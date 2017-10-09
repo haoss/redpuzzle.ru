@@ -91,18 +91,18 @@ hr
 // Links
 a, .link
   color: $link-color
-  text-decoration: underline
+  text-decoration: none
   outline: none
   transition: color 0.35s, background-color 0.35s, border-color 0.35s
 
   &:hover, &:focus, &:active
     color: $link-color
-    text-decoration: none
+    text-decoration: underline
     outline: none
 
 a.link
   &:hover, &:focus, &:active
-    text-decoration: none
+    text-decoration: underline
 
 .container
   margin: 0 auto
@@ -130,20 +130,20 @@ a.link
   z-index: 10000
   background-color: $color-white
   &__block
-    background: $color-black
+    background: $color-red
     animation: load1 1s infinite ease-in-out
     width: 1em
     height: 4em
     position: absolute
     top: 50%
     left: 50%
-    color: $color-black
+    color: $color-red
     text-indent: -9999em
     font-size: 11px
     animation-delay: -0.16s
-    transition: transform(-50%,-50%)
+    transform: translate(-50%,-50%)
     &:before, &:after
-      background: $color-black
+      background: $color-red
       animation: load1 1s infinite ease-in-out
       width: 1em
       height: 4em
@@ -211,8 +211,8 @@ ol li
 
 /* bg */
 .bg
-  &--pink
-    background-color: pink !important
+  &--red
+    background-color: $color-red !important
   &--white
     background-color: $color-white !important
   &--black

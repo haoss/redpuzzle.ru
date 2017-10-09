@@ -6,3 +6,37 @@
     padding: 5px
     background: $color-white
     box-shadow: 0 0 5px rgba($color-black,0.5)
+
+/* popup */
+.popup
+  position: relative
+  background: $color-white
+  padding: 26px
+  width: auto
+  max-width: 280px
+  margin: 20px auto
+  border-radius: 4px
+  &__title
+    text-transform: uppercase
+    color: $color-red
+    text-align: center
+  &--location
+    max-width: 750px
+  &__close
+    cursor: pointer
+    position: absolute
+    right: 23px
+    top: -15px
+    width: 31px
+    height: 32px
+    background: $color-red
+    color: $color-white
+    transform: skewX(-20deg)
+    border-radius: 3px
+    line-height: 32px
+    padding-left: 9px
+    font-size: rem(16)
+    i
+      line-height: 1
+      display: inline-block
+      transform: skewX(20deg)

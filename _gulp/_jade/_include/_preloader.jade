@@ -1,2 +1,19 @@
 .loader
   .loader__block
+
+#popup-register.popup.popup--register.mfp-hide
+  .popup__wrapper
+    .popup__close
+      i.ion-close
+    .popup__title Регистрация
+    form(action="#")
+      fieldset
+        .form-group
+          label Ваше имя
+          input(type="text" name="name" placeholder="Ваше имя").form-control
+
+#popup-location.popup.popup--location.mfp-hide
+  .popup__wrapper
+    .popup__close
+      i.ion-close
+    .popup__title Выберите ваше месторасположение
