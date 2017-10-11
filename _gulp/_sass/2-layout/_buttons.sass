@@ -4,7 +4,7 @@
   display: inline-block
   padding: 0 15px
   margin-bottom: 0
-  font-size: rem(14)
+  font-size: rem(12)
   font-weight: 400
   text-align: center
   white-space: nowrap
@@ -18,15 +18,16 @@
   border: 1px solid $color-red
   border-radius: 3px
   height: 30px
-  line-height: 30px
+  line-height: 28px
   transition: color 0.35s, background-color 0.35s, border-color 0.35s
   text-transform: uppercase
   color: $color-white
   min-width: 158px
-  transform: scaleX(-5deg)
+  transform: skewX(-15deg)
+  font-family: $font-roboto-bold
   span
     display: inline-block
-    transform: skewX(5deg)
+    transform: skewX(15deg)
 
   &:hover, &:focus, &:active
     outline: none
@@ -35,3 +36,15 @@
     color: #333
     background-color: $color-white
     border-color: $color-gray
+
+  &--header
+    height: 35px
+    line-height: 33px
+    width: 125px
+    min-width: inherit
+    margin-left: -5px
+    position: relative
+    z-index: 100
+    &:hover
+      background: #ff5e5e
+      border-color: #ff5e5e

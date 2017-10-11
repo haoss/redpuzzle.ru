@@ -1,11 +1,8 @@
 /* modules */
 
-/* gallery */
-.gallery
-  &__item
-    padding: 5px
-    background: $color-white
-    box-shadow: 0 0 5px rgba($color-black,0.5)
+.mfp-bg
+  opacity: 1
+  background-color: rgba($color-black, 0.4)
 
 /* popup */
 .popup
@@ -20,12 +17,18 @@
     text-transform: uppercase
     color: $color-red
     text-align: center
+    font-size: rem(22)
+    font-family: $font-roboto-bold
+    line-height: 1
+    margin-bottom: 22px
   &--location
     max-width: 750px
+    padding-left: 50px
+    padding-right: 50px
   &__close
     cursor: pointer
     position: absolute
-    right: 23px
+    right: 15px
     top: -15px
     width: 31px
     height: 32px
@@ -36,7 +39,75 @@
     line-height: 32px
     padding-left: 9px
     font-size: rem(16)
+    transition: background 0.35s
     i
       line-height: 1
       display: inline-block
       transform: skewX(20deg)
+      margin-left: 2px
+    &:hover
+      background: $color-lightred
+  &__info
+    color: $color-white
+    background: $color-red
+    font-size: rem(13)
+    font-family: $font-roboto-bold
+    padding: 9px 0
+    line-height: 1.2
+    text-align: center
+    &--location
+      margin: 0 -50px 25px -50px
+  &__search
+    margin-bottom: 25px
+    &-wrapper
+      display: table
+      width: 100%
+      &>div
+        display: table-cell
+        vertical-align: top
+        width: 100%
+        &:last-child
+          width: 1px
+      .input
+        transform: skewX(-15deg)
+        border: 1px solid $color-lightgray
+        background: $color-lightgray
+        border-radius: 3px
+        position: relative
+        overflow: hidden
+        display: block
+        input
+          transform: skewX(15deg)
+          background: none
+          height: 33px
+          border: 0
+          padding: 0 20px 0 20px
+          width: 100%
+          font-size: rem(12)
+          font-family: $font-roboto
+      &.is-focus
+        .input
+          background: transparent
+          border-color: #e0e0e0
+          label
+            opacity: 0
+            visibility: hidden
+  &__city
+    font-family: $font-roboto
+    ul
+      margin: 0
+      padding: 0
+      li
+        margin: 0
+        list-style: none
+        display: inline-block
+        width: 24%
+        &>a, &>span
+          display: inline-block
+          text-decoration: none
+          color: $primary-color
+          white-space: nowrap
+          line-height: 24px
+        &>a
+          &:hover
+            color: $color-red

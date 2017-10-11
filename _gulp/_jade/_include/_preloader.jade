@@ -4,16 +4,101 @@
 #popup-register.popup.popup--register.mfp-hide
   .popup__wrapper
     .popup__close
-      i.ion-close
+      i.ion-android-close
     .popup__title Регистрация
     form(action="#")
       fieldset
         .form-group
           label Ваше имя
           input(type="text" name="name" placeholder="Ваше имя").form-control
+          
+#popup-enter.popup.popup--enter.mfp-hide
+  .popup__wrapper
+    .popup__close
+      i.ion-android-close
+    .popup__title Вход
+    form(action="#")
+      fieldset
+        .form-group
+          label.hidden Ваш логин
+          input(type="text" name="name" placeholder="Ваш логин").form-control
+        .form-group
+          label.hidden Ваш пароль
+          input(type="password" name="name" placeholder="Ваш пароль").form-control
+        .form-group
+          input(type="checkbox")
+        
+        button(type="submit").btn
+          span Войти на сайт
+        .text-center
+          a(href="#!") Забыли пароль?
+        
+        .popup__form-bottom
+          strong Еще не зарегистрированы? 
+          a(href="#!") Зарегистрироваться
 
 #popup-location.popup.popup--location.mfp-hide
   .popup__wrapper
     .popup__close
-      i.ion-close
+      i.ion-android-close
     .popup__title Выберите ваше месторасположение
+    .popup__info.popup__info--location Укажите желаемый город! От этого зависит выбор вакансий и резюме.
+    .popup__search
+      .popup__search-wrapper.block-focus
+        div
+          .input
+            label.hidden
+            input(type="text" placeholder="Поиск по городам").input-focus
+        div
+          button(type="submit").btn.btn--header
+            span найти
+    .popup__city
+      ul
+        li
+          a(href="#!") Москва
+        li
+          a(href="#!") Санкт-Петербург
+        li
+          a(href="#!") Барнаул
+        li
+          a(href="#!") Уфа
+        li
+          a(href="#!") Волгоград
+        li
+          a(href="#!") Нижний Новгород
+        li
+          a(href="#!") Иркутск
+        li
+          a(href="#!") Краснодар
+        li
+          a(href="#!") Сочи
+        li
+          a(href="#!") Самара		
+        li
+          a(href="#!") Новосибирск
+        li
+          a(href="#!") Омск
+        li
+          a(href="#!") Пермь
+        li
+          a(href="#!") Владивосток
+        li
+          a(href="#!") Ростов-на-Дону
+        li
+          a(href="#!") Рязань
+        li
+          a(href="#!") Екатеринбург
+        li
+          a(href="#!") Казань
+        li
+          a(href="#!") Тула
+        li
+          a(href="#!") Тюмень
+        li
+          a(href="#!") Сургут
+        li
+          a(href="#!") Хабаровск
+        li
+          a(href="#!") Челябинск
+        li
+          a(href="#!") Ярославль

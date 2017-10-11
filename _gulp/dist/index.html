@@ -2,11 +2,12 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Главная - siteName</title>
+        <title>Главная - redpuzzle.ru</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/selectric/selectric.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -16,7 +17,7 @@
         </div>
         <div id="popup-register" class="popup popup--register mfp-hide">
             <div class="popup__wrapper">
-                <div class="popup__close"><i class="ion-close"></i></div>
+                <div class="popup__close"><i class="ion-android-close"></i></div>
                 <div class="popup__title">Регистрация</div>
                 <form action="#">
                     <fieldset>
@@ -28,27 +29,164 @@
                 </form>
             </div>
         </div>
+        <div id="popup-enter" class="popup popup--enter mfp-hide">
+            <div class="popup__wrapper">
+                <div class="popup__close"><i class="ion-android-close"></i></div>
+                <div class="popup__title">Вход</div>
+                <form action="#">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="hidden">Ваш логин</label>
+                            <input type="text" name="name" placeholder="Ваш логин" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="hidden">Ваш пароль</label>
+                            <input type="password" name="name" placeholder="Ваш пароль" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox">
+                        </div>
+                        <button type="submit" class="btn"><span>Войти на сайт</span></button>
+                        <div class="text-center"><a href="#!">Забыли пароль?</a></div>
+                        <div class="popup__form-bottom"><strong>Еще не зарегистрированы? </strong><a href="#!">Зарегистрироваться</a></div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
         <div id="popup-location" class="popup popup--location mfp-hide">
             <div class="popup__wrapper">
-                <div class="popup__close"><i class="ion-close"></i></div>
+                <div class="popup__close"><i class="ion-android-close"></i></div>
                 <div class="popup__title">Выберите ваше месторасположение</div>
+                <div class="popup__info popup__info--location">Укажите желаемый город! От этого зависит выбор вакансий и резюме.</div>
+                <div class="popup__search">
+                    <div class="popup__search-wrapper block-focus">
+                        <div>
+                            <div class="input">
+                                <label class="hidden"></label>
+                                <input type="text" placeholder="Поиск по городам" class="input-focus">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn--header"><span>найти</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__city">
+                    <ul>
+                        <li><a href="#!">Москва</a></li>
+                        <li><a href="#!">Санкт-Петербург</a></li>
+                        <li><a href="#!">Барнаул</a></li>
+                        <li><a href="#!">Уфа</a></li>
+                        <li><a href="#!">Волгоград</a></li>
+                        <li><a href="#!">Нижний Новгород</a></li>
+                        <li><a href="#!">Иркутск</a></li>
+                        <li><a href="#!">Краснодар</a></li>
+                        <li><a href="#!">Сочи</a></li>
+                        <li><a href="#!">Самара		</a></li>
+                        <li><a href="#!">Новосибирск</a></li>
+                        <li><a href="#!">Омск</a></li>
+                        <li><a href="#!">Пермь</a></li>
+                        <li><a href="#!">Владивосток</a></li>
+                        <li><a href="#!">Ростов-на-Дону</a></li>
+                        <li><a href="#!">Рязань</a></li>
+                        <li><a href="#!">Екатеринбург</a></li>
+                        <li><a href="#!">Казань</a></li>
+                        <li><a href="#!">Тула</a></li>
+                        <li><a href="#!">Тюмень</a></li>
+                        <li><a href="#!">Сургут</a></li>
+                        <li><a href="#!">Хабаровск</a></li>
+                        <li><a href="#!">Челябинск</a></li>
+                        <li><a href="#!">Ярославль</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <!-- Header-->
         <header class="header">
-            <div class="container">
-                <nav role="navigation" class="navigation">
-                    <ul>
-                        <li class="active"><a href="#" title="Главная">Главная</a></li>
-                        <li><a href="#" title="О нас">О нас</a></li>
-                        <li><a href="#" title="Продукция">Продукция</a></li>
-                        <li><a href="#" title="Сотрудничество">Сотрудничество</a></li>
-                        <li><a href="#" title="Наши магазины">Наши магазины</a></li>
-                        <li><a href="#" title="Контакты">Контакты</a></li>
-                    </ul>
-                </nav>
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__location"><a href="#popup-location" class="open-popup-link"><i class="ion-ios-location"></i><span>Актюбинск (Казахстан)</span></a></div>
+                    <div class="header__lang">
+                        <div class="header__lang-str">Русский<i class="ion-ios-arrow-down"></i></div>
+                        <ul>
+                            <li class="active"><a href="#!">Русский</a></li>
+                            <li><a href="#!">Английский</a></li>
+                            <li><a href="#!">Казахский</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__phone">
+                        <div class="header__phone-str">8 (800) 765 43 21<i class="ion-ios-arrow-down"></i></div><small>С 09:00 до 18:00<br>Понедельник - Пятница</small>
+                    </div>
+                </div>
+            </div>
+            <div class="header__wrapper">
+                <div class="container">
+                    <div class="header__logo"><a href="#!"><img src="./img/logo.png" alt=""><span>Партнер Российского Красного Креста</span></a></div>
+                    <div class="header__user">
+                        <div><a href="#popup-enter" class="open-popup-link"><i class="icon icon--user1"></i><span>войти</span></a></div>
+                        <div><a href="#popup-register" data-balloon="начните с регистрации" data-balloon-pos="up-right" class="open-popup-link"><i class="icon icon--user2"></i><span>регистрация</span></a></div>
+                    </div>
+                    <div class="header__user header__user--is-enter hidden">
+                        <div><a href="#popup-enter" class="open-popup-link"><i class="icon icon--user3"></i><span>Иванов<small>Иван иванович</small><span>99</span></span></a></div>
+                    </div>
+                    <div class="header__category">
+                        <div class="header__links">
+                            <ul>
+                                <li class="active"><a href="#!">Я соискатель</a></li>
+                                <li><a href="#!">Я работодатель</a></li>
+                            </ul>
+                        </div>
+                        <div class="header__search">
+                            <form action="#">
+                                <div class="header__search-wrapper block-focus">
+                                    <div>
+                                        <div class="input">
+                                            <label for="search">Поиск вакансий. Например: <strong class="color color--red">повар</strong></label>
+                                            <input id="search" type="text" class="input-focus">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <select class="selectric">
+                                            <option value="Москва">Москва</option>
+                                            <option value="Актюбинск" selected>Актюбинск</option>
+                                            <option value="">Санкт-Петербург</option>
+                                            <option value="">Барнаул</option>
+                                            <option value="">Уфа</option>
+                                            <option value="">Волгоград</option>
+                                            <option value="">Нижний Новгород</option>
+                                            <option value="">Иркутск</option>
+                                            <option value="">Краснодар</option>
+                                            <option value="">Сочи</option>
+                                            <option value="">Самара		</option>
+                                            <option value="">Новосибирск</option>
+                                            <option value="">Омск</option>
+                                            <option value="">Пермь</option>
+                                            <option value="">Владивосток</option>
+                                            <option value="">Ростов-на-Дону</option>
+                                            <option value="">Рязань</option>
+                                            <option value="">Екатеринбург</option>
+                                            <option value="">Казань</option>
+                                            <option value="">Тула</option>
+                                            <option value="">Тюмень</option>
+                                            <option value="">Сургут</option>
+                                            <option value="">Хабаровск</option>
+                                            <option value="">Челябинск</option>
+                                            <option value="">Ярославль</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn btn--header"><span>найти</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
+        <div class="navigation">
+            <div class="container">test</div>
+        </div>
         <!-- Content-->
         <div class="content">
             <!-- Section-->
@@ -61,6 +199,7 @@
                     </div>
                 </div>
             </section>
+            <div style="height: 1000px"></div>
         </div>
         <!-- Footer-->
         <footer class="footer">
@@ -79,6 +218,7 @@
         <!-- Load Scripts-->
         <script src="./js/libs.js"></script>
         <!-- Footer js-->
+        <script src="./js/libs/selectric/jquery.selectric.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

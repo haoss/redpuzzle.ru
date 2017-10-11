@@ -10,24 +10,6 @@ $(document).on('ready', function(){
     });
   };
 
-  // E-mail Ajax Send
-  // Documentation & Example: https://github.com/agragregra/uniMail
-  $("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      alert("Thank you!");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
-
   // Magnific popup gallery
   $('.gallery').each(function() {
     $(this).magnificPopup({
@@ -83,6 +65,15 @@ $(document).on('ready', function(){
   $('.popup__close').on('click', function(){
     $.magnificPopup.close();
   });
+
+  // Телефон и языки -активация блоков
+  headerLinks();
+  // Тест переключения языков - удалить при сборке
+  languageTest();
+  // Фокус поля ввода на кастомном поле
+  searchFocus();
+
+  $('.selectric').selectric();
 
   // Chrome Smooth Scroll
   try {
@@ -166,4 +157,66 @@ function simpleForm(form, callback) {
 
     return false;
   });
+}
+
+function headerLinks(){
+  var headerPhone = $('.header__phone'),
+      headerLang = $('.header__lang')
+  ;
+
+  // header
+  headerPhone.on('click', function(e){
+    e.stopPropagation();
+    $(this).toggleClass('is-active');
+    headerLang.removeClass('is-active');
+  });
+  headerLang.on('click', function(e){
+    e.stopPropagation();
+    $(this).toggleClass('is-active');
+    headerPhone.removeClass('is-active');
+  });
+
+  $(document).on('click', function(){
+
+    if (headerPhone.hasClass('is-active')) {
+      setTimeout(function(){
+        headerPhone.removeClass('is-active');
+      }, 500)
+    }
+    if (headerLang.hasClass('is-active')) {
+      setTimeout(function(){
+        headerLang.removeClass('is-active');
+      }, 500)
+    }
+
+  });
+}
+
+function languageTest(){
+  var str = $('.header__lang-str'),
+      li = $('.header__lang li'),
+      a = $('.header__lang li a')
+  ;
+
+  li.on('click', function(e){
+    e.stopPropagation();
+    str.html(e.target.text + '<i class="ion-ios-arrow-down"></i>');
+    li.removeClass('active');
+    $(this).addClass('active');
+    $('.header__lang').removeClass('is-active');
+  });
+}
+
+function searchFocus(){
+  $('.input-focus').each(function(){
+    var _this = $(this);
+    _this.focus(function() {
+      _this.parents('.block-focus').addClass('is-focus');
+    }).blur(function() {
+      if (!_this.val().length > 0) {
+        _this.parents('.block-focus').removeClass('is-focus');
+      }
+    });
+  })
+
 }

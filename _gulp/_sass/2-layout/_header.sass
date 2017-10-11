@@ -1,3 +1,330 @@
 /* header */
 .header
-  background-color: $color-gray
+  &__top
+    background-color: $color-lightgray
+    height: 25px
+    .container
+      position: relative
+  &__location
+    float: left
+    font-family: $font-roboto-medium
+    font-size: rem(11)
+    padding-top: 2px
+    a
+      text-decoration: none
+      color: $primary-color
+      i
+        font-size: rem(14)
+        display: inline-block
+        vertical-align: middle
+        margin-right: 5px
+      span
+        display: inline-block
+        border-bottom: 1px dotted $primary-color
+      &:hover
+        span
+          border-color: transparent
+  &__phone
+    // float: right
+    overflow: hidden
+    height: 25px
+    font-size: rem(11)
+    font-family: $font-roboto-bold
+    width: 140px
+    padding-left: 20px
+    padding-right: 10px
+    padding-bottom: 0
+    box-shadow: 0 0 0 rgba($color-black,.1)
+    // margin-right: -30px
+    position: absolute
+    z-index: 50
+    right: 84px
+    i
+      font-size: rem(10)
+      margin-left: 5px
+    small
+      opacity: 0
+      font-size: rem(8)
+      color: #7e9fdb
+      margin-top: 5px
+      line-height: 1.3
+      // transition: opacity 0.35s
+      display: block
+    &-str
+      height: 25px
+      line-height: 23px
+      cursor: pointer
+      // transition: color 0.35s
+    &.is-active
+      height: auto
+      background: $color-blue
+      color: $color-white
+      padding-bottom: 8px
+      box-shadow: 0 3px 5px rgba($color-black,.1)
+      small
+        opacity: 1
+
+  &__lang
+    // float: right
+    width: 112px
+    font-family: $font-roboto-medium
+    font-size: rem(11)
+    text-align: right
+    box-shadow: 0 0 0 rgba($color-black,.1)
+    // margin-right: -15px
+    position: absolute
+    right: 0
+    z-index: 50
+    // background-color: $color-white
+    ul
+      margin: 0
+      padding: 0
+      display: none
+      li
+        list-style: none
+        margin: 0
+        &.active
+          display: none
+        &>a,&>span
+          display: block
+          height: 25px
+          line-height: 24px
+          text-decoration: none
+          padding-right: 31px
+          color: $primary-color
+          background: $color-white
+        &>a
+          &:hover
+            background: $color-lightgray
+    i
+      font-size: rem(10)
+      margin-left: 5px
+    &-str
+      height: 25px
+      line-height: 23px
+      cursor: pointer
+      // transition: color 0.35s
+      padding-right: 20px
+    &.is-active
+      // height: 58px
+      box-shadow: 0 3px 5px rgba($color-black,.1)
+      .header__lang-str
+        background: $color-blue
+        color: $color-white
+      ul
+        display: block
+  &__wrapper
+    height: 107px
+    padding-top: 17px
+  &__logo
+    float: left
+    position: relative
+    font-family: $font-roboto-bold
+    img
+      display: block
+    span
+      display: block
+      font-size: rem(9)
+      color: #747474
+      line-height: 1
+      margin-top: 7px
+      white-space: nowrap
+    a
+      text-decoration: none
+      color: $primary-color
+  &__user
+    float: right
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    margin-top: 22px
+    min-width: 185px
+    a
+      display: inline-block
+      height: 35px
+      line-height: 35px
+      position: relative
+      padding-left: 20px
+      i
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 5
+        &.icon--user2
+          left: 5px
+      &>span
+        position: relative
+        z-index: 10
+    &>div
+      float: left
+      &+div
+        padding-left: 20px
+    &--is-enter
+      padding-right: 20px
+      a
+        padding-left: 40px
+        font-size: rem(16)
+        color: $primary-color
+        line-height: 1.2
+        small
+          font-size: rem(12)
+          display: block
+          line-height: 1
+        &>span
+          position: initial
+          &>span
+            position: absolute
+            border-radius: 50%
+            width: 18px
+            height: 18px
+            color: $color-white
+            text-align: center
+            background: $color-red
+            font-size: rem(10)
+            line-height: 19px
+            right: -19px
+            top: -3px
+
+  &__links
+    text-align: center
+    text-transform: uppercase
+    font-size: rem(13)
+    font-family: $font-roboto-bold
+    line-height: 1
+    margin-bottom: 11px
+    ul
+      margin: 0
+      padding: 0
+      li
+        list-style: none
+        margin: 0
+        display: inline-block
+        &+li
+          margin-left: 40px
+        &>a, &>span
+          color: $primary-color
+        &>a
+          &:hover
+            color: $color-red
+            text-decoration: none
+        &.active
+          &>a, &>span
+            color: $color-red
+
+  &__category
+    padding: 0 258px 0 227px
+
+  &__search
+    &-wrapper
+      display: table
+      // width: 100%
+      &>div
+        display: table-cell
+        vertical-align: top
+        // width: 100%
+        &:first-child, &:last-child
+          width: 1px
+      .input
+        transform: skewX(-15deg)
+        border: 1px solid $color-lightgray
+        background: $color-lightgray
+        border-radius: 3px
+        position: relative
+        overflow: hidden
+        display: inline-block
+        label
+          position: absolute
+          // display: none
+          height: 33px
+          line-height: 31px
+          left: 20px
+          font-size: rem(12)
+          font-family: $font-roboto
+          transform: skewX(15deg)
+          visibility: visible
+          opacity: 1
+          margin: 0
+          // transition: all 0.15s
+        input
+          transform: skewX(15deg)
+          background: none
+          height: 33px
+          border: 0
+          padding: 0 20px 0 20px
+          width: 400px
+          font-size: rem(12)
+          font-family: $font-roboto-bold
+      &.is-focus
+        .input
+          background: transparent
+          border-color: #e0e0e0
+          label
+            opacity: 0
+            visibility: hidden
+      .selectric-wrapper
+        width: 130px
+        transform: skewX(-15deg)
+        margin-left: -5px
+        z-index: 50 !important
+        &.selectric-open
+          .selectric
+            border-radius: 3px 3px 3px 0
+            // background: #f5f5f5
+      .selectric-items
+        width: 165px !important
+        transform: skewX(15deg)
+        margin-left: 31px
+        border: 0
+        background: #f5f5f5
+        height: 230px !important
+        font-family: $font-roboto
+        padding: 10px 0
+        li
+          padding: 0 10px 0 20px
+          line-height: 24px
+          min-height: 24px
+          color: $primary-color
+          &:hover
+            background: none
+            color: $color-red
+          &.selected
+            background: none
+            color: $color-red
+      .selectric
+        border: 0
+        background: #e0e0e0
+        border-radius: 3px
+        .label
+          height: 35px
+          line-height: 35px
+          font-family: $font-roboto-medium
+          color: $primary-color
+          transform: skewX(15deg)
+          margin-left: 20px
+        .button
+          height: 35px
+          line-height: 35px
+          color: $primary-color
+          background: #e0e0e0
+          transform: skewX(15deg)
+          font-size: 0
+          &::after
+            display: none
+          &::before
+            border: 0
+            content: "\f3d0"
+            font-family: $font-ionicons
+            font-size: rem(13)
+            display: block
+            line-height: 1
+            position: absolute
+            color: $primary-color
+            left: 6px
+            top: 12px
+            right: inherit
+            bottom: inherit
+            color: #535353
+            width: 0
+
+.navigation
+  height: 38px
+  background: $color-blue

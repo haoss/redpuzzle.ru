@@ -1,15 +1,102 @@
 // Header
 header.header
-  .container
-    
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
+  
+  .header__top
+    .container
+      
+      .header__location
+        a(href="#popup-location").open-popup-link
+          i.ion-ios-location
+          span Актюбинск (Казахстан)
+      
+      .header__lang
+        .header__lang-str Русский
+          i.ion-ios-arrow-down
+        ul
+          li.active
+            a(href="#!") Русский
+          li
+            a(href="#!") Английский
+          li
+            a(href="#!") Казахский
+      
+      .header__phone
+        .header__phone-str 8 (800) 765 43 21
+          i.ion-ios-arrow-down
+        small С 09:00 до 18:00
+          br
+          | Понедельник - Пятница
+  
+  .header__wrapper
+    .container
+      .header__logo
+        a(href="#!")
+          img(src="./img/logo.png", alt="")
+          span Партнер Российского Красного Креста
+      
+      .header__user
+        div
+          a(href="#popup-enter").open-popup-link
+            i.icon.icon--user1
+            span войти
+        div
+          a(href="#popup-register" data-balloon="начните с регистрации" data-balloon-pos="up-right").open-popup-link
+            i.icon.icon--user2
+            span регистрация
+            
+      .header__user.header__user--is-enter.hidden
+        div
+          a(href="#popup-enter").open-popup-link
+            i.icon.icon--user3
+            span Иванов
+              small Иван иванович
+              span 99
+      
+      .header__category
+        .header__links
+          ul
             li.active
-              a(href=val, title=key)= key
-          else
+              a(href="#!") Я соискатель
             li
-              a(href=val, title=key)= key
+              a(href="#!") Я работодатель
+        .header__search
+          form(action="#")
+            .header__search-wrapper.block-focus
+              div
+                .input
+                  label(for="search") Поиск вакансий. Например: 
+                    strong.color.color--red повар
+                  input#search(type="text").input-focus
+              div
+                select.selectric
+                  option(value="Москва") Москва
+                  option(value="Актюбинск" selected) Актюбинск
+                  option(value="") Санкт-Петербург
+                  option(value="") Барнаул
+                  option(value="") Уфа
+                  option(value="") Волгоград
+                  option(value="") Нижний Новгород
+                  option(value="") Иркутск
+                  option(value="") Краснодар
+                  option(value="") Сочи
+                  option(value="") Самара		
+                  option(value="") Новосибирск
+                  option(value="") Омск
+                  option(value="") Пермь
+                  option(value="") Владивосток
+                  option(value="") Ростов-на-Дону
+                  option(value="") Рязань
+                  option(value="") Екатеринбург
+                  option(value="") Казань
+                  option(value="") Тула
+                  option(value="") Тюмень
+                  option(value="") Сургут
+                  option(value="") Хабаровск
+                  option(value="") Челябинск
+                  option(value="") Ярославль
+              div
+                button(type="submit").btn.btn--header
+                  span найти
+
+.navigation
+  .container test
