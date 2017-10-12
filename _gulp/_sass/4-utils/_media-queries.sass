@@ -13,11 +13,40 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .header
+    &__search
+      &-wrapper
+        .input
+          input
+            width: 240px
+    &__user
+      a
+        &[data-balloon]
+          &::after, &::before
+            display: none
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  .header
+    &__search
+      &-wrapper
+        &>div
+          &:nth-child(2)
+            display: none
+          .input
+            input
+              width: 200px
+            label
+              span
+                display: none
+    &__category
+      padding-left: 200px
+      padding-right: 200px
+    &__user
+      width: 170px
+      &>div
+        &+div
+          padding-left: 5px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -26,12 +55,87 @@
     transition-property: none !important
     transform: none !important
     animation: none !important
+  .header
+    &__wrapper
+      height: 174px
+    &__user
+      margin-top: 5px
+
+    &__category
+      padding-left: 4px
+      padding-right: 0
+      padding-top: 75px
+    &__logo
+      span
+        position: absolute
+        margin-top: -11px
+        margin-left: 49px
+    &__search
+      &-wrapper
+        &>div
+          &:first-child
+            width: 100%
+          .input
+            display: block
+            input
+              width: 100%
+  .popup
+    &__city
+      ul
+        li
+          width: 32.5%
+  .mfp-bg-register
+    background-image: none
+  .icon.popup__register-q1, .icon.popup__register-q2
+    display: none
+
+@media only screen and (max-width : 599px)
+  .popup
+    &--location
+      padding-left: 26px
+      padding-right: 26px
+    &__info
+      &--location
+        margin-right: -26px
+        margin-left: -26px
+  .popup
+    &__city
+      ul
+        li
+          width: 49%
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
+  .hidden-xxs
+    display: none !important
+  .visible-xxs
+    display: block !important
   .header
     &__phone
       display: none
+    &__logo
+      span
+        width: 100px
+        white-space: normal
+        margin-top: -16px
+    &__user
+      width: auto
+      font-family: $font-roboto
+      &--is-enter
+        a
+          &>span
+            display: none
+      .mobile
+        font-size: rem(15)
+        a
+          line-height: 18px
+          padding-top: 1px
+          padding-left: 45px
+          span
+            small
+              display: block
+              font-size: rem(12)
+              font-family: $font-roboto-bold
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

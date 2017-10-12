@@ -3869,19 +3869,54 @@ ol li {
   display: inline-block; }
   .icon--user1 {
     background-image: url(../img/sprite.png);
-    background-position: 0px 0px;
+    background-position: 0px -150px;
     width: 35px;
     height: 35px; }
   .icon--user2 {
     background-image: url(../img/sprite.png);
-    background-position: 0px -35px;
+    background-position: 0px -185px;
     width: 35px;
     height: 35px; }
   .icon--user3 {
     background-image: url(../img/sprite.png);
-    background-position: 0px -70px;
+    background-position: 0px -220px;
     width: 35px;
     height: 35px; }
+  .icon--vk {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -120px;
+    width: 30px;
+    height: 30px; }
+  .icon--facebook {
+    background-image: url(../img/sprite.png);
+    background-position: 0px 0px;
+    width: 30px;
+    height: 30px; }
+  .icon--ok {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -90px;
+    width: 30px;
+    height: 30px; }
+  .icon--mail-ru {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -60px;
+    width: 30px;
+    height: 30px; }
+  .icon--google-plus {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -30px;
+    width: 30px;
+    height: 30px; }
+  .icon.popup__register-q1 {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -255px;
+    width: 146px;
+    height: 137px; }
+  .icon.popup__register-q2 {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -392px;
+    width: 146px;
+    height: 137px; }
 
 /* color */
 .color--black {
@@ -3892,6 +3927,12 @@ ol li {
 
 .color--red {
   color: #ff0f36 !important; }
+
+.color--dark {
+  color: #444444 !important; }
+
+.visible-xxs {
+  display: none !important; }
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background: none !important;
@@ -4145,14 +4186,16 @@ button[data-balloon] {
   border-radius: 3px;
   height: 30px;
   line-height: 28px;
-  -webkit-transition: color 0.35s, background-color 0.35s, border-color 0.35s;
-  transition: color 0.35s, background-color 0.35s, border-color 0.35s;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
   text-transform: uppercase;
   color: #ffffff;
   min-width: 158px;
   -webkit-transform: skewX(-15deg);
           transform: skewX(-15deg);
-  font-family: "RobotoBold"; }
+  font-family: "RobotoBold";
+  margin-left: 4px;
+  margin-right: 4px; }
   .btn span {
     display: inline-block;
     -webkit-transform: skewX(15deg);
@@ -4174,6 +4217,23 @@ button[data-balloon] {
     .btn--header:hover {
       background: #ff5e5e;
       border-color: #ff5e5e; }
+  .btn--middle {
+    height: 35px;
+    line-height: 33px; }
+  .btn--3d {
+    -webkit-box-shadow: 1px 3px 0px #b1112b;
+            box-shadow: 1px 3px 0px #b1112b;
+    position: relative;
+    top: 0; }
+    .btn--3d:focus, .btn--3d:hover {
+      top: 3px;
+      -webkit-box-shadow: 0 0 0 #b1112b;
+              box-shadow: 0 0 0 #b1112b;
+      background: #ff5e5e;
+      border-color: #ff5e5e; }
+  .btn--block {
+    width: calc(100% - 9px);
+    display: block; }
 
 /* forms */
 input::-webkit-input-placeholder {
@@ -4202,15 +4262,84 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   outline: none; }
 
 .form-group, .form__group {
-  margin-bottom: 15px;
+  margin: 0 4px 15px 4px;
   -webkit-transform: skewX(-15deg);
           transform: skewX(-15deg);
   border: 1px solid #f5f5f5;
   background: #f5f5f5;
-  border-radius: 3px;
+  border-radius: 4px;
   position: relative;
-  overflow: hidden;
   display: block; }
+  .form-group.is-focus, .form__group.is-focus {
+    background: transparent;
+    border-color: #e0e0e0; }
+  .form-group--checkbox, .form-group--radio, .form__group--checkbox, .form__group--radio {
+    background: none;
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+    border: 0;
+    position: relative;
+    padding-left: 23px;
+    font-size: 0.75rem;
+    margin-bottom: 7px; }
+    .form-group--checkbox label, .form-group--radio label, .form__group--checkbox label, .form__group--radio label {
+      margin: 0; }
+    .form-group--checkbox.form-group--small, .form-group--radio.form-group--small, .form__group--checkbox.form-group--small, .form__group--radio.form-group--small {
+      font-size: 0.625rem; }
+    .form-group--checkbox input[type="checkbox"], .form-group--checkbox input[type="radio"], .form-group--radio input[type="checkbox"], .form-group--radio input[type="radio"], .form__group--checkbox input[type="checkbox"], .form__group--checkbox input[type="radio"], .form__group--radio input[type="checkbox"], .form__group--radio input[type="radio"] {
+      display: none; }
+      .form-group--checkbox input[type="checkbox"] ~ i.ion-android-checkbox-outline, .form-group--checkbox input[type="checkbox"] ~ i.ion-android-checkmark-circle, .form-group--checkbox input[type="radio"] ~ i.ion-android-checkbox-outline, .form-group--checkbox input[type="radio"] ~ i.ion-android-checkmark-circle, .form-group--radio input[type="checkbox"] ~ i.ion-android-checkbox-outline, .form-group--radio input[type="checkbox"] ~ i.ion-android-checkmark-circle, .form-group--radio input[type="radio"] ~ i.ion-android-checkbox-outline, .form-group--radio input[type="radio"] ~ i.ion-android-checkmark-circle, .form__group--checkbox input[type="checkbox"] ~ i.ion-android-checkbox-outline, .form__group--checkbox input[type="checkbox"] ~ i.ion-android-checkmark-circle, .form__group--checkbox input[type="radio"] ~ i.ion-android-checkbox-outline, .form__group--checkbox input[type="radio"] ~ i.ion-android-checkmark-circle, .form__group--radio input[type="checkbox"] ~ i.ion-android-checkbox-outline, .form__group--radio input[type="checkbox"] ~ i.ion-android-checkmark-circle, .form__group--radio input[type="radio"] ~ i.ion-android-checkbox-outline, .form__group--radio input[type="radio"] ~ i.ion-android-checkmark-circle {
+        display: none; }
+      .form-group--checkbox input[type="checkbox"] ~ i.ion-android-checkbox-outline-blank, .form-group--checkbox input[type="checkbox"] ~ i.ion-android-radio-button-off, .form-group--checkbox input[type="radio"] ~ i.ion-android-checkbox-outline-blank, .form-group--checkbox input[type="radio"] ~ i.ion-android-radio-button-off, .form-group--radio input[type="checkbox"] ~ i.ion-android-checkbox-outline-blank, .form-group--radio input[type="checkbox"] ~ i.ion-android-radio-button-off, .form-group--radio input[type="radio"] ~ i.ion-android-checkbox-outline-blank, .form-group--radio input[type="radio"] ~ i.ion-android-radio-button-off, .form__group--checkbox input[type="checkbox"] ~ i.ion-android-checkbox-outline-blank, .form__group--checkbox input[type="checkbox"] ~ i.ion-android-radio-button-off, .form__group--checkbox input[type="radio"] ~ i.ion-android-checkbox-outline-blank, .form__group--checkbox input[type="radio"] ~ i.ion-android-radio-button-off, .form__group--radio input[type="checkbox"] ~ i.ion-android-checkbox-outline-blank, .form__group--radio input[type="checkbox"] ~ i.ion-android-radio-button-off, .form__group--radio input[type="radio"] ~ i.ion-android-checkbox-outline-blank, .form__group--radio input[type="radio"] ~ i.ion-android-radio-button-off {
+        display: block; }
+      .form-group--checkbox input[type="checkbox"]:checked ~ i.ion-android-checkbox-outline, .form-group--checkbox input[type="checkbox"]:checked ~ i.ion-android-checkmark-circle, .form-group--checkbox input[type="radio"]:checked ~ i.ion-android-checkbox-outline, .form-group--checkbox input[type="radio"]:checked ~ i.ion-android-checkmark-circle, .form-group--radio input[type="checkbox"]:checked ~ i.ion-android-checkbox-outline, .form-group--radio input[type="checkbox"]:checked ~ i.ion-android-checkmark-circle, .form-group--radio input[type="radio"]:checked ~ i.ion-android-checkbox-outline, .form-group--radio input[type="radio"]:checked ~ i.ion-android-checkmark-circle, .form__group--checkbox input[type="checkbox"]:checked ~ i.ion-android-checkbox-outline, .form__group--checkbox input[type="checkbox"]:checked ~ i.ion-android-checkmark-circle, .form__group--checkbox input[type="radio"]:checked ~ i.ion-android-checkbox-outline, .form__group--checkbox input[type="radio"]:checked ~ i.ion-android-checkmark-circle, .form__group--radio input[type="checkbox"]:checked ~ i.ion-android-checkbox-outline, .form__group--radio input[type="checkbox"]:checked ~ i.ion-android-checkmark-circle, .form__group--radio input[type="radio"]:checked ~ i.ion-android-checkbox-outline, .form__group--radio input[type="radio"]:checked ~ i.ion-android-checkmark-circle {
+        display: block; }
+      .form-group--checkbox input[type="checkbox"]:checked ~ i.ion-android-checkbox-outline-blank, .form-group--checkbox input[type="checkbox"]:checked ~ i.ion-android-radio-button-off, .form-group--checkbox input[type="radio"]:checked ~ i.ion-android-checkbox-outline-blank, .form-group--checkbox input[type="radio"]:checked ~ i.ion-android-radio-button-off, .form-group--radio input[type="checkbox"]:checked ~ i.ion-android-checkbox-outline-blank, .form-group--radio input[type="checkbox"]:checked ~ i.ion-android-radio-button-off, .form-group--radio input[type="radio"]:checked ~ i.ion-android-checkbox-outline-blank, .form-group--radio input[type="radio"]:checked ~ i.ion-android-radio-button-off, .form__group--checkbox input[type="checkbox"]:checked ~ i.ion-android-checkbox-outline-blank, .form__group--checkbox input[type="checkbox"]:checked ~ i.ion-android-radio-button-off, .form__group--checkbox input[type="radio"]:checked ~ i.ion-android-checkbox-outline-blank, .form__group--checkbox input[type="radio"]:checked ~ i.ion-android-radio-button-off, .form__group--radio input[type="checkbox"]:checked ~ i.ion-android-checkbox-outline-blank, .form__group--radio input[type="checkbox"]:checked ~ i.ion-android-radio-button-off, .form__group--radio input[type="radio"]:checked ~ i.ion-android-checkbox-outline-blank, .form__group--radio input[type="radio"]:checked ~ i.ion-android-radio-button-off {
+        display: none; }
+      .form-group--checkbox input[type="checkbox"]:checked ~ i[class*='ion-android'], .form-group--checkbox input[type="radio"]:checked ~ i[class*='ion-android'], .form-group--radio input[type="checkbox"]:checked ~ i[class*='ion-android'], .form-group--radio input[type="radio"]:checked ~ i[class*='ion-android'], .form__group--checkbox input[type="checkbox"]:checked ~ i[class*='ion-android'], .form__group--checkbox input[type="radio"]:checked ~ i[class*='ion-android'], .form__group--radio input[type="checkbox"]:checked ~ i[class*='ion-android'], .form__group--radio input[type="radio"]:checked ~ i[class*='ion-android'] {
+        color: #ff0f36; }
+    .form-group--checkbox input[type="radio"]:checked ~ label, .form-group--radio input[type="radio"]:checked ~ label, .form__group--checkbox input[type="radio"]:checked ~ label, .form__group--radio input[type="radio"]:checked ~ label {
+      color: #ff0f36; }
+    .form-group--checkbox i[class*='ion-android'], .form-group--radio i[class*='ion-android'], .form__group--checkbox i[class*='ion-android'], .form__group--radio i[class*='ion-android'] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #969696;
+      font-size: 1rem;
+      line-height: 1;
+      display: block; }
+  .form-group--radio-medium, .form__group--radio-medium {
+    font-size: 0.875rem;
+    font-family: "RobotoMedium"; }
+    .form-group--radio-medium i[class*='ion-android'], .form__group--radio-medium i[class*='ion-android'] {
+      font-size: 1rem; }
+    .form-group--radio-medium .label, .form__group--radio-medium .label {
+      position: relative;
+      top: -2px; }
+  .form-group.has-feedback .form-control, .form__group.has-feedback .form-control {
+    padding-right: 35px; }
+  .form-group.has-feedback i.ion-alert-circled, .form__group.has-feedback i.ion-alert-circled {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    color: #1747a1;
+    font-size: 0.75rem;
+    -webkit-transform: skewX(15deg);
+            transform: skewX(15deg); }
+  .form-group.has-error, .form__group.has-error {
+    border-color: #1747a1;
+    background: transparent; }
+    .form-group.has-error .form-control::-webkit-input-placeholder, .form__group.has-error .form-control::-webkit-input-placeholder {
+      color: #1747a1; }
+    .form-group.has-error .form-control::-moz-placeholder, .form__group.has-error .form-control::-moz-placeholder {
+      color: #1747a1; }
+    .form-group.has-error .form-control:-ms-input-placeholder, .form__group.has-error .form-control:-ms-input-placeholder {
+      color: #1747a1; }
+    .form-group.has-error .form-control:-moz-placeholder, .form__group.has-error .form-control:-moz-placeholder {
+      color: #1747a1; }
+    .form-group.has-error i.ion-alert-circled, .form__group.has-error i.ion-alert-circled {
+      display: block !important; }
 
 .form-control, .form__control {
   display: block;
@@ -4226,10 +4355,8 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   border-radius: 4px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  -webkit-transition: border-color all .35s, -webkit-box-shadow all .35s;
-  transition: border-color all .35s, -webkit-box-shadow all .35s;
-  transition: border-color all .35s, box-shadow all .35s;
-  transition: border-color all .35s, box-shadow all .35s, -webkit-box-shadow all .35s;
+  -webkit-transition: border all .35s;
+  transition: border all .35s;
   -webkit-transform: skewX(15deg);
           transform: skewX(15deg);
   background: none;
@@ -4238,7 +4365,10 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   padding: 0 20px 0 20px;
   width: 100%;
   font-size: 0.75rem;
-  font-family: "RobotoRegular"; }
+  font-family: "RobotoBold"; }
+  .form-control:focus, .form__control:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
 
 textarea.form-control, textarea.form__control {
   height: 150px;
@@ -4264,6 +4394,9 @@ label {
   border-color: #a94442;
   -webkit-box-shadow: none;
           box-shadow: none; }
+  .has-error .form-control:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
 
 .has-success .control-label {
   color: #3c763d; }
@@ -4418,7 +4551,8 @@ label {
   text-transform: uppercase;
   font-family: "RobotoBold";
   margin-top: 22px;
-  min-width: 185px; }
+  width: 185px;
+  font-size: 0.75rem; }
   .header__user a {
     display: inline-block;
     height: 35px;
@@ -4438,7 +4572,7 @@ label {
   .header__user > div {
     float: left; }
     .header__user > div + div {
-      padding-left: 20px; }
+      padding-left: 15px; }
   .header__user--is-enter {
     padding-right: 20px; }
     .header__user--is-enter a {
@@ -4614,7 +4748,8 @@ label {
 /* modules */
 .mfp-bg {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed !important; }
 
 /* popup */
 .popup {
@@ -4667,7 +4802,7 @@ label {
     background: #ff0f36;
     font-size: 0.8125rem;
     font-family: "RobotoBold";
-    padding: 9px 0;
+    padding: 9px 10px;
     line-height: 1.2;
     text-align: center; }
     .popup__info--location {
@@ -4726,6 +4861,81 @@ label {
           line-height: 24px; }
         .popup__city ul li > a:hover {
           color: #ff0f36; }
+  .popup__form-bottom {
+    background: #f5f5f5;
+    text-align: center;
+    font-size: 0.8125rem;
+    height: 72px;
+    margin: 24px -26px -26px -26px;
+    border-radius: 0 0 4px 4px;
+    padding-top: 18px; }
+    .popup__form-bottom strong {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      display: block;
+      line-height: 1;
+      margin-bottom: 5px; }
+  .popup__wrapper .btn {
+    margin-bottom: 0.8125rem; }
+  .popup__social-head {
+    display: table;
+    width: 100%;
+    margin-bottom: 12px; }
+    .popup__social-head > * {
+      display: table-cell;
+      vertical-align: middle; }
+    .popup__social-head span {
+      padding: 0 5px;
+      white-space: nowrap;
+      color: #ff0f36;
+      width: 1px; }
+    .popup__social-head::after, .popup__social-head::before {
+      display: table-cell;
+      content: '';
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#e5e5e5));
+      background-image: linear-gradient(#e5e5e5, #e5e5e5);
+      background-size: 100% 1px;
+      background-repeat: no-repeat;
+      background-position: center; }
+  .popup__social-body {
+    text-align: center; }
+    .popup__social-body p {
+      font-size: 0.75rem;
+      margin-bottom: 12px; }
+    .popup__social-body a {
+      display: inline-block;
+      margin: 0 4px;
+      opacity: 1; }
+      .popup__social-body a:nth-of-type(1) {
+        margin-left: 0; }
+      .popup__social-body a:last-child {
+        margin-right: 0; }
+      .popup__social-body a:hover {
+        opacity: 0.7; }
+  .popup__register-q1, .popup__register-q2 {
+    position: absolute;
+    color: #ffffff;
+    font-size: 0.8125rem;
+    font-family: "RobotoBold";
+    bottom: 7px;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 46px; }
+    .popup__register-q1 b, .popup__register-q2 b {
+      font-size: 1.125rem; }
+    .popup__register-q1 span, .popup__register-q2 span {
+      display: block;
+      line-height: 1.2; }
+  .popup__register-q1 {
+    left: -130px; }
+  .popup__register-q2 {
+    right: -130px; }
+
+.mfp-bg-register {
+  background-image: url("../img/popup-register-background.png");
+  background-position: center center;
+  background-repeat: no-repeat; }
 
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {
@@ -5061,11 +5271,26 @@ label {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1199px) {
-  /**/ }
+  .header__search-wrapper .input input {
+    width: 240px; }
+  .header__user a[data-balloon]::after, .header__user a[data-balloon]::before {
+    display: none; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 991px) {
-  /**/ }
+  .header__search-wrapper > div:nth-child(2) {
+    display: none; }
+  .header__search-wrapper > div .input input {
+    width: 200px; }
+  .header__search-wrapper > div .input label span {
+    display: none; }
+  .header__category {
+    padding-left: 200px;
+    padding-right: 200px; }
+  .header__user {
+    width: 170px; }
+    .header__user > div + div {
+      padding-left: 5px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
@@ -5075,12 +5300,69 @@ label {
     -webkit-transform: none !important;
             transform: none !important;
     -webkit-animation: none !important;
-            animation: none !important; } }
+            animation: none !important; }
+  .header__wrapper {
+    height: 174px; }
+  .header__user {
+    margin-top: 5px; }
+  .header__category {
+    padding-left: 4px;
+    padding-right: 0;
+    padding-top: 75px; }
+  .header__logo span {
+    position: absolute;
+    margin-top: -11px;
+    margin-left: 49px; }
+  .header__search-wrapper > div:first-child {
+    width: 100%; }
+  .header__search-wrapper > div .input {
+    display: block; }
+    .header__search-wrapper > div .input input {
+      width: 100%; }
+  .popup__city ul li {
+    width: 32.5%; }
+  .mfp-bg-register {
+    background-image: none; }
+  .icon.popup__register-q1, .icon.popup__register-q2 {
+    display: none; } }
+
+@media only screen and (max-width: 599px) {
+  .popup--location {
+    padding-left: 26px;
+    padding-right: 26px; }
+  .popup__info--location {
+    margin-right: -26px;
+    margin-left: -26px; }
+  .popup__city ul li {
+    width: 49%; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 479px) {
+  .hidden-xxs {
+    display: none !important; }
+  .visible-xxs {
+    display: block !important; }
   .header__phone {
-    display: none; } }
+    display: none; }
+  .header__logo span {
+    width: 100px;
+    white-space: normal;
+    margin-top: -16px; }
+  .header__user {
+    width: auto;
+    font-family: "RobotoRegular"; }
+    .header__user--is-enter a > span {
+      display: none; }
+    .header__user .mobile {
+      font-size: 0.9375rem; }
+      .header__user .mobile a {
+        line-height: 18px;
+        padding-top: 1px;
+        padding-left: 45px; }
+        .header__user .mobile a span small {
+          display: block;
+          font-size: 0.75rem;
+          font-family: "RobotoBold"; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 319px) {

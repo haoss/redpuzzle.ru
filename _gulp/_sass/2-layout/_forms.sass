@@ -24,16 +24,91 @@ button, html input[type=button], input[type=reset], input[type=submit]
   outline: none
 
 .form
-  &-group,  &__group
-    margin-bottom: 15px
-
+  &-group, &__group
+    margin: 0 4px 15px 4px
     transform: skewX(-15deg)
     border: 1px solid $color-lightgray
     background: $color-lightgray
-    border-radius: 3px
+    border-radius: 4px
     position: relative
-    overflow: hidden
+    // overflow: hidden
     display: block
+    &.is-focus
+      background: transparent
+      border-color: #e0e0e0
+    &--checkbox, &--radio
+      background: none
+      transform: skewX(0)
+      border: 0
+      position: relative
+      padding-left: 23px
+      font-size: rem(12)
+      margin-bottom: 7px
+      label
+        margin: 0
+      &.form-group--small
+        font-size: rem(10)
+      input[type="checkbox"], input[type="radio"]
+        display: none
+        &~i.ion-android-checkbox-outline, &~i.ion-android-checkmark-circle
+          display: none
+        &~i.ion-android-checkbox-outline-blank, &~i.ion-android-radio-button-off
+          display: block
+        &:checked
+          &~i.ion-android-checkbox-outline, &~i.ion-android-checkmark-circle
+            display: block
+          &~i.ion-android-checkbox-outline-blank, &~i.ion-android-radio-button-off
+            display: none
+          &~i[class*='ion-android']
+            color: $color-red
+      input[type="radio"]
+        &:checked
+          &~label
+            color: $color-red
+
+      i[class*='ion-android']
+        position: absolute
+        left: 0
+        top: 0
+        color: #969696
+        font-size: rem(16)
+        line-height: 1
+        display: block
+    &--radio
+      &-medium
+        font-size: rem(14)
+        font-family: $font-roboto-medium
+        i[class*='ion-android']
+          font-size: rem(16)
+        .label
+          position: relative
+          top: -2px
+
+    &.has-feedback
+      .form-control
+        padding-right: 35px
+      i.ion-alert-circled
+        display: none
+        position: absolute
+        right: 15px
+        top: 8px
+        color: $color-blue
+        font-size: rem(12)
+        transform: skewX(15deg)
+    &.has-error
+      border-color: $color-blue
+      background: transparent
+      .form-control
+        &::-webkit-input-placeholder
+          color: $color-blue
+        &::-moz-placeholder
+          color: $color-blue
+        &:-ms-input-placeholder
+          color: $color-blue
+        &:-moz-placeholder
+          color: $color-blue
+      i.ion-alert-circled
+        display: block !important
 
   &-control, &__control
     display: block
@@ -48,8 +123,7 @@ button, html input[type=button], input[type=reset], input[type=submit]
     border: 1px solid $color-gray
     border-radius: 4px
     box-shadow: none
-    transition: border-color all .35s
-
+    transition: border all .35s
     transform: skewX(15deg)
     background: none
     height: 33px
@@ -57,7 +131,9 @@ button, html input[type=button], input[type=reset], input[type=submit]
     padding: 0 20px 0 20px
     width: 100%
     font-size: rem(12)
-    font-family: $font-roboto
+    font-family: $font-roboto-bold
+    &:focus
+      box-shadow: none
 
 textarea
   &.form-control, &.form__control
@@ -82,6 +158,8 @@ label
   &-error .form-control
     border-color: #a94442
     box-shadow: none
+    &:focus
+      box-shadow: none
 
   &-success .control-label
     color: #3c763d

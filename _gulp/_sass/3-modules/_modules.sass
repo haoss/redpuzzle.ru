@@ -3,6 +3,7 @@
 .mfp-bg
   opacity: 1
   background-color: rgba($color-black, 0.4)
+  position: fixed !important
 
 /* popup */
 .popup
@@ -52,7 +53,7 @@
     background: $color-red
     font-size: rem(13)
     font-family: $font-roboto-bold
-    padding: 9px 0
+    padding: 9px 10px
     line-height: 1.2
     text-align: center
     &--location
@@ -111,3 +112,82 @@
         &>a
           &:hover
             color: $color-red
+  &__form-bottom
+    background: $color-lightgray
+    text-align: center
+    font-size: rem(13)
+    height: 72px
+    margin: 24px -26px -26px -26px
+    border-radius: 0 0 4px 4px
+    padding-top: 18px
+    strong
+      font-size: rem(14)
+      text-transform: uppercase
+      // font-family: $font-roboto
+      display: block
+      line-height: 1
+      margin-bottom: 5px
+  &__wrapper
+    .btn
+      margin-bottom: rem(13)
+
+  &__social
+    &-head
+      display: table
+      width: 100%
+      margin-bottom: 12px
+      &>*
+        display: table-cell
+        vertical-align: middle
+      span
+        padding: 0 5px
+        white-space: nowrap
+        color: $color-red
+        width: 1px
+      &::after, &::before
+        display: table-cell
+        content: ''
+        background-image: linear-gradient(#e5e5e5, #e5e5e5)
+        background-size: 100% 1px
+        background-repeat: no-repeat
+        background-position: center
+        // width: 100%
+    &-body
+      text-align: center
+      p
+        font-size: rem(12)
+        margin-bottom: 12px
+      a
+        display: inline-block
+        margin: 0 4px
+        opacity: 1
+        &:nth-of-type(1)
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+        &:hover
+          opacity: 0.7
+  &__register-q1, &__register-q2
+    position: absolute
+    color: $color-white
+    font-size: rem(13)
+    font-family: $font-roboto-bold
+    bottom: 7px
+    font-style: normal
+    text-align: center
+    text-transform: uppercase
+    padding-top: 46px
+    b
+      font-size: rem(18)
+    span
+      display: block
+      line-height: 1.2
+  &__register-q1
+    left: -130px
+  &__register-q2
+    right: -130px
+
+.mfp-bg-register
+  background-image: url('../img/popup-register-background.png')
+  background-position: center center
+  background-repeat: no-repeat

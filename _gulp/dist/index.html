@@ -21,10 +21,51 @@
                 <div class="popup__title">Регистрация</div>
                 <form action="#">
                     <fieldset>
-                        <div class="form-group">
-                            <label>Ваше имя</label>
-                            <input type="text" name="name" placeholder="Ваше имя" class="form-control">
+                        <div class="form-group form-group--radio form-group--radio-medium">
+                            <label class="hidden">Я работодатель</label>
+                            <input id="radio1" type="radio" name="radio1" checked><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                            <label for="radio1" class="label">Я работодатель</label>
                         </div>
+                        <div class="form-group form-group--radio form-group--radio-medium">
+                            <label class="hidden">Я соискатель</label>
+                            <input id="radio2" type="radio" name="radio1"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                            <label for="radio2" class="label">Я соискатель</label>
+                        </div>
+                        <div class="clear5"></div>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Ваше имя</label>
+                            <input type="text" name="name" placeholder="Ваше имя" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group has-feedback block-focus has-error">
+                            <label class="hidden">Ваш email</label>
+                            <input type="email" name="name" placeholder="Ваш email" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Ваш телефон</label>
+                            <input type="text" name="name" placeholder="Ваш телефон" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Введите пароль</label>
+                            <input type="password" name="name" placeholder="Введите пароль" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Повторите пароль</label>
+                            <input type="password" name="name" placeholder="Повторите пароль" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group form-group--checkbox form-group--small">
+                            <label class="hidden">Согласен на обработку моих личных данных</label>
+                            <input id="input3" type="checkbox" name="confidental" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                            <label for="input3">Согласен на обработку моих личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></label>
+                        </div>
+                        <div class="clear10"></div>
+                        <button type="submit" class="btn btn--middle btn--3d btn--block"><span>Зарегистрироваться</span></button>
+                        <div class="popup__social">
+                            <div class="popup__social-head"> <span>или</span></div>
+                            <div class="popup__social-body">
+                                <p>Регистрация через социальные сети</p><a href="#!"><i class="icon icon--vk"></i></a><a href="#!"><i class="icon icon--facebook"></i></a><a href="#!"><i class="icon icon--ok"></i></a><a href="#!"><i class="icon icon--mail-ru"></i></a><a href="#!"><i class="icon icon--google-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="popup__form-bottom"><strong>Уже зарегистрированы? </strong><a href="#popup-enter" class="open-popup-enter--inpopup">Войти на сайт</a></div><i class="icon popup__register-q1"><span>принято верное <b>решение!</b></span></i><i class="icon popup__register-q2"><span>вы поступили <b>правильно!</b></span></i>
                     </fieldset>
                 </form>
             </div>
@@ -35,20 +76,28 @@
                 <div class="popup__title">Вход</div>
                 <form action="#">
                     <fieldset>
-                        <div class="form-group">
+                        <div class="form-group has-feedback block-focus">
                             <label class="hidden">Ваш логин</label>
-                            <input type="text" name="name" placeholder="Ваш логин" class="form-control">
+                            <input type="text" name="name" placeholder="Ваш логин" class="form-control input-focus"><i class="ion-alert-circled"></i>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group has-feedback block-focus">
                             <label class="hidden">Ваш пароль</label>
-                            <input type="password" name="name" placeholder="Ваш пароль" class="form-control">
+                            <input type="password" name="name" placeholder="Ваш пароль" class="form-control input-focus"><i class="ion-alert-circled"></i>
                         </div>
-                        <div class="form-group">
-                            <input type="checkbox">
+                        <div class="form-group form-group--checkbox">
+                            <label class="hidden">Запомнить меня</label>
+                            <input id="input1" type="checkbox" name="remember" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                            <label for="input1">Запомнить меня</label>
                         </div>
-                        <button type="submit" class="btn"><span>Войти на сайт</span></button>
-                        <div class="text-center"><a href="#!">Забыли пароль?</a></div>
-                        <div class="popup__form-bottom"><strong>Еще не зарегистрированы? </strong><a href="#!">Зарегистрироваться</a></div>
+                        <div class="form-group form-group--checkbox form-group--small">
+                            <label class="hidden">Согласен на обработку моих личных данных</label>
+                            <input id="input2" type="checkbox" name="confidental" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                            <label for="input2">Согласен на обработку моих личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></label>
+                        </div>
+                        <div class="clear10"></div>
+                        <button type="submit" class="btn btn--middle btn--3d btn--block"><span>Войти на сайт</span></button>
+                        <div class="text-center"><a href="#!" class="color color--dark">Забыли пароль?</a></div>
+                        <div class="popup__form-bottom"><strong>Еще не зарегистрированы? </strong><a href="#popup-register" class="open-popup-register--inpopup">Зарегистрироваться</a></div>
                     </fieldset>
                 </form>
             </div>
@@ -123,8 +172,9 @@
                 <div class="container">
                     <div class="header__logo"><a href="#!"><img src="./img/logo.png" alt=""><span>Партнер Российского Красного Креста</span></a></div>
                     <div class="header__user">
-                        <div><a href="#popup-enter" class="open-popup-link"><i class="icon icon--user1"></i><span>войти</span></a></div>
-                        <div><a href="#popup-register" data-balloon="начните с регистрации" data-balloon-pos="up-right" class="open-popup-link"><i class="icon icon--user2"></i><span>регистрация</span></a></div>
+                        <div class="hidden-xxs"><a href="#popup-enter" class="open-popup-link"><i class="icon icon--user1"></i><span>войти</span></a></div>
+                        <div class="hidden-xxs"><a href="#popup-register" data-balloon="начните с регистрации" data-balloon-pos="up-right" class="open-popup-register"><i class="icon icon--user2"></i><span>регистрация</span></a></div>
+                        <div class="mobile visible-xxs"><a href="#popup-enter" class="open-popup-link"><i class="icon icon--user2"></i><span>войти <small>на сайт</small></span></a></div>
                     </div>
                     <div class="header__user header__user--is-enter hidden">
                         <div><a href="#popup-enter" class="open-popup-link"><i class="icon icon--user3"></i><span>Иванов<small>Иван иванович</small><span>99</span></span></a></div>
@@ -141,7 +191,7 @@
                                 <div class="header__search-wrapper block-focus">
                                     <div>
                                         <div class="input">
-                                            <label for="search">Поиск вакансий. Например: <strong class="color color--red">повар</strong></label>
+                                            <label for="search">Поиск вакансий. <span>Например: <strong class="color color--red">повар</strong></span></label>
                                             <input id="search" type="text" class="input-focus">
                                         </div>
                                     </div>

@@ -61,6 +61,45 @@ $(document).on('ready', function(){
     midClick: true,
     showCloseBtn: false
   });
+  $('.open-popup-register').magnificPopup({
+    type: 'inline',
+    midClick: true,
+    showCloseBtn: false,
+    mainClass: 'mfp-bg-register'
+  });
+  $('.open-popup-register--inpopup').on('click', function(e){
+    e.preventDefault();
+    $.magnificPopup.close();
+    setTimeout(function(){
+      $.magnificPopup.open({
+        items: {
+          src: '#popup-register'
+        },
+        type: 'inline',
+        midClick: true,
+        showCloseBtn: false,
+        mainClass: 'mfp-bg-register'
+        // You may add options here, they're exactly the same as for $.fn.magnificPopup call
+        // Note that some settings that rely on click event (like disableOn or midClick) will not work here
+      }, 0);
+    }, 400);
+  });
+  $('.open-popup-enter--inpopup').on('click', function(e){
+    e.preventDefault();
+    $.magnificPopup.close();
+    setTimeout(function(){
+      $.magnificPopup.open({
+        items: {
+          src: '#popup-enter'
+        },
+        type: 'inline',
+        midClick: true,
+        showCloseBtn: false,
+        // You may add options here, they're exactly the same as for $.fn.magnificPopup call
+        // Note that some settings that rely on click event (like disableOn or midClick) will not work here
+      }, 0);
+    }, 400);
+  });
 
   $('.popup__close').on('click', function(){
     $.magnificPopup.close();
@@ -73,7 +112,10 @@ $(document).on('ready', function(){
   // Фокус поля ввода на кастомном поле
   searchFocus();
 
-  $('.selectric').selectric();
+  $('.selectric').selectric({
+    disableOnMobile: false,
+    nativeOnMobile: false
+  });
 
   // Chrome Smooth Scroll
   try {

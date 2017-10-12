@@ -35,14 +35,19 @@ header.header
           span Партнер Российского Красного Креста
       
       .header__user
-        div
+        div.hidden-xxs
           a(href="#popup-enter").open-popup-link
             i.icon.icon--user1
             span войти
-        div
-          a(href="#popup-register" data-balloon="начните с регистрации" data-balloon-pos="up-right").open-popup-link
+        div.hidden-xxs
+          a(href="#popup-register" data-balloon="начните с регистрации" data-balloon-pos="up-right").open-popup-register
             i.icon.icon--user2
             span регистрация
+        div.mobile.visible-xxs
+          a(href="#popup-enter").open-popup-link
+            i.icon.icon--user2
+            span войти 
+              small на сайт
             
       .header__user.header__user--is-enter.hidden
         div
@@ -64,8 +69,9 @@ header.header
             .header__search-wrapper.block-focus
               div
                 .input
-                  label(for="search") Поиск вакансий. Например: 
-                    strong.color.color--red повар
+                  label(for="search") Поиск вакансий. 
+                    span Например: 
+                      strong.color.color--red повар
                   input#search(type="text").input-focus
               div
                 select.selectric

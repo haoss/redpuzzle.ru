@@ -253,6 +253,20 @@ ol li
     @include sprite($icon-user-2)
   &--user3
     @include sprite($icon-user-3)
+  &--vk
+    @include sprite($icon-vk)
+  &--facebook
+    @include sprite($icon-facebook)
+  &--ok
+    @include sprite($icon-odnoklassniki-logo)
+  &--mail-ru
+    @include sprite($icon-mail)
+  &--google-plus
+    @include sprite($icon-google-plus)
+  &.popup__register-q1
+    @include sprite($icon-register-q1)
+  &.popup__register-q2
+    @include sprite($icon-register-q2)
 
 /* color */
 .color
@@ -262,6 +276,12 @@ ol li
     color: $color-white !important
   &--red
     color: $color-red !important
+  &--dark
+    color: $primary-color !important
+
+.visible-xxs
+  display: none !important
+
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
   background: none !important

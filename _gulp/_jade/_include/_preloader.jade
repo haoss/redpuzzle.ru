@@ -8,10 +8,78 @@
     .popup__title Регистрация
     form(action="#")
       fieldset
-        .form-group
-          label Ваше имя
-          input(type="text" name="name" placeholder="Ваше имя").form-control
+        .form-group.form-group--radio.form-group--radio-medium
+          label.hidden Я работодатель
+          input#radio1(type="radio" name="radio1" checked)
+          i.ion-android-radio-button-off
+          i.ion-android-checkmark-circle
+          label(for="radio1").label Я работодатель
+        .form-group.form-group--radio.form-group--radio-medium
+          label.hidden Я соискатель
+          input#radio2(type="radio" name="radio1")
+          i.ion-android-radio-button-off
+          i.ion-android-checkmark-circle
+          label(for="radio2").label Я соискатель
+        
+        .clear5
           
+        .form-group.has-feedback.block-focus
+          label.hidden Ваше имя
+          input(type="text" name="name" placeholder="Ваше имя").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.has-feedback.block-focus.has-error
+          label.hidden Ваш email
+          input(type="email" name="name" placeholder="Ваш email").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.has-feedback.block-focus
+          label.hidden Ваш телефон
+          input(type="text" name="name" placeholder="Ваш телефон").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.has-feedback.block-focus
+          label.hidden Введите пароль
+          input(type="password" name="name" placeholder="Введите пароль").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.has-feedback.block-focus
+          label.hidden Повторите пароль
+          input(type="password" name="name" placeholder="Повторите пароль").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.form-group--checkbox.form-group--small
+          label.hidden Согласен на обработку моих личных данных
+          input#input3(type="checkbox" name="confidental" checked)
+          i.ion-android-checkbox-outline-blank
+          i.ion-android-checkbox-outline
+          label(for="input3") Согласен на обработку моих личных данных. 
+            a(href="#!" target="_blank") Политика конфиденциальности
+        .clear10
+        button(type="submit").btn.btn--middle.btn--3d.btn--block
+          span Зарегистрироваться
+        
+        .popup__social
+          .popup__social-head 
+            span или
+          .popup__social-body
+            p Регистрация через социальные сети
+            a(href="#!")
+              i.icon.icon--vk
+            a(href="#!")
+              i.icon.icon--facebook
+            a(href="#!")
+              i.icon.icon--ok
+            a(href="#!")
+              i.icon.icon--mail-ru
+            a(href="#!")
+              i.icon.icon--google-plus
+        
+        .popup__form-bottom
+          strong Уже зарегистрированы? 
+          a(href="#popup-enter").open-popup-enter--inpopup Войти на сайт
+        i.icon.popup__register-q1
+          span принято верное 
+            b решение!
+        i.icon.popup__register-q2
+          span вы поступили 
+            b правильно!
+              
 #popup-enter.popup.popup--enter.mfp-hide
   .popup__wrapper
     .popup__close
@@ -19,23 +87,37 @@
     .popup__title Вход
     form(action="#")
       fieldset
-        .form-group
+        .form-group.has-feedback.block-focus
           label.hidden Ваш логин
-          input(type="text" name="name" placeholder="Ваш логин").form-control
-        .form-group
+          input(type="text" name="name" placeholder="Ваш логин").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.has-feedback.block-focus
           label.hidden Ваш пароль
-          input(type="password" name="name" placeholder="Ваш пароль").form-control
-        .form-group
-          input(type="checkbox")
-        
-        button(type="submit").btn
+          input(type="password" name="name" placeholder="Ваш пароль").form-control.input-focus
+          i.ion-alert-circled
+        .form-group.form-group--checkbox
+          label.hidden Запомнить меня
+          input#input1(type="checkbox" name="remember" checked)
+          i.ion-android-checkbox-outline-blank
+          i.ion-android-checkbox-outline
+          label(for="input1") Запомнить меня
+        .form-group.form-group--checkbox.form-group--small
+          label.hidden Согласен на обработку моих личных данных
+          input#input2(type="checkbox" name="confidental" checked)
+          i.ion-android-checkbox-outline-blank
+          i.ion-android-checkbox-outline
+          label(for="input2") Согласен на обработку моих личных данных. 
+            a(href="#!" target="_blank") Политика конфиденциальности
+        .clear10
+        button(type="submit").btn.btn--middle.btn--3d.btn--block
           span Войти на сайт
         .text-center
-          a(href="#!") Забыли пароль?
+          a(href="#!").color.color--dark Забыли пароль?
         
         .popup__form-bottom
           strong Еще не зарегистрированы? 
-          a(href="#!") Зарегистрироваться
+          a(href="#popup-register").open-popup-register--inpopup Зарегистрироваться
+        
 
 #popup-location.popup.popup--location.mfp-hide
   .popup__wrapper
