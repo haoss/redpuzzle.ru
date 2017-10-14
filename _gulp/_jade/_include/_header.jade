@@ -105,4 +105,33 @@ header.header
                   span найти
 
 .navigation
-  .container test
+  .container
+    .navigation__wrapper
+      div
+        .navigation__logo
+          a(href="#!")
+            img(src="./img/scroll-logo.png", alt="")
+      div
+        .navigation__menu
+          ul
+            li
+              a(href="#!") ищу работу
+            li
+              a(href="#!") ищу сотрудников
+            li
+              a(href="#!") услуги
+            li
+              a(href="#!") контакты
+      div
+        .navigation__search
+          input(type="text" placeholder="Я ищу...")
+          button(type="submit")
+            span
+              i.ion-search
+      div
+        .navigation__about
+          a(href="#!")
+            i
+            span о проекте
+
+.navigation-separator

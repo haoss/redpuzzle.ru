@@ -117,6 +117,9 @@ $(document).on('ready', function(){
     nativeOnMobile: false
   });
 
+  readMore();
+  headerScroll();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -134,6 +137,18 @@ $(document).on('ready', function(){
 $(window).on('load', function() {
   // $(".loader_inner").fadeOut();
   $(".loader").delay(400).fadeOut("slow");
+});
+
+$(window).on('resize', function(){
+  var width = $(window).width();
+  if (width > 767) {
+    $('.message__readmore').removeClass('is-active');
+    $('.message__link a').text('Развернуть');
+  }
+});
+
+$(window).on('scroll', function(){
+  headerScroll();
 });
 
 /*
@@ -261,4 +276,33 @@ function searchFocus(){
     });
   })
 
+}
+
+function readMore(){
+  var width = $(window).width();
+
+  $('.message__link a').on('click', function(e){
+    e.preventDefault();
+    $('.message__readmore').toggleClass('is-active');
+
+    if ($('.message__link a').text() == 'Развернуть') {
+      $('.message__link a').text('Свернуть')
+    } else {
+      $('.message__link a').text('Развернуть')
+    }
+
+    // console.log(e);
+  });
+
+}
+
+function headerScroll(){
+  var header = $('.header');
+  var nav = $('.navigation');
+
+  if ($(window).scrollTop() > header.height()) {
+    nav.addClass('is-sticky');
+  } else {
+    nav.removeClass('is-sticky');
+  }
 }

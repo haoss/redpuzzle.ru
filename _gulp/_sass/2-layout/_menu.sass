@@ -6,3 +6,106 @@
     li
         list-style: none
         margin: 0
+
+.navigation
+  &-separator
+    height: 38px
+  position: absolute
+  width: 100%
+  left: 0
+  z-index: 40
+  &.is-sticky
+    position: fixed
+    top: 0
+    .navigation
+      &__wrapper
+        &>div
+          &:first-child
+            display: table-cell
+      &__logo
+        width: 50px
+
+  &__wrapper
+    display: table
+    width: 100%
+    &>div
+      display: table-cell
+      vertical-align: top
+      &:first-child
+        display: none
+        width: 1px
+      &:last-child, &:nth-child(2)
+        width: 1px
+  &__logo
+    // display: none
+    height: 38px
+    overflow: hidden
+    width: 0px
+    // transition: width 0.35s
+    img
+      position: relative
+      top: 3px
+      transform: translateY(0px)
+      transition: transform 0.35s
+    &:hover
+      img
+        transform: translateY(-15px)
+  &__menu
+    // float: left
+    font-size: rem(13)
+    font-family: $font-roboto-medium
+    text-transform: uppercase
+    ul
+      margin: 0
+      padding: 0
+      white-space: nowrap
+      li
+        list-style: none
+        margin: 0
+        display: inline-block
+        &>a,&>span
+          display: inline-block
+          padding: 0 18px
+          height: 38px
+          line-height: 38px
+          background: transparent
+          color: $color-white
+        &>a
+          &:hover
+            text-decoration: none
+            background: #3f69b8
+  &__about
+    font-size: rem(13)
+    font-family: $font-roboto-medium
+    text-transform: uppercase
+    &>a
+      height: 38px
+      line-height: 37px
+      display: block
+      width: 165px
+      text-align: center
+      color: $color-white
+      background: #143f90
+      &:hover
+        color: $color-white
+        text-decoration: none
+        background: $color-red
+        i
+          @include sprite($icon-logo-small-white)
+      i
+        display: inline-block
+        margin-right: 10px
+        vertical-align: -9px
+        @include sprite($icon-logo-small)
+  &__search
+    margin: 0 4px 14px 4px
+    transform: skewX(-15deg)
+    border: 1px solid $color-lightgray
+    background: $color-lightgray
+    border-radius: 4px
+    position: relative
+    // overflow: hidden
+    display: block
+    &.is-focus
+      background: $color-white
+      border-color: #e0e0e0

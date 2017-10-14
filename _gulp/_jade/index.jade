@@ -14,26 +14,335 @@ html(lang="ru")
     
     include ./_include/_header
     
+    // Slide block
+    .slide
+      .container
+          
+        .slide__form
+          form(action="#")
+            fieldset
+              legend разместить вакансию
+              .row.row--slide-form
+                .col-sm-6
+                  .form-group.form-group--small.has-feedback.block-focus
+                    label.hidden Имя
+                    input(type="text" name="name" placeholder="Имя").form-control.input-focus
+                    i.ion-alert-circled
+                .col-sm-6
+                  .form-group.form-group--small.has-feedback.block-focus
+                    label.hidden Фамилия
+                    input(type="text" name="name" placeholder="Фамилия").form-control.input-focus
+                    i.ion-alert-circled
+              .form-group.form-group--small.has-feedback.block-focus.has-error
+                label.hidden Email
+                input(type="email" name="name" placeholder="Email").form-control.input-focus
+                i.ion-alert-circled
+              .form-group.form-group--small.has-feedback.block-focus
+                label.hidden Телефон
+                input(type="text" name="name" placeholder="Телефон").form-control.input-focus
+                i.ion-alert-circled
+              .form-group.form-group--small.has-feedback.block-focus
+                label.hidden Пароль
+                input(type="password" name="name" placeholder="Пароль").form-control.input-focus
+                i.ion-alert-circled
+              button(type="submit").btn.btn--3d.btn--block
+                span Разместить вакансию
+              p Вы можете прийти к нам в офис в вашем городе и мы все сделем за Вас.
+              .form-group.form-group--checkbox.form-group--small
+                label.hidden Согласен на обработку моих личных данных
+                input#input4(type="checkbox" name="confidental" checked)
+                i.ion-android-checkbox-outline-blank
+                i.ion-android-checkbox-outline
+                label(for="input4").label Согласен на передачу персональных данных
+        .slide__content
+          .slide__content-text
+            span.span1 
+              i Сервис для трудовых мигрантов
+            br
+            span.span2 
+              i Redpuzzle и Красный Крест помогут 
+            br
+            span.span3 
+              i тебе найти работу!
+          img(src="./img/slide-img-1.png", alt="")
+    
     // Content
     .content
       
       // Section
-      section.section
+      section.section.new-vacancy
         .container
           
-          a(href="#popup-register").open-popup-link Регистрация
-          
-          h1 Главная 223
+          .h2 новые вакансии
           
           .row
-            .col-md-4 4 collumns
-            .col-md-8 8 collumns
+            .col-md-9
+              .new-vacancy__block
+                a.new-vacancy__link(href="#!") E-mail маркетолог
+                .new-vacancy__price з/п не указана
+                p Фокстрот. Техника для дома, Москва
+              .new-vacancy__block
+                a.new-vacancy__link(href="#!") Бухгалтер
+                .new-vacancy__price от 8 000 до 10 000 руб.
+                p Фокстрот. Техника для дома, Москва
+              .new-vacancy__block
+                a.new-vacancy__link(href="#!") Менеджер по работе с клиентами
+                .new-vacancy__price от 80 000 руб.
+                p Медиапартнерство, Москва
+              .new-vacancy__block
+                a.new-vacancy__link(href="#!") E-mail маркетолог
+                .new-vacancy__price з/п не указана
+                p Фокстрот. Техника для дома, Москва
+              .new-vacancy__block
+                a.new-vacancy__link(href="#!") Account Manager
+                .new-vacancy__price от 22 000 руб.
+                p АЛІТОС ГРУП, Курск
+              .new-vacancy__block
+                a.new-vacancy__link(href="#!") Java-розробник
+                .new-vacancy__price з/п не указана
+                p Terrasoft, Мурманск
+              
+            .col-md-3.hidden-sm.hidden-xs
+              .banner.new-vacancy__banner
+                a(href="#!")
+                  img(src="./img/banner-262.png", alt="")
+      
+      // Section
+      section.section.our-work
+        .container
+          
+          .h2 с нами работают
+          .our-work__link
+            a(href="#!")
+              span.hidden-xxs Посмотреть все компании
+              span.visible-xxs-inline-block
+                i.ion-share
+          
+          .clear
+          
+          .row
+            -for (var i=1; i<13; i++)
+              .col-sm-2.col-xs-4.col-xxs-6
+                .our-work__block
+                  a(href="#!")
+                    img(src="./img/our-work-#{i}.png", alt="")
+              
+      // Section
+      section.section.position-vacancy
+        .container
+          
+          .h2 вакансии по направлениям
+          ul
+            li
+              a(href="#!")
+                strong Автомобильный бизнес
+                span 10654
+            li
+              a(href="#!")
+                strong Административный персонал
+                span 56406
+            li
+              a(href="#!")
+                strong Банки, инвестиции, лизинг
+                span 6544
+            li
+              a(href="#!")
+                strong Безопасность
+                span 5466
+            li
+              a(href="#!")
+                strong Бухгалтерия, управленческий учет, финансы предприятия
+                span 9840
+            li
+              a(href="#!")
+                strong Высший менеджмент
+                span 986
+            li
+              a(href="#!")
+                strong Государственная служба, некоммерческие организации
+                span 4560
+            li
+              a(href="#!")
+                strong Добыча сырья
+                span 6410
+            li
+              a(href="#!")
+                strong Домашний персонал
+                span 20654
+            li
+              a(href="#!")
+                strong Закупки
+                span 16406
+            li
+              a(href="#!")
+                strong Инсталляция и сервис
+                span 3544
+            li
+              a(href="#!")
+                strong Информационные технологии, интернет, телеком
+                span 149
+            li
+              a(href="#!")
+                strong Искусство, развлечения, масс-медиа
+                span 1840
+            li
+              a(href="#!")
+                strong Консультирование
+                span 186
+            li
+              a(href="#!")
+                strong Маркетинг, реклама, PR
+                span 552
+            li
+              a(href="#!")
+                strong Медицина, фармацевтика
+                span 9560
+            li
+              a(href="#!")
+                strong Наука, образование
+                span 9410
+            li
+              a(href="#!")
+                strong Начало карьеры, студенты
+                span 654
+            li
+              a(href="#!")
+                strong Продажи
+                span 406
+            li
+              a(href="#!")
+                strong Производство
+                span 544
+            li
+              a(href="#!")
+                strong Рабочий персонал
+                span 466
+            li
+              a(href="#!")
+                strong Спортивные клубы, фитнес, салоны красоты
+                span 149
+            li
+              a(href="#!")
+                strong Страхование
+                span 840
+            li
+              a(href="#!")
+                strong Строительство, недвижимость
+                span 186
+            li
+              a(href="#!")
+                strong Транспорт, логистика
+                span 552
+            li
+              a(href="#!")
+                strong Туризм, гостиницы, рестораны
+                span 560
+            li
+              a(href="#!")
+                strong Управление персоналом, тренинги
+                span 410
+      
+      // Section
+      section.section.helpful
+        .container
+          
+          .h2 Полезная информация
+          .helpful__link
+            a(href="#!")
+              span.hidden-xxs Все статьи
+              span.visible-xxs-inline-block
+                i.ion-share
+          
+          .clear
+          
+          .row
+            .col-sm-3.col-xs-6.col-xxs-12
+              figure.helpful__block
+                img(src="./img/helpful-img1.png", alt="")
+                .helpful__info
+                  span
+                    time 01 июля 2017
+                    span 
+                      i.ion-eye
+                      | 35
+                a(href="#!").helpful__href Самые высокие зарплаты августа
+            .col-sm-3.col-xs-6.col-xxs-12
+              figure.helpful__block
+                img(src="./img/helpful-img2.png", alt="")
+                .helpful__info
+                  span
+                    time 01 июля 2017
+                    span 
+                      i.ion-eye
+                      | 35
+                a(href="#!").helpful__href Работодатели уточнят зарплату в вакансиях
+            .col-sm-3.col-xs-6.col-xxs-12
+              figure.helpful__block
+                img(src="./img/helpful-img3.png", alt="")
+                .helpful__info
+                  span
+                    time 01 июля 2017
+                    span 
+                      i.ion-eye
+                      | 35
+                a(href="#!").helpful__href Новое: теперь работодателю можно отказать
+            .col-sm-3.col-xs-6.col-xxs-12
+              figure.helpful__block
+                img(src="./img/helpful-img4.png", alt="")
+                .helpful__info
+                  span
+                    time 01 июля 2017
+                    span 
+                      i.ion-eye
+                      | 35
+                a(href="#!").helpful__href Мы улучшили рекомендации вакансий
+      
+      // Section
+      section.section.message
+        .container
+          
+          .h2 обращение руководителя красного креста
+          
+          .row
+            .col-lg-8.col-md-7
+              blockquote.message__readmore
+                p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. 
+                p Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
+                p Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь.
+                
+              .message__link
+                a(href="#") Развернуть
+              
+              .message__name
+                strong Иванов Иван Иванович
+                span Проф. медецинских наук им. Ломоносова
             
-      div(style="height: 1000px")
-
+            .col-lg-4.col-md-5.hidden-sm.hidden-xs
+              img(src="./img/message-img.png", alt="").message__img
+      
+      // Section
+      section.section.our-partners
+        .container
+          
+          .h2 наши партнеры
+          .our-partners__link
+            a(href="#!")
+              span.hidden-xxs Посмотреть всех партнеров
+              span.visible-xxs-inline-block
+                i.ion-share
+          
+          .clear
+          
+          .row
+            -for (var i=1; i<7; i++)
+              .col-sm-2.col-xs-4.col-xxs-6
+                .our-partners__block
+                  a(href="#!")
+                    img(src="./img/our-work-#{i}.png", alt="")
+              
     
     include ./_include/_footer
-    div(style="height: 1000px; background-color: #000")
+    //- div(style="height: 1000px; background-color: #000")
     
     //[if gte IE 9]
       <script src='./js/libs/html5shiv/es5-shim.min.js'>

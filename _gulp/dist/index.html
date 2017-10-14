@@ -55,7 +55,7 @@
                         <div class="form-group form-group--checkbox form-group--small">
                             <label class="hidden">Согласен на обработку моих личных данных</label>
                             <input id="input3" type="checkbox" name="confidental" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
-                            <label for="input3">Согласен на обработку моих личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></label>
+                            <label for="input3" class="label">Согласен на обработку моих личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></label>
                         </div>
                         <div class="clear10"></div>
                         <button type="submit" class="btn btn--middle btn--3d btn--block"><span>Зарегистрироваться</span></button>
@@ -87,12 +87,12 @@
                         <div class="form-group form-group--checkbox">
                             <label class="hidden">Запомнить меня</label>
                             <input id="input1" type="checkbox" name="remember" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
-                            <label for="input1">Запомнить меня</label>
+                            <label for="input1" class="label">Запомнить меня</label>
                         </div>
                         <div class="form-group form-group--checkbox form-group--small">
                             <label class="hidden">Согласен на обработку моих личных данных</label>
                             <input id="input2" type="checkbox" name="confidental" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
-                            <label for="input2">Согласен на обработку моих личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></label>
+                            <label for="input2" class="label">Согласен на обработку моих личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></label>
                         </div>
                         <div class="clear10"></div>
                         <button type="submit" class="btn btn--middle btn--3d btn--block"><span>Войти на сайт</span></button>
@@ -235,29 +235,343 @@
             </div>
         </header>
         <div class="navigation">
-            <div class="container">test</div>
+            <div class="container">
+                <div class="navigation__wrapper">
+                    <div>
+                        <div class="navigation__logo"><a href="#!"><img src="./img/scroll-logo.png" alt=""></a></div>
+                    </div>
+                    <div>
+                        <div class="navigation__menu">
+                            <ul>
+                                <li><a href="#!">ищу работу</a></li>
+                                <li><a href="#!">ищу сотрудников</a></li>
+                                <li><a href="#!">услуги</a></li>
+                                <li><a href="#!">контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="navigation__search">
+                            <input type="text" placeholder="Я ищу...">
+                            <button type="submit"><span><i class="ion-search"></i></span></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="navigation__about"><a href="#!"><i></i><span>о проекте</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-separator"></div>
+        <!-- Slide block-->
+        <div class="slide">
+            <div class="container">
+                <div class="slide__form">
+                    <form action="#">
+                        <fieldset>
+                            <legend>разместить вакансию</legend>
+                            <div class="row row--slide-form">
+                                <div class="col-sm-6">
+                                    <div class="form-group form-group--small has-feedback block-focus">
+                                        <label class="hidden">Имя</label>
+                                        <input type="text" name="name" placeholder="Имя" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group form-group--small has-feedback block-focus">
+                                        <label class="hidden">Фамилия</label>
+                                        <input type="text" name="name" placeholder="Фамилия" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-group--small has-feedback block-focus has-error">
+                                <label class="hidden">Email</label>
+                                <input type="email" name="name" placeholder="Email" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group form-group--small has-feedback block-focus">
+                                <label class="hidden">Телефон</label>
+                                <input type="text" name="name" placeholder="Телефон" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                            </div>
+                            <div class="form-group form-group--small has-feedback block-focus">
+                                <label class="hidden">Пароль</label>
+                                <input type="password" name="name" placeholder="Пароль" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                            </div>
+                            <button type="submit" class="btn btn--3d btn--block"><span>Разместить вакансию</span></button>
+                            <p>Вы можете прийти к нам в офис в вашем городе и мы все сделем за Вас.</p>
+                            <div class="form-group form-group--checkbox form-group--small">
+                                <label class="hidden">Согласен на обработку моих личных данных</label>
+                                <input id="input4" type="checkbox" name="confidental" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                                <label for="input4" class="label">Согласен на передачу персональных данных</label>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="slide__content">
+                    <div class="slide__content-text"><span class="span1"> <i>Сервис для трудовых мигрантов</i></span><br><span class="span2"> <i>Redpuzzle и Красный Крест помогут </i></span><br><span class="span3"> <i>тебе найти работу!</i></span></div><img src="./img/slide-img-1.png" alt="">
+                </div>
+            </div>
         </div>
         <!-- Content-->
         <div class="content">
             <!-- Section-->
-            <section class="section">
-                <div class="container"><a href="#popup-register" class="open-popup-link">Регистрация</a>
-                    <h1>Главная 223</h1>
+            <section class="section new-vacancy">
+                <div class="container">
+                    <div class="h2">новые вакансии</div>
                     <div class="row">
-                        <div class="col-md-4">4 collumns</div>
-                        <div class="col-md-8">8 collumns</div>
+                        <div class="col-md-9">
+                            <div class="new-vacancy__block"><a href="#!" class="new-vacancy__link">E-mail маркетолог</a>
+                                <div class="new-vacancy__price">з/п не указана</div>
+                                <p>Фокстрот. Техника для дома, Москва</p>
+                            </div>
+                            <div class="new-vacancy__block"><a href="#!" class="new-vacancy__link">Бухгалтер</a>
+                                <div class="new-vacancy__price">от 8 000 до 10 000 руб.</div>
+                                <p>Фокстрот. Техника для дома, Москва</p>
+                            </div>
+                            <div class="new-vacancy__block"><a href="#!" class="new-vacancy__link">Менеджер по работе с клиентами</a>
+                                <div class="new-vacancy__price">от 80 000 руб.</div>
+                                <p>Медиапартнерство, Москва</p>
+                            </div>
+                            <div class="new-vacancy__block"><a href="#!" class="new-vacancy__link">E-mail маркетолог</a>
+                                <div class="new-vacancy__price">з/п не указана</div>
+                                <p>Фокстрот. Техника для дома, Москва</p>
+                            </div>
+                            <div class="new-vacancy__block"><a href="#!" class="new-vacancy__link">Account Manager</a>
+                                <div class="new-vacancy__price">от 22 000 руб.</div>
+                                <p>АЛІТОС ГРУП, Курск</p>
+                            </div>
+                            <div class="new-vacancy__block"><a href="#!" class="new-vacancy__link">Java-розробник</a>
+                                <div class="new-vacancy__price">з/п не указана</div>
+                                <p>Terrasoft, Мурманск</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 hidden-sm hidden-xs">
+                            <div class="banner new-vacancy__banner"><a href="#!"><img src="./img/banner-262.png" alt=""></a></div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <div style="height: 1000px"></div>
+            <!-- Section-->
+            <section class="section our-work">
+                <div class="container">
+                    <div class="h2">с нами работают</div>
+                    <div class="our-work__link"><a href="#!"><span class="hidden-xxs">Посмотреть все компании</span><span class="visible-xxs-inline-block"><i class="ion-share"></i></span></a></div>
+                    <div class="clear"></div>
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-1.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-2.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-3.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-4.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-5.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-6.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-7.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-8.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-9.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-10.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-11.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-work__block"><a href="#!"><img src="./img/our-work-12.png" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section-->
+            <section class="section position-vacancy">
+                <div class="container">
+                    <div class="h2">вакансии по направлениям</div>
+                    <ul>
+                        <li><a href="#!"><strong>Автомобильный бизнес</strong><span>10654</span></a></li>
+                        <li><a href="#!"><strong>Административный персонал</strong><span>56406</span></a></li>
+                        <li><a href="#!"><strong>Банки, инвестиции, лизинг</strong><span>6544</span></a></li>
+                        <li><a href="#!"><strong>Безопасность</strong><span>5466</span></a></li>
+                        <li><a href="#!"><strong>Бухгалтерия, управленческий учет, финансы предприятия</strong><span>9840</span></a></li>
+                        <li><a href="#!"><strong>Высший менеджмент</strong><span>986</span></a></li>
+                        <li><a href="#!"><strong>Государственная служба, некоммерческие организации</strong><span>4560</span></a></li>
+                        <li><a href="#!"><strong>Добыча сырья</strong><span>6410</span></a></li>
+                        <li><a href="#!"><strong>Домашний персонал</strong><span>20654</span></a></li>
+                        <li><a href="#!"><strong>Закупки</strong><span>16406</span></a></li>
+                        <li><a href="#!"><strong>Инсталляция и сервис</strong><span>3544</span></a></li>
+                        <li><a href="#!"><strong>Информационные технологии, интернет, телеком</strong><span>149</span></a></li>
+                        <li><a href="#!"><strong>Искусство, развлечения, масс-медиа</strong><span>1840</span></a></li>
+                        <li><a href="#!"><strong>Консультирование</strong><span>186</span></a></li>
+                        <li><a href="#!"><strong>Маркетинг, реклама, PR</strong><span>552</span></a></li>
+                        <li><a href="#!"><strong>Медицина, фармацевтика</strong><span>9560</span></a></li>
+                        <li><a href="#!"><strong>Наука, образование</strong><span>9410</span></a></li>
+                        <li><a href="#!"><strong>Начало карьеры, студенты</strong><span>654</span></a></li>
+                        <li><a href="#!"><strong>Продажи</strong><span>406</span></a></li>
+                        <li><a href="#!"><strong>Производство</strong><span>544</span></a></li>
+                        <li><a href="#!"><strong>Рабочий персонал</strong><span>466</span></a></li>
+                        <li><a href="#!"><strong>Спортивные клубы, фитнес, салоны красоты</strong><span>149</span></a></li>
+                        <li><a href="#!"><strong>Страхование</strong><span>840</span></a></li>
+                        <li><a href="#!"><strong>Строительство, недвижимость</strong><span>186</span></a></li>
+                        <li><a href="#!"><strong>Транспорт, логистика</strong><span>552</span></a></li>
+                        <li><a href="#!"><strong>Туризм, гостиницы, рестораны</strong><span>560</span></a></li>
+                        <li><a href="#!"><strong>Управление персоналом, тренинги</strong><span>410</span></a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Section-->
+            <section class="section helpful">
+                <div class="container">
+                    <div class="h2">Полезная информация</div>
+                    <div class="helpful__link"><a href="#!"><span class="hidden-xxs">Все статьи</span><span class="visible-xxs-inline-block"><i class="ion-share"></i></span></a></div>
+                    <div class="clear"></div>
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6 col-xxs-12">
+                            <figure class="helpful__block"><img src="./img/helpful-img1.png" alt="">
+                                <div class="helpful__info"><span>
+                                        <time>01 июля 2017</time><span> <i class="ion-eye"></i>35</span></span></div><a href="#!" class="helpful__href">Самые высокие зарплаты августа</a>
+                            </figure>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 col-xxs-12">
+                            <figure class="helpful__block"><img src="./img/helpful-img2.png" alt="">
+                                <div class="helpful__info"><span>
+                                        <time>01 июля 2017</time><span> <i class="ion-eye"></i>35</span></span></div><a href="#!" class="helpful__href">Работодатели уточнят зарплату в вакансиях</a>
+                            </figure>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 col-xxs-12">
+                            <figure class="helpful__block"><img src="./img/helpful-img3.png" alt="">
+                                <div class="helpful__info"><span>
+                                        <time>01 июля 2017</time><span> <i class="ion-eye"></i>35</span></span></div><a href="#!" class="helpful__href">Новое: теперь работодателю можно отказать</a>
+                            </figure>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 col-xxs-12">
+                            <figure class="helpful__block"><img src="./img/helpful-img4.png" alt="">
+                                <div class="helpful__info"><span>
+                                        <time>01 июля 2017</time><span> <i class="ion-eye"></i>35</span></span></div><a href="#!" class="helpful__href">Мы улучшили рекомендации вакансий</a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section-->
+            <section class="section message">
+                <div class="container">
+                    <div class="h2">обращение руководителя красного креста</div>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-7">
+                            <blockquote class="message__readmore">
+                                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. </p>
+                                <p>Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. </p>
+                                <p>Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь.</p>
+                            </blockquote>
+                            <div class="message__link"><a href="#">Развернуть</a></div>
+                            <div class="message__name"><strong>Иванов Иван Иванович</strong><span>Проф. медецинских наук им. Ломоносова</span></div>
+                        </div>
+                        <div class="col-lg-4 col-md-5 hidden-sm hidden-xs"><img src="./img/message-img.png" alt="" class="message__img"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section-->
+            <section class="section our-partners">
+                <div class="container">
+                    <div class="h2">наши партнеры</div>
+                    <div class="our-partners__link"><a href="#!"><span class="hidden-xxs">Посмотреть всех партнеров</span><span class="visible-xxs-inline-block"><i class="ion-share"></i></span></a></div>
+                    <div class="clear"></div>
+                    <div class="row">
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-partners__block"><a href="#!"><img src="./img/our-work-1.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-partners__block"><a href="#!"><img src="./img/our-work-2.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-partners__block"><a href="#!"><img src="./img/our-work-3.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-partners__block"><a href="#!"><img src="./img/our-work-4.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-partners__block"><a href="#!"><img src="./img/our-work-5.png" alt=""></a></div>
+                        </div>
+                        <div class="col-sm-2 col-xs-4 col-xxs-6">
+                            <div class="our-partners__block"><a href="#!"><img src="./img/our-work-6.png" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         <!-- Footer-->
         <footer class="footer">
-            <div class="container">
-                <div>&copy; 2016</div>
+            <div class="footer__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <div class="footer__logo"><a href="#!"><img src="./img/footer-logo.png" alt=""><span>Социальный фрагмент благополучия</span></a></div>
+                            <div class="clear"></div>
+                            <div class="footer__top-button">
+                                <div><a href="#!" class="btn btn--3d btn--block"><span>разместить резюме</span></a></div>
+                                <div><a href="#!" class="btn btn--3d btn--block"><span>разместить вакансию</span></a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                            <div class="footer__menu">
+                                <button id="fMenu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="footer__menu-button"><span><i class="ion-navicon-round"></i><span>Меню</span></span></button>
+                                <div aria-labelledby="fMenu" class="footer__menu-wrapper">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="footer__title">Соискателям  </div>
+                                            <ul class="footer__nav">
+                                                <li><a href="#!">Создать резюме </a></li>
+                                                <li><a href="#!">Найти вакансии</a></li>
+                                                <li><a href="#!">Поиск по компаниям</a></li>
+                                                <li><a href="#!">Поиск по профессии</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="footer__title">работадателям</div>
+                                            <ul class="footer__nav">
+                                                <li><a href="#!">Зарегистрироваться</a></li>
+                                                <li><a href="#!">Разместить вакансию</a></li>
+                                                <li><a href="#!">Найти сотрудников</a></li>
+                                                <li><a href="#!">Поиск по профессии</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="footer__title">информация</div>
+                                            <ul class="footer__nav">
+                                                <li><a href="#!">О проекте</a></li>
+                                                <li><a href="#!">Новости</a></li>
+                                                <li><a href="#!">Наши партнеры</a></li>
+                                                <li><a href="#!">Юридическая помощь</a></li>
+                                                <li><a href="#!">Контакты</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <div class="footer__copyright">© 2017 ООО “РЕДПАЗЛ”  Сервис для трудовых мигрантов</div>
+                    <div class="footer__info">Сегодня на сайте 19 997 вакансий, 1 017 858 резюме, 57 448 компаний</div>
+                </div>
             </div>
         </footer>
-        <div style="height: 1000px; background-color: #000"></div>
         <!--[if gte IE 9]
         <script src='./js/libs/html5shiv/es5-shim.min.js'>
         <script src='./js/libs/html5shiv/html5shiv.min.js'>
@@ -269,6 +583,8 @@
         <script src="./js/libs.js"></script>
         <!-- Footer js-->
         <script src="./js/libs/selectric/jquery.selectric.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/readmore/readmore.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

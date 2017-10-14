@@ -27,12 +27,15 @@
   font-family: $font-roboto-bold
   margin-left: 4px
   margin-right: 4px
+  text-decoration: none
   span
     display: inline-block
     transform: skewX(15deg)
 
   &:hover, &:focus, &:active
     outline: none
+    text-decoration: none
+    color: $color-white
 
   &--default
     color: #333
@@ -64,6 +67,7 @@
       box-shadow: 0 0 0 $color-darkred
       background: #ff5e5e
       border-color: #ff5e5e
+      color: $color-white
 
   &--block
     width: calc(100% - 9px)

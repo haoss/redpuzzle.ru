@@ -191,3 +191,365 @@
   background-image: url('../img/popup-register-background.png')
   background-position: center center
   background-repeat: no-repeat
+
+/* slide */
+.slide
+  background: url('../img/slide-background.png') top center no-repeat
+  background-size: cover
+  height: 390px
+  &__content
+    float: left
+    overflow: hidden
+    height: 390px
+    margin-left: -13px
+    padding-left: 13px
+    // width: 710px
+    width: 100%
+    position: relative
+    z-index: 25
+    margin-top: -369px
+    img
+      margin-top: -76px
+      margin-left: -13px
+    &-text
+      position: absolute
+      left: 13px
+      bottom: 14px
+      font-family: $font-roboto-bold
+      text-transform: uppercase
+      z-index: 50
+      span
+        display: inline-block
+        border-radius: 4px
+        transform: skewX(-20deg)
+        text-align: center
+        position: relative
+        i
+          font-style: normal
+          font-family: $font-roboto-bold
+          transform: skewX(20deg)
+          display: inline-block
+      .span1
+        color: $primary-color
+        font-size: rem(12)
+        height: 23px
+        line-height: 23px
+        width: 242px
+        background: $color-white
+        z-index: 15
+        margin-left: 80px
+        border-radius: 2px
+      .span2
+        font-size: rem(23)
+        color: $color-white
+        height: 48px
+        line-height: 48px
+        background: $color-red
+        width: 514px
+        z-index: 10
+        margin-top: -4px
+      .span3
+        color: $color-white
+        font-size: rem(39)
+        height: 66px
+        line-height: 79px
+        background: $color-blue
+        width: 458px
+        z-index: 5
+        margin-top: -12px
+        margin-left: 12px
+        transform: skewX(-17deg)
+        i
+          transform: skewX(17deg)
+  &__form
+    float: right
+    width: 360px
+    border-radius: 5px
+    overflow: hidden
+    background: rgba($color-black,.5)
+    color: $color-white
+    font-size: rem(12)
+    padding: 16px 18px 16px 18px
+    height: 345px
+    margin-top: 24px
+    position: relative
+    z-index: 35
+    legend
+      text-transform: uppercase
+      font-size: rem(20)
+      text-align: center
+      color: $color-white
+    .row
+      &--slide-form
+        margin-left: -5px
+        margin-right: -5px
+        &>div
+          padding: 0 5px
+    .btn
+      &+p
+        margin: 10px 0 10px 0
+        line-height: 16px
+    .form
+      &-control, &__control
+        // font-family: $font-roboto
+        padding-left: 12px
+        padding-right: 12px
+        &::-webkit-input-placeholder
+          color: #808080
+        &::-moz-placeholder
+          color: #808080
+        &:-ms-input-placeholder
+          color: #808080
+        &:-moz-placeholder
+          color: #808080
+      &-group, &__group
+        background-color: $color-white
+        border-color: $color-white
+        &.has-error
+          border-color: $color-lightgray
+          &::after
+            content: ''
+            background: $color-blue
+            border-radius: 0 3px 3px 0
+            position: absolute
+            top: 0
+            right: -1px
+            top: -1px
+            bottom: -1px
+            width: 38px
+            z-index: 5
+        i.ion-alert-circled
+          color: $color-white
+        &--checkbox, &--radio
+          background: none
+          input[type="checkbox"], input[type="radio"]
+            &~i
+              color: $color-white !important
+          .label
+            top: 2px
+            position: relative
+
+/* our-work */
+.our-work
+  background: $color-lightgray
+  padding-bottom: 25px
+  &__link
+    float: right
+    margin-top: -39px
+    margin-bottom: 30px
+    font-size: rem(12)
+  &__block
+    background-color: $color-white
+    box-shadow: 0px 2px 1px rgba($color-black,.06)
+    overflow: hidden
+    border-radius: 3px
+    margin-bottom: 25px
+    transition: box-shadow 0.35s
+    img
+      max-width: 100%
+      height: auto
+      display: block
+      margin: 0 auto
+    &:hover
+      box-shadow: 0px 2px 10px rgba($color-black,.16)
+
+/* .position-vacancy */
+.position-vacancy
+  font-size: rem(13)
+  ul
+    margin: 0
+    padding: 0
+    column-count: 3
+    column-gap: 30px
+    li
+      margin: 0
+      list-style: none
+      a
+        display: block
+        color: $primary-color
+        position: relative
+        padding-right: 65px
+        font-family: $font-roboto
+        line-height: 24px
+        strong
+          display: inline-block
+        span
+          position: absolute
+          right: 0
+          bottom: 0
+          color: #888888
+        &:hover
+          color: $color-red
+
+/* helpful */
+.helpful
+  background-color: $color-lightgray
+  // padding-bottom: 10px
+  &__link
+    float: right
+    margin-top: -39px
+    margin-bottom: 30px
+    font-size: rem(12)
+  &__block
+    overflow: hidden
+    position: relative
+    font-size: rem(14)
+    // margin-bottom: 20px
+    img
+      border-radius: 3px
+      max-width: 100%
+      height: auto
+      display: block
+
+  &__info
+    position: absolute
+    background: $color-red
+    color: $color-white
+    font-family: $font-roboto-medium
+    font-size: rem(10)
+    transform: skewX(-20deg)
+    height: 15px
+    line-height: 15px
+    min-width: 120px
+    left: 0
+    margin-top: -25px
+    margin-left: -5px
+    padding: 0 15px
+    &>span
+      display: inline-block
+      transform: skewX(20deg)
+  &__href
+    display: block
+    color: $primary-color
+    font-family: $font-roboto-bold
+    line-height: 16px
+    // height: 50px
+    overflow: hidden
+    margin-top: 8px
+    &:hover
+      color: $color-red
+      text-decoration: none
+
+/* our-partners */
+.our-partners
+  background: $color-lightgray
+  padding-bottom: 25px
+  &__link
+    float: right
+    margin-top: -39px
+    margin-bottom: 30px
+    font-size: rem(12)
+  &__block
+    background-color: $color-white
+    box-shadow: 0px 2px 1px rgba($color-black,.06)
+    overflow: hidden
+    border-radius: 3px
+    margin-bottom: 25px
+    transition: box-shadow 0.35s
+    img
+      max-width: 100%
+      height: auto
+      display: block
+      margin: 0 auto
+    &:hover
+      box-shadow: 0px 2px 10px rgba($color-black,.16)
+
+/* message */
+.message
+  blockquote
+    margin: 0 0 25px -1px
+    padding: 0 0 0 22px
+    border-left: 3px solid $color-red
+    font-style: italic
+    // height: auto !important
+    &::before
+      content: ''
+      position: absolute
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABYCAYAAAA9U/+JAAAENElEQVR4nO2d25KbMBBEG7z5/x/ehTw4cgQL4uK5tnWqkt1KqmxNT88IBIgBuRmqP/W/1XzbDScUQ/VzV58vs+G8zwBgxO+AOk9qbU7rE9kAJZASWGeJiD4RDTCiJ30P8aKIYoAS1Og9kKAMAB5QKApvA/Rqb6Ouj5cBeuLbmOljbQC1VkaCuT6WBnigz/EtXPSxMECv+jYjnvq4oG2AXvVt3PXRMkCv+jZh9NEwgGtLS0AofaQNECq4gLi3/DWSBggXXDBC6iNlgJDBBeILAeb7LSQG5Z38ufqD6uf6dy+8k9/U592BeSR/BjBhGVRUPJJ/SZ93pgDL5JegJqPvk8DyNO+2PncHaJX8ElT0Sl+TRp87HcDiuv0E4Ef5O7RIpc9VA5QVLC2yVnwhnT5XDaAVXMY5fgutpfUZz4oXL4wrA9Y6qMnc7mu0kq+qz9lBa81rP8hf9YDe3Tvq+pw1gEbr/0beub5Ga9430eeMAaSDU5vPnEitz5EByu3aUrAlX7r1zzB+lO0ouZLuZks+IF8c5s8xtgKQdjdj8qX0KcVhzpEBpGA54KuR7I5uxbGXZEl3s1U+QJJ8YD/Jkpcx58Znra9TZ1kT+CP4WWf1UVki3/pi7/v6oi8LU+mzZQDvO1hqIl4cotJn7WTtq1lXibZBRGR9bplgHUyIhxU2qBekPLtBZH1KLi/psz4LiH5n7wO+LTiLPqepA4ro7C0G+JggevILl/QZd37PgLUJshQIcMEEGTtAjaUJshUIcEKfElTmvfcsTJBVG+BAn9oAmdE2QXZ9dk9dWQwA6J6fZ2z/NeWY4BdMBpC+eWX92dnZ1IfJAIDOQg2LNsBGl4y0zCqF9FRArQ+jATKf0ViwyDmjAQDZYwFqfbIf3e4haWx6AzAGCPDGJcX4+osUqdhYjfQyAGuArHFJMQDcHQDgj+9dBnaBehdoM3YDfDjsBui06VPAh0NvgM4B3QAfzohYT910jOkd4BjqAukG+Gxm9imAOTYRugFsPiMqc58CjqE3QNSNGCSQiI3eAABvkFJTAK0+zAaQjIlRnwn4fxrIOA1IxkSrT90B2FwumTQ2fV7x1GcBTC7XiIVSn7UBWFyuse0qkz6bBlj8R2I0Y2DQZ1EcWwbI7HLtTZcZ9FmYeGslMPP7eyzGTqVP60nabMvE1tvLZtNnc1PqPQOUDYyz3FNnvd9+Nn12i6PVAbIE6fKmjX/fm+HJqmZxHLWx6Hv9eyW/EP1FGIf6nNlNY0LMTuCd/MKEmJ3glD5nt1OJNh1Ee9totCI5rc+V/XTK+rH30W/Ut42WqSCVPnc2VPJye4bXztUXjaz1KVV/SZ93Bln2qNcONPorZPaw1Od2YUgMrmxAKN36siZ+jZY+Iq/TkXZnORq+GyxL0vd4V5+ScDF9LDZYbh0v1K+Mizy3a3BWn1ojcf4C8k36ZuXPB6oAAAAASUVORK5CYII=') 0 0 no-repeat
+      width: 128px
+      height: 88px
+      top: -50px
+      right: -24px
+    p
+      &:last-child
+        margin-bottom: 0
+    &.message__readmore
+      &+a
+        display: none
+  &__img
+    margin-top: -45px
+    float: right
+  &__name
+    font-size: rem(12)
+    padding-left: 30px
+    strong
+      font-size: rem(18)
+      display: block
+      line-height: 1
+      font-family: $font-roboto-bold
+      margin-bottom: 5px
+  &__link
+    display: none
+
+/* .banner */
+.banner
+  margin-bottom: 25px
+  img
+    max-width: 100%
+    height: auto
+    display: block
+
+/* .new-vacancy */
+.new-vacancy
+  &__block
+    height: 90px
+    float: left
+    width: 33.3%
+    padding-left: 16px
+    font-size: rem(11)
+    color: #808080
+    position: relative
+    padding-top: 18px
+    overflow: hidden
+    &::after
+      content: ''
+      position: absolute
+      width: 30px
+      top: 0
+      bottom: 0
+      right: 0
+      background: linear-gradient(to left, $color-white, rgba($color-white,0))
+    p
+      white-space: nowrap
+      &:last-child
+        margin-bottom: 0
+    &+.new-vacancy__block
+      border-left: 1px solid #e5e5e5
+      border-top: 1px solid #e5e5e5
+    &:first-child
+      padding-left: 0
+    &:nth-child(4)
+      border-left: 0
+      padding-left: 0
+    &:first-child, &:nth-child(2), &:nth-child(3)
+      border-top: 0
+      padding-top: 0
+      height: 85px
+  &__link
+    color: $primary-color
+    text-decoration: none
+    font-size: rem(14)
+    font-family: $font-roboto-bold
+    white-space: nowrap
+    margin-bottom: 3px
+    display: inline-block
+    &:hover
+      text-decoration: none
+      color: $color-red
+  &__price
+    white-space: nowrap
+    font-size: rem(14)
+    color: $primary-color
+    margin-bottom: 3px
+  &__banner
+    margin-top: -35px

@@ -1,6 +1,70 @@
 // Footer
 footer.footer
-  .container
-    
-    div &copy; 2016
   
+  .footer__top
+    .container
+      
+      .row
+        .col-md-3.col-sm-4
+          .footer__logo
+            a(href="#!")
+              img(src="./img/footer-logo.png", alt="")
+              span Социальный фрагмент благополучия
+          .clear
+          .footer__top-button
+            div
+              a(href="#!").btn.btn--3d.btn--block
+                span разместить резюме
+            div
+              a(href="#!").btn.btn--3d.btn--block
+                span разместить вакансию
+        
+        .col-md-9.col-sm-8
+          .footer__menu
+            button.footer__menu-button#fMenu(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+              span
+                i.ion-navicon-round
+                span Меню
+            .footer__menu-wrapper(aria-labelledby="fMenu")
+              .row
+                .col-sm-4
+                  .footer__title Соискателям  
+                  ul.footer__nav
+                    li
+                      a(href="#!") Создать резюме 
+                    li
+                      a(href="#!") Найти вакансии
+                    li
+                      a(href="#!") Поиск по компаниям
+                    li
+                      a(href="#!") Поиск по профессии
+                .col-sm-4
+                  .footer__title работадателям
+                  ul.footer__nav
+                    li
+                      a(href="#!") Зарегистрироваться
+                    li
+                      a(href="#!") Разместить вакансию
+                    li
+                      a(href="#!") Найти сотрудников
+                    li
+                      a(href="#!") Поиск по профессии
+                .col-sm-4
+                  .footer__title информация
+                  ul.footer__nav
+                    li
+                      a(href="#!") О проекте
+                    li
+                      a(href="#!") Новости
+                    li
+                      a(href="#!") Наши партнеры
+                    li
+                      a(href="#!") Юридическая помощь
+                    li
+                      a(href="#!") Контакты
+
+  
+  .footer__bottom
+    .container
+      .footer__copyright © 2017 ООО “РЕДПАЗЛ”  Сервис для трудовых мигрантов
+      .footer__info Сегодня на сайте 19 997 вакансий, 1 017 858 резюме, 57 448 компаний

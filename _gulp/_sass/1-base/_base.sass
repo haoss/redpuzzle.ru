@@ -38,20 +38,23 @@ body
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
   color: $primary-color
-  font-weight: bold
+  font-weight: 400
   text-decoration: none
   margin: 0 0 15px 0
+  font-family: $font-roboto-bold
 
 .h1, h1
-  font-size: rem(21)
+  font-size: rem(30)
   line-height: 1.05
   letter-spacing: -1px
-  margin-bottom: 25px
+  margin-bottom: 35px
+  text-transform: uppercase
 
 .h2, h2
-  font-size: rem(18)
+  font-size: rem(22)
   line-height: 1.14
-  margin-bottom: 20px
+  margin-bottom: 30px
+  text-transform: uppercase
 
 .h3, h3
   font-size: rem(16)
@@ -72,7 +75,7 @@ body
   line-height: 1.2
 
 p
-  line-height: 1.3
+  line-height: 21px
   margin: 0 0 20px 0
 
 em, i, .em, .i
@@ -80,7 +83,7 @@ em, i, .em, .i
 
 strong, b, .strong, .b
   font-weight: 400
-  font-family: $font-roboto-bold
+  font-family: $font-roboto-medium
 
 hr
   border: solid #ddd
@@ -267,6 +270,8 @@ ol li
     @include sprite($icon-register-q1)
   &.popup__register-q2
     @include sprite($icon-register-q2)
+  &--logo-small
+    @include sprite($icon-logo-small)
 
 /* color */
 .color
@@ -281,6 +286,8 @@ ol li
 
 .visible-xxs
   display: none !important
+  &-inline-block
+    display: none !important
 
 
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
