@@ -34,6 +34,8 @@ body
   color: $primary-color
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
+  &.overflow-hidden
+    overflow: hidden
 
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
@@ -272,6 +274,12 @@ ol li
     @include sprite($icon-register-q2)
   &--logo-small
     @include sprite($icon-logo-small)
+  &--navigation-info-1
+    @include sprite($navigation-info-1)
+  &--navigation-info-2
+    @include sprite($navigation-info-2)
+  &--navigation-info-3
+    @include sprite($navigation-info-3)
 
 /* color */
 .color

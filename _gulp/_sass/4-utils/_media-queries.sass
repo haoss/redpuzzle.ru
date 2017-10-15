@@ -27,6 +27,16 @@
   .message
     blockquote
       margin-right: -33px
+  .navigation
+    &__info
+      width: 940px
+      &-img
+        width: 370px
+    &__search
+      &:hover
+        width: 200px
+      &.is-focus
+        width: 200px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -85,6 +95,18 @@
     &__copyright
       float: none
       text-align: center
+  .navigation
+    &__info
+      width: 720px
+      min-height: inherit
+      &-img
+        display: none
+      &-wrapper
+        padding: 20px 0
+      &-text
+        padding: 0 15px
+    &__search
+      display: none !important
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -130,8 +152,9 @@
     height: 296px
     &__content
       height: 296px
+      overflow: hidden
       img
-        margin-top: -58px
+        margin-top: 0
         margin-left: -37px
         width: 626px
       &-text
@@ -264,6 +287,19 @@
       &:nth-last-child(2)
         border-left: 0
         padding-left: 0
+  .navigation
+    &__logo
+      display: none
+    &__menu
+      display: none
+    &__info
+      width: calc(100% - 30px)
+    &__wrapper
+      &>div
+        &:first-child
+          display: block
+    &__button
+      display: block
 
 @media only screen and (max-width : 599px)
   .popup
@@ -316,9 +352,9 @@
   .slide
     &__content
       img
-        margin-top: -58px
+        margin-top: 0
         margin-left: -37px
-        width: 626px
+        width: 541px
       &-text
         .span1
           margin-left: 12px

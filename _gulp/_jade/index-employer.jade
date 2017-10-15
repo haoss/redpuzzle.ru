@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
   
-  -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+  -var active = 'Главная 2' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная 2' + ' - redpuzzle.ru' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -21,7 +21,7 @@ html(lang="ru")
         .slide__form
           form(action="#")
             fieldset
-              legend разместить вакансию
+              legend разместить вакансию 2
               .row.row--slide-form
                 .col-sm-6
                   .form-group.form-group--small.has-feedback.block-focus
@@ -54,7 +54,7 @@ html(lang="ru")
                 i.ion-android-checkbox-outline-blank
                 i.ion-android-checkbox-outline
                 label(for="input4").label Согласен на передачу персональных данных
-        .slide__content
+        .slide__content.slide__content--employer
           .slide__content-text
             span.span1 
               i Сервис для трудовых мигрантов
@@ -64,7 +64,7 @@ html(lang="ru")
             br
             span.span3 
               i тебе найти работу!
-          img(src="./img/slide-img-1.png", alt="")
+          img(src="./img/slide-img-2.png", alt="")
     
     // Content
     .content

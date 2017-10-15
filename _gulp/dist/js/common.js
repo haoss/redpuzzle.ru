@@ -119,6 +119,8 @@ $(document).on('ready', function(){
 
   readMore();
   headerScroll();
+  navigationInfo();
+  menuMobile();
 
   // Chrome Smooth Scroll
   try {
@@ -305,4 +307,58 @@ function headerScroll(){
   } else {
     nav.removeClass('is-sticky');
   }
+}
+
+function navigationInfo(){
+  var navAbout = $('.navigation__about');
+  var navInfo = $('.navigation__info');
+
+  navAbout.on('hover', function(e){
+    $(this).addClass('is-hover');
+    navInfo.addClass('is-active');
+  });
+
+  navAbout.on('click', function(e){
+    e.stopPropagation();
+  });
+  navInfo.on('click', function(e){
+    e.stopPropagation();
+  });
+
+  $(document).on('click', function(){
+    if (navAbout.hasClass('is-hover') && navInfo.hasClass('is-active')) {
+      setTimeout(function(){
+        navInfo.removeClass('is-active');
+        navAbout.removeClass('is-hover');
+      }, 500)
+    }
+  })
+}
+
+function menuMobile(){
+  var navButton = $('#navigation__button');
+  var navMobile = $('#mobile__nav');
+  var navMobileButton = $('#mobile__nav-button');
+  var body = $('body');
+  var navBackground = $('.mobile__nav-background');
+
+  navButton.on('click', function(){
+    body.addClass('overflow-hidden');
+    navMobile.addClass('is-active');
+    navBackground.addClass('is-active');
+  });
+
+  navMobileButton.on('click', function(){
+    body.removeClass('overflow-hidden');
+    navMobile.removeClass('is-active');
+    navBackground.removeClass('is-active');
+  });
+
+  navBackground.on('click', function(){
+    setTimeout(function(){
+      body.removeClass('overflow-hidden');
+      navMobile.removeClass('is-active');
+      navBackground.removeClass('is-active');
+    }, 500)
+  });
 }

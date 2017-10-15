@@ -1,6 +1,5 @@
 // Header
 header.header
-  
   .header__top
     .container
       
@@ -26,7 +25,6 @@ header.header
         small С 09:00 до 18:00
           br
           | Понедельник - Пятница
-  
   .header__wrapper
     .container
       .header__logo
@@ -104,13 +102,87 @@ header.header
                 button(type="submit").btn.btn--header
                   span найти
 
+.mobile__nav-background
+#mobile__nav.mobile__nav
+  .mobile__nav-wrapper
+    button#mobile__nav-button.mobile__nav-button(type="button")
+      span
+        i.ion-navicon-round
+        span Меню
+        i.ion-ios-arrow-forward
+    .mobile__nav-menu
+      ul
+        li
+          a(href="#!") ищу работу
+        li
+          a(href="#!")  ищу сотрудников
+        li
+          a(href="#!")  услуги
+        li
+          a(href="#!")  контакты
+    .mobile__nav-search
+      .mobile__nav-search-wrapper.block-focus
+        input(type="text" placeholder="Я ищу...").input-focus
+        button(type="submit")
+          span
+            i.ion-search
+    .mobile__nav-contacts
+      .mobile__nav-title Телефоны для связи
+      p 8 (800) 765 43 21
+        br
+        | +7 495 987 65 43
+        br
+        | +7 495 123 45 67
+        br
+        | +38 098 654 32 10
+    .mobile__nav-buttons
+      div
+        a(href="#!").btn.btn--3d.btn--block
+          span разместить резюме
+      div
+        a(href="#!").btn.btn--3d.btn--block
+          span разместить вакансию
+
 .navigation
   .container
+    .navigation__info
+      .navigation__info-wrapper
+        img(src="./img/navigation-info-img.png", alt="").navigation__info-img
+        .row
+          .col-lg-6.col-md-5.hidden-sm.hidden-xs &nbsp;
+          .col-lg-6.col-md-7
+            .navigation__info-text
+              .h2 о сайте
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
+              .clear5
+              .h2 Сегодня на сайте
+              table.navigation__info-table
+                tr
+                  td
+                    i.icon.icon--navigation-info-1
+                  td
+                    strong 19 997 
+                      small вакансий
+                  td
+                    i.icon.icon--navigation-info-2
+                  td
+                    strong 1 017 858
+                      small резюме
+                  td
+                    i.icon.icon--navigation-info-3
+                  td
+                    strong 54 448
+                      small компаний
+
     .navigation__wrapper
       div
         .navigation__logo
           a(href="#!")
             img(src="./img/scroll-logo.png", alt="")
+        button#navigation__button.navigation__button(type="button")
+          span
+            i.ion-navicon-round
+            span Меню
       div
         .navigation__menu
           ul
@@ -123,8 +195,8 @@ header.header
             li
               a(href="#!") контакты
       div
-        .navigation__search
-          input(type="text" placeholder="Я ищу...")
+        .navigation__search.block-focus
+          input(type="text" placeholder="Я ищу...").input-focus
           button(type="submit")
             span
               i.ion-search
