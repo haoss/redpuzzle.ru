@@ -42,18 +42,7 @@ html(lang="ru")
           .col-sm-3
             
             // Call block
-            .call-block
-              a(href="#!")
-              .call-block__title Остались вопросы?
-                small Бесплатный звонок по России  
-              span.btn.call-block__btn
-                span.span.span--normal 
-                  i.ion-android-call
-                  | 8 (800) 765 43 21
-                span.span.span--hover
-                  i.ion-android-call
-                  | заказать звонок
-              img(src="./img/call-block.png", alt="")
+            +callBlock
     
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")

@@ -118,7 +118,6 @@
           strong Еще не зарегистрированы? 
           a(href="#popup-register").open-popup-register--inpopup Зарегистрироваться
         
-
 #popup-location.popup.popup--location.mfp-hide
   .popup__wrapper
     .popup__close
@@ -184,3 +183,17 @@
           a(href="#!") Челябинск
         li
           a(href="#!") Ярославль
+
+mixin callBlock
+  .call-block
+    a(href="#!")
+    .call-block__title Остались вопросы?
+      small Бесплатный звонок по России  
+    span.btn.call-block__btn
+      span.span.span--normal 
+        i.ion-android-call
+        | 8 (800) 765 43 21
+      span.span.span--hover
+        i.ion-android-call
+        | заказать звонок
+    img(src="./img/call-block.png", alt="")

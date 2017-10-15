@@ -812,7 +812,7 @@
     font-size: rem(11)
     color: #808080
     position: relative
-    margin: -15px 0 15px 0
+    margin: -5px 0 15px 0
 
 /* thumb */
 .thumb
@@ -994,6 +994,30 @@
       font-size: rem(12)
   &__column-right
     margin-top: -220px
+  &__table
+    margin-bottom: 25px
+    font-size: rem(14)
+    table
+      width: 100%
+      tr
+        &:first-child
+          td
+            border-top: 1px solid #cccccc
+      td
+        border-bottom: 1px solid #cccccc
+        padding: 10px 0
+        vertical-align: top
+        &+td
+          padding-left: 10px
+    &-title
+      font-size: rem(16)
+      strong
+        display: block
+      small
+        font-size: rem(12)
+    &-city
+      font-size: rem(14)
+      margin-top: 2px
 
 /* information */
 .information

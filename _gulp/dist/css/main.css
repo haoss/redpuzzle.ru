@@ -3655,7 +3655,7 @@ body {
   font-size: 1.875rem;
   line-height: 1.2;
   letter-spacing: -1px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   text-transform: uppercase; }
 
 .h2, h2 {
@@ -6148,7 +6148,7 @@ ul.list {
     font-size: 0.6875rem;
     color: #808080;
     position: relative;
-    margin: -15px 0 15px 0; }
+    margin: -5px 0 15px 0; }
 
 /* thumb */
 .thumb--document {
@@ -6331,6 +6331,29 @@ ul.list {
 
 .vacancy__column-right {
   margin-top: -220px; }
+
+.vacancy__table {
+  margin-bottom: 25px;
+  font-size: 0.875rem; }
+  .vacancy__table table {
+    width: 100%; }
+    .vacancy__table table tr:first-child td {
+      border-top: 1px solid #cccccc; }
+    .vacancy__table table td {
+      border-bottom: 1px solid #cccccc;
+      padding: 10px 0;
+      vertical-align: top; }
+      .vacancy__table table td + td {
+        padding-left: 10px; }
+  .vacancy__table-title {
+    font-size: 1rem; }
+    .vacancy__table-title strong {
+      display: block; }
+    .vacancy__table-title small {
+      font-size: 0.75rem; }
+  .vacancy__table-city {
+    font-size: 0.875rem;
+    margin-top: 2px; }
 
 /* information */
 .information {
@@ -7233,7 +7256,9 @@ ul.list {
   .why__block {
     padding-right: 19px; }
   .why__title {
-    max-width: 155px; } }
+    max-width: 155px; }
+  .vacancy__table {
+    font-size: 0.75rem; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 319px) {

@@ -1,0 +1,122 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = '1 партнер' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 партнер' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .row
+          .col-sm-9
+            h1 компания «Юнтел»
+            
+            .h4
+              strong Компания «Юнтел», основанная в 2007 году является поставщиком телекоммуникационных услуг операторам связи и частным юридическим лицам.
+            
+            p.no--m-bottom
+              strong Для операторов связи Юнтел предлагает услуги по проведению работ на всех объектах инфраструктуры связи:
+            ul.list
+              li проектирование
+              li строительство и монтаж
+              li пуско-наладка
+              li эксплуатация
+              li сервисное обслуживание
+              li реконструкция корпоративных сетей
+              
+            p.no--m-bottom
+              strong Также для частных юридических лиц Компания «Юнтел» предлагает услуги по проектированию, монтажу и пусконаладке:
+            ul.list
+              li ВОЛС
+              li Систем аудио- и видеоконференцсвязи
+              li Пожарно-охранная сигнализации и контроля доступа
+              li Систем электропитания и гарантированного электроснабжения
+              li Систем речевых технологий
+              li СКС. Кабельных решений для ЦОД. Промышленных СКС.
+              li Серверных комнат
+              li Автоматических учрежденческих телефонных станций (УАТС, АТС)
+              li Видеонаблюдения и систем мониторинга
+              
+            p.no--m-bottom
+              strong Компания «Юнтел» обладает всем необходимым для проведения работ:
+            ul.list
+              li Квалифицированный инженерно-монтажный персонал, более 100 человек
+              li Складскими помещениями
+              li Коммерческим автотранспортом
+              li Контрольно-измерительными приборами
+              li Электроинструментом
+              li Инструментом для строительства и обслуживания сетей
+          
+            .clear15
+            
+            .h2 вакансии компании
+            .vacancy__table
+              table
+                tr
+                  td
+                    .vacancy__table-title
+                      strong Штукатур-маляр
+                      small ООО Юнтел, 17 августа
+                    .vacancy__table-city.visible-xxs Санкт-Петербург
+                  td от 30 000 
+                    br.visible-xxs
+                    | до 100 000 руб.
+                  td(align="right").hidden-xxs Санкт-Петербург
+                tr
+                  td
+                    .vacancy__table-title
+                      strong Штукатур-маляр
+                      small ООО Юнтел, 17 августа
+                    .vacancy__table-city.visible-xxs Москва
+                  td от 30 000 
+                    br.visible-xxs
+                    | до 100 000 руб.
+                  td(align="right").hidden-xxs Москва
+                tr
+                  td
+                    .vacancy__table-title
+                      strong Штукатур-маляр
+                      small ООО Юнтел, 17 августа
+                    .vacancy__table-city.visible-xxs Москва
+                  td от 30 000 
+                    br.visible-xxs
+                    | до 100 000 руб.
+                  td(align="right").hidden-xxs Москва
+          
+          .col-sm-3
+            
+            // Call block
+            +callBlock
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
