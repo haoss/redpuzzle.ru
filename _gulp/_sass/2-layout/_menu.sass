@@ -26,6 +26,8 @@
         width: 50px
       &__search
         display: block
+      &__menu
+        margin-left: 20px
   &__wrapper
     display: table
     width: 100%
@@ -118,14 +120,14 @@
     transition: all 0.35s
     display: none
     &:hover
-      width: 380px
+      width: 340px
       background: $color-white
       border-color: $color-white
       button
         color: $color-blue
     &.is-focus
       border-color: $color-white
-      width: 380px
+      width: 340px
       background: $color-white
       button
         color: $color-blue
@@ -381,3 +383,23 @@
       color: #4c72b8
       font-family: $font-roboto-bold
       margin-bottom: 15px
+
+ul
+  &.list
+    margin: 0 0 20px 0
+    padding: 0
+    li
+      list-style: none
+      margin: 0
+      padding-left: 26px
+      position: relative
+      line-height: 21px
+      &:before
+        content: "\f363"
+        color: $color-red
+        font-family: $font-ionicons
+        position: absolute
+        top: 3px
+        left: 13px
+        line-height: 1
+        font-size: rem(16)

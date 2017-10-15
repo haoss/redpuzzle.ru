@@ -1,0 +1,182 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = '1 вакансия' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 вакансия' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .row
+          .col-md-9
+            h1 Менеджер по продажам
+            
+            .vacancy__price 40 000-80 000 руб.
+            
+            .button__group.button__group--right
+              div
+                a(href="#!").favorites__button
+                  i.ion-android-star-outline
+                  i.ion-android-star
+              div
+                a(href="#!").btn
+                  span откликнуться
+        
+            .clear25
+            
+            .vacancy__info
+              .vacancy__info-wrapper
+                div Город
+                  strong Москва
+                div Тип занятости
+                  strong Постоянная, полный день
+                div Опыт работы
+                  strong От 2-х лет
+        
+        .clear
+        
+        .row
+          .col-sm-9
+            .h4 Крупная Лизинговая компания Carcade приглашает на работу менеджера по продажам.
+            
+            p.no--m-bottom 
+              strong Условия:
+            ul.list
+              li Доход: от 70 000 рублей (фиксированный оклад 41 850 рублей + ежемесячный бонус);
+              li прозрачная система мотивации;
+              li оформление согласно ТК РФ с первого рабочего дня;
+              li корпоративная мобильная связь;
+              li компенсация ГСМ;
+              li ДМС, оплачиваемый больничный;
+              li корпоративное обучение (тренинги, видеоуроки, электронная библиотека, аудиокниги, вебинары);
+              li перспективы карьерного и профессионального роста;
+              li график 5/2 с 9:00 до 18:00.
+            
+            p.no--m-bottom
+              strong Обязанности:
+            ul.list
+              li Активные прямые продажи автолизинга;
+              li налаживание партнерских отношений с автосалонами, обучение сотрудников автосалонов, проведение тренингов по новым акциям Компании;
+              li продвижение услуг повторным клиентам;
+              li ведение документации по сделкам и предоставление отчетности.
+            
+            p.no--m-bottom
+              strong Требования:
+            ul.list
+              li Желание и готовность продавать и зарабатывать;
+              li опыт продаж (любого продукта);
+              li высшее образование;
+              li готовность к разъездному характеру работы.
+            
+            .clear20
+              
+            .button__group
+              div
+                a(href="#!").btn
+                  span откликнуться
+              div
+                a(href="#!").favorites__button
+                  i.ion-android-star-outline
+                  i.ion-android-star
+            
+            // Section
+            .section.new-vacancy
+              .h2 Похожие вакансии
+              
+              .new-vacancy__row
+                .new-vacancy__block
+                  a.new-vacancy__link(href="#!") E-mail маркетолог
+                  .new-vacancy__price з/п не указана
+                  p Фокстрот. Техника для дома, Москва
+                .new-vacancy__block
+                  a.new-vacancy__link(href="#!") Бухгалтер
+                  .new-vacancy__price от 8 000 до 10 000 руб.
+                  p Фокстрот. Техника для дома, Москва
+                .new-vacancy__block
+                  a.new-vacancy__link(href="#!") Менеджер по работе с клиентами
+                  .new-vacancy__price от 80 000 руб.
+                  p Медиапартнерство, Москва
+                .new-vacancy__block
+                  a.new-vacancy__link(href="#!") E-mail маркетолог
+                  .new-vacancy__price з/п не указана
+                  p Фокстрот. Техника для дома, Москва
+                .new-vacancy__block
+                  a.new-vacancy__link(href="#!") Account Manager
+                  .new-vacancy__price от 22 000 руб.
+                  p АЛІТОС ГРУП, Курск
+                .new-vacancy__block
+                  a.new-vacancy__link(href="#!") Java-розробник
+                  .new-vacancy__price з/п не указана
+                  p Terrasoft, Мурманск
+    
+          .col-sm-3
+            
+            .vacancy__column-right
+              // Vacancy company
+              .vacancy__company
+                .vacancy__company-img
+                  img(src="./img/vacancy-company-1.png", alt="")
+                .vacancy__company-title ООО САРКАДЕ Лизинг
+                  i.ion-checkmark
+                p Телекоммуникации, связь, информационные технологии, системная интеграция, интернет
+                a(href="#!").vacancy__company-all Все вакансии компании (5)
+              
+              // Information
+              .information
+                .information__block
+                  .information__title
+                    i.icon.icon--information-1-small
+                    span Пройдите тест
+                  .information__wrapper
+                    div
+                      i.icon.icon--information-1
+                    div
+                      a(href="#!") Пройдите онлайн-тест «Профориентация», чтобы определить свое призвание.
+                .information__block
+                  .information__title
+                    i.icon.icon--information-2-small
+                    span Резюме в топе
+                  .information__wrapper
+                    div
+                      i.icon.icon--information-2
+                    div
+                      a(href="#!") Выведите резюме в топ с помощью «Автообновления».
+                  
+              
+              // Banner
+              .banner
+                a(href="#!")
+                  img(src="./img/banner-262-2.png", alt="")
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

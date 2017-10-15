@@ -122,6 +122,10 @@ $(document).on('ready', function(){
   navigationInfo();
   menuMobile();
 
+  $('.purchase__block .purchase__info').matchHeight();
+
+  favoritesTest();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -146,6 +150,10 @@ $(window).on('resize', function(){
   if (width > 767) {
     $('.message__readmore').removeClass('is-active');
     $('.message__link a').text('Развернуть');
+
+    $('body').removeClass('overflow-hidden');
+    $('.mobile__nav-background').removeClass('is-active');
+    $('.mobile__nav').removeClass('is-active');
   }
 });
 
@@ -361,4 +369,11 @@ function menuMobile(){
       navBackground.removeClass('is-active');
     }, 500)
   });
+}
+
+function favoritesTest(){
+  $('.favorites__button').on('click', function(e){
+    e.preventDefault();
+    $('.favorites__button').toggleClass('is-favorites');
+  })
 }

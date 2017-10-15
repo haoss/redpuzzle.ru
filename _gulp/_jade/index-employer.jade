@@ -70,74 +70,107 @@ html(lang="ru")
     .content
       
       // Section
-      section.section
+      section.section.new-resume
         .container
           
-          .h2 Мы окажем содействие
+          .h2 новые резюме
+          
+          .new-resume__row
+            .new-resume__block
+              a.new-resume__link(href="#!") E-mail маркетолог
+              .new-resume__price 40 000 руб.
+              p Опыт работы - 1 год и 5 месяцев
+            .new-resume__block
+              img(src="./img/new-resume-img-1.png", alt="").new-resume__img
+              a.new-resume__link(href="#!") Бухгалтер
+              .new-resume__price 60 000 руб.
+              p Опыт работы - 11 лет и 9 месяцев
+            .new-resume__block
+              a.new-resume__link(href="#!") Менеджер по работе с клиентами
+              .new-resume__price 80 000 руб.
+              p Опыт работы - 15 лет и 5 месяцев
+            .new-resume__block
+              a.new-resume__link(href="#!") Специалист по охране труда
+              .new-resume__price 50 000 руб.
+              p Опыт работы - 10 лет и 5 месяцев
+            .new-resume__block
+              a.new-resume__link(href="#!") E-mail маркетолог
+              .new-resume__price з/п не указана
+              p Опыт работы - 7 лет и 10 месяцев
+            .new-resume__block
+              a.new-resume__link(href="#!") Account Manager
+              .new-resume__price 22 000 руб.
+              p Опыт работы - 6 лет и 0 месяцев
+            .new-resume__block
+              a.new-resume__link(href="#!") Java-розробник
+              .new-resume__price 160 000 руб
+              p Опыт работы - 18 лет и 11 месяцев
+            .new-resume__block
+              a.new-resume__link(href="#!") Коммерческий директор
+              .new-resume__price 320 000 руб
+              p Опыт работы - 20 лет и 1 месяц
       
       // Section
-      section.section.new-vacancy
+      section.section.purchase
         .container
           
-          .h2 новые вакансии
+          .h2 Покупка услуг
           
-          .row
-            .col-md-9
-              .new-vacancy__block
-                a.new-vacancy__link(href="#!") E-mail маркетолог
-                .new-vacancy__price з/п не указана
-                p Фокстрот. Техника для дома, Москва
-              .new-vacancy__block
-                a.new-vacancy__link(href="#!") Бухгалтер
-                .new-vacancy__price от 8 000 до 10 000 руб.
-                p Фокстрот. Техника для дома, Москва
-              .new-vacancy__block
-                a.new-vacancy__link(href="#!") Менеджер по работе с клиентами
-                .new-vacancy__price от 80 000 руб.
-                p Медиапартнерство, Москва
-              .new-vacancy__block
-                a.new-vacancy__link(href="#!") E-mail маркетолог
-                .new-vacancy__price з/п не указана
-                p Фокстрот. Техника для дома, Москва
-              .new-vacancy__block
-                a.new-vacancy__link(href="#!") Account Manager
-                .new-vacancy__price от 22 000 руб.
-                p АЛІТОС ГРУП, Курск
-              .new-vacancy__block
-                a.new-vacancy__link(href="#!") Java-розробник
-                .new-vacancy__price з/п не указана
-                p Terrasoft, Мурманск
-              
-            .col-md-3.hidden-sm.hidden-xs
-              .banner.new-vacancy__banner
-                a(href="#!")
-                  img(src="./img/banner-262.png", alt="")
+          .purchase__row.row
+            .col-md-3.col-sm-6
+              .purchase__block
+                .purchase__title Стандарт
+                .purchase__price 1 000 
+                  small руб.
+                .purchase__info
+                  ul
+                    li Доступ к базе 30 дней
+                    li Размещение вакансий на 30 дней
+                a(href="#!").btn.btn--block.btn--3d
+                  span купить
+            .col-md-3.col-sm-6
+              .purchase__block.purchase__block--plus
+                .purchase__mark ХИТ
+                .purchase__title Стандарт Плюс
+                .purchase__price 2 199 
+                  small руб.
+                .purchase__info
+                  ul
+                    li Доступ к базе 90 дней
+                    li Размещение вакансий на 30 дней
+                    li Обновление вакансии каждые 3 дня
+                a(href="#!").btn.btn--block.btn--3d
+                  span купить
+            .col-md-3.col-sm-6
+              .purchase__block.purchase__block--premium
+                .purchase__title Премиум
+                .purchase__price 4 599 
+                  small руб.
+                .purchase__info
+                  ul
+                    li Доступ к базе 180 дней
+                    li Размещение вакансий на 30 дней
+                    li Единоразовая рассылка подходящим соискателям
+                    li 7 дней в начале поиска, с логотипом и выделением цветом
+                a(href="#!").btn.btn--block.btn--3d
+                  span купить
+            .col-md-3.col-sm-6
+              .purchase__block.purchase__block--anonymous
+                .purchase__title Анонимная
+                .purchase__price 6 999 
+                  small руб.
+                .purchase__info
+                  ul
+                    li Доступ к базе 30 дней
+                    li Без упоминания названия компании
+                a(href="#!").btn.btn--block.btn--3d
+                  span купить
       
-      // Section
-      section.section.our-work
-        .container
-          
-          .h2 с нами работают
-          .our-work__link
-            a(href="#!")
-              span.hidden-xxs Посмотреть все компании
-              span.visible-xxs-inline-block
-                i.ion-share
-          
-          .clear
-          
-          .row
-            -for (var i=1; i<13; i++)
-              .col-sm-2.col-xs-4.col-xxs-6
-                .our-work__block
-                  a(href="#!")
-                    img(src="./img/our-work-#{i}.png", alt="")
-              
       // Section
       section.section.position-vacancy
         .container
           
-          .h2 вакансии по направлениям
+          .h2 резюме по направлениям
           ul
             li
               a(href="#!")
@@ -249,82 +282,43 @@ html(lang="ru")
                 span 410
       
       // Section
-      section.section.helpful
+      section.section.why.no--p-top
         .container
           
-          .h2 Полезная информация
-          .helpful__link
-            a(href="#!")
-              span.hidden-xxs Все статьи
-              span.visible-xxs-inline-block
-                i.ion-share
-          
-          .clear
-          
-          .row
-            .col-sm-3.col-xs-6.col-xxs-12
-              figure.helpful__block
-                img(src="./img/helpful-img1.png", alt="")
-                .helpful__info
-                  span
-                    time 01 июля 2017
-                    span 
-                      i.ion-eye
-                      | 35
-                a(href="#!").helpful__href Самые высокие зарплаты августа
-            .col-sm-3.col-xs-6.col-xxs-12
-              figure.helpful__block
-                img(src="./img/helpful-img2.png", alt="")
-                .helpful__info
-                  span
-                    time 01 июля 2017
-                    span 
-                      i.ion-eye
-                      | 35
-                a(href="#!").helpful__href Работодатели уточнят зарплату в вакансиях
-            .col-sm-3.col-xs-6.col-xxs-12
-              figure.helpful__block
-                img(src="./img/helpful-img3.png", alt="")
-                .helpful__info
-                  span
-                    time 01 июля 2017
-                    span 
-                      i.ion-eye
-                      | 35
-                a(href="#!").helpful__href Новое: теперь работодателю можно отказать
-            .col-sm-3.col-xs-6.col-xxs-12
-              figure.helpful__block
-                img(src="./img/helpful-img4.png", alt="")
-                .helpful__info
-                  span
-                    time 01 июля 2017
-                    span 
-                      i.ion-eye
-                      | 35
-                a(href="#!").helpful__href Мы улучшили рекомендации вакансий
-      
-      // Section
-      section.section.message
-        .container
-          
-          .h2 обращение руководителя красного креста
+          .h2 почему мы?
           
           .row
             .col-lg-8.col-md-7
-              blockquote.message__readmore
-                p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. 
-                p Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
-                p Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь.
-                
-              .message__link
-                a(href="#") Развернуть
+              blockquote.why__readmore
+                p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
               
-              .message__name
+              .why__name
                 strong Иванов Иван Иванович
                 span Проф. медецинских наук им. Ломоносова
             
             .col-lg-4.col-md-5.hidden-sm.hidden-xs
-              img(src="./img/message-img.png", alt="").message__img
+              img(src="./img/why-img.png", alt="").why__img
+      
+          .why__row
+            .row
+              .col-lg-3.col-sm-4
+                .why__block
+                  .why__title Идеальный кандидат на вашу вакансию
+                  .why__number 1
+                    i.icon.icon--why-number-1
+                  p Ежемесячно 200 миллионов соискателей посещают Redpuzze, что дает вам доступ к самым талантливым кандидатам во всех областях.
+              .col-lg-3.col-sm-4
+                .why__block
+                  .why__title Доступ с компьютера и мобильных устройств 
+                  .why__number 2
+                    i.icon.icon--why-number-2
+                  p Более 60% поиска осуществляется с помощью мобильных телефонов. Размещайте вакансии на Redpuzze, чтобы просматривать отклики соискателей с любых мобильных устройств.
+              .col-lg-3.col-sm-4
+                .why__block
+                  .why__title Больше квалифицированных кандидатов
+                  .why__number 3
+                    i.icon.icon--why-number-3
+                  p Для тысяч компаний Redpuzze является основным источником найма сотрудников извне. 
       
       // Section
       section.section.our-partners
@@ -361,3 +355,8 @@ html(lang="ru")
     include ./_include/_footer-js
     script(src="./js/common.js")
     include ./_include/_js-body-bottom
+    script.
+      $(document).ready(function(){
+        $('.header__links li:first-child').removeClass('active');
+        $('.header__links li:nth-child(2)').addClass('active');
+      })

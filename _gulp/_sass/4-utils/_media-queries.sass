@@ -37,6 +37,34 @@
         width: 200px
       &.is-focus
         width: 200px
+    &.is-sticky
+      .navigation__menu
+        margin-left: 5px
+  .purchase
+    &__block
+      .btn
+        max-width: 150px
+  .why
+    &__row
+      max-width: 810px
+      float: none
+      margin: 25px 0 0 0
+  .call-block
+    &__btn
+      width: 165px
+      height: 30px
+      line-height: 28px
+      font-size: rem(15)
+      margin-top: 70px
+      i
+        font-size: rem(13)
+      &>.span--hover
+        font-size: 0.8rem
+    &__title
+      font-size: rem(16)
+      margin-top: 25px
+      small
+        font-size: rem(9)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -107,6 +135,78 @@
         padding: 0 15px
     &__search
       display: none !important
+  .new-resume
+    &__block
+      width: 33.3%
+      &:nth-child(4)
+        padding-top: 18px
+        border-left: 0 !important
+        padding-left: 0
+        border-top: 1px solid #e5e5e5
+      &:nth-child(5)
+        border-left: 1px solid #e5e5e5
+        padding-left: 16px
+      &:nth-last-child(1)
+        display: none
+      &:nth-last-child(2)
+        display: none
+  .purchase
+    &__block
+      .btn
+        max-width: 210px
+  .why
+    blockquote
+      &::before
+        right: 15px
+    &__title
+      padding-top: 0
+      max-width: 155px
+      margin-bottom: 25px
+    &__number
+      right: -15px
+    &__row
+      margin-top: 40px
+  .call-block
+    &__btn
+      width: 120px
+      height: 21px
+      line-height: 19px
+      font-size: rem(11)
+      margin-top: 52px
+      i
+        font-size: rem(10)
+        vertical-align: 0
+      &>.span--hover
+        font-size: rem(10)
+    &__title
+      font-size: rem(12)
+      margin-top: 20px
+      small
+        font-size: rem(8)
+  .vacancy
+    &__column
+      &-right
+        margin-top: 0
+    &__company
+      min-height: inherit
+      &-img
+        margin-bottom: 10px
+  .information
+    padding-left: 10px
+    padding-right: 10px
+    &__wrapper
+      &>div
+        &:first-child
+          display: none
+        &+div
+          padding-left: 0
+    &__title
+      padding-left: 25px
+      .icon
+        position: absolute
+        display: block
+        margin-left: -26px
+        margin-top: -3px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -177,6 +277,10 @@
           font-size: rem(30)
           width: 344px
           margin-top: -10px
+      &--employer
+        img
+          width: 905px
+          margin-left: -117px
   .position-vacancy
     ul
       column-count: 2
@@ -203,6 +307,7 @@
         box-shadow: 0 0 30px rgba($color-black,.2)
         border-radius: 4px
         padding: 20px
+        z-index: 30
         &::after
           content: ''
           width: 0
@@ -300,6 +405,89 @@
           display: block
     &__button
       display: block
+  .new-resume
+    &__block
+      width: 50%
+      display: block !important
+      &:nth-child(3)
+        padding-left: 0
+        padding-top: 16px
+        border-left: 0 !important
+        border-top: 1px solid #e5e5e5
+      &:nth-child(4)
+        padding-left: 16px
+        border-left: 1px solid #e5e5e5 !important
+      &:nth-child(5), &:nth-last-child(2)
+        border-left: 0 !important
+        padding-left: 0
+  .purchase
+    .h2
+      max-width: 350px
+      margin-left: auto
+      margin-right: auto
+    &__info
+      height: auto !important
+      min-height: 90px
+  .why
+    &__title
+      margin-bottom: 10px
+      max-width: inherit
+    &__number
+      right: 0
+    &__block
+      margin-bottom: 40px
+      padding-right: 100px
+    .row
+      &>div
+        &:last-child
+          .why__block
+            margin-bottom: 0
+  .call-block
+    &__btn
+      height: 35px
+      line-height: 33px
+      width: 200px
+      margin-top: 88px
+      font-size: rem(19)
+      i
+        font-size: rem(16)
+        vertical-align: 1px
+      &>.span--hover
+        font-size: rem(16)
+    &__title
+      font-size: rem(19)
+      margin-top: 35px
+      small
+        font-size: rem(11)
+  .vacancy
+    &__info
+      &-wrapper
+        display: block
+        &>div
+          display: block
+          width: 100%
+          &+div
+            padding-left: 0
+            padding-top: 15px
+    &__price
+      margin-top: -10px
+    &__column
+      &-right
+        max-width: 262px
+        margin: 0 auto
+  .information
+    padding-left: 10px
+    padding-right: 10px
+    &__title
+      padding-left: 0
+      .icon
+        display: none
+    &__wrapper
+      &>div
+        &:first-child
+          display: table-cell
+        &+div
+          padding-left: 7px
 
 @media only screen and (max-width : 599px)
   .popup
@@ -370,6 +558,10 @@
           font-size: rem(26)
           text-align: left
           width: 315px
+      &--employer
+        img
+          width: 905px
+          margin-left: -147px
   .col
     &-xxs-6
       width: 50% !important
@@ -425,6 +617,26 @@
       &:first-child
         border-top: 0 !important
         padding-top: 0 !important
+  .new-resume
+    &__block
+      width: 100%
+      height: auto !important
+      border: 0 !important
+      padding-left: 0 !important
+      padding-top: 18px !important
+      padding-bottom: 18px !important
+      &+.new-resume__block
+        border: 0 !important
+        border-top: 1px solid #e5e5e5 !important
+      &:first-child
+        padding-top: 0 !important
+      &:last-child
+        padding-bottom: 0 !important
+  .why
+    &__block
+      padding-right: 19px
+    &__title
+      max-width: 155px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
