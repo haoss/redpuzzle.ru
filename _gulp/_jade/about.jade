@@ -1,0 +1,104 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'О проекте' //активный пункт меню, список в header.jade
+  -var pageTitle = 'О проекте' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head
+          h1 о проекте
+          
+        .row
+          .col-md-6
+            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими
+          .col-md-6
+            .h2.no--m-bottom Сегодня на сайте 
+            .clear10
+            table.about__info-table.hidden-xxs
+              tr
+                td
+                  i.icon.icon--navigation-info-1
+                td
+                  strong 19 997 
+                    small вакансий
+                td
+                  i.icon.icon--navigation-info-2
+                td
+                  strong 1 017 858
+                    small резюме
+                td
+                  i.icon.icon--navigation-info-3
+                td
+                  strong 54 448
+                    small компаний
+            table.about__info-table.visible-xxs
+              tr
+                td
+                  i.icon.icon--navigation-info-1
+                td
+                  strong 19 997 
+                    small вакансий
+              tr
+                td
+                  i.icon.icon--navigation-info-2
+                td
+                  strong 1 017 858
+                    small резюме
+              tr
+                td
+                  i.icon.icon--navigation-info-3
+                td
+                  strong 54 448
+                    small компаний
+        
+        // Section
+        .section.message.no--p-bottom
+          .h2 обращение руководителя красного креста
+          .row
+            .col-lg-8.col-md-7
+              blockquote
+                p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. 
+                p Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
+                p Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь.
+              
+              .message__name
+                strong Иванов Иван Иванович
+                span Проф. медецинских наук им. Ломоносова
+            
+            .col-lg-4.col-md-5.hidden-sm.hidden-xs
+              img(src="./img/message-img.png", alt="").message__img
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

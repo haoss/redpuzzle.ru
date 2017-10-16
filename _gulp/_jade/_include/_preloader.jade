@@ -184,6 +184,25 @@
         li
           a(href="#!") Ярославль
 
+#popup-respond.popup.popup--respond.mfp-hide
+  .popup__wrapper
+    .popup__close
+      i.ion-android-close
+    form(action="#")
+      fieldset
+        .popup__respond-title Резюме для отклика
+        .popup__respond-category Менеджер по продажам
+          i.ion-checkmark-circled
+        .popup__respond-link
+          a(href="#!") Посмотреть свое резюме
+        .form-group.form-group--normal
+          label
+            small.popup__respond-small Написать сопроводительное письмо
+          textarea.form-control(name="message")
+        .clear10
+        button(type="submit").btn.btn--middle.btn--3d.btn--block
+          span Отправить
+
 mixin callBlock
   .call-block
     a(href="#!")
@@ -197,3 +216,53 @@ mixin callBlock
         i.ion-android-call
         | заказать звонок
     img(src="./img/call-block.png", alt="")
+
+mixin pagination
+  .pagination
+    ul
+      li.li__prev
+        a(href="#!") 
+          span
+            span alt + 
+              i.ion-android-arrow-back
+          span предыдущая
+      li.li
+        a(href="#!") 1
+      li.li
+        a(href="#!") 2
+      li.li
+        a(href="#!") 3
+      li.li.active
+        a(href="#!") 4
+      li.li
+        a(href="#!") 5
+      li.li
+        a(href="#!") 6
+      li.li
+        span ...
+      li.li
+        a(href="#!") 99
+      li.li__next
+        a(href="#!")
+          span
+            span alt + 
+              i.ion-android-arrow-forward
+          span следующая
+
+mixin phoneVacancy
+  .phone__vacancy
+    .phone__vacancy-background
+    .phone__vacancy-head
+      i.ion-android-call
+    .phone__vacancy-wrapper
+      .phone__vacancy-title Апухтина Ольга Владимировна
+      table.phone__vacancy-info
+        tr
+          td
+            i.ion-android-call
+          td +7 967 0881891
+        tr
+          td
+            i.ion-android-time
+          td с 8 до 20
+      a(href="#!").phone__vacancy-mail contabilite@mail.ru

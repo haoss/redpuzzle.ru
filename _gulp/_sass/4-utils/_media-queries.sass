@@ -65,6 +65,14 @@
       margin-top: 25px
       small
         font-size: rem(9)
+  .content__head
+    .h1, h1
+      letter-spacing: 2px
+  .partner
+    &__company
+      &-button
+        margin-left: -10px
+        margin-right: -10px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -184,13 +192,13 @@
       small
         font-size: rem(8)
   .vacancy
-    &__column
-      &-right
-        margin-top: 0
     &__company
       min-height: inherit
       &-img
         margin-bottom: 10px
+  .column-right
+    &--vacancy
+      margin-top: 0
   .information
     padding-left: 10px
     padding-right: 10px
@@ -207,6 +215,25 @@
         display: block
         margin-left: -26px
         margin-top: -3px
+  .content__head
+    .h1, h1
+      letter-spacing: normal
+  .partner
+    &__company
+      padding-left: 10px
+      padding-right: 10px
+      &-button
+        margin-left: 0
+        margin-right: 0
+      .btn
+        min-width: inherit
+        max-width: 140px
+  .category
+    &__block
+      small
+        display: none
+      span
+        padding-right: 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -297,6 +324,7 @@
       margin-top: -90px
       position: absolute
       right: 24px
+      z-index: 15
       &-wrapper
         display: none
         bottom: 20px
@@ -348,13 +376,12 @@
         margin-top: -17px
   .message
     blockquote
-      overflow: hidden
-      max-height: 170px
-      transition: all 0.35s
       &::before
         display: none
       &.message__readmore
-        // height: auto
+        overflow: hidden
+        max-height: 170px
+        transition: all 0.35s
         &+a
           display: block
         &.is-active
@@ -471,10 +498,6 @@
             padding-top: 15px
     &__price
       margin-top: -10px
-    &__column
-      &-right
-        max-width: 262px
-        margin: 0 auto
   .information
     padding-left: 10px
     padding-right: 10px
@@ -488,6 +511,34 @@
           display: table-cell
         &+div
           padding-left: 7px
+  .partner
+    &__company
+      padding-left: 24px
+      padding-right: 24px
+      .btn
+        max-width: 205px
+  .category
+    &__block
+      small
+        display: block
+      span
+        padding-right: 35px
+  .button__group
+    &--catalog-row
+      margin-top: 10px
+  .catalog
+    &__vacancy
+      ul
+        column-count: 2
+    &__row
+      &-logo
+        margin-top: 0
+        img
+          max-height: 47px
+      &-info
+        margin-bottom: 10px
+        &>div
+          vertical-align: middle
 
 @media only screen and (max-width : 599px)
   .popup
@@ -640,6 +691,45 @@
   .vacancy
     &__table
       font-size: rem(12)
+  .about
+    &__info
+      &-table
+        tr
+          &+tr
+            td
+              padding-top: 20px
+  .pagination
+    padding-top: 55px
+    ul
+      li
+        &.li
+          &__prev, &__next
+            position: absolute
+            top: 10px
+          &__prev
+            left: 0
+          &__next
+            right: 0
+  .catalog
+    &__vacancy
+      ul
+        column-count: inherit
+    &__head
+      margin-bottom: 20px
+    &__row
+      &-logo
+        img
+          max-height: 30px
+    &__sorting
+      &-wrapper
+        width: 290px
+        padding-left: 15px
+        padding-right: 15px
+        padding-bottom: 15px
+  .phone
+    &__vacancy
+      &-wrapper
+        right: -172px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

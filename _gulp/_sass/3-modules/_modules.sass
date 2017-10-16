@@ -1,5 +1,4 @@
 /* modules */
-
 .mfp-bg
   opacity: 1
   background-color: rgba($color-black, 0.4)
@@ -130,7 +129,6 @@
   &__wrapper
     .btn
       margin-bottom: rem(13)
-
   &__social
     &-head
       display: table
@@ -186,6 +184,31 @@
     left: -130px
   &__register-q2
     right: -130px
+  &__respond
+    &-title
+      font-family: $font-roboto-bold
+      font-size: rem(15)
+      margin-bottom: 5px
+    &-category
+      position: relative
+      padding-right: 25px
+      font-style: italic
+      font-size: rem(13)
+      margin-bottom: 5px
+      i
+        top: 2px
+        line-height: 1
+        font-size: rem(15)
+        position: absolute
+        right: 0
+        color: $color-red
+    &-link
+      font-size: rem(11)
+      font-family: $font-roboto-medium
+      margin-bottom: 15px
+    &-small
+      font-size: rem(10)
+      color: $color-808080
 
 .mfp-bg-register
   background-image: url('../img/popup-register-background.png')
@@ -300,13 +323,13 @@
         padding-left: 12px
         padding-right: 12px
         &::-webkit-input-placeholder
-          color: #808080
+          color: $color-808080
         &::-moz-placeholder
-          color: #808080
+          color: $color-808080
         &:-ms-input-placeholder
-          color: #808080
+          color: $color-808080
         &:-moz-placeholder
-          color: #808080
+          color: $color-808080
       &-group, &__group
         background-color: $color-white
         border-color: $color-white
@@ -358,7 +381,7 @@
     &:hover
       box-shadow: 0px 2px 10px rgba($color-black,.16)
 
-/* .position-vacancy */
+/* position-vacancy */
 .position-vacancy
   font-size: rem(13)
   ul
@@ -496,7 +519,7 @@
   &__link
     display: none
 
-/* .banner */
+/* banner */
 .banner
   margin-bottom: 25px
   img
@@ -504,7 +527,7 @@
     height: auto
     display: block
 
-/* .new-vacancy */
+/* new-vacancy */
 .new-vacancy
   +clearfix
   &__block
@@ -513,7 +536,7 @@
     width: 33.3%
     padding-left: 16px
     font-size: rem(11)
-    color: #808080
+    color: $color-808080
     position: relative
     padding-top: 18px
     overflow: hidden
@@ -560,7 +583,7 @@
   &__banner
     margin-top: -35px
 
-/* .new-resume */
+/* new-resume */
 .new-resume
   &__row
     +clearfix
@@ -570,7 +593,7 @@
     width: 25%
     padding-left: 16px
     font-size: rem(11)
-    color: #808080
+    color: $color-808080
     position: relative
     padding-top: 18px
     overflow: hidden
@@ -808,10 +831,11 @@
 /* date */
 .date
   display: block
+  font-size: rem(11)
+  color: $color-808080
+  position: relative
+  margin-bottom: 10px
   &--document
-    font-size: rem(11)
-    color: #808080
-    position: relative
     margin: -5px 0 15px 0
 
 /* thumb */
@@ -833,6 +857,7 @@
 /* call-block */
 .call-block
   position: relative
+  z-index: 5
   // height: 356px
   overflow: hidden
   border-radius: 4px
@@ -916,16 +941,21 @@
       i
         vertical-align: 0
 
+/* button group */
 .button__group
   display: table
-  &--right
-    float: right
   &>div
     display: table-cell
     vertical-align: middle
     &+div
       padding-left: 15px
+  &--right
+    float: right
+  &--catalog-row
+    float: right
+    margin-top: -25px
 
+/* favorites */
 .favorites
   &__button
     color: #bbbbbb
@@ -958,7 +988,7 @@
     overflow: hidden
     padding: 15px 20px
     font-size: rem(11)
-    color: #808080
+    color: $color-808080
     &-wrapper
       display: table
       width: 100%
@@ -992,8 +1022,6 @@
       margin-bottom: 15px
     &-all
       font-size: rem(12)
-  &__column-right
-    margin-top: -220px
   &__table
     margin-bottom: 25px
     font-size: rem(14)
@@ -1055,3 +1083,507 @@
       &:hover
         text-decoration: none
         color: $color-red
+
+/* column right */
+.column-right
+  max-width: 262px
+  margin: 0 auto
+  &--vacancy
+    margin-top: -220px
+
+/* partner__company */
+.partner
+  &__company
+    font-size: rem(12)
+    margin-bottom: 30px
+    border: 1px solid #e0e0e0
+    border-radius: 4px
+    overflow: hidden
+    padding: 25px 24px 38px 24px
+    color: #535353
+    &-img
+      img
+        display: block
+        max-width: 100%
+        height: auto
+      margin-bottom: 25px
+    &-row
+      margin-bottom: 24px
+      strong
+        font-size: rem(14)
+        display: block
+        line-height: 1.2
+        margin-bottom: 5px
+        color: $primary-color
+      p
+        line-height: 18px
+        &:last-child
+          margin-bottom: 0
+    .btn
+      max-width: 205px
+      &+.btn
+        margin-top: 15px
+
+/* about */
+.about
+  &__info
+    &-table
+      font-size: rem(18)
+      i
+        display: block
+      strong
+        display: block
+        line-height: 1
+      small
+        font-size: rem(11)
+        display: block
+      td
+        vertical-align: middle
+        &+td
+          padding-left: 10px
+        &:nth-child(even)
+          min-width: 100px
+
+/* articles */
+.articles
+  &__row
+    margin-bottom: 34px
+    p
+      &:last-child
+        margin-bottom: 0
+  &__img
+    overflow: hidden
+    border-radius: 4px
+    &:hover
+      img
+        opacity: 0.7
+    img
+      display: block
+      max-width: 100%
+      height: auto
+      border-radius: 4px
+      opacity: 1
+      transition: opacity 0.35s
+  &__link
+    font-size: rem(18)
+    font-family: $font-roboto-bold
+    color: $primary-color
+    display: block
+    margin-bottom: 5px
+    line-height: 21px
+    &:hover, &:focus
+      text-decoration: none
+      color: $color-red
+
+/* pagination */
+.pagination
+  font-size: rem(16)
+  overflow: hidden
+  padding: 20px 0 0 0
+  margin-bottom: 25px
+  position: relative
+  ul
+    margin: 0
+    padding: 0
+    text-align: center
+    li
+      list-style: none
+      margin: 0
+      display: inline-block
+      &.li
+        &>a, &>span
+          display: block
+          padding: 7px
+          color: $color-808080
+        &>a
+          &:hover, &:focus
+            text-decoration: none
+            color: $color-red
+        &.active
+          &>a, &>span
+            font-family: $font-roboto-medium
+            color: $color-red
+        &__prev, &__next
+          font-size: rem(12)
+          &>a
+            &:hover, &:focus
+              text-decoration: none
+            &:hover
+              &>span
+                &+span
+                  text-decoration: underline
+            &>span
+              color: #a2a2a2
+              font-size: rem(11)
+              &>span
+                word-spacing: 3px
+              &+span
+                color: $color-red
+                font-size: rem(12)
+          span
+            display: block
+            text-align: left
+        &__prev
+          float: left
+        &__next
+          float: right
+          span
+            text-align: right
+
+/* faq */
+.faq
+  &__row
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
+  &__title
+    font-size: rem(20)
+    line-height: 1.14
+    margin-bottom: 20px
+    text-transform: uppercase
+    font-family: $font-roboto-medium
+  &__block
+    margin-bottom: 5px
+    p
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+    &.is-active
+      margin-bottom: 10px
+      .faq__block-title
+        font-family: $font-roboto-bold
+    &-answer
+      padding: 5px 0
+      display: none
+    &-title
+      margin-left: 25px
+      a
+        display: block
+        &:hover
+          text-decoration: underline
+        &:focus
+          text-decoration: none
+
+/* category */
+.category
+  &__list
+    overflow: hidden
+  &__block
+    display: block
+    border-radius: 3px
+    border: 1px solid #e0e0e0
+    overflow: hidden
+    position: relative
+    min-height: 45px
+    line-height: 45px
+    padding: 0 17px
+    margin-bottom: 15px
+    span
+      display: block
+      white-space: nowrap
+      padding-right: 35px
+      text-overflow: ellipsis
+      overflow: hidden
+    small
+      position: absolute
+      font-size: rem(13)
+      font-family: $font-roboto-medium
+      right: 17px
+      color: $primary-color
+      top: 50%
+      transform: translateY(-50%)
+
+/* partners */
+.partners
+  &__row
+    margin-bottom: 30px
+    font-size: rem(12)
+    p
+      line-height: 19px
+      &:last-child
+        margin-bottom: 0
+  &__img
+    overflow: hidden
+    border-radius: 4px
+    border: 1px solid #e0e0e0
+    &:hover
+      img
+        opacity: 0.7
+    img
+      display: block
+      max-width: 100%
+      height: auto
+      border-radius: 4px
+      opacity: 1
+      transition: opacity 0.35s
+  &__link
+    font-size: rem(16)
+    font-family: $font-roboto-bold
+    color: $primary-color
+    display: block
+    margin-bottom: 20px
+    line-height: 21px
+    &:hover, &:focus
+      text-decoration: none
+      color: $color-red
+
+/* catalog */
+.catalog
+  &__row
+    font-size: rem(13)
+    margin-bottom: 34px
+    color: $primary-color
+    +clearfix
+    p
+      line-height: 18px
+    &-title
+      font-size: rem(16)
+      margin-bottom: 20px
+      line-height: 1.2
+      a
+        color: $primary-color
+        &:hover, &:focus
+          text-decoration: none
+          strong
+            color: $color-red
+      span
+        display: inline-block
+        vertical-align: -4px
+        height: 18px
+        line-height: 19px
+        background-color: $color-red
+        color: $color-white
+        padding: 0 12px
+        text-transform: uppercase
+        font-size: rem(9)
+        border-radius: 3px
+        overflow: hidden
+        margin-left: 10px
+        font-family: $font-roboto-bold
+        display: none
+      &--extra
+        a
+          strong
+            color: $color-red
+        span
+          display: inline-block
+    &-price
+      font-size: rem(16)
+      font-family: $font-roboto-bold
+      line-height: 1
+      margin-bottom: 5px
+    &-name
+      font-size: rem(12)
+      font-family: $font-roboto-medium
+      i
+        font-size: rem(12)
+        color: #a9a9a9
+        vertical-align: 0
+        margin-left: 10px
+      &--confirmed
+        i
+          color: $color-blue
+    &-info
+      margin-bottom: 20px
+      display: table
+      width: 100%
+      &>div
+        display: table-cell
+        vertical-align: top
+      +clearfix
+    &-address
+      color: $color-808080
+      font-size: rem(12)
+      i
+        vertical-align: 0
+        margin-right: 7px
+        font-size: rem(15)
+        color: #bbbbbb
+    &-logo
+      float: right
+      margin-top: -35px
+      img
+        max-height: 68px
+  &__head
+    // background: pink
+    margin-bottom: 40px
+    +clearfix
+  &__number
+    float: left
+    font-size: rem(13)
+    font-family: $font-roboto-bold
+    color: #535353
+    text-transform: uppercase
+  &__sorting
+    float: right
+    position: relative
+    z-index: 10
+    margin-top: -2px
+    &-head
+      position: relative
+      z-index: 15
+      font-size: rem(13)
+      font-family: $font-roboto-bold
+      text-transform: uppercase
+      color: #535353
+      cursor: pointer
+      margin-right: 10px
+      i
+        display: inline-block
+        line-height: 1
+        &.ion-stats-bars
+          color: $color-red
+          font-size: rem(20)
+          margin-right: 10px
+          vertical-align: -2px
+        &.ion-chevron-down
+          font-size: rem(11)
+          margin-left: 8px
+          vertical-align: 1px
+    &-background
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 150
+      background: rgba($color-black, 0.2)
+      display: none
+      cursor: pointer
+    &-wrapper
+      position: absolute
+      z-index: 10
+      right: 0
+      top: -21px
+      padding: 58px 27px 30px 33px
+      background: $color-white
+      box-shadow: 0 0 5px rgba($color-black,0.1)
+      width: 346px
+      display: none
+      border-radius: 3px
+      .form-group--radio
+        font-size: rem(11)
+        margin-bottom: 9px
+        label
+          white-space: nowrap
+          vertical-align: 1px
+        input[type="radio"]
+          &:checked
+            &~label
+              color: $primary-color
+              font-family: $font-roboto-bold
+    &-input
+      display: table
+      width: 100%
+      margin-bottom: 10px
+      &>div
+        display: table-cell
+        vertical-align: top
+    &.is-active
+      z-index: 100
+      .catalog__sorting-background
+        display: block
+      .catalog__sorting-wrapper
+        display: block
+        z-index: 200
+      .catalog__sorting-head
+        z-index: 250
+  &__vacancy
+    font-size: rem(13)
+    margin-bottom: 30px
+    ul
+      margin: 0
+      padding: 0
+      column-count: 3
+      column-gap: 30px
+      li
+        margin: 0
+        list-style: none
+        a
+          display: block
+          color: $primary-color
+          position: relative
+          padding-right: 40px
+          font-family: $font-roboto
+          line-height: 24px
+          strong
+            display: inline-block
+            font-family: $font-roboto
+            color: $color-red
+          span
+            position: absolute
+            right: 0
+            bottom: 0
+            color: #535353
+            font-family: $font-roboto-medium
+          &:hover
+            strong
+              text-decoration: underline
+
+/* phone */
+.phone__vacancy
+  position: relative
+  &-background
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 150
+    background: rgba($color-black, 0.2)
+    display: none
+    cursor: pointer
+  &-wrapper
+    position: absolute
+    z-index: 10
+    right: -5px
+    top: -6px
+    padding: 58px 15px 24px 24px
+    background: $color-white
+    box-shadow: 0 0 5px rgba($color-black,0.1)
+    width: 267px
+    display: none
+    border-radius: 3px
+    font-size: rem(13)
+  &-head
+    position: relative
+    z-index: 15
+    font-size: rem(18)
+    color: #bbbbbb
+    cursor: pointer
+    width: 30px
+    height: 30px
+    text-align: center
+    line-height: 30px
+    &:hover
+      color: $color-red
+    i
+      display: inline-block
+      line-height: 1
+  &-title
+    font-size: rem(15)
+    font-family: $font-roboto-bold
+    line-height: 1
+    margin-bottom: 10px
+  &-mail
+    font-family: $font-roboto-medium
+  &-info
+    margin-bottom: 5px
+    i
+      color: $color-808080
+      font-size: rem(12)
+      line-height: 1
+    td
+      padding: 1px 0
+      &+td
+        padding-left: 8px
+  &.is-active
+    z-index: 100
+    .phone__vacancy-background
+      display: block
+    .phone__vacancy-wrapper
+      display: block
+      z-index: 200
+    .phone__vacancy-head
+      z-index: 250
+      color: $color-red

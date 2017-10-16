@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Вопросы и ответы - redpuzzle.ru</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/selectric/selectric.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <div id="popup-register" class="popup popup--register mfp-hide">
+            <div class="popup__wrapper">
+                <div class="popup__close"><i class="ion-android-close"></i></div>
+                <div class="popup__title">Регистрация</div>
+                <form action="#">
+                    <fieldset>
+                        <div class="form-group form-group--radio form-group--radio-medium">
+                            <label class="hidden">Я работодатель</label>
+                            <input id="radio1" type="radio" name="radio1" checked><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                            <label for="radio1" class="label">Я работодатель</label>
+                        </div>
+                        <div class="form-group form-group--radio form-group--radio-medium">
+                            <label class="hidden">Я соискатель</label>
+                            <input id="radio2" type="radio" name="radio1"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                            <label for="radio2" class="label">Я соискатель</label>
+                        </div>
+                        <div class="clear5"></div>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Ваше имя</label>
+                            <input type="text" name="name" placeholder="Ваше имя" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group has-feedback block-focus has-error">
+                            <label class="hidden">Ваш email</label>
+                            <input type="email" name="name" placeholder="Ваш email" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Ваш телефон</label>
+                            <input type="text" name="name" placeholder="Ваш телефон" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Введите пароль</label>
+                            <input type="password" name="name" placeholder="Введите пароль" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Повторите пароль</label>
+                            <input type="password" name="name" placeholder="Повторите пароль" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group form-group--checkbox form-group--small">
+                            <label class="hidden">Согласен на обработку моих личных данных</label>
+                            <input id="input3" type="checkbox" name="confidental" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                            <label for="input3" class="label">Согласен на обработку моих личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></label>
+                        </div>
+                        <div class="clear10"></div>
+                        <button type="submit" class="btn btn--middle btn--3d btn--block"><span>Зарегистрироваться</span></button>
+                        <div class="popup__social">
+                            <div class="popup__social-head"> <span>или</span></div>
+                            <div class="popup__social-body">
+                                <p>Регистрация через социальные сети</p><a href="#!"><i class="icon icon--vk"></i></a><a href="#!"><i class="icon icon--facebook"></i></a><a href="#!"><i class="icon icon--ok"></i></a><a href="#!"><i class="icon icon--mail-ru"></i></a><a href="#!"><i class="icon icon--google-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="popup__form-bottom"><strong>Уже зарегистрированы? </strong><a href="#popup-enter" class="open-popup-enter--inpopup">Войти на сайт</a></div><i class="icon popup__register-q1"><span>принято верное <b>решение!</b></span></i><i class="icon popup__register-q2"><span>вы поступили <b>правильно!</b></span></i>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div id="popup-enter" class="popup popup--enter mfp-hide">
+            <div class="popup__wrapper">
+                <div class="popup__close"><i class="ion-android-close"></i></div>
+                <div class="popup__title">Вход</div>
+                <form action="#">
+                    <fieldset>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Ваш логин</label>
+                            <input type="text" name="name" placeholder="Ваш логин" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Ваш пароль</label>
+                            <input type="password" name="name" placeholder="Ваш пароль" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                            <label class="hidden">Запомнить меня</label>
+                            <input id="input1" type="checkbox" name="remember" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                            <label for="input1" class="label">Запомнить меня</label>
+                        </div>
+                        <div class="form-group form-group--checkbox form-group--small">
+                            <label class="hidden">Согласен на обработку моих личных данных</label>
+                            <input id="input2" type="checkbox" name="confidental" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                            <label for="input2" class="label">Согласен на обработку моих личных данных. <a href="#!" target="_blank">Политика конфиденциальности</a></label>
+                        </div>
+                        <div class="clear10"></div>
+                        <button type="submit" class="btn btn--middle btn--3d btn--block"><span>Войти на сайт</span></button>
+                        <div class="text-center"><a href="#!" class="color color--dark">Забыли пароль?</a></div>
+                        <div class="popup__form-bottom"><strong>Еще не зарегистрированы? </strong><a href="#popup-register" class="open-popup-register--inpopup">Зарегистрироваться</a></div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div id="popup-location" class="popup popup--location mfp-hide">
+            <div class="popup__wrapper">
+                <div class="popup__close"><i class="ion-android-close"></i></div>
+                <div class="popup__title">Выберите ваше месторасположение</div>
+                <div class="popup__info popup__info--location">Укажите желаемый город! От этого зависит выбор вакансий и резюме.</div>
+                <div class="popup__search">
+                    <div class="popup__search-wrapper block-focus">
+                        <div>
+                            <div class="input">
+                                <label class="hidden"></label>
+                                <input type="text" placeholder="Поиск по городам" class="input-focus">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn--header"><span>найти</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__city">
+                    <ul>
+                        <li><a href="#!">Москва</a></li>
+                        <li><a href="#!">Санкт-Петербург</a></li>
+                        <li><a href="#!">Барнаул</a></li>
+                        <li><a href="#!">Уфа</a></li>
+                        <li><a href="#!">Волгоград</a></li>
+                        <li><a href="#!">Нижний Новгород</a></li>
+                        <li><a href="#!">Иркутск</a></li>
+                        <li><a href="#!">Краснодар</a></li>
+                        <li><a href="#!">Сочи</a></li>
+                        <li><a href="#!">Самара		</a></li>
+                        <li><a href="#!">Новосибирск</a></li>
+                        <li><a href="#!">Омск</a></li>
+                        <li><a href="#!">Пермь</a></li>
+                        <li><a href="#!">Владивосток</a></li>
+                        <li><a href="#!">Ростов-на-Дону</a></li>
+                        <li><a href="#!">Рязань</a></li>
+                        <li><a href="#!">Екатеринбург</a></li>
+                        <li><a href="#!">Казань</a></li>
+                        <li><a href="#!">Тула</a></li>
+                        <li><a href="#!">Тюмень</a></li>
+                        <li><a href="#!">Сургут</a></li>
+                        <li><a href="#!">Хабаровск</a></li>
+                        <li><a href="#!">Челябинск</a></li>
+                        <li><a href="#!">Ярославль</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="popup-respond" class="popup popup--respond mfp-hide">
+            <div class="popup__wrapper">
+                <div class="popup__close"><i class="ion-android-close"></i></div>
+                <form action="#">
+                    <fieldset>
+                        <div class="popup__respond-title">Резюме для отклика</div>
+                        <div class="popup__respond-category">Менеджер по продажам<i class="ion-checkmark-circled"></i></div>
+                        <div class="popup__respond-link"><a href="#!">Посмотреть свое резюме</a></div>
+                        <div class="form-group form-group--normal">
+                            <label><small class="popup__respond-small">Написать сопроводительное письмо</small></label>
+                            <textarea name="message" class="form-control"></textarea>
+                        </div>
+                        <div class="clear10"></div>
+                        <button type="submit" class="btn btn--middle btn--3d btn--block"><span>Отправить</span></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <!-- Header-->
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__location"><a href="#popup-location" class="open-popup-link"><i class="ion-ios-location"></i><span>Актюбинск (Казахстан)</span></a></div>
+                    <div class="header__lang">
+                        <div class="header__lang-str">Русский<i class="ion-ios-arrow-down"></i></div>
+                        <ul>
+                            <li class="active"><a href="#!">Русский</a></li>
+                            <li><a href="#!">Английский</a></li>
+                            <li><a href="#!">Казахский</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__phone">
+                        <div class="header__phone-str">8 (800) 765 43 21<i class="ion-ios-arrow-down"></i></div><small>С 09:00 до 18:00<br>Понедельник - Пятница</small>
+                    </div>
+                </div>
+            </div>
+            <div class="header__wrapper">
+                <div class="container">
+                    <div class="header__logo"><a href="#!"><img src="./img/logo.png" alt=""><span>Партнер Российского Красного Креста</span></a></div>
+                    <div class="header__user">
+                        <div class="hidden-xxs"><a href="#popup-enter" class="open-popup-link"><i class="icon icon--user1"></i><span>войти</span></a></div>
+                        <div class="hidden-xxs"><a href="#popup-register" data-balloon="начните с регистрации" data-balloon-pos="up-right" class="open-popup-register"><i class="icon icon--user2"></i><span>регистрация</span></a></div>
+                        <div class="mobile visible-xxs"><a href="#popup-enter" class="open-popup-link"><i class="icon icon--user2"></i><span>войти <small>на сайт</small></span></a></div>
+                    </div>
+                    <div class="header__user header__user--is-enter hidden">
+                        <div><a href="#popup-enter" class="open-popup-link"><i class="icon icon--user3"></i><span>Иванов<small>Иван иванович</small><span>99</span></span></a></div>
+                    </div>
+                    <div class="header__category">
+                        <div class="header__links">
+                            <ul>
+                                <li class="active"><a href="#!">Я соискатель</a></li>
+                                <li><a href="#!">Я работодатель</a></li>
+                            </ul>
+                        </div>
+                        <div class="header__search">
+                            <form action="#">
+                                <div class="header__search-wrapper block-focus">
+                                    <div>
+                                        <div class="input">
+                                            <label for="search">Поиск вакансий. <span>Например: <strong class="color color--red">повар</strong></span></label>
+                                            <input id="search" type="text" class="input-focus">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <select class="selectric">
+                                            <option value="Москва">Москва</option>
+                                            <option value="Актюбинск" selected>Актюбинск</option>
+                                            <option value="">Санкт-Петербург</option>
+                                            <option value="">Барнаул</option>
+                                            <option value="">Уфа</option>
+                                            <option value="">Волгоград</option>
+                                            <option value="">Нижний Новгород</option>
+                                            <option value="">Иркутск</option>
+                                            <option value="">Краснодар</option>
+                                            <option value="">Сочи</option>
+                                            <option value="">Самара		</option>
+                                            <option value="">Новосибирск</option>
+                                            <option value="">Омск</option>
+                                            <option value="">Пермь</option>
+                                            <option value="">Владивосток</option>
+                                            <option value="">Ростов-на-Дону</option>
+                                            <option value="">Рязань</option>
+                                            <option value="">Екатеринбург</option>
+                                            <option value="">Казань</option>
+                                            <option value="">Тула</option>
+                                            <option value="">Тюмень</option>
+                                            <option value="">Сургут</option>
+                                            <option value="">Хабаровск</option>
+                                            <option value="">Челябинск</option>
+                                            <option value="">Ярославль</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn btn--header"><span>найти</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="mobile__nav-background"></div>
+        <div id="mobile__nav" class="mobile__nav">
+            <div class="mobile__nav-wrapper">
+                <button id="mobile__nav-button" type="button" class="mobile__nav-button"><span><i class="ion-navicon-round"></i><span>Меню</span><i class="ion-ios-arrow-forward"></i></span></button>
+                <div class="mobile__nav-menu">
+                    <ul>
+                        <li><a href="#!">ищу работу</a></li>
+                        <li><a href="#!"> ищу сотрудников</a></li>
+                        <li><a href="#!"> услуги</a></li>
+                        <li><a href="#!"> контакты</a></li>
+                    </ul>
+                </div>
+                <div class="mobile__nav-search">
+                    <div class="mobile__nav-search-wrapper block-focus">
+                        <input type="text" placeholder="Я ищу..." class="input-focus">
+                        <button type="submit"><span><i class="ion-search"></i></span></button>
+                    </div>
+                </div>
+                <div class="mobile__nav-contacts">
+                    <div class="mobile__nav-title">Телефоны для связи</div>
+                    <p>8 (800) 765 43 21<br>+7 495 987 65 43<br>+7 495 123 45 67<br>+38 098 654 32 10</p>
+                </div>
+                <div class="mobile__nav-buttons">
+                    <div><a href="#!" class="btn btn--3d btn--block"><span>разместить резюме</span></a></div>
+                    <div><a href="#!" class="btn btn--3d btn--block"><span>разместить вакансию</span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="container">
+                <div class="navigation__info">
+                    <div class="navigation__info-wrapper"><img src="./img/navigation-info-img.png" alt="" class="navigation__info-img">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-5 hidden-sm hidden-xs">&nbsp;</div>
+                            <div class="col-lg-6 col-md-7">
+                                <div class="navigation__info-text">
+                                    <div class="h2">о сайте</div>
+                                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. </p>
+                                    <div class="clear5"></div>
+                                    <div class="h2">Сегодня на сайте</div>
+                                    <table class="navigation__info-table">
+                                        <tr>
+                                            <td><i class="icon icon--navigation-info-1"></i></td>
+                                            <td><strong>19 997 <small>вакансий</small></strong></td>
+                                            <td><i class="icon icon--navigation-info-2"></i></td>
+                                            <td><strong>1 017 858<small>резюме</small></strong></td>
+                                            <td><i class="icon icon--navigation-info-3"></i></td>
+                                            <td><strong>54 448<small>компаний</small></strong></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation__wrapper">
+                    <div>
+                        <div class="navigation__logo"><a href="#!"><img src="./img/scroll-logo.png" alt=""></a></div>
+                        <button id="navigation__button" type="button" class="navigation__button"><span><i class="ion-navicon-round"></i><span>Меню</span></span></button>
+                    </div>
+                    <div>
+                        <div class="navigation__menu">
+                            <ul>
+                                <li><a href="#!">ищу работу</a></li>
+                                <li><a href="#!">ищу сотрудников</a></li>
+                                <li><a href="#!">услуги</a></li>
+                                <li><a href="#!">контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="navigation__search block-focus">
+                            <input type="text" placeholder="Я ищу..." class="input-focus">
+                            <button type="submit"><span><i class="ion-search"></i></span></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="navigation__about"><a href="#!"><i></i><span>о проекте</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-separator"></div>
+        <!-- Content-->
+        <div class="content content--all">
+            <div class="container">
+                <!-- Breadcrumbs-->
+                <ul class="breadcrumbs">
+                    <li><a href="#!">RedPuzzle.ru</a></li>
+                    <li><span>Название страницы</span></li>
+                </ul>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="h1">Вопросы и ответы</div>
+                        <div class="h4">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. </div>
+                        <div class="clear20"></div>
+                        <!-- FAQ-->
+                        <div class="faq">
+                            <div class="faq__row">
+                                <div class="faq__title">Регистрация</div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Зачем нужна регистрация?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как зарегистрироваться на сайте?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Можно ли не регистрироваться на сайте, а просто получить контактные телефоны работодателя для связи?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как изменить e-mail и/или пароль?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Забыли логин/пароль?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как удалить мою регистрацию с сайта?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq__row">
+                                <div class="faq__title">Создание и редактирование резюме</div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как создать резюме?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Зачем нужна функция «Дублировать резюме»?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как внести изменения в резюме?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как можно удалить ранее сделанное резюме?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как разместить резюме, чтобы его не увидел мой нынешний работодатель?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как узнать, какие компании просматривали мое резюме?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Можно ли не заполнять все поля в резюме?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как выбрать профессиональную область?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как сделать, чтобы опыт работы отображался в произвольном порядке, а не в хронологическом?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Я только закончил вуз, и у меня пока нет опыта работы. Как заполнить страницу Профессиональный опыт, при составлении резюме она является обязательной?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Чем отличается пункт «Повышение квалификации/Курсы» от пункта «Тесты/Экзамены» в разделе «Образование» в построителе резюме?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">В каких случаях резюме может быть удалено модератором?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Что такое «незавершенное резюме»?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Почему мое резюме заблокировано?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq__row">
+                                <div class="faq__title">Поиск вакансий</div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как найти вакансию?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Учитывается ли регистр при поиске?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как сохранить параметры поиска вакансий?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как подписаться на рассылку / отписаться от рассылки вакансий по электронной почте?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как подписаться на рассылку вакансий через RSS?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Можно ли не показывать мне неподходящую вакансию в результатах поиска?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq__row">
+                                <div class="faq__title">Отклики и приглашения</div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Что такое отклик?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Как происходит отклик на вакансию?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Что обозначают красный и зеленый кружки на странице «Отклики и приглашения»?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Насколько быстро будет просмотрен отклик работодателем и от чего это зависит?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Почему не всегда приходят sms c приглашением на интервью?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Могу я откликаться на вакансию, если статус моего резюме стоит «не видно никому»?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Я отправил отклик с резюме через сайт, потом обновил резюме. Те работодатели, которые просмотрят его завтра, увидят новую версию или ту, что была на момент отправки?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Можно ли направить повторный отклик на вакансию?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                                <div class="faq__block">
+                                    <div class="faq__block-title"><a href="#!">Что такое приглашение?</a></div>
+                                    <div class="faq__block-answer">
+                                        <p>Заинтересованность работодателя подтверждается одновременно двумя видами уведомлений: по электронному адресу, указанному в резюме, и на вашей странице «Отклики и приглашения». </p>
+                                        <p>Дополнительное уведомление по sms происходит только по желанию работодателя.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <!-- Right-->
+                        <div class="column-right">
+                            <!-- Call block-->
+                                    <div class="call-block"><a href="#!"></a>
+                                        <div class="call-block__title">Остались вопросы?<small>Бесплатный звонок по России  </small></div><span class="btn call-block__btn"><span class="span span--normal"> <i class="ion-android-call"></i>8 (800) 765 43 21</span><span class="span span--hover"><i class="ion-android-call"></i>заказать звонок</span></span><img src="./img/call-block.png" alt="">
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="footer__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-4">
+                            <div class="footer__logo"><a href="#!"><img src="./img/footer-logo.png" alt=""><span>Социальный фрагмент благополучия</span></a></div>
+                            <div class="clear"></div>
+                            <div class="footer__top-button">
+                                <div><a href="#!" class="btn btn--3d btn--block"><span>разместить резюме</span></a></div>
+                                <div><a href="#!" class="btn btn--3d btn--block"><span>разместить вакансию</span></a></div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                            <div class="footer__menu">
+                                <button id="fMenu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="footer__menu-button"><span><i class="ion-navicon-round"></i><span>Меню</span></span></button>
+                                <div aria-labelledby="fMenu" class="footer__menu-wrapper">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="footer__title">Соискателям  </div>
+                                            <ul class="footer__nav">
+                                                <li><a href="#!">Создать резюме </a></li>
+                                                <li><a href="#!">Найти вакансии</a></li>
+                                                <li><a href="#!">Поиск по компаниям</a></li>
+                                                <li><a href="#!">Поиск по профессии</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="footer__title">работадателям</div>
+                                            <ul class="footer__nav">
+                                                <li><a href="#!">Зарегистрироваться</a></li>
+                                                <li><a href="#!">Разместить вакансию</a></li>
+                                                <li><a href="#!">Найти сотрудников</a></li>
+                                                <li><a href="#!">Поиск по профессии</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="footer__title">информация</div>
+                                            <ul class="footer__nav">
+                                                <li><a href="#!">О проекте</a></li>
+                                                <li><a href="#!">Новости</a></li>
+                                                <li><a href="#!">Наши партнеры</a></li>
+                                                <li><a href="#!">Юридическая помощь</a></li>
+                                                <li><a href="#!">Контакты</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <div class="footer__copyright">© 2017 ООО “РЕДПАЗЛ”  Сервис для трудовых мигрантов</div>
+                    <div class="footer__info">Сегодня на сайте 19 997 вакансий, 1 017 858 резюме, 57 448 компаний</div>
+                </div>
+            </div>
+        </footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Load Scripts-->
+        <script src="./js/libs.js"></script>
+        <!-- Footer js-->
+        <script src="./js/libs/selectric/jquery.selectric.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/readmore/readmore.min.js"></script>
+        <script src="./js/libs/jquery.matchHeight/jquery.matchHeight-min.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
+</html>

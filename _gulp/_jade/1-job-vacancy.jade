@@ -27,7 +27,8 @@ html(lang="ru")
         
         .row
           .col-md-9
-            h1 Менеджер по продажам
+            .content__head
+              h1 Менеджер по продажам
             
             .vacancy__price 40 000-80 000 руб.
             
@@ -37,7 +38,7 @@ html(lang="ru")
                   i.ion-android-star-outline
                   i.ion-android-star
               div
-                a(href="#!").btn
+                a(href="#popup-respond").btn.open-popup-link
                   span откликнуться
         
             .clear25
@@ -90,7 +91,7 @@ html(lang="ru")
               
             .button__group
               div
-                a(href="#!").btn
+                a(href="#popup-respond").btn.open-popup-link
                   span откликнуться
               div
                 a(href="#!").favorites__button
@@ -129,7 +130,8 @@ html(lang="ru")
     
           .col-sm-3
             
-            .vacancy__column-right
+            .column-right.column-right--vacancy
+              
               // Vacancy company
               .vacancy__company
                 .vacancy__company-img

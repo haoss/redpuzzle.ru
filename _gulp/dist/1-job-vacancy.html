@@ -150,6 +150,24 @@
                 </div>
             </div>
         </div>
+        <div id="popup-respond" class="popup popup--respond mfp-hide">
+            <div class="popup__wrapper">
+                <div class="popup__close"><i class="ion-android-close"></i></div>
+                <form action="#">
+                    <fieldset>
+                        <div class="popup__respond-title">Резюме для отклика</div>
+                        <div class="popup__respond-category">Менеджер по продажам<i class="ion-checkmark-circled"></i></div>
+                        <div class="popup__respond-link"><a href="#!">Посмотреть свое резюме</a></div>
+                        <div class="form-group form-group--normal">
+                            <label><small class="popup__respond-small">Написать сопроводительное письмо</small></label>
+                            <textarea name="message" class="form-control"></textarea>
+                        </div>
+                        <div class="clear10"></div>
+                        <button type="submit" class="btn btn--middle btn--3d btn--block"><span>Отправить</span></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
         <!-- Header-->
         <header class="header">
             <div class="header__top">
@@ -327,11 +345,13 @@
                 </ul>
                 <div class="row">
                     <div class="col-md-9">
-                        <h1>Менеджер по продажам</h1>
+                        <div class="content__head">
+                            <h1>Менеджер по продажам</h1>
+                        </div>
                         <div class="vacancy__price">40 000-80 000 руб.</div>
                         <div class="button__group button__group--right">
                             <div><a href="#!" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
-                            <div><a href="#!" class="btn"><span>откликнуться</span></a></div>
+                            <div><a href="#popup-respond" class="btn open-popup-link"><span>откликнуться</span></a></div>
                         </div>
                         <div class="clear25"></div>
                         <div class="vacancy__info">
@@ -375,7 +395,7 @@
                         </ul>
                         <div class="clear20"></div>
                         <div class="button__group">
-                            <div><a href="#!" class="btn"><span>откликнуться</span></a></div>
+                            <div><a href="#popup-respond" class="btn open-popup-link"><span>откликнуться</span></a></div>
                             <div><a href="#!" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
                         </div>
                         <!-- Section-->
@@ -410,7 +430,7 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="vacancy__column-right">
+                        <div class="column-right column-right--vacancy">
                             <!-- Vacancy company-->
                             <div class="vacancy__company">
                                 <div class="vacancy__company-img"><img src="./img/vacancy-company-1.png" alt=""></div>

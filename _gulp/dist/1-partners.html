@@ -150,6 +150,24 @@
                 </div>
             </div>
         </div>
+        <div id="popup-respond" class="popup popup--respond mfp-hide">
+            <div class="popup__wrapper">
+                <div class="popup__close"><i class="ion-android-close"></i></div>
+                <form action="#">
+                    <fieldset>
+                        <div class="popup__respond-title">Резюме для отклика</div>
+                        <div class="popup__respond-category">Менеджер по продажам<i class="ion-checkmark-circled"></i></div>
+                        <div class="popup__respond-link"><a href="#!">Посмотреть свое резюме</a></div>
+                        <div class="form-group form-group--normal">
+                            <label><small class="popup__respond-small">Написать сопроводительное письмо</small></label>
+                            <textarea name="message" class="form-control"></textarea>
+                        </div>
+                        <div class="clear10"></div>
+                        <button type="submit" class="btn btn--middle btn--3d btn--block"><span>Отправить</span></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
         <!-- Header-->
         <header class="header">
             <div class="header__top">
@@ -327,7 +345,9 @@
                 </ul>
                 <div class="row">
                     <div class="col-sm-9">
-                        <h1>компания «Юнтел»</h1>
+                        <div class="content__head">
+                            <h1>компания «Юнтел»<i class="ion-checkmark"></i></h1>
+                        </div>
                         <div class="h4"><strong>Компания «Юнтел», основанная в 2007 году является поставщиком телекоммуникационных услуг операторам связи и частным юридическим лицам.</strong></div>
                         <p class="no--m-bottom"><strong>Для операторов связи Юнтел предлагает услуги по проведению работ на всех объектах инфраструктуры связи:</strong></p>
                         <ul class="list">
@@ -391,10 +411,23 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <!-- Call block-->
-                                <div class="call-block"><a href="#!"></a>
-                                    <div class="call-block__title">Остались вопросы?<small>Бесплатный звонок по России  </small></div><span class="btn call-block__btn"><span class="span span--normal"> <i class="ion-android-call"></i>8 (800) 765 43 21</span><span class="span span--hover"><i class="ion-android-call"></i>заказать звонок</span></span><img src="./img/call-block.png" alt="">
+                        <!-- Right-->
+                        <div class="column-right">
+                            <!-- partner company-->
+                            <div class="partner__company">
+                                <div class="partner__company-img"><img src="./img/partners-company-logo-1.png" alt=""></div>
+                                <div class="partner__company-row"><strong>г.Москва</strong><a href="#!">www.untel.ru</a></div>
+                                <div class="partner__company-row"><strong>Вакансии</strong><a href="#!" class="link-dotted">2 активные вакансии</a></div>
+                                <div class="partner__company-row"><strong>Сферы деятельности</strong>
+                                    <p>Телекоммуникации, связь <br>Информационные технологии, системная интеграция, интернет</p>
                                 </div>
+                                <div class="partner__company-button"><a href="#!" class="btn btn--block"><span class="hidden-sm">Я хочу тут работать</span><span class="visible-sm">хочу работать</span></a><a href="#!" class="btn btn--block"><span class="hidden-sm">следить за вакансиями</span><span class="visible-sm">следить</span></a></div>
+                            </div>
+                            <!-- Call block-->
+                                    <div class="call-block"><a href="#!"></a>
+                                        <div class="call-block__title">Остались вопросы?<small>Бесплатный звонок по России  </small></div><span class="btn call-block__btn"><span class="span span--normal"> <i class="ion-android-call"></i>8 (800) 765 43 21</span><span class="span span--hover"><i class="ion-android-call"></i>заказать звонок</span></span><img src="./img/call-block.png" alt="">
+                                    </div>
+                        </div>
                     </div>
                 </div>
             </div>

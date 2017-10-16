@@ -85,6 +85,9 @@ button, html input[type=button], input[type=reset], input[type=submit]
         .label
           position: relative
           top: -2px
+      &-f11
+        font-size: rem(11)
+        font-family: $font-roboto-medium
     &.has-feedback
       i.ion-alert-circled
         display: none
@@ -117,7 +120,16 @@ button, html input[type=button], input[type=reset], input[type=submit]
       &.has-feedback
         i.ion-alert-circled
           top: 6px
-
+    &--normal
+      transform: skewX(0deg)
+      background: none
+      border: 0
+      margin-left: 0
+      margin-right: 0
+      .form-control, .form__control
+        transform: skewX(0deg)
+        background: $color-lightgray
+        border: 1px solid $color-lightgray
 
   &-control, &__control
     display: block
@@ -146,8 +158,10 @@ button, html input[type=button], input[type=reset], input[type=submit]
 
 textarea
   &.form-control, &.form__control
-    height: 150px
+    height: 180px
     resize: none
+    padding-top: 5px
+    padding-bottom: 5px
 
 label
   display: inline-block

@@ -125,6 +125,9 @@ $(document).on('ready', function(){
   $('.purchase__block .purchase__info').matchHeight();
 
   favoritesTest();
+  faq();
+  sortingOption();
+  phoneVacancy();
 
   // Chrome Smooth Scroll
   try {
@@ -321,7 +324,7 @@ function navigationInfo(){
   var navAbout = $('.navigation__about');
   var navInfo = $('.navigation__info');
 
-  navAbout.on('hover', function(e){
+  navAbout.on('click', function(e){
     $(this).addClass('is-hover');
     navInfo.addClass('is-active');
   });
@@ -374,6 +377,56 @@ function menuMobile(){
 function favoritesTest(){
   $('.favorites__button').on('click', function(e){
     e.preventDefault();
-    $('.favorites__button').toggleClass('is-favorites');
+    $(this).toggleClass('is-favorites');
   })
+}
+
+function faq(){
+  var faqBlock = '.faq__block';
+  var faqBlockAnswer = $('.faq__block-answer');
+  var faqBlockTitle = $('.faq__block-title');
+
+  $(faqBlock).each(function(){
+    var _this = $(this);
+    if (_this.hasClass('is-active')) {
+      _this.find('.faq__block-answer').show();
+    }
+  });
+
+  faqBlockTitle.on('click', function(e){
+    e.preventDefault();
+    var _this = $(this);
+
+    if (!_this.parents(faqBlock).hasClass('is-active')) {
+      _this.parents(faqBlock).addClass('is-active');
+      _this.next(faqBlockAnswer).slideDown();
+    } else {
+      _this.parents(faqBlock).removeClass('is-active');
+      _this.next(faqBlockAnswer).slideUp();
+    }
+  });
+}
+
+function sortingOption(){
+  $('.catalog__sorting-head').on('click', function(){
+    $(this).parent().addClass('is-active');
+  });
+  $('.catalog__sorting-wrapper').on('click', function(e){
+    e.stopPropagation();
+  });
+  $('.catalog__sorting-background').on('click', function(){
+    $(this).parent().removeClass('is-active');
+  });
+}
+
+function phoneVacancy(){
+  $('.phone__vacancy-head').on('click', function(){
+    $(this).parent().addClass('is-active');
+  });
+  $('.phone__vacancy-wrapper').on('click', function(e){
+    e.stopPropagation();
+  });
+  $('.phone__vacancy-background').on('click', function(){
+    $(this).parent().removeClass('is-active');
+  });
 }

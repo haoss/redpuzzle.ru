@@ -27,7 +27,10 @@ html(lang="ru")
         
         .row
           .col-sm-9
-            h1 компания «Юнтел»
+            
+            .content__head
+              h1 компания «Юнтел»
+                i.ion-checkmark
             
             .h4
               strong Компания «Юнтел», основанная в 2007 году является поставщиком телекоммуникационных услуг операторам связи и частным юридическим лицам.
@@ -103,8 +106,37 @@ html(lang="ru")
           
           .col-sm-3
             
-            // Call block
-            +callBlock
+            // Right
+            .column-right
+            
+              // partner company
+              .partner__company
+                .partner__company-img
+                  img(src="./img/partners-company-logo-1.png", alt="")
+                
+                .partner__company-row
+                  strong г.Москва
+                  a(href="#!") www.untel.ru
+                .partner__company-row
+                  strong Вакансии
+                  a(href="#!").link-dotted 2 активные вакансии
+                
+                .partner__company-row
+                  strong Сферы деятельности
+                  p Телекоммуникации, связь 
+                    br
+                    | Информационные технологии, системная интеграция, интернет
+                
+                .partner__company-button
+                  a(href="#!").btn.btn--block
+                    span.hidden-sm Я хочу тут работать
+                    span.visible-sm хочу работать
+                  a(href="#!").btn.btn--block
+                    span.hidden-sm следить за вакансиями
+                    span.visible-sm следить
+              
+              // Call block
+              +callBlock
     
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")

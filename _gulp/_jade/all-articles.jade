@@ -1,0 +1,96 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Все статьи' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Все статьи' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .row
+          .col-sm-9
+            
+            .h1 статьи
+            
+            // Articles
+            .articles
+              .articles__row.row
+                .col-xs-4.hidden-xxs
+                  .articles__img
+                    a(href="#!")
+                      img(src="./img/articles-list-img-1.png", alt="")
+                .col-xs-8.col-xxs-12
+                  a(href="#!").articles__link Астрофизики предупредили о появлении второго солнца
+                  time.date 1 апреля 2017
+                  p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
+              .articles__row.row
+                .col-xs-4.hidden-xxs
+                  .articles__img
+                    a(href="#!")
+                      img(src="./img/articles-list-img-2.png", alt="")
+                .col-xs-8.col-xxs-12
+                  a(href="#!").articles__link День знаний: почему дети идут в школу именно 1 сентября
+                  time.date 1 апреля 2017
+                  p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
+              .articles__row.row
+                .col-xs-4.hidden-xxs
+                  .articles__img
+                    a(href="#!")
+                      img(src="./img/articles-list-img-3.png", alt="")
+                .col-xs-8.col-xxs-12
+                  a(href="#!").articles__link Гены решают: стоит ли воспитывать детей, если все заложено заранее
+                  time.date 1 апреля 2017
+                  p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
+              .articles__row.row
+                .col-xs-4.hidden-xxs
+                  .articles__img
+                    a(href="#!")
+                      img(src="./img/articles-list-img-4.png", alt="")
+                .col-xs-8.col-xxs-12
+                  a(href="#!").articles__link Астрономы поймали 15 таинственных сигналов из далёкой галактики
+                  time.date 1 апреля 2017
+                  p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
+            
+            // Pagination
+            +pagination
+            
+          .col-sm-3
+            
+            // Right
+            .column-right
+              
+              // Call block
+              +callBlock
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

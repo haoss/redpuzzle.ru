@@ -1,0 +1,94 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Вопросы и ответы' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Вопросы и ответы' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head
+          .h1 Работа в области автомобильного бизнеса в москве
+          
+        .clear10
+          
+        // Category
+        .category__list
+          .row
+            .col-sm-4
+              a(href="#!").category__block
+                span Автожестянщик 
+                small 86
+            .col-sm-4
+              a(href="#!").category__block
+                span Автозапчасти 
+                small 13
+            .col-sm-4
+              a(href="#!").category__block
+                span Автомойщик
+                small 53
+            .col-sm-4
+              a(href="#!").category__block
+                span Автослесарь 
+                small 886
+            .col-sm-4
+              a(href="#!").category__block
+                span Начальный уровень /мало опыта   
+                small 544
+            .col-sm-4
+              a(href="#!").category__block
+                span Продажа
+                small 877
+            .col-sm-4
+              a(href="#!").category__block
+                span Производство 
+                small 324
+            .col-sm-4
+              a(href="#!").category__block
+                span Прокат, лизинг  
+                small 4
+            .col-sm-4
+              a(href="#!").category__block
+                span Сервисное обслуживание  
+                small 654
+            .col-sm-4
+              a(href="#!").category__block
+                span Тонировщик 
+                small 54
+            .col-sm-4
+              a(href="#!").category__block
+                span Шины, диски 
+                small 874
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
