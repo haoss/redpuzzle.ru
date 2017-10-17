@@ -67,12 +67,17 @@
         font-size: rem(9)
   .content__head
     .h1, h1
-      letter-spacing: 2px
+      letter-spacing: 1px
   .partner
     &__company
       &-button
         margin-left: -10px
         margin-right: -10px
+  .catalog
+    &-search
+      &>div
+        &:last-child
+          padding-left: 30px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -234,6 +239,14 @@
         display: none
       span
         padding-right: 0
+  .mobile__col
+    display: block
+  .content
+    &__head
+      &--mobile
+        padding-left: 50px
+      &-button
+        display: block
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -539,6 +552,11 @@
         margin-bottom: 10px
         &>div
           vertical-align: middle
+  .catalog
+    &-search
+      &>div
+        &:last-child
+          padding-left: 20px
 
 @media only screen and (max-width : 599px)
   .popup
@@ -730,6 +748,23 @@
     &__vacancy
       &-wrapper
         right: -172px
+  .content
+    &__head
+      &--mobile
+        .h1, h1
+          font-size: rem(26)
+  .catalog-search
+    display: block
+    margin-bottom: 65px
+    &>div
+      display: block
+      width: 100% !important
+      &>div
+        padding-left: 0
+        // padding-top: 20px
+    .catalog__sorting
+      // float: none
+      margin-top: 21px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

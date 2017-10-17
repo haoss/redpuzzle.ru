@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Список работ - redpuzzle.ru</title>
+        <title>Поиск работ - redpuzzle.ru</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -345,7 +345,7 @@
                 </ul>
                 <div class="content__head content__head--mobile">
                     <button id="mobileColBtn" type="button" class="content__head-button"><i class="ion-gear-a"></i></button>
-                    <div class="h1">Работа в области автомобильного бизнеса в москве</div>
+                    <div class="h1">поиск работы в москве и области</div>
                 </div>
                 <!-- Mobile column-->
                 <div id="mobileCol" class="mobile__col">
@@ -354,6 +354,79 @@
                         <div id="mobileColWrapperBody" class="mobile__col-wrapper__body">
                             <button id="mobileColButton" type="button" class="mobile__col-button"><span><i class="ion-gear-a"></i></span></button>
                             <div id="mobileColWrapperBody-div">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Catalog search-->
+                <div class="catalog-search">
+                    <div>
+                        <div class="catalog__search">
+                            <div class="catalog__search-wrapper block-focus">
+                                <div>
+                                    <div class="input">
+                                        <label class="hidden"></label>
+                                        <input type="text" placeholder="Менеджер по продажам" class="input-focus">
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn--catalog-search"><span>найти</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="catalog__sorting">
+                            <div class="catalog__sorting-background"></div>
+                            <div class="catalog__sorting-head"><i class="ion-stats-bars"></i>сортировать<i class="ion-chevron-down"></i></div>
+                            <div class="catalog__sorting-wrapper">
+                                <div class="catalog__sorting-input">
+                                    <div>
+                                        <div class="form-group form-group--radio">
+                                            <label class="hidden">по дате</label>
+                                            <input id="by-name1" type="radio" name="by-name" checked><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                                            <label for="by-name1" class="label">по дате</label>
+                                        </div>
+                                        <div class="form-group form-group--radio">
+                                            <label class="hidden">по убыванию зарплаты</label>
+                                            <input id="by-name2" type="radio" name="by-name"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                                            <label for="by-name2" class="label">по убыванию зарплаты</label>
+                                        </div>
+                                        <div class="form-group form-group--radio">
+                                            <label class="hidden">по возрастанию зарплаты</label>
+                                            <input id="by-name3" type="radio" name="by-name"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                                            <label for="by-name3" class="label">по возрастанию зарплаты</label>
+                                        </div>
+                                        <div class="form-group form-group--radio">
+                                            <label class="hidden">по соответствию</label>
+                                            <input id="by-name4" type="radio" name="by-name"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                                            <label for="by-name4" class="label">по соответствию</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="form-group form-group--radio">
+                                            <label class="hidden">за месяц</label>
+                                            <input id="by-date1" type="radio" name="by-date" checked><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                                            <label for="by-date1" class="label">за месяц</label>
+                                        </div>
+                                        <div class="form-group form-group--radio">
+                                            <label class="hidden">за неделю</label>
+                                            <input id="by-date2" type="radio" name="by-date"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                                            <label for="by-date2" class="label">за неделю</label>
+                                        </div>
+                                        <div class="form-group form-group--radio">
+                                            <label class="hidden">за три дня</label>
+                                            <input id="by-date3" type="radio" name="by-date"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                                            <label for="by-date3" class="label">за три дня</label>
+                                        </div>
+                                        <div class="form-group form-group--radio">
+                                            <label class="hidden">за сутки</label>
+                                            <input id="by-date4" type="radio" name="by-date"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
+                                            <label for="by-date4" class="label">за сутки</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn--block"><span>Сортировать</span></button>
                             </div>
                         </div>
                     </div>
@@ -487,77 +560,6 @@
                     <div class="col-md-9">
                         <!-- Catalog-->
                         <div class="catalog">
-                            <div class="catalog__vacancy">
-                                <ul>
-                                    <li><a href="#!"><strong>автожестянщик</strong><span>86</span></a></li>
-                                    <li><a href="#!"><strong>автозапчасти</strong><span>13</span></a></li>
-                                    <li><a href="#!"><strong>автомойщик</strong><span>57</span></a></li>
-                                    <li><a href="#!"><strong>автослесарь</strong><span>886</span></a></li>
-                                    <li><a href="#!"><strong>начальный уровень /мало опыта</strong><span>544</span></a></li>
-                                    <li><a href="#!"><strong>продажа</strong><span>877</span></a></li>
-                                    <li><a href="#!"><strong>производство</strong><span>324</span></a></li>
-                                    <li><a href="#!"><strong>прокат, лизинг</strong><span>4</span></a></li>
-                                    <li><a href="#!"><strong>сервисное обслуживание</strong><span>654</span></a></li>
-                                    <li><a href="#!"><strong>тонировщик</strong><span>54</span></a></li>
-                                    <li><a href="#!"><strong>шины, диски</strong><span>874</span></a></li>
-                                </ul>
-                            </div>
-                            <div class="catalog__head">
-                                <div class="catalog__number">Найдено<br class="visible-xxs">1 289 вакансий</div>
-                                <div class="catalog__sorting">
-                                    <div class="catalog__sorting-background"></div>
-                                    <div class="catalog__sorting-head"><i class="ion-stats-bars"></i>сортировать<i class="ion-chevron-down"></i></div>
-                                    <div class="catalog__sorting-wrapper">
-                                        <div class="catalog__sorting-input">
-                                            <div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">по дате</label>
-                                                    <input id="by-name1" type="radio" name="by-name" checked><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-name1" class="label">по дате</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">по убыванию зарплаты</label>
-                                                    <input id="by-name2" type="radio" name="by-name"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-name2" class="label">по убыванию зарплаты</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">по возрастанию зарплаты</label>
-                                                    <input id="by-name3" type="radio" name="by-name"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-name3" class="label">по возрастанию зарплаты</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">по соответствию</label>
-                                                    <input id="by-name4" type="radio" name="by-name"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-name4" class="label">по соответствию</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">за месяц</label>
-                                                    <input id="by-date1" type="radio" name="by-date" checked><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-date1" class="label">за месяц</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">за неделю</label>
-                                                    <input id="by-date2" type="radio" name="by-date"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-date2" class="label">за неделю</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">за три дня</label>
-                                                    <input id="by-date3" type="radio" name="by-date"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-date3" class="label">за три дня</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">за сутки</label>
-                                                    <input id="by-date4" type="radio" name="by-date"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-date4" class="label">за сутки</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="btn btn--block"><span>Сортировать</span></button>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="catalog__row">
                                 <div class="catalog__row-title"><a href="#!"> <strong>Менеджер по продажам</strong><span>срочная</span></a></div>
                                 <div class="catalog__row-info">

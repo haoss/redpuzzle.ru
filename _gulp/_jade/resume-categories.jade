@@ -1,0 +1,158 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Список всех соискателей' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список всех соискателей' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head
+          .h1 Список всех соискателей
+          
+        .clear10
+          
+        // Category
+        .category__list
+          .row
+            .col-sm-4
+              a(href="#!").category__block
+                span Начало карьеры 
+                small 86
+            .col-sm-4
+              a(href="#!").category__block
+                span Продажи 
+                small 13
+            .col-sm-4
+              a(href="#!").category__block
+                span ТранспортПроизводство
+                small 53
+            .col-sm-4
+              a(href="#!").category__block
+                span Админ. персонал 
+                small 886
+            .col-sm-4
+              a(href="#!").category__block
+                span Строительство
+                small 544
+            .col-sm-4
+              a(href="#!").category__block
+                span IT, телеком
+                small 877
+            .col-sm-4
+              a(href="#!").category__block
+                span Бухгалтерия 
+                small 324
+            .col-sm-4
+              a(href="#!").category__block
+                span Туризм, рестораны
+                small 4
+            .col-sm-4
+              a(href="#!").category__block
+                span Маркетинг
+                small 654
+            .col-sm-4
+              a(href="#!").category__block
+                span Искусство, медиа 
+                small 54
+            .col-sm-4
+              a(href="#!").category__block
+                span Рабочий персонал
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Топ-менеджмент
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Банки
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Авто
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Медицина
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Юриспруденция
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Управление персоналом
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Наука, образование
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Безопасность
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Спорт, фитнес
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Закупки
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Добыча сырья
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Домашний персонал
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Госслужба
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Консультирование
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Страхование
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Инсталляция
+                small 874
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

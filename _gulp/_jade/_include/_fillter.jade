@@ -1,0 +1,140 @@
+// Catalog filter
+.filter#filters
+  form(action="#!" method="get")
+    .filter__body
+      .filter__block
+        .filter__head Регион
+        .filter__text Москва и область
+        
+      .filter__block
+        .filter__head Зарплата
+        .filter__table
+          div от 
+          div
+            .form-group.form-group--filter.form-group--price.block-focus
+              input(type="text" name="price").form-control.input-focus
+          div руб.
+        label.filter__row(for="price__0").filter__row--price
+          input(type="checkbox" name="f_price[]")#price__0
+          span.checkbox
+          span.label показать вакансии без указания з/п
+        
+      .filter__block.has-hide
+        .filter__head Сфера деятельности
+        label.filter__row(for="sphere__0")
+          input(type="checkbox" name="f_sphere[]" checked)#sphere__0
+          span.checkbox
+          span.label Продажи
+        label.filter__row(for="sphere__1")
+          input(type="checkbox" name="f_sphere[]")#sphere__1
+          span.checkbox
+          span.label Маркетинг
+        label.filter__row(for="sphere__2")
+          input(type="checkbox" name="f_sphere[]")#sphere__2
+          span.checkbox
+          span.label Строительство
+        label.filter__row(for="sphere__3")
+          input(type="checkbox" name="f_sphere[]")#sphere__3
+          span.checkbox
+          span.label Банки
+        label.filter__row(for="sphere__4")
+          input(type="checkbox" name="f_sphere[]")#sphere__4
+          span.checkbox
+          span.label Начало карьеры
+        label.filter__row(for="sphere__5")
+          input(type="checkbox" name="f_sphere[]")#sphere__5
+          span.checkbox
+          span.label IT, телеком
+        label.filter__row.unactive(for="sphere__6")
+          input(type="checkbox" name="f_sphere[]" disabled)#sphere__6
+          span.checkbox
+          span.label Авто
+        label.filter__row.unactive(for="sphere__7")
+          input(type="checkbox" name="f_sphere[]" disabled)#sphere__7
+          span.checkbox
+          span.label Консультирование
+        label.filter__row.unactive(for="sphere__8")
+          input(type="checkbox" name="f_sphere[]" disabled)#sphere__8
+          span.checkbox
+          span.label Админ. персонал
+        label.filter__row.unactive(for="sphere__9")
+          input(type="checkbox" name="f_sphere[]" disabled)#sphere__9
+          span.checkbox
+          span.label Производство
+        label.filter__row(for="sphere__10")
+          input(type="checkbox" name="f_sphere[]")#sphere__10
+          span.checkbox
+          span.label Туризм, рестораны
+        label.filter__row(for="sphere__11")
+          input(type="checkbox" name="f_sphere[]")#sphere__11
+          span.checkbox
+          span.label Транспорт
+        label.filter__row(for="sphere__12")
+          input(type="checkbox" name="f_sphere[]")#sphere__12
+          span.checkbox
+          span.label Транспорт 2
+        label.filter__row(for="sphere__13")
+          input(type="checkbox" name="f_sphere[]")#sphere__13
+          span.checkbox
+          span.label Транспорт 3
+        label.filter__row(for="sphere__14")
+          input(type="checkbox" name="f_sphere[]")#sphere__14
+          span.checkbox
+          span.label Транспорт 4
+    
+      .filter__block
+        .filter__head График работы
+        label.filter__row.filter__row--schedule(for="schedule__0")
+          input(type="checkbox" name="f_schedule[]" checked)#schedule__0
+          span.checkbox
+          span.label Любой
+        label.filter__row.filter__row--schedule(for="schedule__1")
+          input(type="checkbox" name="f_schedule[]")#schedule__1
+          span.checkbox
+          span.label Полный день
+        label.filter__row.filter__row--schedule(for="schedule__2")
+          input(type="checkbox" name="f_schedule[]")#schedule__2
+          span.checkbox
+          span.label Гибкий график
+        label.filter__row.filter__row--schedule(for="schedule__3")
+          input(type="checkbox" name="f_schedule[]")#schedule__3
+          span.checkbox
+          span.label Сменный график
+          
+      .filter__block
+        .filter__head Вид занятости
+        label.filter__row.filter__row--nosup(for="employment__0")
+          input(type="checkbox" name="f_employment[]" checked)#employment__0
+          span.checkbox
+          span.label Любая
+        label.filter__row.filter__row--nosup(for="employment__1")
+          input(type="checkbox" name="f_employment[]")#employment__1
+          span.checkbox
+          span.label Полная занятость
+        label.filter__row.filter__row--nosup(for="employment__2")
+          input(type="checkbox" name="f_employment[]")#employment__2
+          span.checkbox
+          span.label Частичная занятость
+        label.filter__row.filter__row--nosup(for="employment__3")
+          input(type="checkbox" name="f_employment[]")#employment__3
+          span.checkbox
+          span.label Стажировка
+          
+      .filter__block
+        .filter__head Наличие опыта
+        label.filter__row.filter__row--nosup(for="experience__0")
+          input(type="checkbox" name="f_experience[]" checked)#experience__0
+          span.checkbox
+          span.label Нет опыта
+        label.filter__row.filter__row--nosup(for="experience__1")
+          input(type="checkbox" name="f_experience[]")#experience__1
+          span.checkbox
+          span.label От 1 года до 3 лет
+        label.filter__row.filter__row--nosup(for="experience__2")
+          input(type="checkbox" name="f_experience[]")#experience__2
+          span.checkbox
+          span.label От 3 до 6 лет
+        label.filter__row.filter__row--nosup(for="experience__3")
+          input(type="checkbox" name="f_experience[]")#experience__3
+          span.checkbox
+          span.label Более 6 лет

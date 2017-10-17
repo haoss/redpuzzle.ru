@@ -128,6 +128,14 @@ $(document).on('ready', function(){
   faq();
   sortingOption();
   phoneVacancy();
+  columnMobile();
+
+  $('.has-hide').readmore({
+    speed: 500,
+    collapsedHeight: 295,
+    moreLink: '<div class="filter__more"><a href="#!">показать все</a></div>',
+    lessLink: '<div class="filter__more"><a href="#!">скрыть лишнее</a></div>'
+  });
 
   // Chrome Smooth Scroll
   try {
@@ -150,14 +158,37 @@ $(window).on('load', function() {
 
 $(window).on('resize', function(){
   var width = $(window).width();
+  var mobileColWrapper = $('.mobile__col-wrapper');
+  var body = $('body');
+  var mobileColBackground = $('.mobile__col-background');
+
+  var navMobile = $('#mobile__nav');
+  var navBackground = $('.mobile__nav-background');
+
   if (width > 767) {
     $('.message__readmore').removeClass('is-active');
     $('.message__link a').text('Развернуть');
-
-    $('body').removeClass('overflow-hidden');
-    $('.mobile__nav-background').removeClass('is-active');
-    $('.mobile__nav').removeClass('is-active');
   }
+  if (width > 767 && body.hasClass('overflow-hidden') && navBackground.hasClass('is-active') && navMobile.hasClass('is-active')) {
+    body.removeClass('overflow-hidden');
+    navBackground.removeClass('is-active');
+    navMobile.removeClass('is-active');
+  }
+
+  if (width > 991 && body.hasClass('overflow-hidden') && mobileColBackground.hasClass('is-active') && mobileColWrapper.hasClass('is-active')) {
+    body.removeClass('overflow-hidden');
+    mobileColBackground.removeClass('is-active');
+    mobileColWrapper.removeClass('is-active');
+  }
+
+  $('.has-hide').readmore({
+    speed: 500,
+    collapsedHeight: 295,
+    moreLink: '<div class="filter__more"><a href="#!">показать все</a></div>',
+    lessLink: '<div class="filter__more"><a href="#!">скрыть лишнее</a></div>'
+  });
+
+  columnMobile();
 });
 
 $(window).on('scroll', function(){
@@ -366,11 +397,9 @@ function menuMobile(){
   });
 
   navBackground.on('click', function(){
-    setTimeout(function(){
-      body.removeClass('overflow-hidden');
-      navMobile.removeClass('is-active');
-      navBackground.removeClass('is-active');
-    }, 500)
+    body.removeClass('overflow-hidden');
+    navMobile.removeClass('is-active');
+    navBackground.removeClass('is-active');
   });
 }
 
@@ -429,4 +458,61 @@ function phoneVacancy(){
   $('.phone__vacancy-background').on('click', function(){
     $(this).parent().removeClass('is-active');
   });
+}
+
+function columnMobile(){
+  var mobileColBtn = $('#mobileColBtn');
+  var mobileColWrapper = $('.mobile__col-wrapper');
+  var mobileColButton = $('#mobileColButton');
+  var body = $('body');
+  var mobileColBackground = $('.mobile__col-background');
+  var width = $(window).width();
+
+  mobileColBtn.on('click', function(){
+    body.addClass('overflow-hidden');
+    mobileColWrapper.addClass('is-active');
+    mobileColBackground.addClass('is-active');
+
+    if (width < 991 && $('#mobileColWrapperBody-div').children().length == 0) {
+      $('#mobileColContent > div').clone().appendTo('#mobileColWrapperBody-div');
+
+      $('.has-hide').readmore({
+        speed: 500,
+        collapsedHeight: 295,
+        moreLink: '<div class="filter__more"><a href="#!">показать все</a></div>',
+        lessLink: '<div class="filter__more"><a href="#!">скрыть лишнее</a></div>'
+      });
+    }
+  });
+
+  mobileColButton.on('click', function(){
+    body.removeClass('overflow-hidden');
+    mobileColWrapper.removeClass('is-active');
+    mobileColBackground.removeClass('is-active');
+
+    if (width < 991 && $('#mobileColWrapperBody-div').children().length) {
+      $('#mobileColWrapperBody-div > div').remove();
+    }
+  });
+
+  mobileColBackground.on('click', function(){
+    body.removeClass('overflow-hidden');
+    mobileColWrapper.removeClass('is-active');
+    mobileColBackground.removeClass('is-active');
+
+    if (width < 991 && $('#mobileColWrapperBody-div').children().length) {
+      $('#mobileColWrapperBody-div > div').remove()
+    }
+  });
+
+  if (width < 991 && $('#mobileColWrapperBody-div').children().length == 0) {
+    $('#mobileColWrapperBody-div > div').remove();
+
+    $('.has-hide').readmore({
+      speed: 500,
+      collapsedHeight: 295,
+      moreLink: '<div class="filter__more"><a href="#!">показать все</a></div>',
+      lessLink: '<div class="filter__more"><a href="#!">скрыть лишнее</a></div>'
+    });
+  }
 }

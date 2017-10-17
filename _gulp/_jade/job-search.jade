@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
   
-  -var active = 'Список работ' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Список работ' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+  -var active = 'Поиск работ' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Поиск работ' + ' - redpuzzle.ru' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -28,7 +28,7 @@ html(lang="ru")
         .content__head.content__head--mobile
           button#mobileColBtn(type="button").content__head-button
             i.ion-gear-a
-          .h1 Работа в области автомобильного бизнеса в москве
+          .h1 поиск работы в москве и области
         
         // Mobile column
         #mobileCol.mobile__col
@@ -41,6 +41,81 @@ html(lang="ru")
               #mobileColWrapperBody-div
                 //- include ./_include/_fillter
         
+        // Catalog search
+        .catalog-search
+          div
+            .catalog__search
+              .catalog__search-wrapper.block-focus
+                div
+                  .input
+                    label.hidden
+                    input(type="text" placeholder="Менеджер по продажам").input-focus
+                div
+                  button(type="submit").btn.btn--catalog-search
+                    span найти
+          div
+            .catalog__sorting
+              .catalog__sorting-background
+              .catalog__sorting-head
+                i.ion-stats-bars
+                | сортировать
+                i.ion-chevron-down
+              .catalog__sorting-wrapper
+                .catalog__sorting-input
+                  div
+                    .form-group.form-group--radio
+                      label.hidden по дате
+                      input#by-name1(type="radio" name="by-name" checked)
+                      i.ion-android-radio-button-off
+                      i.ion-android-checkmark-circle
+                      label(for="by-name1").label по дате
+                    .form-group.form-group--radio
+                      label.hidden по убыванию зарплаты
+                      input#by-name2(type="radio" name="by-name")
+                      i.ion-android-radio-button-off
+                      i.ion-android-checkmark-circle
+                      label(for="by-name2").label по убыванию зарплаты
+                    .form-group.form-group--radio
+                      label.hidden по возрастанию зарплаты
+                      input#by-name3(type="radio" name="by-name")
+                      i.ion-android-radio-button-off
+                      i.ion-android-checkmark-circle
+                      label(for="by-name3").label по возрастанию зарплаты
+                    .form-group.form-group--radio
+                      label.hidden по соответствию
+                      input#by-name4(type="radio" name="by-name")
+                      i.ion-android-radio-button-off
+                      i.ion-android-checkmark-circle
+                      label(for="by-name4").label по соответствию
+                  div
+                    .form-group.form-group--radio
+                      label.hidden за месяц
+                      input#by-date1(type="radio" name="by-date" checked)
+                      i.ion-android-radio-button-off
+                      i.ion-android-checkmark-circle
+                      label(for="by-date1").label за месяц
+                    .form-group.form-group--radio
+                      label.hidden за неделю
+                      input#by-date2(type="radio" name="by-date")
+                      i.ion-android-radio-button-off
+                      i.ion-android-checkmark-circle
+                      label(for="by-date2").label за неделю
+                    .form-group.form-group--radio
+                      label.hidden за три дня
+                      input#by-date3(type="radio" name="by-date")
+                      i.ion-android-radio-button-off
+                      i.ion-android-checkmark-circle
+                      label(for="by-date3").label за три дня
+                    .form-group.form-group--radio
+                      label.hidden за сутки
+                      input#by-date4(type="radio" name="by-date")
+                      i.ion-android-radio-button-off
+                      i.ion-android-checkmark-circle
+                      label(for="by-date4").label за сутки
+                button(type="button").btn.btn--block
+                  span Сортировать
+          
+        
         .row
           .col-md-3.hidden-sm.hidden-xs
             #mobileColContent.mobile__col-content
@@ -51,120 +126,7 @@ html(lang="ru")
             
             // Catalog
             .catalog
-              
-              .catalog__vacancy
-                ul
-                  li
-                    a(href="#!")
-                      strong автожестянщик
-                      span 86
-                  li
-                    a(href="#!")
-                      strong автозапчасти
-                      span 13
-                  li
-                    a(href="#!")
-                      strong автомойщик
-                      span 57
-                  li
-                    a(href="#!")
-                      strong автослесарь
-                      span 886
-                  li
-                    a(href="#!")
-                      strong начальный уровень /мало опыта
-                      span 544
-                  li
-                    a(href="#!")
-                      strong продажа
-                      span 877
-                  li
-                    a(href="#!")
-                      strong производство
-                      span 324
-                  li
-                    a(href="#!")
-                      strong прокат, лизинг
-                      span 4
-                  li
-                    a(href="#!")
-                      strong сервисное обслуживание
-                      span 654
-                  li
-                    a(href="#!")
-                      strong тонировщик
-                      span 54
-                  li
-                    a(href="#!")
-                      strong шины, диски
-                      span 874
-              
-              .catalog__head
-                .catalog__number Найдено
-                  br.visible-xxs
-                  | 1 289 вакансий
-                
-                .catalog__sorting
-                  .catalog__sorting-background
-                  .catalog__sorting-head
-                    i.ion-stats-bars
-                    | сортировать
-                    i.ion-chevron-down
-                  .catalog__sorting-wrapper
-                    .catalog__sorting-input
-                      div
-                        .form-group.form-group--radio
-                          label.hidden по дате
-                          input#by-name1(type="radio" name="by-name" checked)
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-name1").label по дате
-                        .form-group.form-group--radio
-                          label.hidden по убыванию зарплаты
-                          input#by-name2(type="radio" name="by-name")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-name2").label по убыванию зарплаты
-                        .form-group.form-group--radio
-                          label.hidden по возрастанию зарплаты
-                          input#by-name3(type="radio" name="by-name")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-name3").label по возрастанию зарплаты
-                        .form-group.form-group--radio
-                          label.hidden по соответствию
-                          input#by-name4(type="radio" name="by-name")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-name4").label по соответствию
-                      div
-                        .form-group.form-group--radio
-                          label.hidden за месяц
-                          input#by-date1(type="radio" name="by-date" checked)
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-date1").label за месяц
-                        .form-group.form-group--radio
-                          label.hidden за неделю
-                          input#by-date2(type="radio" name="by-date")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-date2").label за неделю
-                        .form-group.form-group--radio
-                          label.hidden за три дня
-                          input#by-date3(type="radio" name="by-date")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-date3").label за три дня
-                        .form-group.form-group--radio
-                          label.hidden за сутки
-                          input#by-date4(type="radio" name="by-date")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-date4").label за сутки
-                    button(type="button").btn.btn--block
-                      span Сортировать
-              
+                            
               .catalog__row
                 .catalog__row-title
                   a(href="#!") 
