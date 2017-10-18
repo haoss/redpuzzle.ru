@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Список резюме - redpuzzle.ru</title>
+        <title>Список всех соискателей - redpuzzle.ru</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -175,7 +175,7 @@
                     <fieldset>
                         <div class="popup__respond-title">Предлагаемая вакансия</div>
                         <div class="popup__respond-category">Инженер-строитель<i class="ion-chevron-down"></i></div>
-                        <div class="clear20"></div>
+                        <div class="clear10"></div>
                         <div class="form-group form-group--normal">
                             <label><small class="popup__respond-small">Написать сопроводительное письмо</small></label>
                             <textarea name="message" placeholder="Нас заинтересовала Ваша кандидатура, хотели бы пригласить Вас на собеседование." class="form-control"></textarea>
@@ -196,7 +196,7 @@
                 <div class="container">
                     <div class="header__location"><a href="#popup-location" class="open-popup-link"><i class="ion-ios-location"></i><span>Актюбинск (Казахстан)</span></a></div>
                     <div class="header__lang">
-                        <div class="header__lang-str">Русский<i class="ion-ios-arrow-down"></i></div>
+                        <div class="header__lang-str">Русский<i class="ion-chevron-down"></i></div>
                         <ul>
                             <li class="active"><a href="#!">Русский</a></li>
                             <li><a href="#!">Английский</a></li>
@@ -204,7 +204,7 @@
                         </ul>
                     </div>
                     <div class="header__phone">
-                        <div class="header__phone-str">8 (800) 765 43 21<i class="ion-ios-arrow-down"></i></div><small>С 09:00 до 18:00<br>Понедельник - Пятница</small>
+                        <div class="header__phone-str">8 (800) 765 43 21<i class="ion-chevron-down"></i></div><small>С 09:00 до 18:00<br>Понедельник - Пятница</small>
                     </div>
                 </div>
             </div>
@@ -365,273 +365,40 @@
                     <li><a href="#!">RedPuzzle.ru</a></li>
                     <li><span>Название страницы</span></li>
                 </ul>
-                <div class="content__head content__head--mobile">
-                    <button id="mobileColBtn" type="button" class="content__head-button"><i class="ion-gear-a"></i></button>
-                    <div class="h1">резюме в области продаж в москве</div>
+                <div class="content__head">
+                    <div class="h1">Список всех соискателей</div>
                 </div>
-                <!-- Mobile column-->
-                <div id="mobileCol" class="mobile__col">
-                    <div class="mobile__col-background"></div>
-                    <div class="mobile__col-wrapper">
-                        <div id="mobileColWrapperBody" class="mobile__col-wrapper__body">
-                            <button id="mobileColButton" type="button" class="mobile__col-button"><span><i class="ion-gear-a"></i></span></button>
-                            <div id="mobileColWrapperBody-div">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 hidden-sm hidden-xs">
-                        <div id="mobileColContent" class="mobile__col-content">
-                            <div>
-                                <!-- Catalog filter-->
-                                <div id="filters" class="filter">
-                                    <form action="#!" method="get">
-                                        <div class="filter__body">
-                                            <div class="filter__block">
-                                                <div class="filter__head">Регион</div>
-                                                <div class="filter__text">Москва и область</div>
-                                            </div>
-                                            <div class="filter__block">
-                                                <div class="filter__head">Зарплата</div>
-                                                <div class="filter__table">
-                                                    <div>от </div>
-                                                    <div>
-                                                        <div class="form-group form-group--filter form-group--price block-focus">
-                                                            <input type="text" name="price" class="form-control input-focus">
-                                                        </div>
-                                                    </div>
-                                                    <div>руб.</div>
-                                                </div>
-                                                <label for="price__0" class="filter__row filter__row--price">
-                                                    <input type="checkbox" name="f_price[]" checked id="price__0"><span class="checkbox"></span><span class="label">показать вакансии без указания з/п</span>
-                                                </label>
-                                            </div>
-                                            <div class="filter__block has-hide">
-                                                <div class="filter__head">Сфера деятельности</div>
-                                                <label for="sphere__0" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" checked id="sphere__0"><span class="checkbox"></span><span class="label">Продажи</span>
-                                                </label>
-                                                <label for="sphere__1" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" id="sphere__1"><span class="checkbox"></span><span class="label">Маркетинг</span>
-                                                </label>
-                                                <label for="sphere__2" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" id="sphere__2"><span class="checkbox"></span><span class="label">Строительство</span>
-                                                </label>
-                                                <label for="sphere__3" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" id="sphere__3"><span class="checkbox"></span><span class="label">Банки</span>
-                                                </label>
-                                                <label for="sphere__4" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" id="sphere__4"><span class="checkbox"></span><span class="label">Начало карьеры</span>
-                                                </label>
-                                                <label for="sphere__5" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" id="sphere__5"><span class="checkbox"></span><span class="label">IT, телеком</span>
-                                                </label>
-                                                <label for="sphere__6" class="filter__row unactive">
-                                                    <input type="checkbox" name="f_sphere[]" disabled id="sphere__6"><span class="checkbox"></span><span class="label">Авто</span>
-                                                </label>
-                                                <label for="sphere__7" class="filter__row unactive">
-                                                    <input type="checkbox" name="f_sphere[]" disabled id="sphere__7"><span class="checkbox"></span><span class="label">Консультирование</span>
-                                                </label>
-                                                <label for="sphere__8" class="filter__row unactive">
-                                                    <input type="checkbox" name="f_sphere[]" disabled id="sphere__8"><span class="checkbox"></span><span class="label">Админ. персонал</span>
-                                                </label>
-                                                <label for="sphere__9" class="filter__row unactive">
-                                                    <input type="checkbox" name="f_sphere[]" disabled id="sphere__9"><span class="checkbox"></span><span class="label">Производство</span>
-                                                </label>
-                                                <label for="sphere__10" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" id="sphere__10"><span class="checkbox"></span><span class="label">Туризм, рестораны</span>
-                                                </label>
-                                                <label for="sphere__11" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" id="sphere__11"><span class="checkbox"></span><span class="label">Транспорт</span>
-                                                </label>
-                                                <label for="sphere__12" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" id="sphere__12"><span class="checkbox"></span><span class="label">Транспорт 2</span>
-                                                </label>
-                                                <label for="sphere__13" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" id="sphere__13"><span class="checkbox"></span><span class="label">Транспорт 3</span>
-                                                </label>
-                                                <label for="sphere__14" class="filter__row">
-                                                    <input type="checkbox" name="f_sphere[]" id="sphere__14"><span class="checkbox"></span><span class="label">Транспорт 4</span>
-                                                </label>
-                                            </div>
-                                            <div class="filter__block">
-                                                <div class="filter__head">График работы</div>
-                                                <label for="schedule__0" class="filter__row filter__row--schedule">
-                                                    <input type="checkbox" name="f_schedule[]" checked id="schedule__0"><span class="checkbox"></span><span class="label">Любой</span>
-                                                </label>
-                                                <label for="schedule__1" class="filter__row filter__row--schedule">
-                                                    <input type="checkbox" name="f_schedule[]" id="schedule__1"><span class="checkbox"></span><span class="label">Полный день</span>
-                                                </label>
-                                                <label for="schedule__2" class="filter__row filter__row--schedule">
-                                                    <input type="checkbox" name="f_schedule[]" id="schedule__2"><span class="checkbox"></span><span class="label">Гибкий график</span>
-                                                </label>
-                                                <label for="schedule__3" class="filter__row filter__row--schedule">
-                                                    <input type="checkbox" name="f_schedule[]" id="schedule__3"><span class="checkbox"></span><span class="label">Сменный график</span>
-                                                </label>
-                                            </div>
-                                            <div class="filter__block">
-                                                <div class="filter__head">Вид занятости</div>
-                                                <label for="employment__0" class="filter__row filter__row--nosup">
-                                                    <input type="checkbox" name="f_employment[]" checked id="employment__0"><span class="checkbox"></span><span class="label">Любая</span>
-                                                </label>
-                                                <label for="employment__1" class="filter__row filter__row--nosup">
-                                                    <input type="checkbox" name="f_employment[]" id="employment__1"><span class="checkbox"></span><span class="label">Полная занятость</span>
-                                                </label>
-                                                <label for="employment__2" class="filter__row filter__row--nosup">
-                                                    <input type="checkbox" name="f_employment[]" id="employment__2"><span class="checkbox"></span><span class="label">Частичная занятость</span>
-                                                </label>
-                                                <label for="employment__3" class="filter__row filter__row--nosup">
-                                                    <input type="checkbox" name="f_employment[]" id="employment__3"><span class="checkbox"></span><span class="label">Стажировка</span>
-                                                </label>
-                                            </div>
-                                            <div class="filter__block">
-                                                <div class="filter__head">Наличие опыта</div>
-                                                <label for="experience__0" class="filter__row filter__row--nosup">
-                                                    <input type="checkbox" name="f_experience[]" checked id="experience__0"><span class="checkbox"></span><span class="label">Нет опыта</span>
-                                                </label>
-                                                <label for="experience__1" class="filter__row filter__row--nosup">
-                                                    <input type="checkbox" name="f_experience[]" id="experience__1"><span class="checkbox"></span><span class="label">От 1 года до 3 лет</span>
-                                                </label>
-                                                <label for="experience__2" class="filter__row filter__row--nosup">
-                                                    <input type="checkbox" name="f_experience[]" id="experience__2"><span class="checkbox"></span><span class="label">От 3 до 6 лет</span>
-                                                </label>
-                                                <label for="experience__3" class="filter__row filter__row--nosup">
-                                                    <input type="checkbox" name="f_experience[]" id="experience__3"><span class="checkbox"></span><span class="label">Более 6 лет</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <!-- Catalog-->
-                        <div class="catalog">
-                            <div class="catalog__vacancy">
-                                <ul>
-                                    <li><a href="#!"><strong>автожестянщик</strong><span>86</span></a></li>
-                                    <li><a href="#!"><strong>автозапчасти</strong><span>13</span></a></li>
-                                    <li><a href="#!"><strong>автомойщик</strong><span>57</span></a></li>
-                                    <li><a href="#!"><strong>автослесарь</strong><span>886</span></a></li>
-                                    <li><a href="#!"><strong>начальный уровень /мало опыта</strong><span>544</span></a></li>
-                                    <li><a href="#!"><strong>продажа</strong><span>877</span></a></li>
-                                    <li><a href="#!"><strong>производство</strong><span>324</span></a></li>
-                                    <li><a href="#!"><strong>прокат, лизинг</strong><span>4</span></a></li>
-                                    <li><a href="#!"><strong>сервисное обслуживание</strong><span>654</span></a></li>
-                                    <li><a href="#!"><strong>тонировщик</strong><span>54</span></a></li>
-                                    <li><a href="#!"><strong>шины, диски</strong><span>874</span></a></li>
-                                </ul>
-                            </div>
-                            <div class="catalog__head">
-                                <div class="catalog__number">Найдено<br class="visible-xxs">1 289 резюме</div>
-                                <div class="catalog__sorting">
-                                    <div class="catalog__sorting-background"></div>
-                                    <div class="catalog__sorting-head"><i class="ion-stats-bars"></i>сортировать<i class="ion-chevron-down"></i></div>
-                                    <div class="catalog__sorting-wrapper">
-                                        <div class="catalog__sorting-input">
-                                            <div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">по дате</label>
-                                                    <input id="by-name1" type="radio" name="by-name" checked><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-name1" class="label">по дате</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">по убыванию зарплаты</label>
-                                                    <input id="by-name2" type="radio" name="by-name"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-name2" class="label">по убыванию зарплаты</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">по возрастанию зарплаты</label>
-                                                    <input id="by-name3" type="radio" name="by-name"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-name3" class="label">по возрастанию зарплаты</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">по соответствию</label>
-                                                    <input id="by-name4" type="radio" name="by-name"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-name4" class="label">по соответствию</label>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">за месяц</label>
-                                                    <input id="by-date1" type="radio" name="by-date" checked><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-date1" class="label">за месяц</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">за неделю</label>
-                                                    <input id="by-date2" type="radio" name="by-date"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-date2" class="label">за неделю</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">за три дня</label>
-                                                    <input id="by-date3" type="radio" name="by-date"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-date3" class="label">за три дня</label>
-                                                </div>
-                                                <div class="form-group form-group--radio">
-                                                    <label class="hidden">за сутки</label>
-                                                    <input id="by-date4" type="radio" name="by-date"><i class="ion-android-radio-button-off"></i><i class="ion-android-checkmark-circle"></i>
-                                                    <label for="by-date4" class="label">за сутки</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="btn btn--block"><span>Сортировать</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog-resume__row">
-                                <div class="catalog-resume__row-title"><a href="#!"> <strong>Менеджер по продажам</strong><span>срочная</span></a></div>
-                                <div class="catalog-resume__row-info">
-                                    <div>
-                                        <div class="catalog-resume__row-price">55 000-110 000 руб.</div>
-                                        <div class="catalog-resume__row-name">ООО Консалтинг Центр Про<i class="ion-checkmark"></i></div>
-                                    </div>
-                                    <div>
-                                        <div class="catalog-resume__row-logo"><img src="./img/catalog-row-logo-1.png" alt=""></div>
-                                    </div>
-                                </div>
-                                <p>Телефонные продажи участия в деловом мероприятии (форуме/семинаре/конгрессе). Переговоры с клиентами премиум-сегмента рынка отрасли ЖКХ. Взаимодействие с аппаратом...</p>
-                                <div class="catalog-resume__row-address"><i class="ion-ios-location"></i>Москва, Черкизовская  |  1 сентября 2017</div>
-                                <div class="button__group button__group--catalog-row">
-                                    <div><a href="#!" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
-                                    <div><a href="#popup-respond-resume" class="btn open-popup-link"><span>Предложить работу</span></a></div>
-                                </div>
-                            </div>
-                            <div class="catalog-resume__row">
-                                <div class="catalog-resume__row-title catalog-resume__row-title--extra"><a href="#!"> <strong>Менеджер по продажам</strong><span>срочная</span></a></div>
-                                <div class="catalog-resume__row-info">
-                                    <div>
-                                        <div class="catalog-resume__row-price">55 000-110 000 руб.</div>
-                                        <div class="catalog-resume__row-name catalog-resume__row-name--confirmed">ООО Консалтинг Центр Про<i class="ion-checkmark"></i></div>
-                                    </div>
-                                    <div>
-                                        <div class="catalog-resume__row-logo"><img src="./img/catalog-row-logo-2.png" alt=""></div>
-                                    </div>
-                                </div>
-                                <p>Телефонные продажи участия в деловом мероприятии (форуме/семинаре/конгрессе). Переговоры с клиентами премиум-сегмента рынка отрасли ЖКХ. Взаимодействие с аппаратом...</p>
-                                <div class="catalog-resume__row-address"><i class="ion-ios-location"></i>Москва, Черкизовская  |  1 сентября 2017</div>
-                                <div class="button__group button__group--catalog-row">
-                                    <div><a href="#!" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
-                                    <div><a href="#popup-respond-resume" class="btn open-popup-link"><span>Предложить работу</span></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Pagination-->
-                                <div class="pagination">
-                                    <ul>
-                                        <li class="li__prev"><a href="#!"> <span><span>alt + <i class="ion-android-arrow-back"></i></span></span><span>предыдущая</span></a></li>
-                                        <li class="li"><a href="#!">1</a></li>
-                                        <li class="li"><a href="#!">2</a></li>
-                                        <li class="li"><a href="#!">3</a></li>
-                                        <li class="li active"><a href="#!">4</a></li>
-                                        <li class="li"><a href="#!">5</a></li>
-                                        <li class="li"><a href="#!">6</a></li>
-                                        <li class="li"><span>...</span></li>
-                                        <li class="li"><a href="#!">99</a></li>
-                                        <li class="li__next"><a href="#!"><span><span>alt + <i class="ion-android-arrow-forward"></i></span></span><span>следующая</span></a></li>
-                                    </ul>
-                                </div>
+                <div class="clear10"></div>
+                <!-- Category-->
+                <div class="category__list">
+                    <div class="row">
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Начало карьеры </span><small>86</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Продажи </span><small>13</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>ТранспортПроизводство</span><small>53</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Админ. персонал </span><small>886</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Строительство</span><small>544</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>IT, телеком</span><small>877</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Бухгалтерия </span><small>324</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Туризм, рестораны</span><small>4</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Маркетинг</span><small>654</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Искусство, медиа </span><small>54</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Рабочий персонал</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Топ-менеджмент</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Банки</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Авто</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Медицина</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Юриспруденция</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Управление персоналом</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Наука, образование</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Безопасность</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Спорт, фитнес</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Закупки</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Добыча сырья</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Домашний персонал</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Госслужба</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Консультирование</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Страхование</span><small>874</small></a></div>
+                        <div class="col-sm-4"><a href="#!" class="category__block"><span>Инсталляция</span><small>874</small></a></div>
                     </div>
                 </div>
             </div>

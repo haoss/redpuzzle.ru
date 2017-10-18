@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
   
-  -var active = 'Список резюме' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Список резюме' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+  -var active = 'Список всех соискателей' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список всех соискателей' + ' - redpuzzle.ru' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -25,201 +25,123 @@ html(lang="ru")
           li
             span Название страницы
         
-        .content__head.content__head--mobile
-          button#mobileColBtn(type="button").content__head-button
-            i.ion-gear-a
-          .h1 резюме в области продаж в москве
-        
-        // Mobile column
-        #mobileCol.mobile__col
-          .mobile__col-background
-          .mobile__col-wrapper
-            #mobileColWrapperBody.mobile__col-wrapper__body
-              button#mobileColButton(type="button").mobile__col-button
-                span
-                  i.ion-gear-a
-              #mobileColWrapperBody-div
-                //- include ./_include/_fillter
-        
-        .row
-          .col-md-3.hidden-sm.hidden-xs
-            #mobileColContent.mobile__col-content
-              div
-                include ./_include/_fillter
-            
-          .col-md-9
-            
-            // Catalog
-            .catalog
-              
-              .catalog__vacancy
-                ul
-                  li
-                    a(href="#!")
-                      strong автожестянщик
-                      span 86
-                  li
-                    a(href="#!")
-                      strong автозапчасти
-                      span 13
-                  li
-                    a(href="#!")
-                      strong автомойщик
-                      span 57
-                  li
-                    a(href="#!")
-                      strong автослесарь
-                      span 886
-                  li
-                    a(href="#!")
-                      strong начальный уровень /мало опыта
-                      span 544
-                  li
-                    a(href="#!")
-                      strong продажа
-                      span 877
-                  li
-                    a(href="#!")
-                      strong производство
-                      span 324
-                  li
-                    a(href="#!")
-                      strong прокат, лизинг
-                      span 4
-                  li
-                    a(href="#!")
-                      strong сервисное обслуживание
-                      span 654
-                  li
-                    a(href="#!")
-                      strong тонировщик
-                      span 54
-                  li
-                    a(href="#!")
-                      strong шины, диски
-                      span 874
-              
-              .catalog__head
-                .catalog__number Найдено
-                  br.visible-xxs
-                  | 1 289 резюме
-                
-                .catalog__sorting
-                  .catalog__sorting-background
-                  .catalog__sorting-head
-                    i.ion-stats-bars
-                    | сортировать
-                    i.ion-chevron-down
-                  .catalog__sorting-wrapper
-                    .catalog__sorting-input
-                      div
-                        .form-group.form-group--radio
-                          label.hidden по дате
-                          input#by-name1(type="radio" name="by-name" checked)
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-name1").label по дате
-                        .form-group.form-group--radio
-                          label.hidden по убыванию зарплаты
-                          input#by-name2(type="radio" name="by-name")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-name2").label по убыванию зарплаты
-                        .form-group.form-group--radio
-                          label.hidden по возрастанию зарплаты
-                          input#by-name3(type="radio" name="by-name")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-name3").label по возрастанию зарплаты
-                        .form-group.form-group--radio
-                          label.hidden по соответствию
-                          input#by-name4(type="radio" name="by-name")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-name4").label по соответствию
-                      div
-                        .form-group.form-group--radio
-                          label.hidden за месяц
-                          input#by-date1(type="radio" name="by-date" checked)
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-date1").label за месяц
-                        .form-group.form-group--radio
-                          label.hidden за неделю
-                          input#by-date2(type="radio" name="by-date")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-date2").label за неделю
-                        .form-group.form-group--radio
-                          label.hidden за три дня
-                          input#by-date3(type="radio" name="by-date")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-date3").label за три дня
-                        .form-group.form-group--radio
-                          label.hidden за сутки
-                          input#by-date4(type="radio" name="by-date")
-                          i.ion-android-radio-button-off
-                          i.ion-android-checkmark-circle
-                          label(for="by-date4").label за сутки
-                    button(type="button").btn.btn--block
-                      span Сортировать
-              
-              .catalog-resume__row
-                .catalog-resume__row-title
-                  a(href="#!") 
-                    strong Менеджер по продажам
-                    span срочная
-                .catalog-resume__row-info
-                  div
-                    .catalog-resume__row-price 55 000-110 000 руб.
-                    .catalog-resume__row-name ООО Консалтинг Центр Про
-                      i.ion-checkmark
-                  div
-                    .catalog-resume__row-logo
-                      img(src="./img/catalog-row-logo-1.png", alt="")
-                p Телефонные продажи участия в деловом мероприятии (форуме/семинаре/конгрессе). Переговоры с клиентами премиум-сегмента рынка отрасли ЖКХ. Взаимодействие с аппаратом...
-                .catalog-resume__row-address
-                  i.ion-ios-location
-                  | Москва, Черкизовская  |  1 сентября 2017
-                .button__group.button__group--catalog-row
-                  div
-                    a(href="#!").favorites__button
-                      i.ion-android-star-outline
-                      i.ion-android-star
-                  div
-                    a(href="#popup-respond-resume").btn.open-popup-link
-                      span Предложить работу
-                      
-              .catalog-resume__row
-                .catalog-resume__row-title.catalog-resume__row-title--extra
-                  a(href="#!") 
-                    strong Менеджер по продажам
-                    span срочная
-                .catalog-resume__row-info
-                  div
-                    .catalog-resume__row-price 55 000-110 000 руб.
-                    .catalog-resume__row-name.catalog-resume__row-name--confirmed ООО Консалтинг Центр Про
-                      i.ion-checkmark
-                  div
-                    .catalog-resume__row-logo
-                      img(src="./img/catalog-row-logo-2.png", alt="")
-                p Телефонные продажи участия в деловом мероприятии (форуме/семинаре/конгрессе). Переговоры с клиентами премиум-сегмента рынка отрасли ЖКХ. Взаимодействие с аппаратом...
-                .catalog-resume__row-address
-                  i.ion-ios-location
-                  | Москва, Черкизовская  |  1 сентября 2017
-                .button__group.button__group--catalog-row
-                  div
-                    a(href="#!").favorites__button
-                      i.ion-android-star-outline
-                      i.ion-android-star
-                  div
-                    a(href="#popup-respond-resume").btn.open-popup-link
-                      span Предложить работу
-                      
-            // Pagination
-            +pagination
-        
+        .content__head
+          .h1 Список всех соискателей
+          
+        .clear10
+          
+        // Category
+        .category__list
+          .row
+            .col-sm-4
+              a(href="#!").category__block
+                span Начало карьеры 
+                small 86
+            .col-sm-4
+              a(href="#!").category__block
+                span Продажи 
+                small 13
+            .col-sm-4
+              a(href="#!").category__block
+                span ТранспортПроизводство
+                small 53
+            .col-sm-4
+              a(href="#!").category__block
+                span Админ. персонал 
+                small 886
+            .col-sm-4
+              a(href="#!").category__block
+                span Строительство
+                small 544
+            .col-sm-4
+              a(href="#!").category__block
+                span IT, телеком
+                small 877
+            .col-sm-4
+              a(href="#!").category__block
+                span Бухгалтерия 
+                small 324
+            .col-sm-4
+              a(href="#!").category__block
+                span Туризм, рестораны
+                small 4
+            .col-sm-4
+              a(href="#!").category__block
+                span Маркетинг
+                small 654
+            .col-sm-4
+              a(href="#!").category__block
+                span Искусство, медиа 
+                small 54
+            .col-sm-4
+              a(href="#!").category__block
+                span Рабочий персонал
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Топ-менеджмент
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Банки
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Авто
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Медицина
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Юриспруденция
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Управление персоналом
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Наука, образование
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Безопасность
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Спорт, фитнес
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Закупки
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Добыча сырья
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Домашний персонал
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Госслужба
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Консультирование
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Страхование
+                small 874
+            .col-sm-4
+              a(href="#!").category__block
+                span Инсталляция
+                small 874
+    
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")
     

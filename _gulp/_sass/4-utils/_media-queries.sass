@@ -78,6 +78,13 @@
       &>div
         &:last-child
           padding-left: 30px
+  .catalog-resume
+    &__options
+      &>div
+        &:first-child
+          width: 205px
+    &__info
+      padding-left: 80px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -557,6 +564,28 @@
       &>div
         &:last-child
           padding-left: 20px
+    .catalog-resume
+      &__options
+        padding-bottom: 10px
+        display: block
+        &>div
+          display: block
+          width: auto !important
+      &__table
+        display: block
+        margin: 0
+        &>div
+          display: block
+          &+div
+            padding: 0
+        table
+          width: 100%
+          td
+            width: 50%
+      &__experience
+        display: none
+      &__title a
+        margin-right: 5px
 
 @media only screen and (max-width : 599px)
   .popup
@@ -765,6 +794,22 @@
     .catalog__sorting
       // float: none
       margin-top: 21px
+  .catalog-resume
+    &__row
+      margin-bottom: 35px
+    &__title
+      .catalog-resume__icon
+        display: none
+    &__icon
+      &:first-child
+        margin-left: 0
+    &__options
+      padding-bottom: 0 !important
+    &__info
+      margin-bottom: 20px
+      min-height: 105px
+    &__table
+      margin-bottom: 10px !important
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
