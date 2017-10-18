@@ -168,6 +168,28 @@
                 </form>
             </div>
         </div>
+        <div id="popup-respond-resume" class="popup popup--respond mfp-hide">
+            <div class="popup__wrapper">
+                <div class="popup__close"><i class="ion-android-close"></i></div>
+                <form action="#">
+                    <fieldset>
+                        <div class="popup__respond-title">Предлагаемая вакансия</div>
+                        <div class="popup__respond-category">Инженер-строитель<i class="ion-chevron-down"></i></div>
+                        <div class="clear20"></div>
+                        <div class="form-group form-group--normal">
+                            <label><small class="popup__respond-small">Написать сопроводительное письмо</small></label>
+                            <textarea name="message" placeholder="Нас заинтересовала Ваша кандидатура, хотели бы пригласить Вас на собеседование." class="form-control"></textarea>
+                        </div>
+                        <div class="form-group has-feedback block-focus">
+                            <label class="hidden">Номер телефона</label>
+                            <input type="text" name="name" placeholder="Номер телефона" class="form-control input-focus"><i class="ion-alert-circled"></i>
+                        </div>
+                        <div class="clear"></div>
+                        <button type="submit" class="btn btn--middle btn--block"> <span>Отправить</span></button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
         <!-- Header-->
         <header class="header">
             <div class="header__top">
@@ -455,7 +477,7 @@
                                                     <div>руб.</div>
                                                 </div>
                                                 <label for="price__0" class="filter__row filter__row--price">
-                                                    <input type="checkbox" name="f_price[]" id="price__0"><span class="checkbox"></span><span class="label">показать вакансии без указания з/п</span>
+                                                    <input type="checkbox" name="f_price[]" checked id="price__0"><span class="checkbox"></span><span class="label">показать вакансии без указания з/п</span>
                                                 </label>
                                             </div>
                                             <div class="filter__block has-hide">

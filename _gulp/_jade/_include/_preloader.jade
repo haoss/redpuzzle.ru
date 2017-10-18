@@ -202,6 +202,28 @@
         .clear10
         button(type="submit").btn.btn--middle.btn--3d.btn--block
           span Отправить
+          
+#popup-respond-resume.popup.popup--respond.mfp-hide
+  .popup__wrapper
+    .popup__close
+      i.ion-android-close
+    form(action="#")
+      fieldset
+        .popup__respond-title Предлагаемая вакансия
+        .popup__respond-category Инженер-строитель
+          i.ion-chevron-down
+        .clear20
+        .form-group.form-group--normal
+          label
+            small.popup__respond-small Написать сопроводительное письмо
+          textarea.form-control(name="message" placeholder="Нас заинтересовала Ваша кандидатура, хотели бы пригласить Вас на собеседование.")
+        .form-group.has-feedback.block-focus
+          label.hidden Номер телефона
+          input(type="text" name="name" placeholder="Номер телефона").form-control.input-focus
+          i.ion-alert-circled
+        .clear
+        button(type="submit").btn.btn--middle.btn--block 
+          span Отправить
 
 mixin callBlock
   .call-block
