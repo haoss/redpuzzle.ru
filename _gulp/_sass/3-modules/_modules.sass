@@ -57,6 +57,16 @@
     text-align: center
     &--location
       margin: 0 -50px 25px -50px
+    &--pay-services
+      background: $color-lightgray
+      color: $primary-color
+      margin: 20px -26px 20px -26px
+      font-size: rem(15)
+      font-family: $font-roboto
+      padding-top: 16px
+      padding-bottom: 16px
+      strong
+        font-family: $font-roboto-bold
   &__search
     margin-bottom: 25px
     &-wrapper
@@ -209,6 +219,32 @@
     &-small
       font-size: rem(10)
       color: $color-808080
+  &__pay-services
+    &-title
+      font-family: $font-roboto-bold
+      font-size: rem(15)
+      margin-bottom: 5px
+    &-category
+      position: relative
+      padding-right: 25px
+      font-style: italic
+      font-size: rem(13)
+      margin-bottom: 5px
+      i
+        top: 2px
+        line-height: 1
+        font-size: rem(15)
+        position: absolute
+        right: 0
+        color: $color-red
+    &-link
+      font-size: rem(11)
+      font-family: $font-roboto-medium
+      margin-bottom: 15px
+    &-small
+      font-size: rem(10)
+      color: $color-808080
+
 
 .mfp-bg-register
   background-image: url('../img/popup-register-background.png')
@@ -1796,7 +1832,6 @@
         padding-left: 60px
     .catalog__sorting
       margin-top: 6px
-
   &__search
     &-wrapper
       display: table
@@ -1841,7 +1876,6 @@
     +clearfix
   &__info
     padding-left: 95px
-    // margin-bottom: 30px
   &__img
     // position: absolute
     left: 0
@@ -2333,6 +2367,32 @@
       .label
         font-size: rem(13)
         margin-top: -1px
+  &__list
+    &-row
+      font-size: rem(13)
+      margin-bottom: 40px
+      +clearfix
+      p
+        margin-bottom: 15px
+    &-title
+      font-size: rem(16)
+      font-family: $font-roboto-bold
+      line-height: 1.3
+      margin-bottom: 15px
+    &-result
+      font-size: rem(12)
+      color: $color-808080
+      float: left
+      i
+        color: $color-808080
+        margin-right: 8px
+        &.ion-checkmark-circled
+          color: $color-red
+    &-button
+      float: right
+      text-transform: uppercase
+      font-size: rem(12)
+      font-family: $font-roboto-medium
 
 /* settings */
 .settings
@@ -2342,7 +2402,7 @@
     border-radius: 3px
     margin-bottom: 30px
     text-transform: uppercase
-    padding: 5px 0
+    padding: 0
     font-family: $font-roboto-bold
     ul
       margin: 0
@@ -2577,7 +2637,6 @@
       margin: 0
   &__file-upload
     display: none !important
-
   &__skill
     margin: 0 -150px 10px -15px
     padding: 0
@@ -2615,3 +2674,438 @@
         &:hover, &:focus
           text-decoration: none
           color: $color-red
+  &__congratulation
+    margin-bottom: 25px
+    border-radius: 3px
+    padding: 21px 24px
+    background: $color-lightgray
+    font-size: rem(13)
+    strong
+      font-size: rem(18)
+      display: block
+      line-height: 1.2
+      text-transform: uppercase
+      margin-bottom: 5px
+  &__published
+    padding-bottom: 5px
+    &>label
+      position: relative
+      padding: 0 0 17px 26px
+      color: $color-808080
+      cursor: pointer
+      border-bottom: 1px solid #e5e5e5
+      margin-bottom: 17px
+      display: block
+      input[type="radio"]
+        display: none
+        &~.ion-android-checkmark-circle
+          display: none
+        &:checked
+          &~.ion-android-checkmark-circle
+            display: block
+          &~.ion-android-radio-button-off
+            display: none
+          &~[class*="ion-android"]
+            color: $color-red
+      [class*="ion-android"]
+        position: absolute
+        font-size: rem(16)
+        left: 1px
+        top: 1px
+        line-height: 1
+      .label
+        strong
+          color: $primary-color
+          display: block
+          line-height: 1.2
+          font-size: rem(15)
+          margin-bottom: 5px
+      .price
+        position: absolute
+        right: 0
+        top: 2px
+        font-size: rem(15)
+        font-family: $font-roboto-medium
+        width: 165px
+        color: $primary-color
+        line-height: 1
+        span
+          font-family: $font-roboto
+
+/* buy-top */
+.buy-top
+  &__head
+    +clearfix
+    border-bottom: 1px solid #b2b2b2
+    color: $color-808080
+    font-size: rem(12)
+    padding-bottom: 5px
+    margin-bottom: 10px
+    &>div
+      &:first-child
+        float: left
+      &:nth-child(2)
+        float: right
+        width: 165px
+      &:nth-child(3)
+        padding: 0 195px
+  &__row
+    position: relative
+    border-bottom: 1px solid #e5e5e5
+    margin-bottom: 14px
+    padding-bottom: 15px
+    &:last-child
+      padding-bottom: 0
+      border-bottom: none
+    &-left
+      float: left
+    &-right
+      float: right
+      width: 165px
+      .price
+        margin-bottom: 10px
+        font-size: rem(14)
+    &-center
+      padding: 0 195px
+      &__wrapper
+        height: 101px
+        overflow: hidden
+        position: relative
+        pointer-events: none
+        p
+          &:last-child
+            margin-bottom: 0
+        &::after
+          font-size: rem(11)
+          pointer-events: all
+          content: "Развернуть описание"
+          color: $color-red
+          cursor: pointer
+          -webkit-box-sizing: content-box
+          box-sizing: content-box
+          float: right
+          position: absolute
+          right: 0px
+          bottom: 0
+          width: 285px
+          text-align: right
+          background-size: 100% 100%
+          background: linear-gradient(to right, rgba(255, 255, 255, 0), white 40%, white)
+        &.is-active
+          &::after
+            display: none
+    &-link
+      display: inline-block
+      padding-left: 40px
+      position: relative
+      height: 42px
+      i
+        position: absolute
+        left: 2px
+        top: 50%
+        transform: translateY(-50%)
+      strong
+        display: inline-block
+        line-height: 20px
+        font-family: $font-roboto-medium
+        padding-top: 2px
+    &-order
+      font-size: rem(12)
+      strong
+        font-size: rem(14)
+        color: $color-red
+        display: block
+        margin-top: 5px
+
+/* my-resume */
+.my-resume
+  &__head
+    text-align: right
+    margin-top: -50px
+    margin-bottom: 30px
+  &__row
+    position: relative
+    min-height: 105px
+    margin-bottom: 45px
+    &:last-child
+      margin-bottom: 20px
+    +clearfix
+  &__info
+    padding-left: 95px
+    margin-bottom: 15px
+  &__img
+    // position: absolute
+    left: 0
+    top: 0
+    overflow: hidden
+    border-radius: 3px
+    background: $color-lightgray
+    width: 65px
+    text-align: center
+    border-radius: 3px
+    color: $color-red
+    font-family: $font-roboto-bold
+    float: left
+    img
+      object-fit: cover
+      display: block
+  &__title
+    font-size: rem(16)
+    margin-bottom: 2px
+    a
+      display: inline
+      margin-right: 10px
+  &__icon
+    display: inline
+    height: 18px
+    width: 18px
+    position: relative
+    color: #cfcfcf
+    font-size: rem(16)
+    vertical-align: 0px
+    margin-left: 8px
+    i.ion-checkmark-circled
+      opacity: 1
+      position: absolute
+      font-size: rem(10)
+      color: #52be30
+      opacity: 0
+    &--active
+      color: #777777
+      i.ion-checkmark-circled
+        opacity: 1
+    i.ion-android-call + .ion-checkmark-circled
+      right: 0
+    i.ion-document-text + .ion-checkmark-circled
+      right: 0px
+  &__name
+    font-family: $font-roboto-medium
+    font-size: rem(13)
+    color: $primary-color
+    margin-bottom: 10px
+  &__price
+    font-size: rem(16)
+    font-family: $font-roboto-medium
+    margin-bottom: 2px
+  &__experience
+    font-size: rem(12)
+    color: $color-808080
+    span
+      color: $primary-color
+      display: inline-block
+      margin-left: 10px
+      font-family: $font-roboto-bold
+  &__options
+    display: table
+    width: 100%
+    &>div
+      display: table-cell
+      vertical-align: top
+      &:first-child
+        width: 243px
+  &__table
+    font-size: rem(12)
+    color: $color-808080
+    margin-top: -17px
+    display: table
+    width: 100%
+    strong
+      color: $primary-color
+    td
+      padding: 1px 0
+      &+td
+        padding-left: 10px
+    &>div
+      display: table-cell
+      vertical-align: top
+      &+div
+        padding-left: 15px
+  &__control
+    font-size: rem(13)
+    border-radius: 3px
+    overflow: hidden
+    background: $color-lightgray
+    padding: 5px 15px
+    display: flex
+    justify-content: space-between
+    i
+      color: #acacac
+      margin-right: 7px
+
+/* response */
+.table
+  display: table
+  &-cell
+    display: table-cell
+    &+.table-cell
+      padding-left: 30px
+
+.response
+  &__table1
+    font-size: rem(13)
+    margin-bottom: 25px
+    padding-top: 25px
+    table
+      width: 100%
+      thead
+        th
+          font-weight: 400
+          font-family: $font-roboto
+          color: $color-808080
+          padding-bottom: 5px
+          border-bottom: 1px solid #b2b2b2
+          text-align: left
+          font-size: rem(12)
+          &+th
+            padding-left: 10px
+      tbody
+        td
+          padding: 17px 0
+          vertical-align: top
+          &+td
+            padding-left: 15px
+          &:first-child
+            min-width: 190px
+          p
+            margin-bottom: 10px
+          .name
+            font-size: rem(14)
+            display: block
+            margin-bottom: 5px
+          .link-block
+            font-size: rem(10)
+            color: $color-808080
+            font-family: $font-roboto-medium
+            position: relative
+            padding-left: 16px
+            display: inline-block
+            i
+              margin-left: -16px
+              font-size: rem(14)
+              margin-right: 5px
+              line-height: 1
+              vertical-align: -1px
+            &:hover
+              color: $color-red
+              text-decoration: none
+          .link-act
+            font-size: rem(10)
+            font-family: $font-roboto-medium
+            a
+              position: relative
+              padding-left: 16px
+              display: inline-block
+              i
+                font-size: rem(14)
+                margin-right: 5px
+                line-height: 1
+                vertical-align: -1px
+                margin-left: -16px
+              &+a
+                margin-left: 20px
+        .tr
+          font-size: rem(14)
+          td
+            border-bottom: 1px solid #e5e5e5
+            &:last-child
+              width: 170px
+              white-space: nowrap
+            strong
+              display: block
+              margin-bottom: 10px
+              line-height: 1.2
+              white-space: nowrap
+              overflow: hidden
+            small
+              font-size: rem(11)
+              color: $color-808080
+              white-space: nowrap
+              display: block
+              overflow: hidden
+            &:nth-child(2)
+              position: relative
+              &::after
+                content: ''
+                width: 20px
+                position: absolute
+                top: 0
+                right: 0
+                bottom: 0
+                background: linear-gradient(to right, rgba($color-white, 0), rgba($color-white,1))
+        tr
+          &:last-child
+            td
+              border-bottom: 0
+  &__table2
+    font-size: rem(14)
+    margin-bottom: 25px
+    padding-top: 25px
+    table
+      width: 100%
+      thead
+        th
+          font-weight: 400
+          font-family: $font-roboto
+          color: $color-808080
+          padding-bottom: 5px
+          border-bottom: 1px solid #b2b2b2
+          text-align: left
+          font-size: rem(12)
+          &+th
+            padding-left: 10px
+      tbody
+        td
+          padding: 17px 0
+          border-bottom: 1px solid #e5e5e5
+          vertical-align: top
+          white-space: nowrap
+          &+td
+            padding-left: 10px
+          &:last-child
+            width: 170px
+            white-space: nowrap
+          strong
+            display: block
+            margin-bottom: 10px
+            line-height: 1.2
+            white-space: nowrap
+            overflow: hidden
+          small
+            font-size: rem(11)
+            color: $color-808080
+            white-space: nowrap
+            display: block
+            overflow: hidden
+          &:nth-child(2)
+            position: relative
+            &::after
+              content: ''
+              width: 20px
+              position: absolute
+              top: 0
+              right: 0
+              bottom: 0
+              background: linear-gradient(to right, rgba($color-white, 0), rgba($color-white,1))
+        tr
+          &:last-child
+            td
+              border-bottom: 0
+  &__form
+    margin-bottom: 20px
+    &-wrapper
+      width: 100%
+      &>div
+        vertical-align: top
+        &:first-child
+          width: 100%
+      .btn
+        width: 210px
+      .form-group
+        margin-bottom: 0
+  &__button
+    width: 600px
+    .btn
+      width: 210px
+    &>div
+      &:last-child
+        text-align: right

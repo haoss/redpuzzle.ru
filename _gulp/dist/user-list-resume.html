@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>О проекте - redpuzzle.ru</title>
+        <title>Мои резюме - redpuzzle.ru</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -375,55 +375,314 @@
                     <li><a href="#!">RedPuzzle.ru</a></li>
                     <li><span>Название страницы</span></li>
                 </ul>
-                <div class="content__head">
-                    <h1>о проекте</h1>
+                <div class="content__head content__head--mobile">
+                    <button id="mobileColBtn" type="button" class="content__head-button"><i class="ion-gear-a"></i></button>
+                    <h1>Мои резюме</h1>
+                </div>
+                <!-- Mobile column-->
+                <div id="mobileCol" class="mobile__col">
+                    <div class="mobile__col-background"></div>
+                    <div class="mobile__col-wrapper">
+                        <div id="mobileColWrapperBody" class="mobile__col-wrapper__body">
+                            <button id="mobileColButton" type="button" class="mobile__col-button"><span><i class="ion-gear-a"></i></span></button>
+                            <div id="mobileColWrapperBody-div"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="h2 no--m-bottom">Сегодня на сайте </div>
-                        <div class="clear10"></div>
-                        <table class="about__info-table hidden-xxs">
-                            <tr>
-                                <td><i class="icon icon--navigation-info-1"></i></td>
-                                <td><strong>19 997 <small>вакансий</small></strong></td>
-                                <td><i class="icon icon--navigation-info-2"></i></td>
-                                <td><strong>1 017 858<small>резюме</small></strong></td>
-                                <td><i class="icon icon--navigation-info-3"></i></td>
-                                <td><strong>54 448<small>компаний</small></strong></td>
-                            </tr>
-                        </table>
-                        <table class="about__info-table visible-xxs">
-                            <tr>
-                                <td><i class="icon icon--navigation-info-1"></i></td>
-                                <td><strong>19 997 <small>вакансий</small></strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon icon--navigation-info-2"></i></td>
-                                <td><strong>1 017 858<small>резюме</small></strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class="icon icon--navigation-info-3"></i></td>
-                                <td><strong>54 448<small>компаний</small></strong></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <!-- Section-->
-                <div class="section message no--p-bottom">
-                    <div class="h2">обращение руководителя красного креста</div>
-                    <div class="row">
-                        <div class="col-lg-8 col-md-7">
-                            <blockquote>
-                                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. </p>
-                                <p>Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. </p>
-                                <p>Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь.</p>
-                            </blockquote>
-                            <div class="message__name"><strong>Иванов Иван Иванович</strong><span>Проф. медецинских наук им. Ломоносова</span></div>
+                    <div class="col-md-3 hidden-sm hidden-xs">
+                        <div id="mobileColContent" class="mobile__col-content">
+                            <div>
+                                <!-- User-->
+                                <div class="settings__nav">
+                                    <ul>
+                                        <li><a href="#!">Настройки аккаунта</a></li>
+                                        <li><a href="#!">Мои резюме</a></li>
+                                        <li><a href="#!">Отклики и приглашения</a></li>
+                                        <li><a href="#!">Избранные</a></li>
+                                        <li class="active"><a href="#!">Список тестов</a></li>
+                                        <li><a href="#!">Платные услуги</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Sitebar-->
+                                <div class="user__sitebar">
+                                    <ul>
+                                        <li><a href="#!"><i class="icon icon--sitebar-1"></i>Опубликовать телефон</a></li>
+                                        <li><a href="#!"> <i class="icon icon--sitebar-2"></i>Подтвердить документы</a></li>
+                                        <li><a href="#!"> <i class="icon icon--sitebar-3"></i>Выделить резюме</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Banner-->
+                                <div class="banner"><a href="#!"><img src="./img/banner-262-2.png" alt=""></a></div>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-5 hidden-sm hidden-xs"><img src="./img/message-img.png" alt="" class="message__img"></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="my-resume__head"><a href="#!" class="btn btn--big"><span>Добавить резюме</span></a></div>
+                        <!-- My resume-->
+                        <div class="my-resume">
+                            <div class="my-resume__row">
+                                <div class="my-resume__img"><img src="./img/catalog-resume-list-img-1.png" alt=""></div>
+                                <div class="my-resume__info">
+                                    <div class="my-resume__title"><a href="#!"><strong>Менеджер по продажам / Консультант</strong></a>
+                                        <div class="my-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div class="my-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                    </div>
+                                    <div class="my-resume__name">Иванова Инна </div>
+                                    <div class="my-resume__price visible-xs">55 000-110 000 руб.</div>
+                                    <div class="my-resume__options hidden-xxs">
+                                        <div class="hidden-xs">
+                                            <div class="my-resume__price">55 000-110 000 руб.</div>
+                                        </div>
+                                        <div>
+                                            <div class="my-resume__table">
+                                                <div>
+                                                    <table>
+                                                        <tr>
+                                                            <td>Видимость резюме:</td>
+                                                            <td><strong>Скрыто</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Дату публикации:</td>
+                                                            <td><strong>31 января 2017</strong></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div>
+                                                    <table>
+                                                        <tr>
+                                                            <td>Количество просмотров:</td>
+                                                            <td><strong>31</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Количество откликов:</td>
+                                                            <td><strong>10</strong></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="visible-xxs">
+                                    <div class="clear"></div>
+                                    <div class="my-resume__table">
+                                        <div>
+                                            <table>
+                                                <tr>
+                                                    <td>Видимость резюме:</td>
+                                                    <td><strong>Скрыто</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Дату публикации:</td>
+                                                    <td><strong>31 января 2017</strong></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <table>
+                                                <tr>
+                                                    <td>Количество просмотров:</td>
+                                                    <td><strong>31</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Количество откликов:</td>
+                                                    <td><strong>10</strong></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="my-resume__control">
+                                    <div><a href="#!"><i class="ion-android-print"></i>Печать</a></div>
+                                    <div><a href="#!"><i class="ion-android-mail"></i>Выслать на почту</a></div>
+                                    <div><a href="#!"><i class="ion-arrow-up-a"></i>Продвинуть</a></div>
+                                    <div><a href="#!"><i class="ion-compose"></i>Редактировать</a></div>
+                                    <div><a href="#!"><i class="ion-ios-browsers"></i>Копировать</a></div>
+                                    <div><a href="#!"><i class="ion-trash-a"></i>Удалить</a></div>
+                                </div>
+                            </div>
+                            <div class="my-resume__row">
+                                <div class="my-resume__img"><img src="./img/catalog-resume-list-img-2.png" alt=""></div>
+                                <div class="my-resume__info">
+                                    <div class="my-resume__title"><a href="#!"><strong>Консультант</strong></a>
+                                        <div class="my-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div class="my-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                    </div>
+                                    <div class="my-resume__name">Иванова Инна </div>
+                                    <div class="my-resume__price visible-xs">5 000-10 000 руб.</div>
+                                    <div class="my-resume__options hidden-xxs">
+                                        <div class="hidden-xs">
+                                            <div class="my-resume__price">55 000-110 000 руб.</div>
+                                        </div>
+                                        <div>
+                                            <div class="my-resume__table">
+                                                <div>
+                                                    <table>
+                                                        <tr>
+                                                            <td>Видимость резюме:</td>
+                                                            <td><strong>Скрыто</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Дату публикации:</td>
+                                                            <td><strong>31 января 2017</strong></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div>
+                                                    <table>
+                                                        <tr>
+                                                            <td>Количество просмотров:</td>
+                                                            <td><strong>31</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Количество откликов:</td>
+                                                            <td><strong>10</strong></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="visible-xxs">
+                                    <div class="clear"></div>
+                                    <div class="my-resume__table">
+                                        <div>
+                                            <table>
+                                                <tr>
+                                                    <td>Видимость резюме:</td>
+                                                    <td><strong>Скрыто</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Дату публикации:</td>
+                                                    <td><strong>31 января 2017</strong></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <table>
+                                                <tr>
+                                                    <td>Количество просмотров:</td>
+                                                    <td><strong>31</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Количество откликов:</td>
+                                                    <td><strong>10</strong></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="my-resume__control">
+                                    <div><a href="#!"><i class="ion-android-print"></i>Печать</a></div>
+                                    <div><a href="#!"><i class="ion-android-mail"></i>Выслать на почту</a></div>
+                                    <div><a href="#!"><i class="ion-arrow-up-a"></i>Продвинуть</a></div>
+                                    <div><a href="#!"><i class="ion-compose"></i>Редактировать</a></div>
+                                    <div><a href="#!"><i class="ion-ios-browsers"></i>Копировать</a></div>
+                                    <div><a href="#!"><i class="ion-trash-a"></i>Удалить</a></div>
+                                </div>
+                            </div>
+                            <div class="my-resume__row">
+                                <div class="my-resume__img"><img src="./img/catalog-resume-list-img-3.png" alt=""></div>
+                                <div class="my-resume__info">
+                                    <div class="my-resume__title"><a href="#!"><strong>Курьер</strong></a>
+                                        <div class="my-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div class="my-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                    </div>
+                                    <div class="my-resume__name">Иванова Инна </div>
+                                    <div class="my-resume__price visible-xs">5 000-10 000 руб.</div>
+                                    <div class="my-resume__options hidden-xxs">
+                                        <div class="hidden-xs">
+                                            <div class="my-resume__price">55 000-110 000 руб.</div>
+                                        </div>
+                                        <div>
+                                            <div class="my-resume__table">
+                                                <div>
+                                                    <table>
+                                                        <tr>
+                                                            <td>Видимость резюме:</td>
+                                                            <td><strong>Скрыто</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Дату публикации:</td>
+                                                            <td><strong>31 января 2017</strong></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div>
+                                                    <table>
+                                                        <tr>
+                                                            <td>Количество просмотров:</td>
+                                                            <td><strong>31</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Количество откликов:</td>
+                                                            <td><strong>10</strong></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="visible-xxs">
+                                    <div class="clear"></div>
+                                    <div class="my-resume__table">
+                                        <div>
+                                            <table>
+                                                <tr>
+                                                    <td>Видимость резюме:</td>
+                                                    <td><strong>Скрыто</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Дату публикации:</td>
+                                                    <td><strong>31 января 2017</strong></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <table>
+                                                <tr>
+                                                    <td>Количество просмотров:</td>
+                                                    <td><strong>31</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Количество откликов:</td>
+                                                    <td><strong>10</strong></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="my-resume__control">
+                                    <div><a href="#!"><i class="ion-android-print"></i>Печать</a></div>
+                                    <div><a href="#!"><i class="ion-android-mail"></i>Выслать на почту</a></div>
+                                    <div><a href="#!"><i class="ion-arrow-up-a"></i>Продвинуть</a></div>
+                                    <div><a href="#!"><i class="ion-compose"></i>Редактировать</a></div>
+                                    <div><a href="#!"><i class="ion-ios-browsers"></i>Копировать</a></div>
+                                    <div><a href="#!"><i class="ion-trash-a"></i>Удалить</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pagination-->
+                                <div class="pagination">
+                                    <ul>
+                                        <li class="li__prev"><a href="#!"> <span><span>alt + <i class="ion-android-arrow-back"></i></span></span><span>предыдущая</span></a></li>
+                                        <li class="li"><a href="#!">1</a></li>
+                                        <li class="li"><a href="#!">2</a></li>
+                                        <li class="li"><a href="#!">3</a></li>
+                                        <li class="li active"><a href="#!">4</a></li>
+                                        <li class="li"><a href="#!">5</a></li>
+                                        <li class="li"><a href="#!">6</a></li>
+                                        <li class="li"><span>...</span></li>
+                                        <li class="li"><a href="#!">99</a></li>
+                                        <li class="li__next"><a href="#!"><span><span>alt + <i class="ion-android-arrow-forward"></i></span></span><span>следующая</span></a></li>
+                                    </ul>
+                                </div>
                     </div>
                 </div>
             </div>
@@ -503,5 +762,11 @@
         <script src="./js/libs/readmore/readmore.min.js"></script>
         <script src="./js/libs/jquery.matchHeight/jquery.matchHeight-min.js"></script>
         <script src="./js/common.js"></script>
+        <script>
+            $(document).ready(function(){
+              $('.settings__nav li').removeClass('active');
+              $('.settings__nav li:nth-child(2)').addClass('active');
+            })
+        </script>
     </body>
 </html>

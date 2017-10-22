@@ -1,0 +1,153 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Отклики и приглашения 1' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Отклики и приглашения 1' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 Отклики и приглашения
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            // Response
+            .response
+              
+              // Response table 1
+              .response__table1
+                table
+                  thead
+                    tr
+                      th Статус
+                      th Вакансия
+                      th Дата
+                  tbody
+                    tr.tr
+                      td
+                        strong Рассмотрено
+                        span.date.visible-xxs 31 января 2017
+                      td
+                        strong E-mail менеджер
+                        small Фокстрот. Техника для дома, Москва
+                      td(nowrap) 31 января 2017
+                    tr
+                      td
+                        strong.name.color.color--blue Представитель компании
+                      td(colspan="2")
+                        p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+                        .clear
+                        .link-act
+                          a(href="#!")
+                            i.ion-sad
+                            | Пожаловаться на спам
+                          a(href="#!")
+                            i.ion-trash-a
+                            | Удалить сообщение
+                    tr
+                      td
+                        strong.name Иванов Иван Иванович
+                        a(href="#!").link-block
+                          i.ion-ios-close
+                          | Заблокировать пользователя
+                      td(colspan="2")
+                        p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
+                        .clear
+                        .link-act
+                          a(href="#!")
+                            i.ion-sad
+                            | Пожаловаться на спам
+                          a(href="#!")
+                            i.ion-trash-a
+                            | Удалить сообщение
+                    tr
+                      td
+                        strong.name.color.color--blue Представитель компании
+                      td(colspan="2")
+                        p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
+                        .clear
+                        .link-act
+                          a(href="#!")
+                            i.ion-sad
+                            | Пожаловаться на спам
+                          a(href="#!")
+                            i.ion-trash-a
+                            | Удалить сообщение
+              
+              // Response form
+              .response__form
+                form(action="#!")
+                  .response__form-wrapper.table
+                    div.table-cell
+                      .form-group.block-focus
+                        label.hidden Введите сообщение
+                        input(type="text" name="message" placeholder="Введите сообщение").form-control.input-focus
+                    div.table-cell
+                      button(type="submit").btn.btn--middle
+                        span отправить сообщение
+              
+              // Response button
+              .response__button.table
+                div.table-cell
+                  a(href="#!").btn.btn--middle.btn--border
+                    span отказать
+                div.table-cell
+                  a(href="#!").btn.btn--middle.btn--border
+                    span Пригласить
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(3)').addClass('active');
+      })

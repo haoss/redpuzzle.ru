@@ -145,6 +145,14 @@ $(document).on('ready', function(){
   // Прикрепление фото в профиле при создании резюме
   uploadImageProfile();
 
+  $('.buy-top__row-center__wrapper').each(function(){
+    var _this = $(this);
+    _this.on('click', function() {
+        _this.addClass('is-active');
+        _this.css({height: '100%', overflow: 'visible'});
+    });
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -382,7 +390,7 @@ function navigationInfo(){
 function menuMobile(){
   var navButton = $('#navigation__button'),
       navMobile = $('#mobile__nav'),
-      navMobileButton = $('#mobile__nav-button',
+      navMobileButton = $('#mobile__nav-button'),
       body = $('body'),
       navBackground = $('.mobile__nav-background');
 
