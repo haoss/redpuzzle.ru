@@ -1,0 +1,110 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Создание резюме - шаг 2' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Создание резюме - шаг 2' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 создание резюме
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            // Create resume
+            .create-resume
+              
+              .create-resume__step.create-resume__step--two
+                span 1
+                span 2
+                span 3
+                span 4
+                span 5
+              
+              .form
+                form(action="#!")
+                  legend.form__legend Желаемая должность
+                  
+                  .create-resume__row
+                    div.create-resume__step2-left
+                      .form-group.block-focus
+                        label.hidden Желаемая должность
+                        input(type="text" name="name" placeholder="Желаемая должность").form-control.input-focus
+                      .form-group.form-group--select
+                        select.selectric
+                          option(value="" selected) Профессиональная область
+                          option(value="") Область 1
+                          option(value="") Область 2
+                          option(value="") Область 3
+                          option(value="") Область 4
+                          option(value="") Область 5
+                          option(value="") Область 6
+                          option(value="") Область 7
+                          option(value="") Область 8
+                          option(value="") Область 9
+                          option(value="") Область 10
+                          option(value="") Область 11
+                          option(value="") Область 12
+                      .form-group.block-focus
+                        label.hidden Желаемая зарплата
+                        input(type="text" name="name" placeholder="Желаемая зарплата").form-control.input-focus
+                      button(type="button").btn.btn--big
+                        span продолжить
+                    div &nbsp;
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(2)').addClass('active');
+      })

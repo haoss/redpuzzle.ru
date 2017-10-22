@@ -1,0 +1,121 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Создание резюме - шаг 3' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Создание резюме - шаг 3' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 создание резюме
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            // Create resume
+            .create-resume
+              
+              .create-resume__step.create-resume__step--three
+                span 1
+                span 2
+                span 3
+                span 4
+                span 5
+              
+              .form
+                form(action="#!")
+                  legend.form__legend Образование
+                  
+                  .create-resume__row
+                    div.create-resume__step3-left
+                      
+                      .create-resume__step3-row
+                        a(href="#!").create-resume__step3-delete
+                          i.ion-trash-a
+                        .form-group.form-group--select
+                          select.selectric
+                            option(value="" selected) Уровень образования
+                            option(value="") Полный
+                            option(value="") Неполный
+                            option(value="") Простой
+                        .form-group.block-focus
+                          label.hidden Факультет
+                          input(type="text" name="name" placeholder="Факультет").form-control.input-focus
+                        .form-group.block-focus
+                          label.hidden Специализация
+                          input(type="text" name="name" placeholder="Специализация").form-control.input-focus
+                        .row
+                          .col-sm-6
+                            .form-group.block-focus.no--m-bottom
+                              label.hidden Год начала обучения
+                              input(type="text" name="name" placeholder="Год начала обучения").form-control.input-focus
+                          .col-sm-6
+                            .form-group.block-focus.no--m-bottom
+                              label.hidden Год окончания обучения
+                              input(type="text" name="name" placeholder="Год окончания обучения").form-control.input-focus
+                      
+                    div.hidden-xs &nbsp;
+                  
+                  .create-resume__step3-button
+                    div
+                      button(type="button").btn.btn--border.btn--big
+                        span сохранить и добавить еще одно
+                    div
+                      button(type="button").btn.btn--big
+                        span продолжить
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(2)').addClass('active');
+      })

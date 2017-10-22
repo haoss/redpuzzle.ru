@@ -1,0 +1,166 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Создание резюме - шаг 4' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Создание резюме - шаг 4' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 создание резюме
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            // Create resume
+            .create-resume
+              
+              .create-resume__step.create-resume__step--four
+                span 1
+                span 2
+                span 3
+                span 4
+                span 5
+              
+              .form
+                form(action="#!")
+                  legend.form__legend Опыт работы
+                  
+                  .create-resume__row
+                    div.create-resume__step4-left
+                      
+                      .create-resume__step4-row
+                        a(href="#!").create-resume__step3-delete
+                          i.ion-trash-a
+                        .form-group.block-focus
+                          label.hidden Название организации
+                          input(type="text" name="name" placeholder="Название организации").form-control.input-focus
+                        .form-group.block-focus
+                          label.hidden Должность
+                          input(type="text" name="name" placeholder="Должность").form-control.input-focus
+                        .form-group.block-focus
+                          label.hidden Обязанности
+                          input(type="text" name="name" placeholder="Обязанности").form-control.input-focus
+                        .row
+                          .col-sm-6
+                            .form-group.block-focus.no--m-bottom
+                              label.hidden Год начала обучения
+                              input(type="text" name="name" placeholder="Год начала обучения").form-control.input-focus
+                          .col-sm-6
+                            .form-group.block-focus.no--m-bottom
+                              label.hidden Год окончания обучения
+                              input(type="text" name="name" placeholder="Год окончания обучения").form-control.input-focus
+                      
+                    div.hidden-xs &nbsp;
+                  
+                  button(type="button").btn.btn--border.btn--big
+                    span сохранить и добавить еще одно
+                  
+                  .clear25
+                  
+                  legend.form__legend Навыки
+                  
+                  .create-resume__row
+                    .create-resume__step4-left.create-resume__step4-left--skill
+                      .create-resume__step4-row.no--border
+                        .form-group.form-group--select
+                          select.selectric
+                            option(value="" selected) Выберите навык
+                            option(value="") Штукатурка
+                            option(value="") Грунтовка
+                            option(value="") Шпаклевка
+                            option(value="") Бетонирование
+                            option(value="") Кладка кирпича
+                            option(value="") Поклейка обоев
+                        ul.create-resume__skill
+                          li
+                            span Штукатурка
+                            a(href="#!")
+                              i.ion-trash-a
+                          li
+                            span грунтовка
+                            a(href="#!")
+                              i.ion-trash-a
+                          li
+                            span шпаклевка
+                            a(href="#!")
+                              i.ion-trash-a
+                          li
+                            span бетонирование
+                            a(href="#!")
+                              i.ion-trash-a
+                          li
+                            span кладка кирпича
+                            a(href="#!")
+                              i.ion-trash-a
+                          li
+                            span поклейка обоев
+                            a(href="#!")
+                              i.ion-trash-a
+                        .form-group.form-group--checkbox
+                          input#input44(type="checkbox" name="confidental" checked)
+                          i.ion-android-checkbox-outline-blank
+                          i.ion-android-checkbox-outline
+                          label.label(for="input44") Согласиться с условиями 
+                            a(href="#!").link.link--underline договора-оферты
+                        
+                    div.hidden-xs &nbsp;
+                  
+                  button(type="button").btn.btn--big
+                    span разместить резюме
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(2)').addClass('active');
+      })

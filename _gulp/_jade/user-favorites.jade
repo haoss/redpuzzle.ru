@@ -1,0 +1,175 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Избранные' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Избранные' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 Избранные
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            // Catalog
+            .catalog
+              
+              .catalog__row
+                .catalog__row-title.catalog__row-title--extra
+                  a(href="#!") 
+                    strong Менеджер по продажам
+                    span срочная
+                .catalog__row-info
+                  div
+                    .catalog__row-price 55 000-110 000 руб.
+                    .catalog__row-name.catalog__row-name--confirmed ООО Консалтинг Центр Про
+                      i.ion-checkmark
+                  div
+                    .catalog__row-logo
+                      img(src="./img/catalog-row-logo-2.png", alt="")
+                p Телефонные продажи участия в деловом мероприятии (форуме/семинаре/конгрессе). Переговоры с клиентами премиум-сегмента рынка отрасли ЖКХ. Взаимодействие с аппаратом...
+                .catalog__row-address
+                  i.ion-ios-location
+                  | Москва, Черкизовская  |  1 сентября 2017
+                .button__group.button__group--catalog-row
+                  div
+                    a(href="#!").favorites__button.is-favorites
+                      i.ion-android-star-outline
+                      i.ion-android-star
+                  div
+                    a(href="#popup-respond").btn.open-popup-link
+                      span откликнуться
+                      
+              .catalog__row
+                .catalog__row-title.catalog__row-title--extra
+                  a(href="#!") 
+                    strong Менеджер по продажам
+                    span срочная
+                .catalog__row-info
+                  div
+                    .catalog__row-price 55 000-110 000 руб.
+                    .catalog__row-name.catalog__row-name--confirmed ООО Консалтинг Центр Про
+                      i.ion-checkmark
+                  div
+                    .catalog__row-logo
+                      img(src="./img/catalog-row-logo-3.png", alt="")
+                p Телефонные продажи участия в деловом мероприятии (форуме/семинаре/конгрессе). Переговоры с клиентами премиум-сегмента рынка отрасли ЖКХ. Взаимодействие с аппаратом...
+                .catalog__row-address
+                  i.ion-ios-location
+                  | Москва, Черкизовская  |  1 сентября 2017
+                .button__group.button__group--catalog-row
+                  div
+                    a(href="#!").favorites__button.is-favorites
+                      i.ion-android-star-outline
+                      i.ion-android-star
+                  div
+                    +phoneVacancy
+                  div
+                    a(href="#popup-respond").btn.open-popup-link
+                      span откликнуться
+                      
+              .catalog__row
+                .catalog__row-title
+                  a(href="#!") 
+                    strong Менеджер по продажам
+                    span срочная
+                .catalog__row-info
+                  div
+                    .catalog__row-price 55 000-110 000 руб.
+                    .catalog__row-name ООО Консалтинг Центр Про
+                      i.ion-checkmark
+                p Телефонные продажи участия в деловом мероприятии (форуме/семинаре/конгрессе). Переговоры с клиентами премиум-сегмента рынка отрасли ЖКХ. Взаимодействие с аппаратом...
+                .catalog__row-address
+                  i.ion-ios-location
+                  | Москва, Черкизовская  |  1 сентября 2017
+                .button__group.button__group--catalog-row
+                  div
+                    a(href="#!").favorites__button.is-favorites
+                      i.ion-android-star-outline
+                      i.ion-android-star
+                  div
+                    a(href="#popup-respond").btn.open-popup-link
+                      span откликнуться
+                      
+              .catalog__row
+                .catalog__row-title
+                  a(href="#!") 
+                    strong Менеджер по продажам
+                    span срочная
+                .catalog__row-info
+                  div
+                    .catalog__row-price 55 000-110 000 руб.
+                    .catalog__row-name ООО Консалтинг Центр Про
+                      i.ion-checkmark
+                p Телефонные продажи участия в деловом мероприятии (форуме/семинаре/конгрессе). Переговоры с клиентами премиум-сегмента рынка отрасли ЖКХ. Взаимодействие с аппаратом...
+                .catalog__row-address
+                  i.ion-ios-location
+                  | Москва, Черкизовская  |  1 сентября 2017
+                .button__group.button__group--catalog-row
+                  div
+                    a(href="#!").favorites__button.is-favorites
+                      i.ion-android-star-outline
+                      i.ion-android-star
+                  div
+                    a(href="#popup-respond").btn.open-popup-link
+                      span откликнуться
+            
+            // Pagination
+            +pagination
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(4)').addClass('active');
+      })

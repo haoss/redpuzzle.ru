@@ -1,0 +1,144 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Создание резюме - шаг 1' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Создание резюме - шаг 1' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 создание резюме
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            // Create resume
+            .create-resume
+              
+              .create-resume__step.create-resume__step--one
+                span 1
+                span 2
+                span 3
+                span 4
+                span 5
+              
+              .form
+                form(action="#!")
+                  legend.form__legend Личные данные
+                  
+                  .create-resume__row
+                    div.create-resume__step1-left
+                      .form-group.block-focus
+                        label.hidden Фамилия
+                        input(type="text" name="name" placeholder="Фамилия").form-control.input-focus
+                      .form-group.block-focus
+                        label.hidden Имя
+                        input(type="text" name="name" placeholder="Имя").form-control.input-focus
+                      .form-group.block-focus
+                        label.hidden Отчество
+                        input(type="text" name="name" placeholder="Отчество").form-control.input-focus
+                      .form-group.block-focus
+                        label.hidden Дата рождения
+                        input(type="text" name="name" placeholder="Дата рождения").form-control.input-focus
+                      .form-group.form-group--select
+                        select.selectric
+                          option(value="" selected) Город
+                          option(value="") Актюбинск
+                          option(value="") Санкт-Петербург
+                          option(value="") Барнаул
+                          option(value="") Уфа
+                          option(value="") Волгоград
+                          option(value="") Нижний Новгород
+                          option(value="") Иркутск
+                          option(value="") Краснодар
+                          option(value="") Сочи
+                          option(value="") Самара		
+                          option(value="") Новосибирск
+                          option(value="") Омск
+                          option(value="") Пермь
+                          option(value="") Владивосток
+                          option(value="") Ростов-на-Дону
+                          option(value="") Рязань
+                          option(value="") Екатеринбург
+                          option(value="") Казань
+                          option(value="") Тула
+                          option(value="") Тюмень
+                          option(value="") Сургут
+                          option(value="") Хабаровск
+                          option(value="") Челябинск
+                          option(value="") Ярославль
+                      .form-group.block-focus
+                        label.hidden Пол
+                        input(type="text" name="name" placeholder="Пол").form-control.input-focus
+                      .form-group.block-focus
+                        label.hidden Номер телефона
+                        input(type="text" name="name" placeholder="Номер телефона").form-control.input-focus
+                      button(type="button").btn.btn--big.hidden-xs
+                        span продолжить
+                    div.create-resume__step1-right
+                      .create-resume__image
+                        div
+                          .create-resume__image-div
+                            img(src="./img/file-upload-image.png", alt="").create-resume__picture
+                        div
+                          input.create-resume__file-upload(type="file" accept="image/*")
+                          strong Добавить фотографию
+                          p Поддерживаются фотографии размером не более 1 мегабайта. Формат изображений должен соответствовать этим расширениям - jpg, png, gif
+                      button(type="button").btn.btn--big.visible-xs-inline-block
+                        span продолжить
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(2)').addClass('active');
+      })

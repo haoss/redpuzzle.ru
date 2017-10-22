@@ -1,0 +1,181 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Список тестов' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список тестов' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 Список тестов
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            // Tests
+            .tests
+              form(action="#!")
+                .tests__title Название теста определенной длины и сложности
+                
+                .tests__row
+                  .tests__row-title
+                    span 1.
+                    | &nbsp;Вопрос за словесными горами в стране гласных и согласных живут рыбные тексты?
+                  p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот.
+                  .tests__answer
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest11(type="radio" name="radioTest11")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest11").label Ответ номер один
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest12(type="radio" name="radioTest11" checked)
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest12").label Ответ номер два
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest13(type="radio" name="radioTest11")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest13").label Ответ номер три
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest14(type="radio" name="radioTest11")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest14").label Ответ номер четыре
+                        
+                .tests__row
+                  .tests__row-title
+                    span 2.
+                    | &nbsp;Вопрос за словесными горами в стране гласных и согласных живут рыбные тексты?
+                  p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот.
+                  .tests__answer
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest21(type="radio" name="radioTest22")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest21").label Ответ номер один
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest22(type="radio" name="radioTest22")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest22").label Ответ номер два
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest23(type="radio" name="radioTest22")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest23").label Ответ номер три
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest24(type="radio" name="radioTest22")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest24").label Ответ номер четыре
+                    
+                .tests__row
+                  .tests__row-title
+                    span 3.
+                    | &nbsp;Вопрос за словесными горами в стране гласных и согласных живут рыбные тексты?
+                  p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот.
+                  .tests__answer
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest31(type="radio" name="radioTest33")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest31").label Ответ номер один
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest32(type="radio" name="radioTest33")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest32").label Ответ номер два
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest33(type="radio" name="radioTest33")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest33").label Ответ номер три
+                    div
+                      .form-group.form-group--radio.form-group--radio-medium
+                        input#radioTest34(type="radio" name="radioTest33")
+                        i.ion-android-radio-button-off
+                        i.ion-android-checkmark-circle
+                        label(for="radioTest34").label Ответ номер четыре
+                
+                button(type="button").btn.btn--tests
+                  span отправить
+    
+                .tests__result
+                  .tests__result-wrapper
+                    div
+                      .tests__result-title поздравляем, Тест пройден
+                      .tests__result-number Ваш результат - 
+                        strong 4.8
+                        | &nbsp;балла
+                    div
+                      .tests__result-test осталось попыток - 
+                        strong 3
+                      .form-group.form-group--checkbox.no--m-bottom
+                        input#input333(type="checkbox" name="add-resume" checked)
+                        i.ion-android-checkbox-outline-blank
+                        i.ion-android-checkbox-outline
+                        label.label(for="input333") Добавить в резюме
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom

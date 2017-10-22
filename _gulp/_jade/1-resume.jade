@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
   
-  -var active = '1 вакансия' //активный пункт меню, список в header.jade
-  -var pageTitle = '1 вакансия' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+  -var active = '1 резюме' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 резюме' + ' - redpuzzle.ru' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -25,7 +25,259 @@ html(lang="ru")
           li
             span Название страницы
         
-        
+        .row
+          .col-md-9
+            
+            // One-resume
+            .one-resume__head
+              .one-resume__head-img
+                img(src="./img/one-resume-img.png", alt="")
+                .one-resume__head-rating
+                  span
+                    i.ion-android-star
+                    | 9.9
+                .one-resume__head-label.visible-xs рекомендуем
+              .one-resume__head-info
+                .one-resume__head-label.hidden-xs рекомендуем
+                .one-resume__head-title
+                  | Иванов иван иванович
+                  
+                  .one-resume__head-icon
+                    .catalog-resume__icon.catalog-resume__icon--active
+                      i.ion-android-call
+                      i.ion-checkmark-circled
+                    .catalog-resume__icon.catalog-resume__icon--active
+                      i.ion-document-text
+                      i.ion-checkmark-circled
+                    .catalog-resume__icon
+                      a(href="#!").edit-block 
+                        i.ion-compose
+                    
+                .one-resume__head-price Инженер-строитель, 40 000-80 000 руб.
+                .one-resume__head-time Резюме от 10 сентября 2017
+                
+              .clear
+              
+              .button__group.button__group--one-resume
+                div
+                  a(href="#!" target="_blank").one-resume__doc
+                    svg(xmlns='http://www.w3.org/2000/svg', version='1.2', viewbox='0 0 14 20', width='14', height='20')
+                      g(fill='#ff0f36')
+                        path(d='M7.19 15.02c-.663 0-1.04.637-1.04 1.496 0 .858.4 1.472 1.04 1.472.66 0 1.016-.638 1.016-1.497.024-.784-.355-1.47-1.017-1.47zm0 0M2.34 15.02c-.212 0-.354.023-.424.048v2.895c.07.025.212.025.33.025.876 0 1.443-.49 1.443-1.546 0-.933-.52-1.423-1.35-1.423zm0 0')
+                        path(d='M14 4.786c0-.098-.024-.172-.095-.245L10.193.125l-.07-.074s-.025 0-.025-.024C10.074 0 10.05 0 10.028 0H.755C.33-.022 0 .32 0 .763v18.453c0 .44.33.785.757.785h12.486c.426 0 .757-.344.757-.785V4.81v-.024zM3.997 18.184c-.45.393-1.136.565-1.963.565-.497 0-.852-.026-1.088-.075v-4.32c.355-.048.828-.097 1.3-.097.805 0 1.325.147 1.75.466.45.344.734.884.734 1.67-.024.858-.308 1.422-.733 1.79zm3.145.59c-1.253 0-2.01-.982-2.01-2.258 0-1.326.804-2.307 2.08-2.307 1.302 0 2.035 1.005 2.035 2.232 0 1.472-.852 2.33-2.105 2.33zm4.92-.835c.283 0 .614-.075.803-.148l.142.785c-.166.098-.568.196-1.088.196-1.467 0-2.224-.957-2.224-2.208 0-1.497 1.04-2.356 2.318-2.356.496 0 .875.097 1.04.195l-.19.785c-.188-.073-.472-.17-.803-.17-.756 0-1.347.49-1.347 1.47-.024.91.496 1.45 1.348 1.45zM.756 13.3V.763H9.53v4.024c0 .22.166.393.38.393h3.333v8.146H.757zm0 0')
+                        path(d='M6.03 5.4h2.744c.142 0 .26-.123.26-.27 0-.147-.095-.246-.237-.246H6.03c-.14 0-.26.123-.26.27 0 .148.142.246.26.246zm0 0M10.145 6.946H3.287c-.142 0-.26.122-.26.27 0 .147.118.27.26.27h6.858c.142 0 .26-.123.26-.27-.023-.148-.118-.27-.26-.27zm0 0M3.997 5.915l.236-.982c.047-.245.095-.44.142-.662.024.222.07.418.118.663l.213.982h.402l.544-2.086h-.378l-.213.932c-.046.245-.094.49-.14.71-.025-.22-.072-.465-.12-.71l-.19-.957h-.377l-.213.932c-.047.27-.118.515-.142.736-.023-.196-.07-.466-.142-.736l-.19-.932H3.17l.496 2.085h.33zm0 0M10.145 9.03H3.287c-.142 0-.26.124-.26.27 0 .15.118.27.26.27h6.858c.142 0 .26-.12.26-.27-.023-.17-.118-.27-.26-.27zm0 0M10.145 11.142H3.287c-.142 0-.26.122-.26.27 0 .147.118.27.26.27h6.858c.142 0 .26-.123.26-.27-.023-.148-.118-.27-.26-.27zm0 0')
+
+                div
+                  a(href="#!").favorites__button
+                    i.ion-android-star-outline
+                    i.ion-android-star
+                div
+                  a(href="#").btn.open-popup-link
+                    span Связаться со специалистом
+            
+            .clear
+            
+            // One-resume info
+            .one-resume__info
+              a(href="#!").edit-block 
+                i.ion-compose
+              .one-resume__info-wrapper
+                div Город проживания
+                  strong Черноморск
+                div Тип занятости
+                  strong Постоянная, полный день
+                div Дата рождения
+                  strong 3 августа 1968 
+                    span.font.font--normal (49 лет)
+
+            // One-resume more
+            .one-resume__block
+              .one-resume__block-wrapper
+                ul.one-resume__block-more
+                  li
+                    table
+                      tr
+                        td Образование: 
+                        td
+                          strong Высшее
+                      tr
+                        td Опыт работы:
+                        td
+                          strong 9 лет
+                      tr
+                        td Пройдено тестов:
+                        td
+                          strong 3
+                  li
+                    table
+                      tr
+                        td Город проживания: 
+                        td
+                          strong Москва
+                      tr
+                        td Гражданство:
+                        td
+                          strong Русский
+                  li
+                    table
+                      tr
+                        td Пройдено собеседование:
+                        td
+                          strong Да
+                      tr
+                        td Данные проверены:
+                        td
+                          strong Да
+                      tr
+                        td Справка об отсутствии судимости:
+                        td
+                          strong Есть
+
+        .row
+          .col-sm-9
+            // One-resume services
+            .one-resume__block
+              .one-resume__block-head
+                span Выполняемые услуги
+                a(href="#!").edit-block 
+                  i.ion-compose
+              .one-resume__block-wrapper
+                ul.one-resume__block-services
+                  li Штукатурка
+                  li грунтовка
+                  li шпаклевка
+                  li бетонирование
+                  li кладка кирпича
+                  li поклейка обоев
+              
+            // One-resume experience
+            .one-resume__block
+              .one-resume__block-head
+                span Опыт работы
+                a(href="#!").edit-block 
+                  i.ion-compose
+              .one-resume__block-wrapper
+                ul.one-resume__block-experience
+                  li
+                    strong Мастер старший
+                    i 
+                      b с 05.2002 по наст. время
+                        span (15 лет 4 месяца)
+                      br
+                      b филиал «ВГМК» ГП «ОГХК», Вольногорск 
+                        span (Добыча и переработка руд)
+                    p Обслуживание электропривода и релейной защиты в сетях электроснабжения в карьерах горно-транспортного производства. Монтаж, эксплуатация, ремонт эл.оборудования экскаваторов, конвейерных линий, насосных станций и др. Группа по эл.безопасности.
+                  li
+                    strong Электрик
+                    i 
+                      b с 09.2000 по 05.2002
+                        span (2 года 4 месяца)
+                      br
+                      b НКТ Строй групп, Черкассы 
+                        span (Строительство и реконструкция отелей ,кафе, ресторанов)
+                    p Электромонтаж щитов,щитовых,жилого фонда,наружного освещения,систем вентилляции
+                    
+            // One-resume education
+            .one-resume__block
+              .one-resume__block-head
+                span Образование
+                a(href="#!").edit-block 
+                  i.ion-compose
+              .one-resume__block-wrapper
+                ul.one-resume__block-education
+                  li
+                    strong Авиационный институт
+                    i 
+                      b Высшее, с 09.1968 по 02.1974
+                        span (5 лет 5 месяцев)
+                      br
+                      b Системы автоматического управления и электрооборудования ЛА, Казань
+                    
+            // One-resume add-info
+            .one-resume__block
+              .one-resume__block-head
+                span Дополнительная информация
+                a(href="#!").edit-block 
+                  i.ion-compose
+              .one-resume__block-wrapper
+                p Знание технологии строительных, ремонтных, сантехнических, дорожных работ, эксплуатация существующих сооружений, ведение технической и рабочей документации. Учет движения материалов.
+                p Опыт руководства участком с коллективом 70 человек и 20 единиц техники с проведением работ до 20 различных объектов единовременно.
+              
+            // One-resume tests
+            .one-resume__block
+              .one-resume__block-head
+                span пройденные тесты
+              .one-resume__block-wrapper
+                ul.one-resume__block-tests
+                  li
+                    strong Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. 
+                    small Результат теста - 3 
+                  li
+                    strong Далеко-далеко за словесными горами
+                    small Результат теста - 4
+                  li
+                    strong Далеко-далеко 
+                    small Результат теста - 5
+            
+            // Section
+            .similar-summaries
+              .h2 Похожие резюме
+              
+              .similar-summaries__row
+                .similar-summaries__block
+                  img(src="./img/catalog-resume-list-img-1.png", alt="").similar-summaries__img
+                  a.similar-summaries__link(href="#!") Инженер-строитель
+                  .similar-summaries__name Иванов Иван
+                .similar-summaries__block
+                  img(src="./img/catalog-resume-list-img-2.png", alt="").similar-summaries__img
+                  a.similar-summaries__link(href="#!") Инженер-строитель
+                  .similar-summaries__name Тукер Ирма
+                .similar-summaries__block
+                  img(src="./img/catalog-resume-list-img-3.png", alt="").similar-summaries__img
+                  a.similar-summaries__link(href="#!") Инженер-строитель
+                  .similar-summaries__name Куртис Стоне
+                .similar-summaries__block
+                  img(src="./img/catalog-resume-list-img-4.png", alt="").similar-summaries__img
+                  a.similar-summaries__link(href="#!") Инженер-строитель
+                  .similar-summaries__name Иванов Иван
+                .similar-summaries__block
+                  img(src="./img/catalog-resume-list-img-1.png", alt="").similar-summaries__img
+                  a.similar-summaries__link(href="#!") Инженер-строитель
+                  .similar-summaries__name Тукер Ирма
+                .similar-summaries__block
+                  img(src="./img/catalog-resume-list-img-2.png", alt="").similar-summaries__img
+                  a.similar-summaries__link(href="#!") Инженер-строитель
+                  .similar-summaries__name Куртис Стоне
+            
+          .col-sm-3.hidden-xs
+            
+            .column-right.column-right--one-resume
+            
+              // Information
+              .information
+                .information__block
+                  .information__title
+                    i.icon.icon--information-1-small
+                    span Пройдите тест
+                  .information__wrapper
+                    div
+                      i.icon.icon--information-1
+                    div
+                      a(href="#!") Пройдите онлайн-тест «Профориентация», чтобы определить свое призвание.
+                .information__block
+                  .information__title
+                    i.icon.icon--information-2-small
+                    span Резюме в топе
+                  .information__wrapper
+                    div
+                      i.icon.icon--information-2
+                    div
+                      a(href="#!") Выведите резюме в топ с помощью «Автообновления».
+                  
+              // Banner
+              .banner
+                a(href="#!")
+                  img(src="./img/banner-262-2.png", alt="")
     
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")

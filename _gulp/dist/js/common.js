@@ -3,13 +3,6 @@
 // Document ready
 $(document).on('ready', function(){
 
-  // SVG Fallback
-  if(!Modernizr.svg) {
-    $("img[src*='svg']").attr("src", function() {
-      return $(this).attr("src").replace(".svg", ".png");
-    });
-  };
-
   // Magnific popup gallery
   $('.gallery').each(function() {
     $(this).magnificPopup({
@@ -112,30 +105,45 @@ $(document).on('ready', function(){
   // Фокус поля ввода на кастомном поле
   searchFocus();
 
+  // Кастомный селект
   $('.selectric').selectric({
-    disableOnMobile: false,
-    nativeOnMobile: false
+    // disableOnMobile: false,
+    // nativeOnMobile: false
   });
 
+  // Читать далее на мобильник
   readMore();
+  // Липкая шапка при скролле
   headerScroll();
+  // Блок о проекте к шапке
   navigationInfo();
+  // Мобильное боковое меню
   menuMobile();
 
+  // Адаптивная высота блоков
   $('.purchase__block .purchase__info').matchHeight();
 
+  // Тест Избранное - удалить при сборке
   favoritesTest();
+  // Слайдер вопрос-ответ
   faq();
+  // Попап блок Сортировка
   sortingOption();
+  // Папап телефон вакансии
   phoneVacancy();
+  // Мобильная боковая колонка
   columnMobile();
 
+  // Читать далее
   $('.has-hide').readmore({
     speed: 500,
     collapsedHeight: 295,
     moreLink: '<div class="filter__more"><a href="#!">показать все</a></div>',
     lessLink: '<div class="filter__more"><a href="#!">скрыть лишнее</a></div>'
   });
+
+  // Прикрепление фото в профиле при создании резюме
+  uploadImageProfile();
 
   // Chrome Smooth Scroll
   try {
@@ -157,13 +165,12 @@ $(window).on('load', function() {
 });
 
 $(window).on('resize', function(){
-  var width = $(window).width();
-  var mobileColWrapper = $('.mobile__col-wrapper');
-  var body = $('body');
-  var mobileColBackground = $('.mobile__col-background');
-
-  var navMobile = $('#mobile__nav');
-  var navBackground = $('.mobile__nav-background');
+  var width = $(window).width(),
+      mobileColWrapper = $('.mobile__col-wrapper'),
+      body = $('body'),
+      mobileColBackground = $('.mobile__col-background'),
+      navMobile = $('#mobile__nav'),
+      navBackground = $('.mobile__nav-background');
 
   if (width > 767) {
     $('.message__readmore').removeClass('is-active');
@@ -202,9 +209,8 @@ function simpleForm(form, callback) {
   $(document).on('submit', form, function(e){
     e.preventDefault();
 
-    var formData = {};
-
-    var hasFile = false;
+    var formData = {},
+        hasFile = false;
 
     if ($(this).find('[type=file]').length < 1) {
       formData = $(this).serialize();
@@ -262,8 +268,7 @@ function simpleForm(form, callback) {
 
 function headerLinks(){
   var headerPhone = $('.header__phone'),
-      headerLang = $('.header__lang')
-  ;
+      headerLang = $('.header__lang');
 
   // header
   headerPhone.on('click', function(e){
@@ -296,8 +301,7 @@ function headerLinks(){
 function languageTest(){
   var str = $('.header__lang-str'),
       li = $('.header__lang li'),
-      a = $('.header__lang li a')
-  ;
+      a = $('.header__lang li a');
 
   li.on('click', function(e){
     e.stopPropagation();
@@ -334,15 +338,13 @@ function readMore(){
     } else {
       $('.message__link a').text('Развернуть')
     }
-
-    // console.log(e);
   });
 
 }
 
 function headerScroll(){
-  var header = $('.header');
-  var nav = $('.navigation');
+  var header = $('.header'),
+      nav = $('.navigation');
 
   if ($(window).scrollTop() > header.height()) {
     nav.addClass('is-sticky');
@@ -352,12 +354,12 @@ function headerScroll(){
 }
 
 function navigationInfo(){
-  var navAbout = $('.navigation__about');
-  var navInfo = $('.navigation__info');
+  var navAbout = $('.navigation__about'),
+      navInfo = $('.navigation__info');
 
   navAbout.on('click', function(e){
-    $(this).addClass('is-hover');
-    navInfo.addClass('is-active');
+    $(this).toggleClass('is-hover');
+    navInfo.toggleClass('is-active');
   });
 
   navAbout.on('click', function(e){
@@ -378,11 +380,11 @@ function navigationInfo(){
 }
 
 function menuMobile(){
-  var navButton = $('#navigation__button');
-  var navMobile = $('#mobile__nav');
-  var navMobileButton = $('#mobile__nav-button');
-  var body = $('body');
-  var navBackground = $('.mobile__nav-background');
+  var navButton = $('#navigation__button'),
+      navMobile = $('#mobile__nav'),
+      navMobileButton = $('#mobile__nav-button',
+      body = $('body'),
+      navBackground = $('.mobile__nav-background');
 
   navButton.on('click', function(){
     body.addClass('overflow-hidden');
@@ -411,9 +413,9 @@ function favoritesTest(){
 }
 
 function faq(){
-  var faqBlock = '.faq__block';
-  var faqBlockAnswer = $('.faq__block-answer');
-  var faqBlockTitle = $('.faq__block-title');
+  var faqBlock = '.faq__block',
+      faqBlockAnswer = $('.faq__block-answer'),
+      faqBlockTitle = $('.faq__block-title');
 
   $(faqBlock).each(function(){
     var _this = $(this);
@@ -461,12 +463,12 @@ function phoneVacancy(){
 }
 
 function columnMobile(){
-  var mobileColBtn = $('#mobileColBtn');
-  var mobileColWrapper = $('.mobile__col-wrapper');
-  var mobileColButton = $('#mobileColButton');
-  var body = $('body');
-  var mobileColBackground = $('.mobile__col-background');
-  var width = $(window).width();
+  var mobileColBtn = $('#mobileColBtn'),
+      mobileColWrapper = $('.mobile__col-wrapper'),
+      mobileColButton = $('#mobileColButton'),
+      body = $('body'),
+      mobileColBackground = $('.mobile__col-background'),
+      width = $(window).width();
 
   mobileColBtn.on('click', function(){
     body.addClass('overflow-hidden');
@@ -515,4 +517,26 @@ function columnMobile(){
       lessLink: '<div class="filter__more"><a href="#!">скрыть лишнее</a></div>'
     });
   }
+}
+
+function uploadImageProfile() {
+  var readURL = function(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('.create-resume__picture').attr('src', e.target.result);
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  $(".create-resume__file-upload").on('change', function(){
+      readURL(this);
+  });
+
+  $(".create-resume__image-div").on('click', function() {
+     $(".create-resume__file-upload").click();
+  });
 }

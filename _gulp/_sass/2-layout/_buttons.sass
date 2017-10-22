@@ -2,7 +2,7 @@
 
 .btn
   display: inline-block
-  padding: 0 5px
+  padding: 0 15px
   margin-bottom: 0
   font-size: rem(12)
   font-weight: 400
@@ -87,3 +87,21 @@
   &--block
     width: calc(100% - 9px)
     display: block
+
+  &--tests
+    height: 35px
+    line-height: 33px
+    min-width: 214px
+
+  &--border
+    border-color: $color-red
+    background: $color-white
+    color: $color-red
+    &:hover, &:focus
+      color: $color-white
+      background: $color-red
+
+  &--big
+    height: 35px
+    line-height: 35px
+    min-width: 214px
