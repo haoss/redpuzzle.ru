@@ -211,7 +211,28 @@
         .popup__info.popup__info--pay-services Автообновление - 
           strong 100 999 
           | руб
+        .clear
+        button(type="submit").btn.btn--middle.btn--3d.btn--block
+          span Оплатить
+          
+#popup-pay-services2.popup.popup--pay-services.mfp-hide
+  .popup__wrapper
+    .popup__close
+      i.ion-android-close
+    form(action="#")
+      fieldset
+        .popup__respond-title Резюме для продвижения
+        .popup__respond-category Менеджер по продажам
+          i.ion-checkmark-circled
         .clear10
+        .form-group.form-group--search.block-focus
+          input(type="text" name="name" placeholder="Поиск").form-control.input-focus
+          button(type="button")
+            i.ion-search
+        .popup__info.popup__info--pay-services Автообновление - 
+          strong 100 999 
+          | руб
+        .clear
         button(type="submit").btn.btn--middle.btn--3d.btn--block
           span Оплатить
           

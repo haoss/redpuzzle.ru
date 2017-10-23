@@ -1,0 +1,251 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Мои вакансии' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Мои вакансии' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 Мои вакансии
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            .my-resume__head
+              a(href="#!").btn.btn--big
+                span Разместить вакансию
+            
+            // My resume
+            .my-resume
+              .my-resume__row
+                .my-resume__info
+                  .my-resume__title
+                    a(href="#!")
+                      strong Менеджер по продажам / Консультант
+                  .my-resume__price.visible-xs 55 000-110 000 руб.
+                  .catalog__row-name
+                    | ООО Консалтинг Центр Про
+                    i.ion-checkmark
+
+                  .my-resume__options.hidden-xxs
+                    div.hidden-xs
+                      .my-resume__price 55 000-110 000 руб.
+                    div
+                      .my-resume__table
+                        div
+                          table
+                            tr
+                              td Видимость резюме:
+                              td
+                                strong Скрыто
+                            tr
+                              td Дату публикации:
+                              td
+                                strong 31 января 2017
+                        div
+                          table
+                            tr
+                              td Количество просмотров:
+                              td
+                                strong 31
+                            tr
+                              td Количество откликов:
+                              td
+                                strong 10
+                .visible-xxs
+                  .clear
+                  .my-resume__table
+                    div
+                      table
+                        tr
+                          td Видимость резюме:
+                          td
+                            strong Скрыто
+                        tr
+                          td Дату публикации:
+                          td
+                            strong 31 января 2017
+                    div
+                      table
+                        tr
+                          td Количество просмотров:
+                          td
+                            strong 31
+                        tr
+                          td Количество откликов:
+                          td
+                            strong 10
+                
+                p Телефонные продажи участия в деловом мероприятии (форуме/семинаре/конгрессе). Переговоры с клиентами премиум-сегмента рынка отрасли ЖКХ. Взаимодействие с аппаратом...
+                .clear
+                .my-resume__control
+                  div
+                    a(href="#!")
+                      i.ion-android-print
+                      | Печать
+                  div
+                    a(href="#!")
+                      i.ion-android-mail
+                      | Выслать на почту
+                  div
+                    a(href="#!")
+                      i.ion-arrow-up-a
+                      | Продвинуть
+                  div
+                    a(href="#!")
+                      i.ion-compose
+                      | Редактировать
+                  div
+                    a(href="#!")
+                      i.ion-ios-browsers
+                      | Копировать
+                  div
+                    a(href="#!")
+                      i.ion-trash-a
+                      | Удалить
+                
+              .my-resume__row
+                .my-resume__info
+                  .my-resume__title
+                    a(href="#!")
+                      strong Консультант
+                  .my-resume__price.visible-xs 5 000-10 000 руб.
+                  .catalog__row-name
+                    | ООО Консалтинг Центр Про
+                    i.ion-checkmark
+
+                  .my-resume__options.hidden-xxs
+                    div.hidden-xs
+                      .my-resume__price 55 000-110 000 руб.
+                    div
+                      .my-resume__table
+                        div
+                          table
+                            tr
+                              td Видимость резюме:
+                              td
+                                strong Скрыто
+                            tr
+                              td Дату публикации:
+                              td
+                                strong 31 января 2017
+                        div
+                          table
+                            tr
+                              td Количество просмотров:
+                              td
+                                strong 31
+                            tr
+                              td Количество откликов:
+                              td
+                                strong 10
+                .visible-xxs
+                  .clear
+                  .my-resume__table
+                    div
+                      table
+                        tr
+                          td Видимость резюме:
+                          td
+                            strong Скрыто
+                        tr
+                          td Дату публикации:
+                          td
+                            strong 31 января 2017
+                    div
+                      table
+                        tr
+                          td Количество просмотров:
+                          td
+                            strong 31
+                        tr
+                          td Количество откликов:
+                          td
+                            strong 10
+                p Телефонные продажи участия в деловом мероприятии (форуме/семинаре/конгрессе). Переговоры с клиентами премиум-сегмента рынка отрасли ЖКХ. Взаимодействие с аппаратом...
+                .clear
+                .my-resume__control
+                  div
+                    a(href="#!")
+                      i.ion-android-print
+                      | Печать
+                  div
+                    a(href="#!")
+                      i.ion-android-mail
+                      | Выслать на почту
+                  div
+                    a(href="#!")
+                      i.ion-arrow-up-a
+                      | Продвинуть
+                  div
+                    a(href="#!")
+                      i.ion-compose
+                      | Редактировать
+                  div
+                    a(href="#!")
+                      i.ion-ios-browsers
+                      | Копировать
+                  div
+                    a(href="#!")
+                      i.ion-trash-a
+                      | Удалить
+                
+            // Pagination
+            +pagination
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(2)').addClass('active');
+      })

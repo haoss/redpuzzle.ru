@@ -53,6 +53,8 @@ html(lang="ru")
               form(action="#!")
                 .row
                   .col-lg-6.col-md-5.col-sm-6
+                    .clear15
+                    
                     fieldset.form__fieldset
                       legend.form__legend.form__legend--small Сменить пароль
                       
@@ -67,22 +69,69 @@ html(lang="ru")
                         input(type="text" name="name" placeholder="Повторите пароль").form-control.input-focus
                       
                     fieldset.form__fieldset
-                      legend.form__legend.form__legend--small Сменить телефон
+                      legend.form__legend.form__legend--small тип работодателя
                       
-                      .form-group.block-focus
-                        label.hidden Ваш телефон
-                        input(type="text" name="name" placeholder="Ваш телефон").form-control.input-focus
+                      .form-group.form-group--select
+                        select.selectric
+                          option(value="" selected) Выберите тип
+                          option(value="") Тип 1
+                          option(value="") Тип 2
+                          option(value="") Тип 3
+                          option(value="") Тип 4
+                          option(value="") Тип 5
                       
                     fieldset.form__fieldset
-                      legend.form__legend.form__legend--small Сменить email
+                      legend.form__legend.form__legend--small Реквизиты
                       
-                      .form-group.has-feedback.block-focus.has-error.has-error--red
-                        label.hidden Новый email
-                        input(type="email" name="name" value="demo-yandex.ru" placeholder="Новый email").form-control.input-focus
-                        i.ion-alert-circled
-                        span.error-text Не корректные данные. Внесите верные данные.
+                      .form-group.block-focus
+                        label.hidden Название реквизита
+                        input(type="text" name="name" placeholder="Название реквизита").form-control.input-focus
+                      .form-group.block-focus
+                        label.hidden Название реквизита
+                        input(type="text" name="name" placeholder="Название реквизита").form-control.input-focus
+                      .form-group.block-focus
+                        label.hidden Название реквизита
+                        input(type="text" name="name" placeholder="Название реквизита").form-control.input-focus
+                      .form-group.block-focus
+                        label.hidden Название реквизита
+                        input(type="text" name="name" placeholder="Название реквизита").form-control.input-focus
+                      .form-group.block-focus
+                        label.hidden Название реквизита
+                        input(type="text" name="name" placeholder="Название реквизита").form-control.input-focus
+                      
+                      .form-group.form-group--file
+                        input#inputfile.inputfile.inputfile-6(type='file', name='inputfile', placeholder="Добавить документ" data-multiple-caption='{count} файлов выбрано', multiple='')
+                        label(for='inputfile')
+                          span Добавить документ
+                            i.ion-archive
+                      
+                      ul.inputfile__list
+                        li
+                          span Свидетельство о ИП
+                          a(href="#!")
+                            i.ion-trash-a
+                        li
+                          span Сертификат на работу
+                          a(href="#!")
+                            i.ion-trash-a
+                        li
+                          span Документ для документа
+                          a(href="#!")
+                            i.ion-trash-a
+
                       
                   .col-lg-6.col-md-7.col-sm-6
+                    .clear25
+                    fieldset.form__fieldset
+                      .settings__image
+                        div
+                          .settings__image-div
+                            img(src="./img/file-upload-image2.png", alt="").settings__picture
+                        div
+                          input.settings__file-upload(type="file" accept="image/*")
+                          strong Добавить логотип
+                          p Поддерживаются фотографии размером не более 1 мегабайта. Формат изображений должен соответствовать этим расширениям - jpg, png, gif
+                    
                     fieldset.form__fieldset
                       legend.form__legend.form__legend--small смс рассылка
                       
@@ -109,15 +158,10 @@ html(lang="ru")
                         i.ion-android-checkbox-outline
                         label.label(for="email111") Оповещения и советы
                       .form-group.form-group--checkbox.form-group--checkbox-medium
-                        input#email222(type="checkbox" name="email222" checked)
-                        i.ion-android-checkbox-outline-blank
-                        i.ion-android-checkbox-outline
-                        label.label(for="email222") Поздравления в день рождения
-                      .form-group.form-group--checkbox.form-group--checkbox-medium
                         input#email333(type="checkbox" name="email333" checked)
                         i.ion-android-checkbox-outline-blank
                         i.ion-android-checkbox-outline
-                        label.label(for="email333") Уведомление о просмотрах резюме
+                        label.label(for="email333") Уведомление о просмотрах вакансий
                       .form-group.form-group--checkbox.form-group--checkbox-medium
                         input#email444(type="checkbox" name="email444" checked)
                         i.ion-android-checkbox-outline-blank
@@ -127,7 +171,7 @@ html(lang="ru")
                         input#email555(type="checkbox" name="email555" checked)
                         i.ion-android-checkbox-outline-blank
                         i.ion-android-checkbox-outline
-                        label.label(for="email555") Новые вакансии, соответствующие вашему резюме
+                        label.label(for="email555") Новые резюме, соответствующие вашей вакансии
     
                 button(type="button").btn.btn--big
                   span сохранить изменения

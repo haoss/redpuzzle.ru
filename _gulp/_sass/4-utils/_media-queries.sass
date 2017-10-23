@@ -845,6 +845,13 @@
     &__table1
       table
         table-layout: fixed
+  .statistics
+    &__row
+      table
+        tbody
+          td
+            width: auto !important
+            min-width: inherit !important
 
 @media only screen and (max-width : 599px)
   .popup
@@ -1100,7 +1107,6 @@
             width: auto
             &:last-child
               width: 1px
-              // min-width: inherit
   .similar-summaries
     &__block
       width: 100%
@@ -1159,6 +1165,20 @@
         display: none
       thead
         display: none
+      tbody
+        tr, td
+          display: block
+        td
+          &+td
+            padding-left: 0 !important
+        tr
+          td
+            &:first-child
+              padding-top: 0
+              padding-bottom: 0
+            &:nth-child(2)
+              padding-top: 5px
+              padding-bottom: 30px
     &__button
       display: block
       &>div
@@ -1167,20 +1187,6 @@
         &+div
           padding-top: 15px
           padding-left: 0 !important
-    tbody
-      tr, td
-        display: block
-      td
-        &+td
-          padding-left: 0 !important
-      tr
-        td
-          &:first-child
-            padding-top: 0
-            padding-bottom: 0
-          &:nth-child(2)
-            padding-top: 5px
-            padding-bottom: 30px
   .tests
     &__list
       &-result
@@ -1191,6 +1197,20 @@
         padding-top: 10px
       &-row
         margin-bottom: 20px
+  .settings__image > div + div
+    padding-left: 20px
+  .statistics
+    &__row
+      table
+        thead
+          th
+            font-size: rem(0)
+            padding: 0
+      &-title
+        float: none
+        margin-bottom: 10px
+      &-sorting
+        float: none
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

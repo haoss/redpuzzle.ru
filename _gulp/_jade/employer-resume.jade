@@ -1,0 +1,524 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Подходящие резюме' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Подходящие резюме' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 Подходящие резюме
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            // Catalog
+            .catalog
+              
+              .catalog-resume__row
+                .catalog-resume__img
+                  img(src="./img/catalog-resume-list-img-1.png", alt="")
+                  span
+                    i.ion-android-star
+                    | 9.9
+                  small Рейтинг
+                .catalog-resume__info
+                  .catalog-resume__title
+                    a(href="#!")
+                      strong Менеджер по продажам / Консультант
+                    .catalog-resume__icon
+                      i.ion-android-call
+                      i.ion-checkmark-circled
+                    .catalog-resume__icon
+                      i.ion-document-text
+                      i.ion-checkmark-circled
+                  .catalog-resume__name Иванова Инна 
+                  
+                  .catalog-resume__options
+                    div
+                      .catalog-resume__price 55 000-110 000 руб.
+                      .catalog-resume__experience Опыт работы: 
+                        span 9 лет 2 месяца
+                      
+                      .visible-xxs
+                        .catalog-resume__icon
+                          i.ion-android-call
+                          i.ion-checkmark-circled
+                        .catalog-resume__icon
+                          i.ion-document-text
+                          i.ion-checkmark-circled
+                    div.hidden-xxs
+                      .catalog-resume__table
+                        div
+                          table
+                            tr.visible-xs
+                              td Опыт работы: 
+                              td
+                                strong 9 лет 2 месяца
+                            tr
+                              td Образование:
+                              td
+                                strong Высшее
+                            tr
+                              td Пройдено собеседование:
+                              td
+                                strong Да
+                            tr
+                              td Данные проверены:
+                              td
+                                strong Да
+                        div
+                          table
+                            tr
+                              td Город проживания:
+                              td
+                                strong Москва
+                            tr
+                              td Возраст:
+                              td
+                                strong 20 лет
+                            tr
+                              td Гражданство:	
+                              td
+                                strong Русская
+                
+                .visible-xxs
+                  .clear
+                  .catalog-resume__table
+                    div
+                      table
+                        tr.visible-xs
+                          td Опыт работы: 
+                          td
+                            strong 9 лет 2 месяца
+                        tr
+                          td Образование:
+                          td
+                            strong Высшее
+                        tr
+                          td Пройдено собеседование:
+                          td
+                            strong Да
+                        tr
+                          td Данные проверены:
+                          td
+                            strong Да
+                    div
+                      table
+                        tr
+                          td Город проживания:
+                          td
+                            strong Москва
+                        tr
+                          td Возраст:
+                          td
+                            strong 20 лет
+                        tr
+                          td Гражданство:	
+                          td
+                            strong Русская
+
+                .clear
+                
+                .button__group.button__group--catalog-resume
+                  div
+                    a(href="#!").favorites__button
+                      i.ion-android-star-outline
+                      i.ion-android-star
+                  div
+                    a(href="#popup-respond-resume").btn.open-popup-link
+                      span Предложить работу
+                      
+              .catalog-resume__row
+                .catalog-resume__img
+                  img(src="./img/catalog-resume-list-img-2.png", alt="")
+                  span
+                    i.ion-android-star
+                    | 9.2
+                  small Рейтинг
+                .catalog-resume__info
+                  .catalog-resume__title
+                    a(href="#!")
+                      strong Менеджер по продажам 
+                    .catalog-resume__icon.catalog-resume__icon--active
+                      i.ion-android-call
+                      i.ion-checkmark-circled
+                    .catalog-resume__icon.catalog-resume__icon--active
+                      i.ion-document-text
+                      i.ion-checkmark-circled
+                  .catalog-resume__name Иванова Инна 
+                  
+                  .catalog-resume__options
+                    div
+                      .catalog-resume__price 55 000-110 000 руб.
+                      .catalog-resume__experience Опыт работы: 
+                        span 9 лет 2 месяца
+                      
+                      .visible-xxs
+                        .catalog-resume__icon.catalog-resume__icon--active
+                          i.ion-android-call
+                          i.ion-checkmark-circled
+                        .catalog-resume__icon.catalog-resume__icon--active
+                          i.ion-document-text
+                          i.ion-checkmark-circled
+                    div.hidden-xxs
+                      .catalog-resume__table
+                        div
+                          table
+                            tr.visible-xs
+                              td Опыт работы: 
+                              td
+                                strong 9 лет 2 месяца
+                            tr
+                              td Образование:
+                              td
+                                strong Высшее
+                            tr
+                              td Пройдено собеседование:
+                              td
+                                strong Да
+                            tr
+                              td Данные проверены:
+                              td
+                                strong Да
+                        div
+                          table
+                            tr
+                              td Город проживания:
+                              td
+                                strong Москва
+                            tr
+                              td Возраст:
+                              td
+                                strong 20 лет
+                            tr
+                              td Гражданство:	
+                              td
+                                strong Русская
+                
+                .visible-xxs
+                  .clear
+                  .catalog-resume__table
+                    div
+                      table
+                        tr.visible-xs
+                          td Опыт работы: 
+                          td
+                            strong 9 лет 2 месяца
+                        tr
+                          td Образование:
+                          td
+                            strong Высшее
+                        tr
+                          td Пройдено собеседование:
+                          td
+                            strong Да
+                        tr
+                          td Данные проверены:
+                          td
+                            strong Да
+                    div
+                      table
+                        tr
+                          td Город проживания:
+                          td
+                            strong Москва
+                        tr
+                          td Возраст:
+                          td
+                            strong 20 лет
+                        tr
+                          td Гражданство:	
+                          td
+                            strong Русская
+                
+                .clear
+                
+                .button__group.button__group--catalog-resume
+                  div
+                    a(href="#!").favorites__button
+                      i.ion-android-star-outline
+                      i.ion-android-star
+                  div
+                    a(href="#popup-respond-resume").btn.open-popup-link
+                      span Предложить работу
+                
+              .catalog-resume__row
+                .catalog-resume__img
+                  img(src="./img/catalog-resume-list-img-3.png", alt="")
+                  span
+                    i.ion-android-star
+                    | 9.0
+                  small Рейтинг
+                .catalog-resume__info
+                  .catalog-resume__title
+                    a(href="#!")
+                      strong Менеджер по продажам / Консультант
+                    .catalog-resume__icon
+                      i.ion-android-call
+                      i.ion-checkmark-circled
+                    .catalog-resume__icon
+                      i.ion-document-text
+                      i.ion-checkmark-circled
+                  .catalog-resume__name Иванова Инна
+                  
+                  .catalog-resume__options
+                    div
+                      .catalog-resume__price 55 000-110 000 руб.
+                      .catalog-resume__experience Опыт работы: 
+                        span 9 лет 2 месяца
+                      .visible-xxs
+                        .catalog-resume__icon
+                          i.ion-android-call
+                          i.ion-checkmark-circled
+                        .catalog-resume__icon
+                          i.ion-document-text
+                          i.ion-checkmark-circled
+                    div.hidden-xxs
+                      .catalog-resume__table
+                        div
+                          table
+                            tr.visible-xs
+                              td Опыт работы: 
+                              td
+                                strong 9 лет 2 месяца
+                            tr
+                              td Образование:
+                              td
+                                strong Высшее
+                            tr
+                              td Пройдено собеседование:
+                              td
+                                strong Да
+                            tr
+                              td Данные проверены:
+                              td
+                                strong Да
+                        div
+                          table
+                            tr
+                              td Город проживания:
+                              td
+                                strong Москва
+                            tr
+                              td Возраст:
+                              td
+                                strong 20 лет
+                            tr
+                              td Гражданство:	
+                              td
+                                strong Русская
+                
+                .visible-xxs
+                  .catalog-resume__table
+                    div
+                      table
+                        tr.visible-xs
+                          td Опыт работы: 
+                          td
+                            strong 9 лет 2 месяца
+                        tr
+                          td Образование:
+                          td
+                            strong Высшее
+                        tr
+                          td Пройдено собеседование:
+                          td
+                            strong Да
+                        tr
+                          td Данные проверены:
+                          td
+                            strong Да
+                    div
+                      table
+                        tr
+                          td Город проживания:
+                          td
+                            strong Москва
+                        tr
+                          td Возраст:
+                          td
+                            strong 20 лет
+                        tr
+                          td Гражданство:	
+                          td
+                            strong Русская
+                
+                .clear
+                
+                .button__group.button__group--catalog-resume
+                  div
+                    a(href="#!").favorites__button
+                      i.ion-android-star-outline
+                      i.ion-android-star
+                  div
+                    a(href="#popup-respond-resume").btn.open-popup-link
+                      span Предложить работу
+                
+              .catalog-resume__row
+                .catalog-resume__img
+                  img(src="./img/catalog-resume-list-img-4.png", alt="")
+                  span
+                    i.ion-android-star
+                    | 8.9
+                  small Рейтинг
+                .catalog-resume__info
+                  .catalog-resume__title
+                    a(href="#!")
+                      strong Менеджер по продажам / Консультант
+                    .catalog-resume__icon
+                      i.ion-android-call
+                      i.ion-checkmark-circled
+                    .catalog-resume__icon
+                      i.ion-document-text
+                      i.ion-checkmark-circled
+                  .catalog-resume__name Иванова Инна                   
+                  
+                  .catalog-resume__options
+                    div
+                      .catalog-resume__price 55 000-110 000 руб.
+                      .catalog-resume__experience Опыт работы: 
+                        span 9 лет 2 месяца
+                      .visible-xxs
+                        .catalog-resume__icon
+                          i.ion-android-call
+                          i.ion-checkmark-circled
+                        .catalog-resume__icon
+                          i.ion-document-text
+                          i.ion-checkmark-circled
+                    div.hidden-xxs
+                      .catalog-resume__table
+                        div
+                          table
+                            tr.visible-xs
+                              td Опыт работы: 
+                              td
+                                strong 9 лет 2 месяца
+                            tr
+                              td Образование:
+                              td
+                                strong Высшее
+                            tr
+                              td Пройдено собеседование:
+                              td
+                                strong Да
+                            tr
+                              td Данные проверены:
+                              td
+                                strong Да
+                        div
+                          table
+                            tr
+                              td Город проживания:
+                              td
+                                strong Москва
+                            tr
+                              td Возраст:
+                              td
+                                strong 20 лет
+                            tr
+                              td Гражданство:	
+                              td
+                                strong Русская
+                
+                .visible-xxs
+                  .catalog-resume__table
+                    div
+                      table
+                        tr.visible-xs
+                          td Опыт работы: 
+                          td
+                            strong 9 лет 2 месяца
+                        tr
+                          td Образование:
+                          td
+                            strong Высшее
+                        tr
+                          td Пройдено собеседование:
+                          td
+                            strong Да
+                        tr
+                          td Данные проверены:
+                          td
+                            strong Да
+                    div
+                      table
+                        tr
+                          td Город проживания:
+                          td
+                            strong Москва
+                        tr
+                          td Возраст:
+                          td
+                            strong 20 лет
+                        tr
+                          td Гражданство:	
+                          td
+                            strong Русская
+                .clear
+                
+                .button__group.button__group--catalog-resume
+                  div
+                    a(href="#!").favorites__button
+                      i.ion-android-star-outline
+                      i.ion-android-star
+                  div
+                    a(href="#popup-respond-resume").btn.open-popup-link
+                      span Предложить работу
+                
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(1)').addClass('active');
+      })

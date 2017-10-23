@@ -1,0 +1,144 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Отклики и приглашения 2' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Отклики и приглашения 2' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 Отклики и приглашения
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            .catalog__search
+              .catalog__search-wrapper.block-focus
+                div
+                  .input
+                    label.hidden
+                    input(type="text" placeholder="Поиск").input-focus
+                div
+                  button(type="submit").btn.btn--catalog-search
+                    span найти
+            
+            // Response
+            .response
+              
+              // Response table 2
+              .response__table2
+                table
+                  thead
+                    tr
+                      th От кого
+                      th Вакансия
+                      th Дата
+                  tbody
+                    tr
+                      td
+                        strong Фокстрот
+                        small.color.color--red Отказано
+                        .clear5.visible-xxs
+                        span.date.color--dark.visible-xxs 31 января 2017
+                      td
+                        strong E-mail менеджер
+                        small Фокстрот. Техника для дома, Москва
+                      td 31 января 2017
+                    tr
+                      td
+                        strong Новости
+                        small Не прочитано
+                        .clear5.visible-xxs
+                        span.date.color--dark.visible-xxs 01 декабря 2016
+                      td
+                        strong Поздравляем с Новым годом!
+                        small Вы подписаны на новости 
+                      td 01 декабря 2016
+                    tr
+                      td
+                        strong Администрация
+                        small.color.color--blue Прочитано
+                        .clear5.visible-xxs
+                        span.date.color--dark.visible-xxs 05 сентября 2016
+                      td
+                        strong Вы забанены!
+                        small Вы не можетет ответить
+                      td 05 сентября 2016
+                    tr
+                      td
+                        strong Яндекс
+                        small.color.color--green Приглашен
+                        .clear5.visible-xxs
+                        span.date.color--dark.visible-xxs 12 августа 2016
+                      td
+                        strong Инженер
+                        small Вы подписаны на новости
+                      td 12 августа 2016
+                    tr
+                      td
+                        strong Новости
+                        small Не прочитано 
+                        .clear5.visible-xxs
+                        span.date.color--dark.visible-xxs 22 июня 2016
+                      td
+                        strong Клининг менеджер
+                        small Вы подписаны на новости
+                      td 22 июня 2016
+            
+            
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(3)').addClass('active');
+      })

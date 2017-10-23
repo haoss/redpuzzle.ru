@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Создание резюме - шаг 3 - redpuzzle.ru</title>
+        <title>Настройки - redpuzzle.ru</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -397,7 +397,7 @@
                 </ul>
                 <div class="content__head content__head--mobile">
                     <button id="mobileColBtn" type="button" class="content__head-button"><i class="ion-gear-a"></i></button>
-                    <h1>создание резюме</h1>
+                    <h1>Настройки</h1>
                 </div>
                 <!-- Mobile column-->
                 <div id="mobileCol" class="mobile__col">
@@ -438,59 +438,122 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-                        <!-- Create resume-->
-                        <div class="create-resume">
-                            <div class="create-resume__step create-resume__step--three"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
-                            <div class="form">
-                                <form action="#!">
-                                    <legend class="form__legend">Образование</legend>
-                                    <div class="create-resume__row">
-                                        <div class="create-resume__step3-left">
-                                            <div class="create-resume__step3-row"><a href="#!" class="create-resume__step3-delete"><i class="ion-trash-a"></i></a>
-                                                <div class="form-group form-group--select">
-                                                    <select class="selectric">
-                                                        <option value="" selected>Уровень образования</option>
-                                                        <option value="">Полный</option>
-                                                        <option value="">Неполный</option>
-                                                        <option value="">Простой</option>
-                                                    </select>
+                        <!-- Settings-->
+                        <div class="settings">
+                            <form action="#!">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-5 col-sm-6">
+                                        <div class="clear15"></div>
+                                        <fieldset class="form__fieldset">
+                                            <legend class="form__legend form__legend--small">Сменить пароль</legend>
+                                            <div class="form-group block-focus">
+                                                <label class="hidden">Введите старый пароль</label>
+                                                <input type="text" name="name" placeholder="Введите старый пароль" class="form-control input-focus">
+                                            </div>
+                                            <div class="form-group block-focus">
+                                                <label class="hidden">Введите пароль</label>
+                                                <input type="text" name="name" placeholder="Введите пароль" class="form-control input-focus">
+                                            </div>
+                                            <div class="form-group block-focus">
+                                                <label class="hidden">Повторите пароль</label>
+                                                <input type="text" name="name" placeholder="Повторите пароль" class="form-control input-focus">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form__fieldset">
+                                            <legend class="form__legend form__legend--small">тип работодателя</legend>
+                                            <div class="form-group form-group--select">
+                                                <select class="selectric">
+                                                    <option value="" selected>Выберите тип</option>
+                                                    <option value="">Тип 1</option>
+                                                    <option value="">Тип 2</option>
+                                                    <option value="">Тип 3</option>
+                                                    <option value="">Тип 4</option>
+                                                    <option value="">Тип 5</option>
+                                                </select>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form__fieldset">
+                                            <legend class="form__legend form__legend--small">Реквизиты</legend>
+                                            <div class="form-group block-focus">
+                                                <label class="hidden">Название реквизита</label>
+                                                <input type="text" name="name" placeholder="Название реквизита" class="form-control input-focus">
+                                            </div>
+                                            <div class="form-group block-focus">
+                                                <label class="hidden">Название реквизита</label>
+                                                <input type="text" name="name" placeholder="Название реквизита" class="form-control input-focus">
+                                            </div>
+                                            <div class="form-group block-focus">
+                                                <label class="hidden">Название реквизита</label>
+                                                <input type="text" name="name" placeholder="Название реквизита" class="form-control input-focus">
+                                            </div>
+                                            <div class="form-group block-focus">
+                                                <label class="hidden">Название реквизита</label>
+                                                <input type="text" name="name" placeholder="Название реквизита" class="form-control input-focus">
+                                            </div>
+                                            <div class="form-group block-focus">
+                                                <label class="hidden">Название реквизита</label>
+                                                <input type="text" name="name" placeholder="Название реквизита" class="form-control input-focus">
+                                            </div>
+                                            <div class="form-group form-group--file">
+                                                <input id="inputfile" type="file" name="inputfile" placeholder="Добавить документ" data-multiple-caption="{count} файлов выбрано" multiple="" class="inputfile inputfile-6">
+                                                <label for="inputfile"><span>Добавить документ<i class="ion-archive"></i></span></label>
+                                            </div>
+                                            <ul class="inputfile__list">
+                                                <li><span>Свидетельство о ИП</span><a href="#!"><i class="ion-trash-a"></i></a></li>
+                                                <li><span>Сертификат на работу</span><a href="#!"><i class="ion-trash-a"></i></a></li>
+                                                <li><span>Документ для документа</span><a href="#!"><i class="ion-trash-a"></i></a></li>
+                                            </ul>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-6 col-md-7 col-sm-6">
+                                        <div class="clear25"></div>
+                                        <fieldset class="form__fieldset">
+                                            <div class="settings__image">
+                                                <div>
+                                                    <div class="settings__image-div"><img src="./img/file-upload-image2.png" alt="" class="settings__picture"></div>
                                                 </div>
-                                                <div class="form-group block-focus">
-                                                    <label class="hidden">Факультет</label>
-                                                    <input type="text" name="name" placeholder="Факультет" class="form-control input-focus">
-                                                </div>
-                                                <div class="form-group block-focus">
-                                                    <label class="hidden">Специализация</label>
-                                                    <input type="text" name="name" placeholder="Специализация" class="form-control input-focus">
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group block-focus no--m-bottom">
-                                                            <label class="hidden">Год начала обучения</label>
-                                                            <input type="text" name="name" placeholder="Год начала обучения" class="form-control input-focus">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="form-group block-focus no--m-bottom">
-                                                            <label class="hidden">Год окончания обучения</label>
-                                                            <input type="text" name="name" placeholder="Год окончания обучения" class="form-control input-focus">
-                                                        </div>
-                                                    </div>
+                                                <div>
+                                                    <input type="file" accept="image/*" class="settings__file-upload"><strong>Добавить логотип</strong>
+                                                    <p>Поддерживаются фотографии размером не более 1 мегабайта. Формат изображений должен соответствовать этим расширениям - jpg, png, gif</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="hidden-xs">&nbsp;</div>
+                                        </fieldset>
+                                        <fieldset class="form__fieldset">
+                                            <legend class="form__legend form__legend--small">смс рассылка</legend>
+                                            <div class="form-group form-group--checkbox form-group--checkbox-medium">
+                                                <input id="sms111" type="checkbox" name="sms111" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                                                <label for="sms111" class="label">Оповещения и советы</label>
+                                            </div>
+                                            <div class="form-group form-group--checkbox form-group--checkbox-medium">
+                                                <input id="sms222" type="checkbox" name="sms222" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                                                <label for="sms222" class="label">Новости сайта и рекламная информация
+                                                    <div class="small">Обновление системы произойдет в течение суток после отписки от СМС-уведомлений, в это время возможно поступление сообщений. По прошествии суток вы больше не будете получать сообщения.</div>
+                                                </label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form__fieldset">
+                                            <legend class="form__legend form__legend--small">email рассылка</legend>
+                                            <div class="form-group form-group--checkbox form-group--checkbox-medium">
+                                                <input id="email111" type="checkbox" name="email111" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                                                <label for="email111" class="label">Оповещения и советы</label>
+                                            </div>
+                                            <div class="form-group form-group--checkbox form-group--checkbox-medium">
+                                                <input id="email333" type="checkbox" name="email333" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                                                <label for="email333" class="label">Уведомление о просмотрах вакансий</label>
+                                            </div>
+                                            <div class="form-group form-group--checkbox form-group--checkbox-medium">
+                                                <input id="email444" type="checkbox" name="email444" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                                                <label for="email444" class="label">Новости сайта и рекламная информация</label>
+                                            </div>
+                                            <div class="form-group form-group--checkbox form-group--checkbox-medium">
+                                                <input id="email555" type="checkbox" name="email555" checked><i class="ion-android-checkbox-outline-blank"></i><i class="ion-android-checkbox-outline"></i>
+                                                <label for="email555" class="label">Новые резюме, соответствующие вашей вакансии</label>
+                                            </div>
+                                        </fieldset>
                                     </div>
-                                    <div class="create-resume__step3-button">
-                                        <div>
-                                            <button type="button" class="btn btn--border btn--big"><span>сохранить и добавить еще одно</span></button>
-                                        </div>
-                                        <div>
-                                            <button type="button" class="btn btn--big"><span>продолжить</span></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                                </div>
+                                <button type="button" class="btn btn--big"><span>сохранить изменения</span></button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -575,7 +638,7 @@
         <script>
             $(document).ready(function(){
               $('.settings__nav li').removeClass('active');
-              $('.settings__nav li:nth-child(2)').addClass('active');
+              $('.settings__nav li:nth-child(1)').addClass('active');
             })
         </script>
     </body>

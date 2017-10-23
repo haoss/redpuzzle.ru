@@ -1,0 +1,320 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Статистика' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Статистика' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 Статистика
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            // Statistics
+            .statistics
+              
+              .statistics__row
+                .statistics__row-head
+                  .statistics__row-title оплаты продвижения
+                  .statistics__row-sorting.table
+                    div.table-cell
+                      strong Статистика за:
+                    div.table-cell
+                      select.nice-select
+                        option(value="" selected) Месяц
+                        option(value="") Год
+                        option(value="") Неделя
+                  
+                table
+                  thead
+                    tr
+                      th ФИО
+                      th Дата регистрации
+                      th.hidden-xxs Статус
+                  tbody
+                    tr
+                      td
+                        strong Иванова И.И.
+                        .visible-xxs
+                          small Не активный
+                      td 01.09.2017
+                      td.hidden-xxs 
+                        small Не активный
+                    tr
+                      td
+                        strong Иванова И.И.
+                        .visible-xxs
+                          small.color--red Заблокирован
+                      td 01.09.2017
+                      td.hidden-xxs 
+                        small.color--red Заблокирован
+                    tr
+                      td
+                        strong Иванова И.И.
+                        .visible-xxs
+                          small.color--green Работает
+                      td 01.09.2017
+                      td.hidden-xxs 
+                        small.color--green Работает
+                    tr
+                      td
+                        strong Иванова И.И.
+                        .visible-xxs
+                          small.color--red Заблокирован
+                      td 01.09.2017
+                      td.hidden-xxs 
+                        small.color--red Заблокирован
+                    tr
+                      td
+                        strong Иванова И.И.
+                        .visible-xxs
+                          small.color--green Работает
+                      td 01.09.2017
+                      td.hidden-xxs 
+                        small.color--green Работает
+                    tr.hidden
+                      td
+                        strong Иванова И.И.
+                        .visible-xxs
+                          small Не активный
+                      td 01.09.2017
+                      td.hidden-xxs 
+                        small Не активный
+                    tr.hidden
+                      td
+                        strong Иванова И.И.
+                        .visible-xxs
+                          small.color--red Заблокирован
+                      td 01.09.2017
+                      td.hidden-xxs 
+                        small.color--red Заблокирован
+                    tr.hidden
+                      td
+                        strong Иванова И.И.
+                        .visible-xxs
+                          small.color--green Работает
+                      td 01.09.2017
+                      td.hidden-xxs 
+                        small.color--green Работает
+                    tr.hidden
+                      td
+                        strong Иванова И.И.
+                        .visible-xxs
+                          small.color--red Заблокирован
+                      td 01.09.2017
+                      td.hidden-xxs 
+                        small.color--red Заблокирован
+                    tr.hidden
+                      td
+                        strong Иванова И.И.
+                        .visible-xxs
+                          small.color--green Работает
+                      td 01.09.2017
+                      td.hidden-xxs 
+                        small.color--green Работает
+                .statistics__row-more
+                  a(href="#!") Загрузить еще
+                    i.ion-refresh
+            
+              .statistics__row
+                .statistics__row-head
+                  .statistics__row-title оплаты продвижения
+                  .statistics__row-sorting.table
+                    div.table-cell
+                      strong Статистика за:
+                    div.table-cell
+                      select.nice-select
+                        option(value="" selected) Месяц
+                        option(value="") Год
+                        option(value="") Неделя
+                        
+                table
+                  thead
+                    tr
+                      th Название
+                      th.hidden-xxs Кому заказано
+                      th Дата заказа
+                      th.hidden-xxs Стоимость
+                  tbody
+                    tr
+                      td
+                        strong.color--red Топ на 24 часа
+                        .visible-xxs Иванова И.И.
+                      td.hidden-xxs Иванова И.И.
+                      td 01.09.2017
+                        .visible-xxs
+                          strong 1 999 
+                          | руб
+                      td.hidden-xxs
+                        strong 1 999 
+                        | руб
+                    tr
+                      td
+                        strong.color--red Топ на 48 часа
+                        .visible-xxs Петрова П.П.
+                      td.hidden-xxs Петрова П.П.
+                      td 01.09.2017
+                        .visible-xxs
+                          strong 2 999 
+                          | руб
+                      td.hidden-xxs
+                        strong 2 999 
+                        | руб
+                    tr
+                      td
+                        strong.color--red Топ на 96 часа
+                        .visible-xxs Борисова К.К.
+                      td.hidden-xxs Борисова К.К.
+                      td 01.09.2017
+                        .visible-xxs
+                          strong 5 999 
+                          | руб
+                      td.hidden-xxs
+                        strong 5 999 
+                        | руб
+                    tr
+                      td
+                        strong.color--red Топ на 30 дней
+                        .visible-xxs Никоваев В.В.
+                      td.hidden-xxs Никоваев В.В.
+                      td 01.09.2017
+                        .visible-xxs
+                          strong 10 999 
+                          | руб
+                      td.hidden-xxs
+                        strong 10 999 
+                        | руб
+                    tr
+                      td
+                        strong.color--red Автообновление
+                        .visible-xxs Глебов Г.Г.
+                      td.hidden-xxs Глебов Г.Г.
+                      td 01.09.2017
+                        .visible-xxs
+                          strong 100 999 
+                          | руб
+                      td.hidden-xxs
+                        strong 100 999 
+                        | руб
+                    tr.hidden
+                      td
+                        strong.color--red Топ на 24 часа
+                        .visible-xxs Иванова И.И.
+                      td.hidden-xxs Иванова И.И.
+                      td 01.09.2017
+                        .visible-xxs
+                          strong 1 999 
+                          | руб
+                      td.hidden-xxs
+                        strong 1 999 
+                        | руб
+                    tr.hidden
+                      td
+                        strong.color--red Топ на 24 часа
+                        .visible-xxs Иванова И.И.
+                      td.hidden-xxs Иванова И.И.
+                      td 01.09.2017
+                        .visible-xxs
+                          strong 1 999 
+                          | руб
+                      td.hidden-xxs
+                        strong 1 999 
+                        | руб
+                .statistics__row-more
+                  a(href="#!") Загрузить еще
+                    i.ion-refresh
+            
+              .statistics__row
+                .statistics__row-head
+                  .statistics__row-title Общая статистика
+                  .statistics__row-sorting.table
+                    div.table-cell
+                      strong Статистика за:
+                    div.table-cell
+                      select.nice-select
+                        option(value="" selected) Месяц
+                        option(value="") Год
+                        option(value="") Неделя
+                        
+                table
+                  thead
+                    tr
+                      th Название
+                      th.hidden-xxs Данные
+                  tbody
+                    tr
+                      td
+                        strong Кол-во оказанных платных услуг
+                        .visible-xxs
+                          strong 123
+                      td(nowrap).hidden-xxs
+                        strong 123
+                    tr
+                      td
+                        strong Общая стоимость
+                        .visible-xxs
+                          strong 100 999 
+                          | руб
+                      td(nowrap).hidden-xxs
+                        strong 100 999 
+                        | руб
+            
+            
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(4)').hide();
+        $('.settings__nav li:nth-child(5)').html('<a href="#!">Статистика</a>').addClass('active');
+      })

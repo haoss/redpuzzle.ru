@@ -3109,3 +3109,160 @@
     &>div
       &:last-child
         text-align: right
+
+/* settings */
+.settings
+  &__image
+    margin-bottom: 30px
+    &-div
+      width: 150px
+      height: 150px
+      border-radius: 3px
+      background: $color-lightgray
+      position: relative
+      overflow: hidden
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
+      img
+        display: block
+        // object-fit: cover
+    display: table
+    &>div
+      display: table-cell
+      vertical-align: top
+      &+div
+        padding-left: 30px
+    strong
+      display: block
+      line-height: 1
+      margin-bottom: 5px
+      font-size: rem(14)
+      font-family: $font-roboto-medium
+    p
+      line-height: 13px
+      font-size: rem(11)
+      color: $color-808080
+      margin: 0
+  &__file-upload
+    display: none !important
+
+.inputfile__list
+  margin: 0 0 15px 0
+  padding: 0
+  color: $color-red
+  font-size: rem(11)
+  li
+    list-style: none
+    margin: 0 0 10px 0
+    position: relative
+    padding: 0 24px
+    &:last-child
+      margin-bottom: 0
+    span
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      display: block
+      padding-right: 20px
+    a
+      position: absolute
+      right: 24px
+      top: -1px
+      text-decoration: none
+      color: $color-red
+      font-size: rem(13)
+      i
+        line-height: 1
+
+.statistics
+  &__row
+    font-size: rem(14)
+    margin-bottom: 45px
+    padding-top: 25px
+    table
+      margin-bottom: 15px
+      width: 100%
+      thead
+        th
+          font-weight: 400
+          font-family: $font-roboto
+          color: $color-808080
+          padding-bottom: 5px
+          border-bottom: 1px solid #b2b2b2
+          text-align: left
+          font-size: rem(12)
+          &+th
+            padding-left: 10px
+      tbody
+        td
+          padding: 17px 0
+          border-bottom: 1px solid #e5e5e5
+          vertical-align: top
+          min-width: 150px
+          &+td
+            padding-left: 10px
+          small
+            font-size: rem(12)
+          strong
+            font-family: $font-roboto-medium
+          &:first-child
+            width: 100%
+    &-more
+      text-align: center
+      font-size: rem(12)
+      i
+        margin-left: 10px
+    &-head
+      margin-bottom: 20px
+      +clearfix
+      .nice-select
+        // z-index: 20
+        height: 30px
+        line-height: 28px
+        border-color: transparent
+        padding-left: 5px
+        padding-right: 25px
+        margin-top: -5px
+        .list
+          border: 2px solid $primary-color
+          border-radius: 0
+          box-shadow: none
+          font-size: 13px
+          margin-left: -5px
+        .current
+          font-weight: 400
+          font-family: $font-roboto-medium
+          color: $color-red
+        .option
+          min-height: 35px
+          line-height: 35px
+          padding-left: 10px
+          padding-right: 20px
+          &.selected
+            font-weight: 600
+            color: $primary-color
+        &::after
+          border-color: $color-red
+          width: 8px
+          height: 8px
+          right: 6px
+
+    &-title
+      text-transform: uppercase
+      font-size: rem(18)
+      font-family: $font-roboto-bold
+      float: left
+    &-sorting
+      float: right
+      .table-cell
+        vertical-align: top
+        &+.table-cell
+          padding-left: 10px
+      .list
+        border-color: $color-gray !important
+        li
+          &::before
+            display: none
+          font-weight: 400 !important
