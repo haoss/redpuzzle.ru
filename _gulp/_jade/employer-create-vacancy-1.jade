@@ -1,0 +1,134 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Создание вакансии - шаг 1' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Создание вакансии - шаг 1' + ' - redpuzzle.ru' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Content
+    .content.content--all
+      .container
+        
+        // Breadcrumbs
+        ul.breadcrumbs
+          li
+            a(href="#!") RedPuzzle.ru
+          li
+            span Название страницы
+        
+        .content__head.content__head--mobile
+          button#mobileColBtn(type="button").content__head-button
+            i.ion-gear-a
+          h1 создание резюме
+        
+        // Mobile column
+        #mobileCol.mobile__col
+          .mobile__col-background
+          .mobile__col-wrapper
+            #mobileColWrapperBody.mobile__col-wrapper__body
+              button#mobileColButton(type="button").mobile__col-button
+                span
+                  i.ion-gear-a
+              #mobileColWrapperBody-div
+                
+        .row
+          .col-md-3.hidden-sm.hidden-xs
+            #mobileColContent.mobile__col-content
+              div
+                include ./_include/_profile-left
+                  
+          .col-md-9
+            
+            // Create vacancy
+            .create-vacancy
+              
+              .create-vacancy__step.create-vacancy__step--one
+                span 1
+                span 2
+              
+              .form
+                form(action="#!")
+                  //- legend.form__legend Личные данные
+                  
+                  .create-vacancy__row
+                    div.create-vacancy__step1-left
+                      .form-group.block-focus
+                        label.hidden Название вакансии
+                        input(type="text" name="name" placeholder="Название вакансии").form-control.input-focus
+                      .form-group.form-group--select
+                        select.selectric
+                          option(value="" selected) Категория вакансии
+                          option(value="") Категория 1
+                          option(value="") Категория 2
+                          option(value="") Категория 3
+                          option(value="") Категория 4
+                          option(value="") Категория 5
+                      .form-group.block-focus
+                        label.hidden Должностные обязанности
+                        input(type="text" name="name" placeholder="Должностные обязанности").form-control.input-focus
+                      .form-group.form-group--select
+                        select.selectric
+                          option(value="" selected) Тип занятости
+                          option(value="") Полная
+                          option(value="") Неполная
+                      .form-group.form-group--normal.block-focus
+                        label.hidden Требования к соискателю
+                        textarea(name="name" placeholder="Требования к соискателю").form-control.input-focus
+                      .form-group.block-focus
+                        label.hidden Адрес
+                        input(type="text" name="name" placeholder="Адрес").form-control.input-focus
+                      .form-group.block-focus
+                        label.hidden Номер телефона
+                        input(type="text" name="name" placeholder="Номер телефона").form-control.input-focus
+                      .form-group.form-group--checkbox
+                        input#input44(type="checkbox" name="confidental" checked)
+                        i.ion-android-checkbox-outline-blank
+                        i.ion-android-checkbox-outline
+                        label.label(for="input44") Согласиться с условиями 
+                          a(href="#!").link.link--underline договора-оферты
+                          
+                      .clear10
+                      button(type="button").btn.btn--big
+                        span продолжить
+                        
+                    div.create-vacancy__step1-right
+                      .clear20.visible-xs
+                      .form-group.form-group--checkbox.form-group--checkbox-medium
+                        input#setting111(type="checkbox" name="setting111" checked)
+                        i.ion-android-checkbox-outline-blank
+                        i.ion-android-checkbox-outline
+                        label.label(for="setting111") Предоставляется проживание
+                      .form-group.form-group--checkbox.form-group--checkbox-medium
+                        input#setting222(type="checkbox" name="setting222" checked)
+                        i.ion-android-checkbox-outline-blank
+                        i.ion-android-checkbox-outline
+                        label.label(for="setting222") Предоставляется регистрация
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    include ./_include/_js-body-bottom
+    script().
+      $(document).ready(function(){
+        $('.settings__nav li').removeClass('active');
+        $('.settings__nav li:nth-child(2)').addClass('active');
+      })

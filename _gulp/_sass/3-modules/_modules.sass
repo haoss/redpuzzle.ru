@@ -245,7 +245,6 @@
       font-size: rem(10)
       color: $color-808080
 
-
 .mfp-bg-register
   background-image: url('../img/popup-register-background.png')
   background-position: center center
@@ -440,7 +439,7 @@
         span
           position: absolute
           right: 0
-          bottom: 0
+          // bottom: 0
           color: #888888
         &:hover
           color: $color-red
@@ -1071,12 +1070,15 @@
       width: 100%
       tr
         &:first-child
+
           td
             border-top: 1px solid #cccccc
       td
         border-bottom: 1px solid #cccccc
         padding: 10px 0
         vertical-align: top
+        &:first-child
+          width: 480px
         &+td
           padding-left: 10px
     &-title
@@ -2829,6 +2831,15 @@
     margin-bottom: 45px
     &:last-child
       margin-bottom: 20px
+    &--vacancy
+      .my-resume__info
+        padding-left: 0
+      .my-resume__title
+        margin-bottom: 20px
+        a
+          color: $primary-color
+      .my-resume__table
+        margin-top: 0
     +clearfix
   &__info
     padding-left: 95px
@@ -3266,3 +3277,198 @@
           &::before
             display: none
           font-weight: 400 !important
+
+/* create-resume */
+.create-vacancy
+  &__step
+    margin: 32px 0 40px 0
+    position: relative
+    height: 3px
+    background: linear-gradient(to right, $color-blue 0px, #e0e0e0 0px)
+    width: 100%
+    font-size: rem(12)
+    color: $primary-color
+    span
+      position: absolute
+      height: 25px
+      width: 25px
+      display: block
+      left: 0
+      top: -11px
+      border-radius: 50%
+      overflow: hidden
+      text-align: center
+      line-height: 25px
+      background: #e0e0e0
+      &::before
+        content: "\f122"
+        position: absolute
+        color: $color-white
+        font-size: rem(12)
+        opacity: 0
+        font-family: $font-ionicons
+        line-height: 1
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+      &:nth-child(5)
+        left: inherit
+        right: 0
+      &:nth-child(2)
+        left: 100%
+        margin-left: -25px
+    &--one
+      // background: linear-gradient(to right, $color-blue 25%, #e0e0e0 0px)
+      span
+        &:first-child
+          color: $color-white
+          background-color: $color-blue
+    &--two
+      background: linear-gradient(to right, $color-blue 100%, #e0e0e0 0px)
+      span
+        &:first-child, &:nth-child(2)
+          color: $color-white
+          background-color: $color-blue
+        &:first-child
+          font-size: rem(0)
+          &:before
+            opacity: 1
+  &__row
+    display: table
+    width: 100%
+    &>div
+      display: table-cell
+      vertical-align: top
+  &__step1-left
+    width: 555px
+    textarea.form-control
+      height: 114px
+  &__step1-right
+    padding-left: 30px
+    padding-top: 0
+  &__congratulation
+    margin-bottom: 25px
+    border-radius: 3px
+    padding: 21px 24px
+    background: $color-lightgray
+    font-size: rem(13)
+    strong
+      font-size: rem(18)
+      display: block
+      line-height: 1.2
+      text-transform: uppercase
+      margin-bottom: 5px
+
+.assistance
+  &__square
+    position: relative
+    height: 100px
+    width: 127px
+    margin: 0 auto
+    // cursor: pointer
+    // background: pink
+    &-one
+      position: absolute
+      right: -11px
+      top: -10px
+      width: 28px
+      height: 28px
+      border-radius: 4px
+      background: $color-red
+      transform: skewX(-15deg) translateX(0) translateY(0)
+      z-index: 15
+      cursor: pointer
+      // transition: transform 0.35s
+    &-two
+      position: absolute
+      left: -15px
+      bottom: -16px
+      width: 50px
+      height: 50px
+      border-radius: 4px
+      background: $color-lightgray
+      transform: skewX(-15deg) translateX(0) translateY(0)
+      z-index: 5
+      // transition: top 1s, right 1s
+    &-three
+      transform: skewX(-15deg)
+      border-radius: 4px
+      background: $color-blue
+      height: 100px
+      width: 100px
+      margin-left: 14px
+      position: absolute
+      z-index: 10
+      &>div
+        transform: skewX(15deg)
+
+  &__title
+    white-space: nowrap
+    text-transform: uppercase
+    position: absolute
+    font-family: $font-roboto-bold
+    line-height: 1.2
+    top: 127px
+    left: -67px
+    font-size: rem(16)
+    z-index: 25
+    width: 262px
+    text-align: center
+  &__info
+    position: absolute
+    z-index: 20
+    background-color: $color-lightgray
+    overflow: hidden
+    height: 2px
+    width: 0px
+    left: 50%
+    top: 50%
+    border-radius: 4px
+    // opacity: 0
+    ul
+      margin: 0
+      padding: 0
+      text-align: center
+      li
+        list-style: none
+        margin: 0
+        opacity: 0
+        transform: translateY(10px)
+        &>a
+          display: inline-block
+        &.li
+          padding: 3px 0
+
+          a
+            color: $primary-color
+            font-family: $font-roboto-bold
+        &.last
+          text-transform: uppercase
+          padding-top: 10px
+          a
+            text-decoration: underline
+            &:hover
+              text-decoration: none
+  &__block
+    min-height: 155px
+    &.is-active
+      .assistance__square-one
+        transform: skewX(-15deg) translateX(-17px) translateY(17px)
+        z-index: 5
+      .assistance__square-two
+        transform: skewX(-15deg) translateX(45px) translateY(-40px)
+        z-index: 15
+      .assistance__info
+        left: 0
+        width: 262px
+        margin-left: -67px
+        margin-top: -56px
+        height: 180px
+        padding-top: 50px
+        ul
+          li
+            opacity: 1
+            transform: translateX(0)
+      .assistance__title
+        color: $color-blue
+        top: 10px

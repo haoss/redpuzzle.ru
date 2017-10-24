@@ -124,8 +124,22 @@
       &>label
         .price
           width: auto
-  .my-resume__options > div:first-child
-    width: 175px
+  .my-resume
+    &__options
+      &>div
+        &:first-child
+          width: 175px
+    &__row
+      &--vacancy
+        .my-resume__options
+          &>div
+            &:first-child
+              width: 243px
+  .create-vacancy__step1-left
+    width: 375px
+  .vacancy
+    &__table table tr:first-child td
+      width: 420px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -332,6 +346,9 @@
   .tests
     &__list-row
       margin-bottom: 30px
+  .vacancy
+    &__table table tr:first-child td
+      width: none
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -818,6 +835,22 @@
       &>div
         width: 33.3%
         padding-bottom: 5px
+    &__row
+      &--vacancy
+        margin-bottom: 30px
+        .my-resume__options
+          margin-left: 0
+        .my-resume__table
+          margin-top: 10px
+          display: table
+          &>div
+            display: table-cell
+          table
+            width: auto
+            td
+              white-space: nowrap
+        .my-resume__info
+          margin-bottom: 0
   .response
     &__table2
       table
@@ -852,6 +885,16 @@
           td
             width: auto !important
             min-width: inherit !important
+  .create-vacancy
+    &__row
+      display: block
+      &>div
+        display: block
+    &__step1
+      &-left, &-right
+        padding: 0
+        width: 100%
+        display: block
 
 @media only screen and (max-width : 599px)
   .popup
@@ -1145,6 +1188,12 @@
       margin-top: 10px
       &>div
         width: 50%
+    &__row
+      &--vacancy
+        .my-resume__table
+          display: block
+          &>div
+            display: block
   .response
     &__table2
       td

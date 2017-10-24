@@ -155,6 +155,8 @@ $(document).on('ready', function(){
 
   $('.nice-select').niceSelect();
 
+  animationBlock();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -578,3 +580,53 @@ function uploadImageProfile() {
 		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
 	});
 }( document, window, 0 ));
+
+function animationBlock(){
+
+  var blockBody = $('.assistance__square');
+
+  blockBody.each(function(){
+    var tl = new TimelineLite();
+
+    var _this = $(this);
+    var one = _this.find('.assistance__square-one');
+    var two = _this.find('.assistance__square-two');
+    var three = _this.find('.assistance__square-three');
+    var title = _this.find('.assistance__title');
+    var info = _this.find('.assistance__info');
+    var li = _this.find('.assistance__info li');
+
+    tl
+      .set(one, {css:{zIndex: 15}})
+      .set(two, {css:{zIndex: 5}})
+      .to(one, 0.35, {css:{transform:"skewX(-15deg) translateX(17px) translateY(-17px)"}},'start0')
+      .set(one, {css:{zIndex: 5}}, 'start1')
+      .to(one, 0.35, {css:{transform:"skewX(-15deg) translateX(-17px) translateY(17px)"}}, 'start2')
+      .to(two, 0.35, {css:{transform:"skewX(-15deg) translateX(-32px) translateY(32px)"}},'start0')
+      .set(two, {css:{zIndex: 15}}, 'start1')
+      .to(two, 0.35, {css:{transform:"skewX(-15deg) translateX(45px) translateY(-40px)"}}, 'start2')
+      .to(info, 0.5, {width: 262,x:'-=131'})
+      .to(info, 0.5, {height: 184,y:'-=60'}, 'start3')
+      .set(info, {css:{paddingTop:'55px'}})
+      .to(title, 0.5, {y: '-115px'}, 'start3', "+=0.5")
+      .set(title, {css:{color:'#1747a1'}})
+      .staggerTo(li, 0.35, {css:{transform:"translateY(0)", opacity:1}}, 0.2)
+    ;
+    tl.pause();
+
+    one.on('click', function(e){
+      e.stopPropagation();
+      tl.play();
+      // console.log('play');
+    });
+
+    info.on('click', function(){
+      tl.reverse();
+    });
+
+    li.find('a').on('click', function(e){
+      e.stopPropagation();
+    })
+  });
+
+}
