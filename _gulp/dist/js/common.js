@@ -599,6 +599,7 @@ function animationBlock(){
     tl
       .set(one, {css:{zIndex: 15}})
       .set(two, {css:{zIndex: 5}})
+      .set(info, {css:{paddingTop:'0px'}})
       .to(one, 0.35, {css:{transform:"skewX(-15deg) translateX(17px) translateY(-17px)"}},'start0')
       .set(one, {css:{zIndex: 5}}, 'start1')
       .to(one, 0.35, {css:{transform:"skewX(-15deg) translateX(-17px) translateY(17px)"}}, 'start2')

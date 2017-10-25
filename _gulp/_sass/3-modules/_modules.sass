@@ -587,6 +587,8 @@
       white-space: nowrap
       &:last-child
         margin-bottom: 0
+      a
+        color: $color-808080
     &+.new-vacancy__block
       border-left: 1px solid #e5e5e5
       border-top: 1px solid #e5e5e5
@@ -1291,6 +1293,11 @@
     font-family: $font-roboto-medium
   &__block
     margin-bottom: 5px
+    &.is-active
+      .faq__block-title
+        i
+          // will-change: transform
+          transform: rotate(90deg)
     p
       margin-bottom: 10px
       &:last-child
@@ -1310,6 +1317,14 @@
           text-decoration: underline
         &:focus
           text-decoration: none
+      i
+        margin-right: 10px
+        color: $primary-color
+        font-size: rem(12)
+        font-weight: bold
+        transform: rotate(0)
+        transition: transform 0.35s
+        display: inline-block
 
 /* category */
 .category
@@ -1422,13 +1437,17 @@
     &-name
       font-size: rem(12)
       font-family: $font-roboto-medium
-      i
+      color: $primary-color
+      &:hover
+        text-decoration: none
+      .span
         font-size: rem(12)
         color: #a9a9a9
         vertical-align: 0
         margin-left: 10px
+        display: inline-block
       &--confirmed
-        i
+        .span
           color: $color-blue
     &-info
       margin-bottom: 20px
@@ -3464,7 +3483,7 @@
         margin-left: -67px
         margin-top: -56px
         height: 180px
-        padding-top: 50px
+        padding-top: 55px !important
         ul
           li
             opacity: 1
@@ -3472,3 +3491,49 @@
       .assistance__title
         color: $color-blue
         top: 10px
+
+.form__select
+  .nice-select
+    // z-index: 20
+    height: 30px
+    line-height: 28px
+    border-color: transparent
+    padding-left: 0
+    padding-right: 25px
+    // margin-top: -5px
+    display: block
+    float: none
+    border: 0
+    background: none
+    .list
+      border: 2px solid $primary-color
+      border-radius: 0
+      box-shadow: none
+      font-size: 13px
+      margin-left: 0
+      right: 0
+    .current
+      font-weight: 400
+      font-family: $font-roboto-medium
+      color: $color-red
+    .option
+      min-height: 35px
+      line-height: 35px
+      padding-left: 10px
+      padding-right: 20px
+      &.selected
+        font-weight: 600
+        color: $primary-color
+    &::after
+      border-color: $color-red
+      width: 8px
+      height: 8px
+      right: 6px
+    .list
+      border-color: $color-gray !important
+      max-height: 200px
+      overflow: auto
+      li
+        &::before
+          display: none
+        font-weight: 400 !important
