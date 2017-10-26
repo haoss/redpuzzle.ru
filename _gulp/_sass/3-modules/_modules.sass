@@ -1266,6 +1266,9 @@
               font-size: rem(11)
               &>span
                 word-spacing: 3px
+                opacity: 0
+                visibility: hidden
+                height: 9px
               &+span
                 color: $color-red
                 font-size: rem(12)
@@ -3379,6 +3382,9 @@
       margin-bottom: 5px
 
 .assistance
+  &__row
+    display: flex
+    justify-content: center
   &__square
     position: relative
     height: 100px
@@ -3398,6 +3404,7 @@
       z-index: 15
       cursor: pointer
       // transition: transform 0.35s
+
     &-two
       position: absolute
       left: -15px
@@ -3420,7 +3427,9 @@
       z-index: 10
       &>div
         transform: skewX(15deg)
-
+        svg
+          display: block
+          margin: 24px 0 0 24px
   &__title
     white-space: nowrap
     text-transform: uppercase
@@ -3442,12 +3451,13 @@
     width: 0px
     left: 50%
     top: 50%
-    border-radius: 4px
-    // opacity: 0
+    border-radius: 4px 4px 0 0
+    text-align: center
     ul
-      margin: 0
+      margin: 55px 0 0 0
       padding: 0
       text-align: center
+      display: inline-block
       li
         list-style: none
         margin: 0
@@ -3491,6 +3501,73 @@
       .assistance__title
         color: $color-blue
         top: 10px
+  &__img
+    position: absolute
+    left: 0
+    width: 262px
+    margin-left: -67px
+    top: 174px
+    z-index: -1
+    visibility: hidden
+    opacity: 0
+    &-wrapper
+      position: absolute
+      margin-left: 6px
+    img
+      position: absolute
+      left: 0
+      top: 0
+      opacity: 0
+      visibility: hidden
+      transform: translateY(10px)
+    &-1
+      left: 0
+      top: 0
+    &-2
+      top: 0
+      left: 59px !important
+    &-3
+      top: 0
+      left: 102px !important
+    &-4
+      top: 0
+      left: 184px !important
+    &-5
+      top: 40px !important
+      left: 0 !important
+    &-6
+      top: 59px !important
+      left: 40px !important
+    &-7
+      top: 40px !important
+      left: 121px !important
+    &-8
+      top: 59px !important
+      left: 164px !important
+    &-9
+      top: 121px !important
+      left: 0px !important
+    &-10
+      top: 102px !important
+      left: 59px !important
+    &-11
+      top: 121px !important
+      left: 102px !important
+    &-12
+      top: 102px !important
+      left: 184px !important
+    &-13
+      top: 164px !important
+      left: 0px !important
+    &-14
+      top: 183px !important
+      left: 40px !important
+    &-15
+      top: 164px !important
+      left: 121px !important
+    &-16
+      top: 183px !important
+      left: 164px !important
 
 .form__select
   .nice-select
@@ -3537,3 +3614,21 @@
         &::before
           display: none
         font-weight: 400 !important
+
+.table
+  &--time
+    width: 100%
+    td
+      &:first-child
+        width: 1px
+    p
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+
+.experience__date
+  width: 150px
+  span
+    color: $color-808080
+    display: block
+    margin-top: 5px

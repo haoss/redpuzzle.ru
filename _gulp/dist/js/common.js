@@ -156,6 +156,7 @@ $(document).on('ready', function(){
   $('.nice-select').niceSelect();
 
   animationBlock();
+  animationLink();
 
   // Chrome Smooth Scroll
   try {
@@ -452,7 +453,7 @@ function faq(){
 
 function sortingOption(){
   $('.catalog__sorting-head').on('click', function(){
-    $(this).parent().addClass('is-active');
+    $(this).parent().toggleClass('is-active');
   });
   $('.catalog__sorting-wrapper').on('click', function(e){
     e.stopPropagation();
@@ -595,11 +596,12 @@ function animationBlock(){
     var title = _this.find('.assistance__title');
     var info = _this.find('.assistance__info');
     var li = _this.find('.assistance__info li');
+    var images = _this.find('.assistance__img');
 
     tl
       .set(one, {css:{zIndex: 15}})
       .set(two, {css:{zIndex: 5}})
-      .set(info, {css:{paddingTop:'0px'}})
+      .set(title, {css:{color:'#444444'}})
       .to(one, 0.35, {css:{transform:"skewX(-15deg) translateX(17px) translateY(-17px)"}},'start0')
       .set(one, {css:{zIndex: 5}}, 'start1')
       .to(one, 0.35, {css:{transform:"skewX(-15deg) translateX(-17px) translateY(17px)"}}, 'start2')
@@ -608,10 +610,11 @@ function animationBlock(){
       .to(two, 0.35, {css:{transform:"skewX(-15deg) translateX(45px) translateY(-40px)"}}, 'start2')
       .to(info, 0.5, {width: 262,x:'-=131'})
       .to(info, 0.5, {height: 184,y:'-=60'}, 'start3')
-      .set(info, {css:{paddingTop:'55px'}})
       .to(title, 0.5, {y: '-115px'}, 'start3', "+=0.5")
       .set(title, {css:{color:'#1747a1'}})
       .staggerTo(li, 0.35, {css:{transform:"translateY(0)", opacity:1}}, 0.2)
+      .set(images, {autoAlpha: 1})
+      .set(images, {css:{zIndex: 40}})
     ;
     tl.pause();
 
@@ -629,5 +632,35 @@ function animationBlock(){
       e.stopPropagation();
     })
   });
+
+}
+
+function animationLink(){
+
+  $('.assistance__info li a').each(function(e){
+    var _this = $(this);
+    var tl = new TimelineLite({
+      repeat: 1,
+      onReverseComplete: function(){
+        console.log('reverse complete');
+        $('#' + _this.data('img') + ' img').attr('style','');
+      }
+    });
+
+    if (!_this.data('img')) return;
+
+    _this.hover(function(e){
+
+      var img = $('#' + _this.data('img') + ' img');
+      tl
+        .staggerTo(img, 0.35, {autoAlpha: 1, y:'0'}, 0.1)
+      ;
+      tl.pause();
+      tl.seek(0);
+      tl.play();
+    }, function(){
+      tl.reverse();
+    });
+  })
 
 }

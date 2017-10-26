@@ -228,7 +228,13 @@
                 <form action="#">
                     <fieldset>
                         <div class="popup__respond-title">Предлагаемая вакансия</div>
-                        <div class="popup__respond-category">Инженер-строитель<i class="ion-chevron-down"></i></div>
+                        <div class="form__select">
+                            <select class="nice-select">
+                                <option value="" selected>Менеджер по продажам</option>
+                                <option value="">Менеджер по покупкам</option>
+                                <option value="">Менеджер по продажам</option>
+                            </select>
+                        </div>
                         <div class="clear10"></div>
                         <div class="form-group form-group--normal">
                             <label><small class="popup__respond-small">Написать сопроводительное письмо</small></label>
@@ -450,7 +456,7 @@
                                             </g>
                                         </svg></a></div>
                                 <div><a href="#!" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
-                                <div><a href="#" class="btn open-popup-link"><span>Связаться со специалистом</span></a></div>
+                                <div><a href="#popup-respond-resume" class="btn open-popup-link"><span>Связаться со специалистом</span></a></div>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -536,11 +542,27 @@
                             <div class="one-resume__block-head"><span>Опыт работы</span><a href="#!" class="edit-block"> <i class="ion-compose"></i></a></div>
                             <div class="one-resume__block-wrapper">
                                 <ul class="one-resume__block-experience">
-                                    <li><strong>Мастер старший</strong><i> <b>с 05.2002 по наст. время<span>(15 лет 4 месяца)</span></b><br><b>филиал «ВГМК» ГП «ОГХК», Вольногорск <span>(Добыча и переработка руд)</span></b></i>
-                                        <p>Обслуживание электропривода и релейной защиты в сетях электроснабжения в карьерах горно-транспортного производства. Монтаж, эксплуатация, ремонт эл.оборудования экскаваторов, конвейерных линий, насосных станций и др. Группа по эл.безопасности.</p>
+                                    <li>
+                                        <div class="table table--time">
+                                            <div class="table-cell">
+                                                <div class="experience__date">Сентябрь 2009 -<br>октябрь 2010<span>1 год 2 месяца</span></div>
+                                            </div>
+                                            <div class="table-cell">
+                                                <p><strong>strong Мастер старший</strong></p>
+                                                <p>филиал «ВГМК» ГП «ОГХК», Вольногорск <span>(Добыча и переработка руд)</span><br>Обслуживание электропривода и релейной защиты в сетях электроснабжения в карьерах горно-транспортного производства. Монтаж, эксплуатация, ремонт эл.оборудования экскаваторов, конвейерных линий, насосных станций и др. Группа по эл.безопасности.</p>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li><strong>Электрик</strong><i> <b>с 09.2000 по 05.2002<span>(2 года 4 месяца)</span></b><br><b>НКТ Строй групп, Черкассы <span>(Строительство и реконструкция отелей ,кафе, ресторанов)</span></b></i>
-                                        <p>Электромонтаж щитов,щитовых,жилого фонда,наружного освещения,систем вентилляции</p>
+                                    <li>
+                                        <div class="table table--time">
+                                            <div class="table-cell">
+                                                <div class="experience__date">Сентябрь 2009 -<br>октябрь 2010<span>1 год 2 месяца</span></div>
+                                            </div>
+                                            <div class="table-cell">
+                                                <p><strong>Электрик</strong></p>
+                                                <p>НКТ Строй групп, Черкассы <span>(Строительство и реконструкция отелей ,кафе, ресторанов)</span><br>Электромонтаж щитов,щитовых,жилого фонда,наружного освещения,систем вентилляции</p>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -550,7 +572,17 @@
                             <div class="one-resume__block-head"><span>Образование</span><a href="#!" class="edit-block"> <i class="ion-compose"></i></a></div>
                             <div class="one-resume__block-wrapper">
                                 <ul class="one-resume__block-education">
-                                    <li><strong>Авиационный институт</strong><i> <b>Высшее, с 09.1968 по 02.1974<span>(5 лет 5 месяцев)</span></b><br><b>Системы автоматического управления и электрооборудования ЛА, Казань</b></i></li>
+                                    <li>
+                                        <div class="table table--time">
+                                            <div class="table-cell">
+                                                <div class="experience__date">09.1968 -<br>02.1974<span>1 год 2 месяца</span></div>
+                                            </div>
+                                            <div class="table-cell">
+                                                <p><strong>Авиационный институт</strong></p>
+                                                <p>Системы автоматического управления и электрооборудования ЛА, Казань</p>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

@@ -228,7 +228,13 @@
                 <form action="#">
                     <fieldset>
                         <div class="popup__respond-title">Предлагаемая вакансия</div>
-                        <div class="popup__respond-category">Инженер-строитель<i class="ion-chevron-down"></i></div>
+                        <div class="form__select">
+                            <select class="nice-select">
+                                <option value="" selected>Менеджер по продажам</option>
+                                <option value="">Менеджер по покупкам</option>
+                                <option value="">Менеджер по продажам</option>
+                            </select>
+                        </div>
                         <div class="clear10"></div>
                         <div class="form-group form-group--normal">
                             <label><small class="popup__respond-small">Написать сопроводительное письмо</small></label>
@@ -663,11 +669,11 @@
                                 </div>
                             </div>
                             <div class="catalog-resume__row">
-                                <div class="catalog-resume__img"><img src="./img/catalog-resume-list-img-1.png" alt=""><span><i class="ion-android-star"></i>9.9</span><small>Рейтинг</small></div>
+                                <div class="catalog-resume__img"><a href="#!"><img src="./img/catalog-resume-list-img-1.png" alt=""></a><span><i class="ion-android-star"></i>9.9</span><small>Рейтинг</small></div>
                                 <div class="catalog-resume__info">
                                     <div class="catalog-resume__title"><a href="#!"><strong>Менеджер по продажам / Консультант</strong></a>
-                                        <div class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
-                                        <div class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div data-balloon="телефон подтвержден" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div data-balloon="резюме подтверждено" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
                                     </div>
                                     <div class="catalog-resume__name">Иванова Инна </div>
                                     <div class="catalog-resume__options">
@@ -675,8 +681,8 @@
                                             <div class="catalog-resume__price">55 000-110 000 руб.</div>
                                             <div class="catalog-resume__experience">Опыт работы: <span>9 лет 2 месяца</span></div>
                                             <div class="visible-xxs">
-                                                <div class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
-                                                <div class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                                <div data-balloon="телефон подтвержден" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                                <div data-balloon="резюме подтверждено" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
                                             </div>
                                         </div>
                                         <div class="hidden-xxs">
@@ -764,16 +770,16 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="button__group button__group--catalog-resume">
-                                    <div><a href="#!" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
+                                    <div><a href="#!" data-balloon="добавить в избранное" data-balloon-pos="up" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
                                     <div><a href="#popup-respond-resume" class="btn open-popup-link"><span>Предложить работу</span></a></div>
                                 </div>
                             </div>
                             <div class="catalog-resume__row">
-                                <div class="catalog-resume__img"><img src="./img/catalog-resume-list-img-2.png" alt=""><span><i class="ion-android-star"></i>9.2</span><small>Рейтинг</small></div>
+                                <div class="catalog-resume__img"><a href="#!"><img src="./img/catalog-resume-list-img-2.png" alt=""></a><span><i class="ion-android-star"></i>9.2</span><small>Рейтинг</small></div>
                                 <div class="catalog-resume__info">
                                     <div class="catalog-resume__title"><a href="#!"><strong>Менеджер по продажам </strong></a>
-                                        <div class="catalog-resume__icon catalog-resume__icon--active"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
-                                        <div class="catalog-resume__icon catalog-resume__icon--active"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div data-balloon="телефон подтвержден" data-balloon-pos="up" class="catalog-resume__icon catalog-resume__icon--active"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div data-balloon="резюме подтверждено" data-balloon-pos="up" class="catalog-resume__icon catalog-resume__icon--active"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
                                     </div>
                                     <div class="catalog-resume__name">Иванова Инна </div>
                                     <div class="catalog-resume__options">
@@ -781,8 +787,8 @@
                                             <div class="catalog-resume__price">55 000-110 000 руб.</div>
                                             <div class="catalog-resume__experience">Опыт работы: <span>9 лет 2 месяца</span></div>
                                             <div class="visible-xxs">
-                                                <div class="catalog-resume__icon catalog-resume__icon--active"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
-                                                <div class="catalog-resume__icon catalog-resume__icon--active"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                                <div data-balloon="телефон подтвержден" data-balloon-pos="up" class="catalog-resume__icon catalog-resume__icon--active"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                                <div data-balloon="резюме подтверждено" data-balloon-pos="up" class="catalog-resume__icon catalog-resume__icon--active"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
                                             </div>
                                         </div>
                                         <div class="hidden-xxs">
@@ -870,16 +876,16 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="button__group button__group--catalog-resume">
-                                    <div><a href="#!" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
+                                    <div><a href="#!" data-balloon="добавить в избранное" data-balloon-pos="up" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
                                     <div><a href="#popup-respond-resume" class="btn open-popup-link"><span>Предложить работу</span></a></div>
                                 </div>
                             </div>
                             <div class="catalog-resume__row">
-                                <div class="catalog-resume__img"><img src="./img/catalog-resume-list-img-3.png" alt=""><span><i class="ion-android-star"></i>9.0</span><small>Рейтинг</small></div>
+                                <div class="catalog-resume__img"><a href="#!"><img src="./img/catalog-resume-list-img-3.png" alt=""></a><span><i class="ion-android-star"></i>9.0</span><small>Рейтинг</small></div>
                                 <div class="catalog-resume__info">
                                     <div class="catalog-resume__title"><a href="#!"><strong>Менеджер по продажам / Консультант</strong></a>
-                                        <div class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
-                                        <div class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div data-balloon="телефон подтвержден" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div data-balloon="резюме подтверждено" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
                                     </div>
                                     <div class="catalog-resume__name">Иванова Инна</div>
                                     <div class="catalog-resume__options">
@@ -887,8 +893,8 @@
                                             <div class="catalog-resume__price">55 000-110 000 руб.</div>
                                             <div class="catalog-resume__experience">Опыт работы: <span>9 лет 2 месяца</span></div>
                                             <div class="visible-xxs">
-                                                <div class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
-                                                <div class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                                <div data-balloon="телефон подтвержден" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                                <div data-balloon="резюме подтверждено" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
                                             </div>
                                         </div>
                                         <div class="hidden-xxs">
@@ -975,16 +981,16 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="button__group button__group--catalog-resume">
-                                    <div><a href="#!" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
+                                    <div><a href="#!" data-balloon="добавить в избранное" data-balloon-pos="up" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
                                     <div><a href="#popup-respond-resume" class="btn open-popup-link"><span>Предложить работу</span></a></div>
                                 </div>
                             </div>
                             <div class="catalog-resume__row">
-                                <div class="catalog-resume__img"><img src="./img/catalog-resume-list-img-4.png" alt=""><span><i class="ion-android-star"></i>8.9</span><small>Рейтинг</small></div>
+                                <div class="catalog-resume__img"><a href="#!"><img src="./img/catalog-resume-list-img-4.png" alt=""></a><span><i class="ion-android-star"></i>8.9</span><small>Рейтинг</small></div>
                                 <div class="catalog-resume__info">
                                     <div class="catalog-resume__title"><a href="#!"><strong>Менеджер по продажам / Консультант</strong></a>
-                                        <div class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
-                                        <div class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div data-balloon="телефон подтвержден" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                        <div data-balloon="резюме подтверждено" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
                                     </div>
                                     <div class="catalog-resume__name">Иванова Инна                   </div>
                                     <div class="catalog-resume__options">
@@ -992,8 +998,8 @@
                                             <div class="catalog-resume__price">55 000-110 000 руб.</div>
                                             <div class="catalog-resume__experience">Опыт работы: <span>9 лет 2 месяца</span></div>
                                             <div class="visible-xxs">
-                                                <div class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
-                                                <div class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
+                                                <div data-balloon="телефон подтвержден" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-android-call"></i><i class="ion-checkmark-circled"></i></div>
+                                                <div data-balloon="резюме подтверждено" data-balloon-pos="up" class="catalog-resume__icon"><i class="ion-document-text"></i><i class="ion-checkmark-circled"></i></div>
                                             </div>
                                         </div>
                                         <div class="hidden-xxs">
@@ -1080,7 +1086,7 @@
                                 </div>
                                 <div class="clear"></div>
                                 <div class="button__group button__group--catalog-resume">
-                                    <div><a href="#!" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
+                                    <div><a href="#!" data-balloon="добавить в избранное" data-balloon-pos="up" class="favorites__button"><i class="ion-android-star-outline"></i><i class="ion-android-star"></i></a></div>
                                     <div><a href="#popup-respond-resume" class="btn open-popup-link"><span>Предложить работу</span></a></div>
                                 </div>
                             </div>

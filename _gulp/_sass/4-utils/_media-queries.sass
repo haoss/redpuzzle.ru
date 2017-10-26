@@ -140,6 +140,15 @@
   .vacancy
     &__table table tr:first-child td
       width: 420px
+  .assistance
+    &__row
+      flex-wrap: wrap
+      &>div
+        &:last-child
+          .assistance__block
+            margin-bottom: 0
+    &__block
+      margin-bottom: 50px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -349,6 +358,23 @@
   .vacancy
     &__table table tr:first-child td
       width: none
+  .assistance
+    &__row
+      &>div
+        &:nth-last-child(2)
+          .assistance__block
+            margin-bottom: 0
+
+  .table
+    &--time
+      display: block
+      &>div
+        display: block
+        &+div
+          padding-left: 0 !important
+  .experience__date
+    width: 100%
+    margin-bottom: 10px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -909,6 +935,16 @@
       ul
         li
           width: 49%
+  .assistance
+    &__block
+      margin-bottom: 50px !important
+    &__row
+      flex-direction: column
+      align-items: center
+      &>div
+        &:last-child
+          .assistance__block
+            margin-bottom: 0 !important
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
