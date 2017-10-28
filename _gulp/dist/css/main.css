@@ -4149,7 +4149,7 @@ button[data-balloon] {
   [data-balloon][data-balloon-pos="up-left"]:after {
     bottom: 100%;
     left: 0;
-    margin-bottom: 11px;
+    margin-bottom: 9px;
     -webkit-transform: translate(0, 10px);
             transform: translate(0, 10px);
     -webkit-transform-origin: top;
@@ -6706,6 +6706,11 @@ ul.list {
         font-size: 0.875rem;
         color: #444444;
         margin-top: 3px; }
+        .vacancy__info-wrapper > div strong a {
+          color: #444444; }
+          .vacancy__info-wrapper > div strong a:hover {
+            color: #ff0f36;
+            text-decoration: none; }
 
 .vacancy__company {
   min-height: 190px;
@@ -6749,6 +6754,11 @@ ul.list {
     font-size: 1rem; }
     .vacancy__table-title strong {
       display: block; }
+      .vacancy__table-title strong a {
+        color: #444444; }
+        .vacancy__table-title strong a:hover {
+          color: #ff0f36;
+          text-decoration: none; }
     .vacancy__table-title small {
       font-size: 0.75rem; }
   .vacancy__table-city {
@@ -7782,6 +7792,11 @@ ul.list {
         font-size: 0.875rem;
         color: #444444;
         margin-top: 3px; }
+        .one-resume__info-wrapper > div strong a {
+          color: #444444; }
+          .one-resume__info-wrapper > div strong a:hover {
+            text-decoration: none;
+            color: #444444; }
         .one-resume__info-wrapper > div strong span {
           color: #808080; }
   .one-resume__info .edit-block {
@@ -7986,6 +8001,11 @@ ul.list {
         display: block;
         line-height: 1.3;
         margin-bottom: 3px; }
+        .one-resume__block-tests > li > strong a {
+          color: #444444; }
+          .one-resume__block-tests > li > strong a:hover {
+            text-decoration: none;
+            color: #ff0f36; }
       .one-resume__block-tests > li > small {
         font-size: 0.6875rem;
         color: #808080; }
