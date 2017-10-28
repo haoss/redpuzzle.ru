@@ -162,11 +162,14 @@ $(document).on('ready', function(){
 
   animationBlock();
   animationLink();
+  fixedMobileConBtn();
 
   // Datepicker
   $('#input-datepicker').data('datepicker')
 
-  $(".chosen-select").chosen();
+  $(".chosen-select").chosen({
+    no_results_text: 'нет результата'
+  });
 
   // Chrome Smooth Scroll
   try {
@@ -199,6 +202,9 @@ $(window).on('resize', function(){
     $('.message__readmore').removeClass('is-active');
     $('.message__link a').text('Развернуть');
   }
+  if (width > 991 && $('#mobileColBtn').hasClass('is-fixed')) {
+    $('#mobileColBtn').removeClass('is-fixed');
+  }
   if (width > 767 && body.hasClass('overflow-hidden') && navBackground.hasClass('is-active') && navMobile.hasClass('is-active')) {
     body.removeClass('overflow-hidden');
     navBackground.removeClass('is-active');
@@ -223,6 +229,7 @@ $(window).on('resize', function(){
 
 $(window).on('scroll', function(){
   headerScroll();
+  fixedMobileConBtn();
 });
 
 /*
@@ -539,6 +546,18 @@ function columnMobile(){
       moreLink: '<div class="filter__more"><a href="#!">показать все</a></div>',
       lessLink: '<div class="filter__more"><a href="#!">скрыть лишнее</a></div>'
     });
+  }
+}
+
+function fixedMobileConBtn(){
+  var btn = $('#mobileColBtn');
+  var header = $('.header');
+  var width = $(window).width();
+
+  if (width < 991 && $(window).scrollTop() > header.height()) {
+    btn.addClass('is-fixed');
+  } else if (width > 991 ) {
+    btn.removeClass('is-fixed');
   }
 }
 

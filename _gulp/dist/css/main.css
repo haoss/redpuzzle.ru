@@ -7492,6 +7492,8 @@ ul.list {
     margin-bottom: 13px;
     margin-left: -14px;
     width: calc(100% + 28px); }
+    .mobile__col-button--blue {
+      background: #1747a1; }
 
 .content__head-button {
   display: none;
@@ -7508,9 +7510,15 @@ ul.list {
   left: 0px;
   cursor: pointer;
   margin-top: 4px; }
+  .content__head-button--blue {
+    background: #1747a1; }
   .content__head-button i {
     vertical-align: 1px;
     line-height: 1; }
+  .content__head-button.is-fixed {
+    position: fixed;
+    top: 85px;
+    z-index: 100; }
 
 .catalog-search {
   margin-bottom: 32px;
@@ -9427,6 +9435,106 @@ ul.list {
 .form__select .chosen-container {
   display: block;
   width: 100% !important; }
+
+.form__select .chosen-container-multi .chosen-choices {
+  margin: 0 0 14px 0;
+  border: 1px solid #f5f5f5;
+  border-radius: 3px;
+  position: relative;
+  display: block;
+  border-color: #e0e0e0;
+  background: #e0e0e0;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .form__select .chosen-container-multi .chosen-choices li.search-field {
+    height: 25px;
+    text-align: center;
+    padding: 0 10px;
+    font-size: 0.875rem; }
+    .form__select .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+      font-family: "RobotoRegular";
+      color: #767676;
+      font-size: 0.75rem;
+      margin: 0;
+      font-weight: 400;
+      height: 25px; }
+
+.form__group .chosen-container {
+  display: block;
+  width: 100% !important;
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg); }
+
+.form__group .chosen-choices {
+  padding: 0 5px;
+  background: none; }
+
+.form__group .chosen-container-multi .chosen-choices {
+  margin: 0 0 14px 0;
+  border: 1px solid #f5f5f5;
+  border-radius: 3px;
+  position: relative;
+  display: block;
+  border-color: #e0e0e0;
+  background-color: #e0e0e0; }
+  .form__group .chosen-container-multi .chosen-choices li.search-field {
+    height: 25px;
+    text-align: center;
+    padding: 0 10px;
+    font-size: 0.875rem; }
+    .form__group .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+      font-family: "RobotoRegular";
+      color: #767676;
+      font-size: 0.875rem;
+      margin: 0;
+      font-weight: 400; }
+
+.form__group .chosen-container-active .chosen-choices {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #ffffff;
+  border-color: #ffffff; }
+
+.form__group .chosen-container-single .chosen-single {
+  height: 35px;
+  line-height: 33px;
+  border-radius: 3px;
+  border-color: #f5f5f5;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-left: 20px;
+  font-family: "RobotoMedium"; }
+  .form__group .chosen-container-single .chosen-single span {
+    margin-right: 35px; }
+  .form__group .chosen-container-single .chosen-single div {
+    width: 35px; }
+    .form__group .chosen-container-single .chosen-single div b {
+      background: none; }
+      .form__group .chosen-container-single .chosen-single div b::before {
+        border-bottom: 2px solid #999;
+        border-right: 2px solid #999;
+        content: '';
+        display: block;
+        pointer-events: none;
+        position: absolute;
+        -webkit-transform-origin: 66% 66%;
+                transform-origin: 66% 66%;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        border-color: #ff0f36;
+        width: 8px;
+        height: 8px;
+        left: 13px;
+        top: 11px; }
+
+.form__group .chosen-container-single .chosen-drop {
+  margin-top: 0;
+  margin-left: -4px;
+  border: 1px solid #f5f5f5; }
+
+.form__group .chosen-container .chosen-results li {
+  line-height: 25px; }
 
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {

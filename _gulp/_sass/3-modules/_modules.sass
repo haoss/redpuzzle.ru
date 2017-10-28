@@ -1828,6 +1828,9 @@
     margin-bottom: 13px
     margin-left: -14px
     width: calc(100% + 28px)
+    &--blue
+      background: $color-blue
+      // font-size: rem(14)
 
 .content
   &__head
@@ -1846,9 +1849,15 @@
       left: 0px
       cursor: pointer
       margin-top: 4px
+      &--blue
+        background: $color-blue
       i
         vertical-align: 1px
         line-height: 1
+      &.is-fixed
+        position: fixed
+        top: 85px
+        z-index: 100
     &--mobile
       // position: relative
 
@@ -3709,12 +3718,46 @@
   .chosen-container
     display: block
     width: 100% !important
+  .chosen-container-multi
+    .chosen-choices
+      margin: 0 0 14px 0
+      // transform: skewX(-15deg)
+      border: 1px solid #f5f5f5
+      border-radius: 3px
+      position: relative
+      display: block
+      border-color: #e0e0e0
+      background: #e0e0e0
+      box-shadow: none
+      li.search-field
+        height: 25px
+        // width: 100px
+        text-align: center
+        padding: 0 10px
+        font-size: 0.875rem
+        // font-family: "RobotoMedium"
+        // transform: skewX(15deg)
+        input[type=text]
+          font-family: $font-roboto
+          color: #767676
+          // font-family: "RobotoMedium"
+          font-size: rem(12)
+          margin: 0
+          font-weight: 400
+          height: 25px
+      li.search-choice
+        // margin-top: 7px
 
-  //.chosen-choices
+.form__group
+  .chosen-container
+    display: block
+    width: 100% !important
+    transform: skewX(15deg)
+  .chosen-choices
     padding: 0 5px
     // border-color: transparent
     background: none
-  //.chosen-container-multi
+  .chosen-container-multi
     .chosen-choices
       margin: 0 0 14px 0
       // transform: skewX(-15deg)
@@ -3739,8 +3782,46 @@
           font-size: rem(14)
           margin: 0
           font-weight: 400
-  //.chosen-container-active
+  .chosen-container-active
     .chosen-choices
       box-shadow: none
       background: $color-white
       border-color: $color-white
+  .chosen-container-single
+    .chosen-single
+      height: 35px
+      line-height: 33px
+      border-radius: 3px
+      border-color: #f5f5f5
+      background: none
+      box-shadow: none
+      padding-left: 20px
+      font-family: $font-roboto-medium
+      span
+        margin-right: 35px
+      div
+        width: 35px
+        b
+          background: none
+          &::before
+            border-bottom: 2px solid #999
+            border-right: 2px solid #999
+            content: ''
+            display: block
+            pointer-events: none
+            position: absolute
+            transform-origin: 66% 66%
+            transform: rotate(45deg)
+            border-color: #ff0f36
+            width: 8px
+            height: 8px
+            left: 13px
+            top: 11px
+    .chosen-drop
+      margin-top: 0
+      margin-left: -4px
+      border: 1px solid #f5f5f5
+  .chosen-container
+    .chosen-results
+      li
+        line-height: 25px
