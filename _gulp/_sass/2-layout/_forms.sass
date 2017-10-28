@@ -197,6 +197,8 @@ button, html input[type=button], input[type=reset], input[type=submit]
         &.selected
           background: none
           color: $color-red
+        &.disabled
+          display: none
     .selectric
       border: 0
       background: none
@@ -314,6 +316,8 @@ button, html input[type=button], input[type=reset], input[type=submit]
               transform: translateY(-50%)
         &:focus + label strong, &.has-focus + label strong, + label:hover strong
           background-color: #722040
+    &-select
+      transform: skewX(15deg)
   &-control, &__control
     display: block
     width: 100%
@@ -338,6 +342,8 @@ button, html input[type=button], input[type=reset], input[type=submit]
     font-family: $font-roboto-medium
     &:focus
       box-shadow: none
+    &[disabled], &[readonly]
+      background: none
   &__legend
     text-transform: uppercase
     font-family: $font-roboto-bold
@@ -349,8 +355,9 @@ button, html input[type=button], input[type=reset], input[type=submit]
 
 textarea
   &.form-control, &.form__control
-    height: 180px
-    resize: none
+    height: auto
+    min-height: 100px
+    resize: vertical
     padding-top: 5px
     padding-bottom: 5px
 

@@ -6,9 +6,31 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="./favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./favicon/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="./favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./favicon/manifest.json">
+        <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="./favicon/mstile-144x144.png">
+        <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
         <link rel="stylesheet" href="./js/libs/selectric/selectric.css">
         <link rel="stylesheet" href="./js/libs/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="./js/libs/air-datepicker/dist/css/datepicker.min.css">
+        <link rel="stylesheet" href="./js/libs/chosen/chosen.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -195,7 +217,13 @@
                 <form action="#">
                     <fieldset>
                         <div class="popup__respond-title">Резюме для продвижения</div>
-                        <div class="popup__respond-category">Менеджер по продажам<i class="ion-checkmark-circled"></i></div>
+                        <div class="form__select">
+                            <select class="nice-select">
+                                <option value="" selected>Менеджер по продажам</option>
+                                <option value="">Менеджер по покупкам</option>
+                                <option value="">Менеджер по продажам</option>
+                            </select>
+                        </div>
                         <div class="popup__info popup__info--pay-services">Автообновление - <strong>100 999 </strong>руб</div>
                         <div class="clear"></div>
                         <button type="submit" class="btn btn--middle btn--3d btn--block"><span>Оплатить</span></button>
@@ -479,7 +507,7 @@
                                             <div class="create-resume__step3-row"><a href="#!" class="create-resume__step3-delete"><i class="ion-trash-a"></i></a>
                                                 <div class="form-group form-group--select">
                                                     <select class="selectric">
-                                                        <option value="" selected>Уровень образования</option>
+                                                        <option value="" selected disabled>Уровень образования</option>
                                                         <option value="">Полный</option>
                                                         <option value="">Неполный</option>
                                                         <option value="">Простой</option>
@@ -497,13 +525,13 @@
                                                     <div class="col-sm-6">
                                                         <div class="form-group block-focus no--m-bottom">
                                                             <label class="hidden">Год начала обучения</label>
-                                                            <input type="text" name="name" placeholder="Год начала обучения" class="form-control input-focus">
+                                                            <input type="text" name="name" placeholder="Год начала обучения" readonly data-auto-close="true" class="form-control datepicker-here">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <div class="form-group block-focus no--m-bottom">
                                                             <label class="hidden">Год окончания обучения</label>
-                                                            <input type="text" name="name" placeholder="Год окончания обучения" class="form-control input-focus">
+                                                            <input type="text" name="name" placeholder="Год окончания обучения" readonly data-auto-close="true" class="form-control datepicker-here">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -601,15 +629,18 @@
         <script src="./js/libs/readmore/readmore.min.js"></script>
         <script src="./js/libs/jquery.matchHeight/jquery.matchHeight-min.js"></script>
         <script src="./js/libs/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenLite.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TimelineLite.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/easing/EasePack.min.js"></script>
+        <script src="./js/libs/air-datepicker/dist/js/datepicker.min.js"></script>
+        <script src="./js/libs/chosen/chosen.jquery.min.js"></script>
+        <script src="./js/libs/gsap/TweenLite.min.js"></script>
+        <script src="./js/libs/gsap/TimelineLite.min.js"></script>
+        <script src="./js/libs/gsap/CSSPlugin.min.js"></script>
+        <script src="./js/libs/gsap/EasePack.min.js"></script>
         <script src="./js/common.js"></script>
         <script>
             $(document).ready(function(){
               $('.settings__nav li').removeClass('active');
               $('.settings__nav li:nth-child(2)').addClass('active');
+              $('.user__sitebar').hide();
             })
         </script>
     </body>

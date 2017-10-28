@@ -70,7 +70,7 @@ html(lang="ru")
                           i.ion-trash-a
                         .form-group.form-group--select
                           select.selectric
-                            option(value="" selected) Уровень образования
+                            option(value="" selected disabled) Уровень образования
                             option(value="") Полный
                             option(value="") Неполный
                             option(value="") Простой
@@ -84,11 +84,11 @@ html(lang="ru")
                           .col-sm-6
                             .form-group.block-focus.no--m-bottom
                               label.hidden Год начала обучения
-                              input(type="text" name="name" placeholder="Год начала обучения").form-control.input-focus
+                              input(type="text" name="name" placeholder="Год начала обучения" readonly data-auto-close="true").form-control.datepicker-here
                           .col-sm-6
                             .form-group.block-focus.no--m-bottom
                               label.hidden Год окончания обучения
-                              input(type="text" name="name" placeholder="Год окончания обучения").form-control.input-focus
+                              input(type="text" name="name" placeholder="Год окончания обучения" readonly data-auto-close="true").form-control.datepicker-here
                       
                     div.hidden-xs &nbsp;
                   
@@ -118,4 +118,5 @@ html(lang="ru")
       $(document).ready(function(){
         $('.settings__nav li').removeClass('active');
         $('.settings__nav li:nth-child(2)').addClass('active');
+        $('.user__sitebar').hide();
       })

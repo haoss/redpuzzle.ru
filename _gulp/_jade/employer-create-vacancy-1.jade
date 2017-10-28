@@ -64,9 +64,9 @@ html(lang="ru")
                       .form-group.block-focus
                         label.hidden Название вакансии
                         input(type="text" name="name" placeholder="Название вакансии").form-control.input-focus
-                      .form-group.form-group--select
+                      .form-group.form-group--select.zindex15
                         select.selectric
-                          option(value="" selected) Категория вакансии
+                          option(value="" selected disabled) Категория вакансии
                           option(value="") Категория 1
                           option(value="") Категория 2
                           option(value="") Категория 3
@@ -77,7 +77,7 @@ html(lang="ru")
                         input(type="text" name="name" placeholder="Должностные обязанности").form-control.input-focus
                       .form-group.form-group--select
                         select.selectric
-                          option(value="" selected) Тип занятости
+                          option(value="" selected disabled) Тип занятости
                           option(value="") Полная
                           option(value="") Неполная
                       .form-group.form-group--normal.block-focus

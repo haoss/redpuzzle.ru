@@ -1429,7 +1429,7 @@
       &--extra
         a
           strong
-            color: $color-red
+            // color: $color-red
         span
           display: inline-block
     &-price
@@ -1938,6 +1938,10 @@
     a
       display: inline-block
       margin-right: 10px
+      color: $primary-color
+      &:hover, &:focus
+        color: $color-red
+        text-decoration: none
   &__icon
     display: inline-block
     height: 18px
@@ -2403,6 +2407,11 @@
       font-family: $font-roboto-bold
       line-height: 1.3
       margin-bottom: 15px
+      display: inline-block
+      color: $primary-color
+      &:hover
+        color: $color-red
+        text-decoration: none
     &-result
       font-size: rem(12)
       color: $color-808080
@@ -2445,9 +2454,9 @@
             background: $color-red
             border-top-color: $color-red
             color: $color-white
-        &>li
-          &>a, &>span
-            border-top: 1px solid $color-white
+      &>li
+        &>a, &>span
+          border-top: 1px solid $color-white
         &.active
           &>a,&>span
             background: $color-red
@@ -2817,7 +2826,8 @@
           background: linear-gradient(to right, rgba(255, 255, 255, 0), white 40%, white)
         &.is-active
           &::after
-            display: none
+            content: "Свернуть описание"
+            // display: none
     &-link
       display: inline-block
       padding-left: 40px
@@ -2888,6 +2898,10 @@
     a
       display: inline
       margin-right: 10px
+      color: $primary-color
+      &:hover, &:focus
+        color: $color-red
+        text-decoration: none
   &__icon
     display: inline
     height: 18px
@@ -2961,6 +2975,7 @@
     padding: 5px 15px
     display: flex
     justify-content: space-between
+    font-family: $font-roboto-medium
     i
       color: #acacac
       margin-right: 7px
@@ -3049,12 +3064,22 @@
               line-height: 1.2
               white-space: nowrap
               overflow: hidden
+              a
+                color: $primary-color
+                &:hover
+                  text-decoration: none
+                  color: $color-red
             small
               font-size: rem(11)
               color: $color-808080
               white-space: nowrap
               display: block
               overflow: hidden
+              a
+                color: $color-808080
+                &:hover
+                  text-decoration: none
+                  color: $color-red
             &:nth-child(2)
               position: relative
               &::after
@@ -3069,6 +3094,12 @@
           &:last-child
             td
               border-bottom: 0
+          &:hover
+            td
+              background: #eee
+              &:nth-child(2)
+                &::after
+                  background: linear-gradient(to right, rgba($color-white, 0), rgba(#eee,1))
   &__table2
     font-size: rem(14)
     margin-bottom: 25px
@@ -3103,12 +3134,22 @@
             line-height: 1.2
             white-space: nowrap
             overflow: hidden
+            a
+              color: $primary-color
+              &:hover
+                text-decoration: none
+                color: $color-red
           small
             font-size: rem(11)
             color: $color-808080
             white-space: nowrap
             display: block
             overflow: hidden
+            a
+              color: $color-808080
+              &:hover
+                text-decoration: none
+                color: $color-red
           &:nth-child(2)
             position: relative
             &::after
@@ -3123,6 +3164,12 @@
           &:last-child
             td
               border-bottom: 0
+          &:hover
+            td
+              background: #eee
+              &:nth-child(2)
+                &::after
+                  background: linear-gradient(to right, rgba($color-white, 0), rgba(#eee,1))
   &__form
     margin-bottom: 20px
     &-wrapper
@@ -3178,8 +3225,13 @@
       font-size: rem(11)
       color: $color-808080
       margin: 0
-  &__file-upload
-    display: none !important
+  &__file
+    &-upload
+      display: none !important
+    &-link
+      cursor: pointer
+      &:hover
+        color: $color-red
 
 .inputfile__list
   margin: 0 0 15px 0
@@ -3592,7 +3644,7 @@
     .current
       font-weight: 400
       font-family: $font-roboto-medium
-      color: $color-red
+      // color: $color-red
     .option
       min-height: 35px
       line-height: 35px
@@ -3617,7 +3669,7 @@
 
 .table
   &--time
-    width: 100%
+    // width: 100%
     td
       &:first-child
         width: 1px
@@ -3632,3 +3684,43 @@
     color: $color-808080
     display: block
     margin-top: 5px
+
+.form__select
+  .chosen-container
+    display: block
+    width: 100% !important
+
+  //.chosen-choices
+    padding: 0 5px
+    // border-color: transparent
+    background: none
+  //.chosen-container-multi
+    .chosen-choices
+      margin: 0 0 14px 0
+      // transform: skewX(-15deg)
+      border: 1px solid #f5f5f5
+      border-radius: 3px
+      position: relative
+      display: block
+      border-color: #e0e0e0
+      background-color: #e0e0e0
+      li.search-field
+        height: 25px
+        // width: 100px
+        text-align: center
+        padding: 0 10px
+        font-size: 0.875rem
+        // font-family: "RobotoMedium"
+        // transform: skewX(15deg)
+        input[type=text]
+          font-family: $font-roboto
+          color: #767676
+          // font-family: "RobotoMedium"
+          font-size: rem(14)
+          margin: 0
+          font-weight: 400
+  //.chosen-container-active
+    .chosen-choices
+      box-shadow: none
+      background: $color-white
+      border-color: $color-white

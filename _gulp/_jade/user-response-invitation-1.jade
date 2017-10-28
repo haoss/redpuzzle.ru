@@ -65,8 +65,10 @@ html(lang="ru")
                         strong Рассмотрено
                         span.date.visible-xxs 31 января 2017
                       td
-                        strong E-mail менеджер
-                        small Фокстрот. Техника для дома, Москва
+                        strong
+                          a(href="#!") E-mail менеджер
+                        small
+                          a(href="#!") Фокстрот. Техника для дома, Москва
                       td(nowrap) 31 января 2017
                     tr
                       td
@@ -84,14 +86,14 @@ html(lang="ru")
                     tr
                       td
                         strong.name Иванов Иван Иванович
-                        a(href="#!").link-block
+                        //-a(href="#!").link-block
                           i.ion-ios-close
                           | Заблокировать пользователя
                       td(colspan="2")
                         p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
                         .clear
                         .link-act
-                          a(href="#!")
+                          //-a(href="#!")
                             i.ion-sad
                             | Пожаловаться на спам
                           a(href="#!")
@@ -116,9 +118,9 @@ html(lang="ru")
                 form(action="#!")
                   .response__form-wrapper.table
                     div.table-cell
-                      .form-group.block-focus
+                      .form-group.form-group--normal.block-focus
                         label.hidden Введите сообщение
-                        input(type="text" name="message" placeholder="Введите сообщение").form-control.input-focus
+                        textarea(name="message" placeholder="Введите сообщение" rows="5").form-control.input-focus
                     div.table-cell
                       button(type="submit").btn.btn--middle
                         span отправить сообщение
@@ -128,9 +130,9 @@ html(lang="ru")
                 div.table-cell
                   a(href="#!").btn.btn--middle.btn--border
                     span отказать
-                div.table-cell
-                  a(href="#!").btn.btn--middle.btn--border
-                    span Пригласить
+                div.table-cell &nbsp;
+                  //- a(href="#!").btn.btn--middle.btn--border
+                  //-   span Пригласить
     
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")

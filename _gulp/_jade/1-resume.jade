@@ -43,10 +43,10 @@ html(lang="ru")
                   | Иванов иван иванович
                   
                   .one-resume__head-icon
-                    .catalog-resume__icon.catalog-resume__icon--active
+                    .catalog-resume__icon(data-balloon="телефон подтвержден" data-balloon-pos="up").catalog-resume__icon--active
                       i.ion-android-call
                       i.ion-checkmark-circled
-                    .catalog-resume__icon.catalog-resume__icon--active
+                    .catalog-resume__icon(data-balloon="резюме подтверждено" data-balloon-pos="up").catalog-resume__icon--active
                       i.ion-document-text
                       i.ion-checkmark-circled
                     .catalog-resume__icon
@@ -68,7 +68,7 @@ html(lang="ru")
                         path(d='M6.03 5.4h2.744c.142 0 .26-.123.26-.27 0-.147-.095-.246-.237-.246H6.03c-.14 0-.26.123-.26.27 0 .148.142.246.26.246zm0 0M10.145 6.946H3.287c-.142 0-.26.122-.26.27 0 .147.118.27.26.27h6.858c.142 0 .26-.123.26-.27-.023-.148-.118-.27-.26-.27zm0 0M3.997 5.915l.236-.982c.047-.245.095-.44.142-.662.024.222.07.418.118.663l.213.982h.402l.544-2.086h-.378l-.213.932c-.046.245-.094.49-.14.71-.025-.22-.072-.465-.12-.71l-.19-.957h-.377l-.213.932c-.047.27-.118.515-.142.736-.023-.196-.07-.466-.142-.736l-.19-.932H3.17l.496 2.085h.33zm0 0M10.145 9.03H3.287c-.142 0-.26.124-.26.27 0 .15.118.27.26.27h6.858c.142 0 .26-.12.26-.27-.023-.17-.118-.27-.26-.27zm0 0M10.145 11.142H3.287c-.142 0-.26.122-.26.27 0 .147.118.27.26.27h6.858c.142 0 .26-.123.26-.27-.023-.148-.118-.27-.26-.27zm0 0')
 
                 div
-                  a(href="#!").favorites__button
+                  a(href="#!" data-balloon="добавить в избранное" data-balloon-pos="up").favorites__button
                     i.ion-android-star-outline
                     i.ion-android-star
                 div

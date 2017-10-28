@@ -85,7 +85,7 @@ html(lang="ru")
                         span руб
                   
                   button(type="button").btn.btn--big
-                    span Оплатить
+                    span Сохранить
     
               .clear35
       
@@ -98,7 +98,7 @@ html(lang="ru")
                 .buy-top__wrapper
                   .buy-top__row
                     .buy-top__row-left
-                      a(href="#!").buy-top__row-link
+                      a(href="#popup-pay-services").buy-top__row-link.open-popup-link
                         i.icon.icon--timer-24
                         strong Топ на 
                           br
@@ -113,7 +113,7 @@ html(lang="ru")
                         p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
                   .buy-top__row
                     .buy-top__row-left
-                      a(href="#!").buy-top__row-link
+                      a(href="#popup-pay-services").buy-top__row-link.open-popup-link
                         i.icon.icon--timer-48
                         strong Топ на 
                           br
@@ -131,7 +131,7 @@ html(lang="ru")
                         p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
                   .buy-top__row
                     .buy-top__row-left
-                      a(href="#!").buy-top__row-link
+                      a(href="#popup-pay-services").buy-top__row-link.open-popup-link
                         i.icon.icon--timer-96
                         strong Топ на 
                           br
@@ -149,7 +149,7 @@ html(lang="ru")
                         p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
                   .buy-top__row
                     .buy-top__row-left
-                      a(href="#!").buy-top__row-link
+                      a(href="#popup-pay-services").buy-top__row-link.open-popup-link
                         i.icon.icon--timer-30
                         strong Топ на 
                           br
@@ -167,7 +167,7 @@ html(lang="ru")
                         p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. 
                   .buy-top__row
                     .buy-top__row-left
-                      a(href="#!").buy-top__row-link
+                      a(href="#popup-pay-services").buy-top__row-link.open-popup-link
                         i.icon.icon--timer-auto
                         strong Автообновление
                     .buy-top__row-right
@@ -201,4 +201,5 @@ html(lang="ru")
       $(document).ready(function(){
         $('.settings__nav li').removeClass('active');
         $('.settings__nav li:nth-child(2)').addClass('active');
+        $('.user__sitebar').hide();
       })

@@ -148,8 +148,13 @@ $(document).on('ready', function(){
   $('.buy-top__row-center__wrapper').each(function(){
     var _this = $(this);
     _this.on('click', function() {
+      if (_this.hasClass('is-active')) {
+        _this.removeClass('is-active');
+        _this.css({height: '101px', overflow: 'hidden'});
+      } else {
         _this.addClass('is-active');
         _this.css({height: '100%', overflow: 'visible'});
+      }
     });
   });
 
@@ -157,6 +162,11 @@ $(document).on('ready', function(){
 
   animationBlock();
   animationLink();
+
+  // Datepicker
+  $('#input-datepicker').data('datepicker')
+
+  $(".chosen-select").chosen();
 
   // Chrome Smooth Scroll
   try {
@@ -546,10 +556,12 @@ function uploadImageProfile() {
   }
 
   $(".settings__file-upload").on('change', function(){
-      readURL(this);
+    readURL(this);
   });
-
   $(".settings__image-div").on('click', function() {
+     $(".settings__file-upload").click();
+  });
+  $(".settings__file-link").on('click', function() {
      $(".settings__file-upload").click();
   });
 }
@@ -618,15 +630,16 @@ function animationBlock(){
     ;
     tl.pause();
 
-    one.on('click', function(e){
+    _this.hover(function(e){
       e.stopPropagation();
       tl.play();
-      // console.log('play');
-    });
-
-    info.on('click', function(){
+    }, function(){
       tl.reverse();
     });
+
+    // info.on('click', function(){
+    //
+    // });
 
     li.find('a').on('click', function(e){
       e.stopPropagation();
