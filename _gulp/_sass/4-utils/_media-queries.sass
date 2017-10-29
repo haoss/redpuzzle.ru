@@ -149,6 +149,18 @@
             margin-bottom: 0
     &__block
       margin-bottom: 50px
+  .navigation__about
+    &>a
+      &:hover, &:focus
+        background: $color-blue
+        color: $color-white
+        i
+          background-position: 0px -24px
+    &.is-hover
+      &>a
+        background-color: $color-red
+        i
+          background-position: 0px 0px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -378,6 +390,18 @@
       display: none
   .mobile__col-wrapper__body
     cursor: pointer
+  .new-vacancy
+    &__block
+      &--similar
+        width: 50%
+        &:nth-child(3)
+          padding-left: 0
+          border-left: 0
+          border-top: 1px solid #e5e5e5
+          padding-top: 18px
+        &:nth-child(4)
+          padding-left: 16px
+          border-left: 1px solid #e5e5e5
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -563,6 +587,8 @@
       &:nth-last-child(2)
         border-left: 0
         padding-left: 0
+      // &:nth-last-child(1), &:nth-last-child(2)
+        display: none
   .navigation
     &__logo
       display: none
@@ -579,7 +605,7 @@
   .new-resume
     &__block
       width: 50%
-      display: block !important
+      // display: block !important
       &:nth-child(3)
         padding-left: 0
         padding-top: 16px
@@ -1063,6 +1089,8 @@
       &:first-child
         border-top: 0 !important
         padding-top: 0 !important
+      // &:nth-last-child(3), &:nth-last-child(4)
+      //   display: none
   .new-resume
     &__block
       width: 100%
