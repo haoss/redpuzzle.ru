@@ -374,9 +374,10 @@ function readMore(){
 
 function headerScroll(){
   var header = $('.header'),
-      nav = $('.navigation');
+      nav = $('.navigation'),
+      width = $(window).width();
 
-  if ($(window).scrollTop() > header.height()) {
+  if (width > 991 && $(window).scrollTop() > header.height()) {
     nav.addClass('is-sticky');
   } else {
     nav.removeClass('is-sticky');
@@ -557,6 +558,8 @@ function fixedMobileConBtn(){
   if (width < 991 && $(window).scrollTop() > header.height()) {
     btn.addClass('is-fixed');
   } else if (width > 991 ) {
+    btn.removeClass('is-fixed');
+  } else {
     btn.removeClass('is-fixed');
   }
 }

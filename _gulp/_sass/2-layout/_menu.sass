@@ -83,6 +83,7 @@
     font-size: rem(13)
     font-family: $font-roboto-medium
     text-transform: uppercase
+    float: right
     &>a
       height: 38px
       line-height: 37px
@@ -97,6 +98,8 @@
         background: $color-red
         i
           @include sprite($icon-logo-small-white)
+        &:focus
+          text-decoration: none
       i
         display: inline-block
         margin-right: 10px

@@ -364,7 +364,6 @@
         &:nth-last-child(2)
           .assistance__block
             margin-bottom: 0
-
   .table
     &--time
       display: block
@@ -375,6 +374,10 @@
   .experience__date
     width: 100%
     margin-bottom: 10px
+    br
+      display: none
+  .mobile__col-wrapper__body
+    cursor: pointer
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -1296,6 +1299,16 @@
         margin-bottom: 10px
       &-sorting
         float: none
+
+  .about__info-table td:nth-child(even)
+    min-width: 70px
+  .navigation__info-table tr + tr td
+    padding-top: 15px
+
+  .assistance .h2
+    text-align: center
+    letter-spacing: normal
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

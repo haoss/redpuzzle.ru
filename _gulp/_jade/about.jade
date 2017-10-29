@@ -34,7 +34,7 @@ html(lang="ru")
           .col-md-6
             .h2.no--m-bottom Сегодня на сайте 
             .clear10
-            table.about__info-table.hidden-xxs
+            table.about__info-table
               tr
                 td
                   i.icon.icon--navigation-info-1
@@ -46,30 +46,21 @@ html(lang="ru")
                 td
                   strong 1 017 858
                     small резюме
-                td
+                td.hidden-xs
                   i.icon.icon--navigation-info-3
-                td
+                td.hidden-xs
                   strong 54 448
                     small компаний
-            table.about__info-table.visible-xxs
-              tr
-                td
-                  i.icon.icon--navigation-info-1
-                td
-                  strong 19 997 
-                    small вакансий
-              tr
-                td
-                  i.icon.icon--navigation-info-2
-                td
-                  strong 1 017 858
-                    small резюме
-              tr
-                td
+              tr.visible-xs
+                td(colspan="2").no--p-top
+                  .clear20
+              tr.visible-xs
+                td.no--p-top
                   i.icon.icon--navigation-info-3
-                td
+                td.no--p-top
                   strong 54 448
                     small компаний
+            .clear
         
         // Section
         .section.message.no--p-bottom

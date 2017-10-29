@@ -4887,7 +4887,8 @@ legend {
   .navigation__about {
     font-size: 0.8125rem;
     font-family: "RobotoMedium";
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    float: right; }
     .navigation__about > a {
       height: 38px;
       line-height: 37px;
@@ -4905,6 +4906,8 @@ legend {
           background-position: 0px 0px;
           width: 20px;
           height: 24px; }
+        .navigation__about > a:hover:focus {
+          text-decoration: none; }
       .navigation__about > a i {
         display: inline-block;
         margin-right: 10px;
@@ -6686,6 +6689,14 @@ ul.list {
   font-family: "RobotoMedium";
   margin-bottom: 15px;
   line-height: 1; }
+  .vacancy__price + .catalog__row-name {
+    margin-top: -10px;
+    margin-bottom: 15px; }
+    .vacancy__price + .catalog__row-name a {
+      color: #444444; }
+      .vacancy__price + .catalog__row-name a:hover {
+        text-decoration: none;
+        color: #ff0f36; }
 
 .vacancy__info {
   margin-bottom: 20px;
@@ -7340,7 +7351,7 @@ ul.list {
   color: #444444;
   max-width: 262px;
   position: relative;
-  z-index: 40;
+  z-index: 20;
   background: #f5f5f5;
   padding: 20px 17px;
   -webkit-transform: translateX(0);
@@ -7483,7 +7494,7 @@ ul.list {
     color: #ffffff;
     background: #ff0f36;
     border: 0;
-    text-align: right;
+    text-align: left;
     padding: 0 14px;
     font-size: 1rem;
     font-family: "RobotoMedium";
@@ -7492,6 +7503,12 @@ ul.list {
     margin-bottom: 13px;
     margin-left: -14px;
     width: calc(100% + 28px); }
+    .mobile__col-button::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .mobile__col-button span {
+      float: right; }
     .mobile__col-button--blue {
       background: #1747a1; }
 
@@ -11638,7 +11655,11 @@ ul.list {
         padding-left: 0 !important; }
   .experience__date {
     width: 100%;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+    .experience__date br {
+      display: none; }
+  .mobile__col-wrapper__body {
+    cursor: pointer; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
@@ -12411,7 +12432,14 @@ ul.list {
     float: none;
     margin-bottom: 10px; }
   .statistics__row-sorting {
-    float: none; } }
+    float: none; }
+  .about__info-table td:nth-child(even) {
+    min-width: 70px; }
+  .navigation__info-table tr + tr td {
+    padding-top: 15px; }
+  .assistance .h2 {
+    text-align: center;
+    letter-spacing: normal; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 319px) {

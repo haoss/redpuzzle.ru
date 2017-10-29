@@ -1024,6 +1024,14 @@
     font-family: $font-roboto-medium
     margin-bottom: 15px
     line-height: 1
+    &+.catalog__row-name
+      margin-top: -10px
+      margin-bottom: 15px
+      a
+        color: $primary-color
+        &:hover
+          text-decoration: none
+          color: $color-red
   &__info
     margin-bottom: 20px
     background: $color-lightgray
@@ -1675,7 +1683,7 @@
   color: $primary-color
   max-width: 262px
   position: relative
-  z-index: 40
+  z-index: 20
   background: #f5f5f5
   padding: 20px 17px
   transform: translateX(0)
@@ -1819,7 +1827,7 @@
     color: $color-white
     background: $color-red
     border: 0
-    text-align: right
+    text-align: left
     padding: 0 14px
     font-size: 1rem
     font-family: "RobotoMedium"
@@ -1828,6 +1836,9 @@
     margin-bottom: 13px
     margin-left: -14px
     width: calc(100% + 28px)
+    +clearfix
+    span
+      float: right
     &--blue
       background: $color-blue
       // font-size: rem(14)
