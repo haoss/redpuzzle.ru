@@ -483,7 +483,7 @@ function sortingOption(){
 
 function phoneVacancy(){
   $('.phone__vacancy-head').on('click', function(){
-    $(this).parent().addClass('is-active');
+    $(this).parent().toggleClass('is-active');
   });
   $('.phone__vacancy-wrapper').on('click', function(e){
     e.stopPropagation();
