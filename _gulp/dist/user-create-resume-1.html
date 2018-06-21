@@ -31,6 +31,7 @@
         <link rel="stylesheet" href="./js/libs/nice-select/css/nice-select.css">
         <link rel="stylesheet" href="./js/libs/air-datepicker/dist/css/datepicker.min.css">
         <link rel="stylesheet" href="./js/libs/chosen/chosen.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -530,9 +531,13 @@
                                                 <label class="hidden">Отчество</label>
                                                 <input type="text" name="name" placeholder="Отчество" class="form-control">
                                             </div>
-                                            <div class="form-group block-focus">
+                                            <div class="form-group zindex17 block-focus">
                                                 <label class="hidden">Дата рождения</label>
-                                                <input type="text" name="name" placeholder="Дата рождения" readonly data-auto-close="true" class="form-control datepicker-here">
+                                                <input id="datepicker1" type="text" name="name" placeholder="Дата рождения 1" readonly class="form-control">
+                                            </div>
+                                            <div class="form-group zindex16 block-focus">
+                                                <label class="hidden">Дата рождения</label>
+                                                <input id="datepicker2" type="text" name="name" placeholder="Дата рождения 2" readonly class="form-control">
                                             </div>
                                             <div class="form__group zindex15">
                                                 <select data-placeholder="Выберите регион" class="chosen-select">
@@ -658,7 +663,7 @@
         <script src='./js/libs/html5shiv/html5shiv.min.js'>
         <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
         <script src='./js/libs/html5shiv/respond.min.js'><![endif]
-        
+
         -->
         <!-- Load Scripts-->
         <script src="./js/libs.js"></script>
@@ -674,6 +679,7 @@
         <script src="./js/libs/gsap/TimelineLite.min.js"></script>
         <script src="./js/libs/gsap/CSSPlugin.min.js"></script>
         <script src="./js/libs/gsap/EasePack.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="./js/common.js"></script>
         <script>
             $(document).ready(function(){
