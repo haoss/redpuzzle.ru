@@ -353,7 +353,6 @@ function searchFocus(){
       }
     });
   })
-
 }
 
 function readMore(){

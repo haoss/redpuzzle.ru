@@ -4,6 +4,14 @@
   "version": "1.1.0",
   "homepage": "",
   "author": "Dmitriy Khristoev <info@websource.in.ua> (http://websource.in.ua/)",
+  "scripts": {
+    "watch": "gulp watch",
+    "jade": "gulp jade",
+    "gulp": "gulp",
+    "sass": "gulp sass",
+    "scripts": "gulp scripts",
+    "sprite": "gulp sprite"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
