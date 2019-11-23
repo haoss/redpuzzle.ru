@@ -49,11 +49,18 @@ $(document).on('ready', function(){
     fixedContentPos: false
   });
 
-  $('.open-popup-link').magnificPopup({
-    type: 'inline',
-    midClick: true,
-    showCloseBtn: false
+  
+  $(document).on('click', '.open-popup-link', function(e) {
+    e.preventDefault();
+    $.magnificPopup.open({
+        items: {
+            src: $(this).attr('href')
+        },
+        type: 'inline',
+		showCloseBtn: false
+    });
   });
+
   $('.open-popup-register').magnificPopup({
     type: 'inline',
     midClick: true,
@@ -165,21 +172,16 @@ $(document).on('ready', function(){
   fixedMobileConBtn();
 
   // Datepicker
-  $('#input-datepicker').data('datepicker')
+  $('#datepicker1').data('datepicker');
+
+  $( "#datepicker2" ).datepicker({
+    changeMonth: true,
+    changeYear: true
+  });
 
   $(".chosen-select").chosen({
     no_results_text: 'нет результата'
   });
-
-  // Chrome Smooth Scroll
-  try {
-    $.browserSelector();
-    if($("html").hasClass("chrome")) {
-      $.smoothScroll();
-    }
-  } catch(err) {
-
-  };
 
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');
